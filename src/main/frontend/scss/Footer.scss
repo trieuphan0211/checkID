@@ -1,0 +1,161 @@
+.footer {
+  width: 100%;
+  background-color: var(--primary-1);
+  position: relative;
+  > div:first-child {
+    display: inline-flex;
+    margin: 0 auto;
+  }
+  &_info {
+    padding: 96px 0 20px 0;
+    &-item {
+      color: #fff;
+      &--lable {
+        font-weight: 700;
+      }
+      &:first-child {
+        padding-right: 24px;
+        max-width: 322px;
+        font-size: 1.6em;
+        .footer_info {
+          &-title {
+            margin: 30px 0;
+            font-weight: 500;
+          }
+          &-btn {
+            color: #ffe492;
+            cursor: pointer;
+            font-weight: 700;
+            svg {
+              margin-left: 15px;
+              font-size: 20px;
+            }
+            &:hover {
+              svg {
+                margin-left: 20px;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+      &:last-child {
+        margin-left: 50px;
+        h5 {
+          font-size: 16px;
+          font-weight: 700;
+          margin-bottom: 16px;
+        }
+      }
+      .link {
+        &-discover,
+        &-service {
+          padding-left: 40px;
+          font-size: 1.6em;
+          h5 {
+            font-weight: 700;
+            margin-bottom: 12px;
+          }
+          p {
+            font-weight: 400;
+            cursor: pointer;
+            line-height: 34px;
+            &:hover {
+              color: var(--primary-2);
+            }
+          }
+        }
+      }
+    }
+  }
+  &_cer {
+    padding: 20px 0 50px 0;
+    &-item {
+      > div {
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+        color: #fff;
+        padding: 0 24px 18px;
+        width: 332px;
+        > div {
+          p {
+            font-size: 1.6em;
+            text-wrap: nowrap;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    > p {
+      color: #ffe492;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      svg {
+        font-size: 20px;
+        margin-left: 5px;
+      }
+      &:hover {
+        svg {
+          margin-left: 10px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+  &_contact {
+    width: 100%;
+    padding: 20px 0;
+    > div {
+      p {
+        color: #fff;
+        font-size: 1.6em;
+        font-weight: 500;
+        &:nth-child(2) {
+          margin: 0 15px;
+        }
+        &:last-child {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+// 1153 to 1440
+
+// 769 to 1152
+
+// 321 to 768
+@media (min-width: 321px) and (max-width: 768px) {
+  .footer {
+    &_info {
+      &-item {
+        flex-wrap: wrap;
+
+        &:last-child {
+          margin: 0;
+          width: 100%;
+        }
+      }
+    }
+    &_cer {
+      &-item {
+        > div {
+          flex-wrap: wrap;
+
+          padding: 0;
+        }
+      }
+    }
+    &_contact {
+      flex-wrap: wrap;
+    }
+  }
+}
+// 0 to 320
