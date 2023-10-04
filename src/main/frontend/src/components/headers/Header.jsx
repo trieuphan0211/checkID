@@ -5,11 +5,21 @@ import logo_blue from "../../assets/img/logo_blue.png";
 
 import { useTranslation } from "react-i18next";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { FaChevronDown } from "react-icons/fa";
 import { useWindowSize } from "usehooks-ts";
 
 import { Button, Collapse, Divider, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import styled from "@emotion/styled";
+import {
+  AIDocumentScanning,
+  Check,
+  DataManagement,
+  DocumentVerification,
+  Group,
+  Group1,
+  Top,
+} from "../../icons";
 
 const ContactButton = styled(Button)({
   backgroundColor: "var(--primary-2)",
@@ -59,279 +69,6 @@ export const Header = ({ bg }) => {
           <MenuIcon sx={{ fontSize: "45px" }} />
         </IconButton>
       )}
-      {width < 1440 && (
-        <Collapse
-          in={open}
-          sx={{ position: "absolute", top: "100%", right: "0" }}
-        >
-          <div className="header_component d-flex">
-            <ul className="headerList ">
-              <li
-                className={`headerList_item ${
-                  bg === "white" ? "headerList_item-white" : ""
-                }`}
-              >
-                {t("header.header.menu.identityVerification")}
-                <ul className="subItem1">
-                  <li className="subItem1_item">
-                    {width >= 768 && <BsChevronLeft />}
-                    {t(
-                      "header.header.menu.subIdentityVerification.built.title"
-                    )}
-                    {width < 768 && <BsChevronRight />}
-                    <ul className="subItem2">
-                      <li className="subItem2_item">
-                        {t(
-                          "header.header.menu.subIdentityVerification.built.why"
-                        )}
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="subItem1_item">
-                    {width >= 768 && <BsChevronLeft />}
-                    {t(
-                      "header.header.menu.subIdentityVerification.solution.title"
-                    )}
-                    {width < 768 && <BsChevronRight />}
-                    <ul className="subItem2">
-                      <li className="subItem2_item">
-                        {t(
-                          "header.header.menu.subIdentityVerification.solution.remote"
-                        )}
-                      </li>
-                      <li className="subItem2_item">
-                        {t(
-                          "header.header.menu.subIdentityVerification.solution.facetoface"
-                        )}
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-                {/* <ul className="subItem1 subItem1_detail flex-column align-items-start">
-                  <h5>Built with NFC technology</h5>
-                  <li className="subItem1_detail-li">
-                    <h4></h4>
-                    <p>
-                      Create trust in identity verification by leveraging
-                      identity documents, NFC technology and smartphones
-                    </p>
-                  </li>
-                  <Divider
-                    component="li"
-                    sx={{ width: "100%", margin: "20px 0" }}
-                  />
-                  <h5>Solutions for</h5>
-                  <li className="subItem1_detail-li">
-                    <h4>Remote identity verification</h4>
-                    <p>
-                      Identity verification within your mobile services or
-                      through our ready-to-use app
-                    </p>
-                  </li>
-                  <li className="subItem1_detail-li">
-                    <h4>Face-to-face identity verification</h4>
-                    <p>
-                      Guaranteed identity verification without knowledge of
-                      identity documents, anytime, anywhere
-                    </p>
-                  </li>
-                </ul> */}
-              </li>
-              <li
-                className={`headerList_item ${
-                  bg === "white" ? "headerList_item-white" : ""
-                }`}
-              >
-                {t("header.header.menu.products")}
-                <ul className="subItem1">
-                  <li className="subItem1_item">
-                    {width >= 768 && <BsChevronLeft />}
-
-                    {t("header.header.menu.subProduct.icao")}
-                    {width < 768 && <BsChevronRight />}
-                    <ul className="subItem2">
-                      <li className="subItem2_item">
-                        {" "}
-                        {t("header.header.menu.subProduct.subicao.checkid")}
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li
-                className={`headerList_item ${
-                  bg === "white" ? "headerList_item-white" : ""
-                }`}
-              >
-                {t("header.header.menu.solution")}
-                <ul className="subItem1">
-                  <li className="subItem1_item">
-                    {width >= 768 && <BsChevronLeft />}
-                    {t("header.header.menu.subSolution.icao")}
-                    {width < 768 && <BsChevronRight />}
-                    <ul className="subItem2">
-                      <li className="subItem2_item">
-                        {" "}
-                        {t("header.header.menu.subSolution.subicao.checkid")}
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li
-                className={`headerList_item ${
-                  bg === "white" ? "headerList_item-white" : ""
-                }`}
-              >
-                {t("header.header.menu.customers")}
-                <ul className="subItem1">
-                  <li className="subItem1_item">
-                    {width >= 768 && <BsChevronLeft />}
-                    {t("header.header.menu.subCustomers.how.title")}
-                    {width < 768 && <BsChevronRight />}
-                    <ul className="subItem2">
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subCustomers.how.customers")}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subCustomers.how.partner")}
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="subItem1_item">
-                    {width >= 768 && <BsChevronLeft />}
-                    {t("header.header.menu.subCustomers.highlight.title")}
-                    {width < 768 && <BsChevronRight />}
-                    <ul className="subItem2">
-                      <li className="subItem2_item">
-                        {t(
-                          "header.header.menu.subCustomers.highlight.customers"
-                        )}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subCustomers.highlight.ukHome")}
-                      </li>
-                      <li className="subItem2_item">
-                        {t(
-                          "header.header.menu.subCustomers.highlight.reverification"
-                        )}
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li
-                className={`headerList_item ${
-                  bg === "white" ? "headerList_item-white" : ""
-                }`}
-              >
-                {t("header.header.menu.industries")}
-                <ul className="subItem1">
-                  <li className="subItem1_item">
-                    {width >= 768 && <BsChevronLeft />}
-                    {t("header.header.menu.subIndustries.working.title")}
-                    {width < 768 && <BsChevronRight />}
-                    <ul className="subItem2">
-                      <li className="subItem2_item">
-                        {" "}
-                        {t(
-                          "header.header.menu.subIndustries.working.financial"
-                        )}{" "}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subIndustries.working.travel")}{" "}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subIndustries.working.digital")}{" "}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subIndustries.working.hiring")}{" "}
-                      </li>
-                      <li className="subItem2_item">
-                        {t(
-                          "header.header.menu.subIndustries.working.eGovernment"
-                        )}{" "}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subIndustries.working.Gaming")}{" "}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subIndustries.working.police")}
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li
-                className={`headerList_item ${
-                  bg === "white" ? "headerList_item-white" : ""
-                }`}
-              >
-                {t("header.header.menu.resources")}
-                <ul className="subItem1">
-                  <li className="subItem1_item">
-                    {width >= 768 && <BsChevronLeft />}
-                    {t("header.header.menu.subResources.gain.title")}
-                    {width < 768 && <BsChevronRight />}
-                    <ul className="subItem2">
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subResources.gain.blog")}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subResources.gain.whitepaper")}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subResources.gain.webinar")}
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li
-                className={`headerList_item ${
-                  bg === "white" ? "headerList_item-white" : ""
-                }`}
-              >
-                {t("header.header.menu.aboutUs")}{" "}
-                <ul className="subItem1">
-                  <li className="subItem1_item">
-                    {width >= 768 && <BsChevronLeft />}
-                    {t("header.header.menu.subAboutUs.know.title")}
-                    {width < 768 && <BsChevronRight />}
-                    <ul className="subItem2">
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subAboutUs.know.company")}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subAboutUs.know.History")}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subAboutUs.know.Certifications")}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subAboutUs.know.partnerShips")}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subAboutUs.know.awards")}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subAboutUs.know.events")}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subAboutUs.know.working")}
-                      </li>
-                      <li className="subItem2_item">
-                        {t("header.header.menu.subAboutUs.know.contact")}
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ContactButton>{t("header.header.button.contact")}</ContactButton>
-          </div>
-        </Collapse>
-      )}
       {width >= 1440 && (
         <>
           <ul className="headerList ">
@@ -341,36 +78,50 @@ export const Header = ({ bg }) => {
               }`}
             >
               {t("header.header.menu.identityVerification")}
-              <ul className="subItem1">
-                <li className="subItem1_item">
-                  {t("header.header.menu.subIdentityVerification.built.title")}
-                  <BsChevronRight />
-                  <ul className="subItem2">
-                    <li className="subItem2_item">
-                      {t(
-                        "header.header.menu.subIdentityVerification.built.why"
-                      )}
-                    </li>
-                  </ul>
+              <FaChevronDown />
+              <ul className="subItem1 flex-column align-items-start">
+                <h5>Built with NFC technology</h5>
+                <li className="subItem1_item d-flex justify-content-between">
+                  <AIDocumentScanning />
+                  <div>
+                    <h4>Why NFC-First identity verification?</h4>
+                    <p>
+                      Create trust in identity verification by leveraging
+                      identity documents, NFC technology, and smartphones -
+                      compliment with optical technology for maximal coverage
+                    </p>
+                  </div>
                 </li>
-                <li className="subItem1_item">
-                  {t(
-                    "header.header.menu.subIdentityVerification.solution.title"
-                  )}
-                  <BsChevronRight />
-                  <ul className="subItem2">
-                    <li className="subItem2_item">
-                      {t(
-                        "header.header.menu.subIdentityVerification.solution.remote"
-                      )}
-                    </li>
-                    <li className="subItem2_item">
-                      {t(
-                        "header.header.menu.subIdentityVerification.solution.facetoface"
-                      )}
-                    </li>
-                  </ul>
+                <Divider
+                  component="li"
+                  sx={{
+                    width: "100%",
+                    marginTop: "12px",
+                    borderColor: "#C4C4C4",
+                  }}
+                />
+                <h5>Solutions for</h5>
+                <li className="subItem1_item d-flex justify-content-between">
+                  <DocumentVerification />
+                  <div>
+                    <h4>Remote identity verification</h4>
+                    <p>
+                      Identity verification within your mobile services or
+                      through our ready-to-use app
+                    </p>
+                  </div>
                 </li>
+                <li className="subItem1_item d-flex justify-content-between">
+                  <DataManagement />
+                  <div>
+                    <h4>Face-to-face identity verification</h4>
+                    <p>
+                      Guaranteed identity verification without knowledge of
+                      identity documents, anytime, anywhere
+                    </p>
+                  </div>
+                </li>
+                <Top className="positionTop" />
               </ul>
             </li>
             <li
@@ -379,17 +130,58 @@ export const Header = ({ bg }) => {
               }`}
             >
               {t("header.header.menu.products")}
+              <FaChevronDown />
               <ul className="subItem1">
-                <li className="subItem1_item">
-                  {t("header.header.menu.subProduct.icao")}
-                  <BsChevronRight />
-                  <ul className="subItem2">
-                    <li className="subItem2_item">
-                      {" "}
-                      {t("header.header.menu.subProduct.subicao.checkid")}
+                <h5>ICAO Reader Products</h5>
+                <div className="d-flex">
+                  <div className="d-flex flex-column">
+                    <li className="subItem1_item d-flex justify-content-start">
+                      <Check />
+                      <div>
+                        <h4>CheckID-SR</h4>
+                        <p>ID card reader/scanner</p>
+                      </div>
                     </li>
-                  </ul>
-                </li>
+                    <li className="subItem1_item d-flex justify-content-start">
+                      <Check />
+                      <div>
+                        <h4>V11</h4>
+                        <p>Handheld Biometric ID Terminal</p>
+                      </div>
+                    </li>
+                    <li className="subItem1_item d-flex justify-content-start">
+                      <Check />
+                      <div>
+                        <h4>R301 C11</h4>
+                        <p>CCID Smartcard Reader</p>
+                      </div>
+                    </li>
+                  </div>
+                  <div>
+                    <li className="subItem1_item d-flex justify-content-start">
+                      <Check />
+                      <div>
+                        <h4>AM-001</h4>
+                        <p>Altimeter for document/ID card</p>
+                      </div>
+                    </li>
+                    <li className="subItem1_item d-flex justify-content-start">
+                      <Check />
+                      <div>
+                        <h4>V20</h4>
+                        <p>Biometric Tablet</p>
+                      </div>
+                    </li>
+                    <li className="subItem1_item d-flex justify-content-start">
+                      <Check />
+                      <div>
+                        <h4>R502-CL</h4>
+                        <p>Altimeter for document/ID card</p>
+                      </div>
+                    </li>
+                  </div>
+                </div>
+                <Top className="positionTop" />
               </ul>
             </li>
             <li
@@ -398,17 +190,17 @@ export const Header = ({ bg }) => {
               }`}
             >
               {t("header.header.menu.solution")}
+              <FaChevronDown />
               <ul className="subItem1">
-                <li className="subItem1_item">
-                  {t("header.header.menu.subSolution.icao")}
-                  <BsChevronRight />
-                  <ul className="subItem2">
-                    <li className="subItem2_item">
-                      {" "}
-                      {t("header.header.menu.subSolution.subicao.checkid")}
-                    </li>
-                  </ul>
+                <h5>ICAO Reader Solutions</h5>
+                <li className="subItem1_item d-flex justify-content-start">
+                  <Check />
+                  <div>
+                    <h4>CheckID Client Middleware</h4>
+                    {/* <p>ID card reader/scanner</p> */}
+                  </div>
                 </li>
+                <Top className="positionTop" />
               </ul>
             </li>
             <li
@@ -417,36 +209,79 @@ export const Header = ({ bg }) => {
               }`}
             >
               {t("header.header.menu.customers")}
-              <ul className="subItem1">
-                <li className="subItem1_item">
-                  {t("header.header.menu.subCustomers.how.title")}
-                  <BsChevronRight />
-                  <ul className="subItem2">
-                    <li className="subItem2_item">
-                      {t("header.header.menu.subCustomers.how.customers")}
-                    </li>
-                    <li className="subItem2_item">
-                      {t("header.header.menu.subCustomers.how.partner")}
-                    </li>
-                  </ul>
+              <FaChevronDown />
+              <ul className="subItem1 flex-column align-items-start">
+                <h5>How we work together</h5>
+                <li className="subItem1_item d-flex justify-content-between">
+                  <Group />
+                  <div>
+                    <h4>Customer stories</h4>
+                    <p>
+                      How others are using ReadID to create trusted identity
+                      verification
+                    </p>
+                  </div>
                 </li>
-                <li className="subItem1_item">
-                  {t("header.header.menu.subCustomers.highlight.title")}
-                  <BsChevronRight />
-                  <ul className="subItem2">
-                    <li className="subItem2_item">
-                      {t("header.header.menu.subCustomers.highlight.customers")}
-                    </li>
-                    <li className="subItem2_item">
-                      {t("header.header.menu.subCustomers.highlight.ukHome")}
-                    </li>
-                    <li className="subItem2_item">
-                      {t(
-                        "header.header.menu.subCustomers.highlight.reverification"
-                      )}
-                    </li>
-                  </ul>
+                <li className="subItem1_item d-flex justify-content-between">
+                  <Group1 />
+                  <div>
+                    <h4>Partnerships</h4>
+                    <p>
+                      We collaborate with partners in different industries and
+                      other technologies to create a perfect fit for you
+                    </p>
+                  </div>
                 </li>
+                <Divider
+                  component="li"
+                  sx={{
+                    width: "100%",
+                    marginTop: "12px",
+                    borderColor: "#C4C4C4",
+                  }}
+                />
+                <h5>Highlighted use cases</h5>
+                <li className="subItem1_item d-flex justify-content-between">
+                  <Check />
+                  <div>
+                    <h4>Digital mortgage applications with Moneyou</h4>
+                    {/* <p>
+                      Identity verification within your mobile services or
+                      through our ready-to-use app
+                    </p> */}
+                  </div>
+                </li>
+                <li className="subItem1_item d-flex justify-content-between">
+                  <Check />
+                  <div>
+                    <h4>The UK Home Office EU settlement scheme</h4>
+                    {/* <p>
+                      Identity verification within your mobile services or
+                      through our ready-to-use app
+                    </p> */}
+                  </div>
+                </li>
+                <li className="subItem1_item d-flex justify-content-between">
+                  <Check />
+                  <div>
+                    <h4>Automated anti-money laundering with Thirdfort</h4>
+                    {/* <p>
+                      Identity verification within your mobile services or
+                      through our ready-to-use app
+                    </p> */}
+                  </div>
+                </li>
+                <li className="subItem1_item d-flex justify-content-between">
+                  <Check />
+                  <div>
+                    <h4>A high-quality customer journey for ASB bank</h4>
+                    {/* <p>
+                      Identity verification within your mobile services or
+                      through our ready-to-use app
+                    </p> */}
+                  </div>
+                </li>
+                <Top className="positionTop" />
               </ul>
             </li>
             <li
@@ -455,6 +290,7 @@ export const Header = ({ bg }) => {
               }`}
             >
               {t("header.header.menu.industries")}
+              <FaChevronDown />
               <ul className="subItem1">
                 <li className="subItem1_item">
                   {t("header.header.menu.subIndustries.working.title")}
@@ -544,6 +380,7 @@ export const Header = ({ bg }) => {
               }`}
             >
               {t("header.header.menu.resources")}
+              <FaChevronDown />
               <ul className="subItem1">
                 <li className="subItem1_item">
                   {t("header.header.menu.subResources.gain.title")}
@@ -582,7 +419,7 @@ export const Header = ({ bg }) => {
                 bg === "white" ? "headerList_item-white" : ""
               }`}
             >
-              {t("header.header.menu.aboutUs")}{" "}
+              {t("header.header.menu.aboutUs")} <FaChevronDown />
               <ul className="subItem1">
                 <li className="subItem1_item">
                   {t("header.header.menu.subAboutUs.know.title")}
