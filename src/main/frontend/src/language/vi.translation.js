@@ -8,45 +8,67 @@ export default {
     },
     header: {
       menu: {
-        identityVerification: "Xác minh danh tính",
+        identityVerification: "Xác thực danh tính",
         subIdentityVerification: {
           built: {
-            title: "Xây dựng với công nghệ NFC",
-            why: "Tại sao nên sử dụng xác minh dựa trên NFC?",
+            title: "Sử dụng công nghệ NFC",
+            why: "Tại sao sử dụng xác thực danh tính dựa trên NFC?",
+            bodyWhy:
+              "Xây dựng niềm tin trong việc xác thực danh tính bằng cách sử dụng tài liệu danh tính, công nghệ NFC và điện thoại thông minh - kết hợp với công nghệ quang học để đảm bảo sự bao phủ tối đa",
           },
           solution: {
             title: "Giải pháp cho",
-            remote: "Xác minh danh tính từ xa",
-            facetoface: "Xác minh danh tính trực tiếp",
+            remote: "Xác thực danh tính từ xa",
+            bodyRemote:
+              "Xác thực danh tính trong dịch vụ di động của bạn hoặc thông qua ứng dụng sẵn sàng của chúng tôi",
+            facetoface: "Xác thực danh tính trực tiếp",
+            bodyFacetoFace:
+              "Xác thực danh tính đảm bảo mà không cần kiến thức về tài liệu danh tính, bất kỳ lúc nào, bất kỳ nơi đâu",
           },
         },
         products: "Sản phẩm",
         subProduct: {
-          icao: "Sản phẩm đọc ICAO",
+          icao: "Sản phẩm Đọc ICAO",
           subicao: {
             checkid: "CheckID-SR",
+            bodyCheckid: "Đầu đọc/thu mẫu thẻ ID",
+            v11: "V11",
+            bodyV11:
+              "Thiết bị xác thực danh tính hình thức cầm tay với thông tin về ngón tay",
+            r301: "R301 C11",
+            bodyR301: "Đầu đọc thẻ thông minh CCID",
+            am001: "AM-001",
+            bodyAm001: "Altimeter cho tài liệu/thẻ ID",
+            v20: "V20",
+            bodyV20: "Máy tính bảng có tích hợp thông tin về ngón tay",
+            r502: "R502-CL",
+            bodyR502: "Altimeter cho tài liệu/thẻ ID",
           },
         },
         solution: "Giải pháp",
         subSolution: {
-          icao: "Giải pháp đọc ICAO",
+          icao: "Giải pháp Đọc ICAO",
           subicao: {
-            checkid: "Phần mềm trung gian khách hàng CheckID",
+            checkid: "CheckID Client Middleware",
           },
         },
         customers: "Khách hàng",
         subCustomers: {
           how: {
             title: "Cách chúng tôi làm việc cùng nhau",
-            customers: "Câu chuyện khách hàng",
+            customers: "Câu chuyện của khách hàng",
+            bodyCustomers:
+              "Cách người khác sử dụng ReadID để tạo ra sự xác thực danh tính đáng tin cậy",
             partner: "Đối tác",
+            bodyPartnerships:
+              "Chúng tôi hợp tác với đối tác trong các ngành công nghiệp khác nhau và các công nghệ khác nhau để tạo ra sự phù hợp hoàn hảo cho bạn",
           },
           highlight: {
             title: "Các trường hợp sử dụng nổi bật",
-            customers: "Tiếp nhận khách hàng tại Rabobank",
-            ukHome:
-              "Chương trình giải quyết chính sách EU tại Văn phòng Nhà ở Anh",
-            reverification: "Xác minh lại tại Aegon",
+            digital: "Đơn xin vay thế chấp số hóa với Moneyou",
+            ukHome: "Chương trình giải quyết tạm trú của Bộ Nội vụ Anh Quốc",
+            automated: "Kiểm tra chống rửa tiền tự động với Thirdfort",
+            quality: "Hành trình khách hàng chất lượng cao cho ngân hàng ASB",
           },
         },
         industries: "Ngành công nghiệp",
@@ -54,12 +76,13 @@ export default {
           working: {
             title: "Làm việc cho",
             financial: "Dịch vụ tài chính",
-            travel: "Du lịch",
             digital: "Ký số",
-            hiring: "Tuyển dụng",
             eGovernment: "Chính phủ điện tử",
-            Gaming: "Trò chơi & Cờ bạc",
-            police: "Cảnh sát và Kiểm soát biên giới",
+            law: "Cơ quan thực thi pháp luật",
+            travel: "Du lịch và Biên giới",
+            hiring: "Tuyển dụng",
+            Gaming: "Trò chơi và Cờ bạc",
+            real: "Bất động sản",
           },
         },
         resources: "Tài liệu",
@@ -67,21 +90,11 @@ export default {
           gain: {
             title: "Nhận thông tin",
             blog: "Blog",
-            whitepaper: "Báo cáo và Báo cáo trắng",
-            webinar: "Buổi hội thảo trực tuyến",
+            knowledge: "Trung tâm kiến thức",
           },
-        },
-        aboutUs: "Về chúng tôi",
-        subAboutUs: {
-          know: {
-            title: "Hiểu về chúng tôi",
+          about: {
+            title: "Về chúng tôi",
             company: "Công ty",
-            History: "Lịch sử",
-            Certifications: "Chứng chỉ",
-            partnerShips: "Hợp tác",
-            awards: "Giải thưởng",
-            events: "Sự kiện",
-            working: "Làm việc tại InnoValor",
             contact: "Liên hệ",
           },
         },

@@ -12,12 +12,18 @@ export default {
         subIdentityVerification: {
           built: {
             title: "Built with NFC technology",
-            why: " Why NFC-based identity verification?",
+            why: "Why NFC-based identity verification?",
+            bodyWhy:
+              "Create trust in identity verification by leveraging identity documents, NFC technology, and smartphones - compliment with optical technology for maximal coverage",
           },
           solution: {
             title: " Solutions for",
             remote: "Remote identity verification",
+            bodyRemote:
+              "Identity verification within your mobile services or through our ready-to-use app",
             facetoface: "Face-to-face identity verification",
+            bodyFacetoFace:
+              " Guaranteed identity verification without knowledge of identity documents, anytime, anywhere",
           },
         },
         products: "products",
@@ -25,6 +31,17 @@ export default {
           icao: "ICAO Reader Products",
           subicao: {
             checkid: "CheckID-SR",
+            bodyCheckid: "ID card reader/scanner",
+            v11: "V11",
+            bodyV11: "Handheld Biometric ID Terminal",
+            r301: "R301 C11",
+            bodyR301: "CCID Smartcard Reader",
+            am001: "AM-001",
+            bodyAm001: "Altimeter for document/ID card",
+            v20: "V20",
+            bodyV20: "Biometric Tablet",
+            r502: "R502-CL",
+            bodyR502: "Altimeter for document/ID card",
           },
         },
         solution: "solutions",
@@ -39,13 +56,18 @@ export default {
           how: {
             title: " How we work together",
             customers: "Customer stories",
+            bodyCustomers:
+              "How others are using ReadID to create trusted identity verification",
             partner: "Partnerships",
+            bodyPartnerships:
+              " We collaborate with partners in different industries and other technologies to create a perfect fit for you",
           },
           highlight: {
             title: " Highlighted use cases",
-            customers: "  Customer onboarding at Rabobank",
+            digital: "Digital mortgage applications with Moneyou",
             ukHome: "The UK Home Office EU settlement scheme",
-            reverification: "Reverification at Aegon",
+            automated: "Automated anti-money laundering with Thirdfort",
+            quality: "A high-quality customer journey for ASB bank",
           },
         },
         industries: "Industries",
@@ -53,12 +75,13 @@ export default {
           working: {
             title: "Working for ",
             financial: "Financial services",
-            travel: "Travel",
             digital: "Digital signing",
-            hiring: "Hiring",
             eGovernment: "eGovernment",
+            law: "Law enforcement",
+            travel: "Travel and Borders",
+            hiring: "Hiring",
             Gaming: "Gaming & Gambling",
-            police: "Police and Border control",
+            real: "Real Estate",
           },
         },
         resources: "Resources",
@@ -66,21 +89,11 @@ export default {
           gain: {
             title: "Gain insights",
             blog: "Blog",
-            whitepaper: "  White papers and Reports",
-            webinar: "Webinar",
+            knowledge: "Knowledge centre",
           },
-        },
-        aboutUs: "About us",
-        subAboutUs: {
-          know: {
-            title: "Get to know us",
+          about: {
+            title: "About us",
             company: "Company",
-            History: "History",
-            Certifications: "Certifications",
-            partnerShips: "Partnerships",
-            awards: "Awards",
-            events: "Events",
-            working: "Work at InnoValor",
             contact: "Contact",
           },
         },

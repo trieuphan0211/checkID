@@ -4,27 +4,6 @@ import { useTranslation } from "react-i18next";
 import { Header, SubHeader } from "../components/headers";
 import vendor from "../assets/img/home_page/vendor.png";
 import "../assets/css/HomePage.css";
-import idSolution from "../assets/img/company/sk-id-logo.png";
-import agency from "../assets/img/company/agency-denmark-logo.png";
-import ing from "../assets/img/company/ing-logo.png";
-import itsme from "../assets/img/company/itsme-logo.png";
-import rabobank from "../assets/img/company/Rabobank-logo.png";
-import volksbank from "../assets/img/company/volksbank-logo.png";
-import cbr from "../assets/img/company/cbr-logo.png";
-import nets from "../assets/img/company/nets-logo.png";
-import signicat from "../assets/img/company/signicat-logo.png";
-import aegon from "../assets/img/company/Aegon.png";
-import gbg from "../assets/img/company/gbg-logo.png";
-import evidos from "../assets/img/company/evidos-logo.png";
-import amp from "../assets/img/company/amp-groep-logo.png";
-import florius from "../assets/img/company/florius-logo.png";
-import digidentity from "../assets/img/company/digidentity-logo.png";
-import entrust from "../assets/img/company/worldreach-logo.png";
-import asb from "../assets/img/company/ASB_Bank_logo.png";
-import gov from "../assets/img/company/gov.png";
-import thirdfort from "../assets/img/company/thirdfort-logo.png";
-import idnow from "../assets/img/company/id-now-logo.png";
-import thelawstore from "../assets/img/company/lawstore.png";
 import benifit from "../assets/img/home_page/benifit.png";
 import remote from "../assets/img/home_page/remote-icon.png";
 import facetoface from "../assets/img/home_page/face-to-face.png";
@@ -32,6 +11,26 @@ import feature from "../assets/img/home_page/Featured-image-website-blog.png";
 import banner from "../assets/img/home_page/banner_readid_phone-app.png";
 import talkChallenge from "../assets/img/home_page/talkChallenge.png";
 import ai from "../assets/img/home_page/ai.png";
+import acb from "../assets/img/company/acb.png";
+import eximbank from "../assets/img/company/eximbank.png";
+import pgbank from "../assets/img/company/pgbank.png";
+import ocb from "../assets/img/company/ocb.png";
+import techcombank from "../assets/img/company/techcombank.png";
+import fpt from "../assets/img/company/fpt.png";
+import viettel from "../assets/img/company/viettel.png";
+import vnpt from "../assets/img/company/vnpt.png";
+import vgca from "../assets/img/company/vgca.png";
+import fastca from "../assets/img/company/fastca.png";
+import winca from "../assets/img/company/winca.png";
+import cmcca from "../assets/img/company/cmcca.png";
+import easyca from "../assets/img/company/easyca.png";
+import ica from "../assets/img/company/ica.png";
+import bkavca from "../assets/img/company/bkavca.png";
+import hiloca from "../assets/img/company/hiloca.png";
+import trustca from "../assets/img/company/trustca.png";
+import misa from "../assets/img/company/misa.png";
+import newtel from "../assets/img/company/newtel.png";
+import martsign from "../assets/img/company/martsign.png";
 
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
@@ -168,33 +167,32 @@ const HomePage = (props) => {
           </p>
           <div className="homePage_company-logos d-flex flex-column align-items-center">
             <div className="homePage_company-logos-item">
-              <img src={idSolution} alt="" />
-              <img src={agency} alt="" />
-              <img src={ing} alt="" />
-              <img src={itsme} alt="" />
-              <img src={rabobank} alt="" />
+              <img src={acb} alt="" />
+              <img src={eximbank} alt="" />
+              <img src={pgbank} alt="" />
+              <img src={ocb} alt="" />
+              <img src={techcombank} alt="" />
             </div>
             <div className="homePage_company-logos-item">
-              <img src={volksbank} alt="" />
-              <img src={cbr} alt="" />
-              <img src={nets} alt="" />
-              <img src={signicat} alt="" />
-              <img src={aegon} alt="" />
+              <img src={fpt} alt="" />
+              <img src={viettel} alt="" />
+              <img src={vnpt} alt="" />
+              <img src={vgca} alt="" />
+              <img src={fastca} alt="" />
             </div>
             <div className="homePage_company-logos-item">
-              <img src={gbg} alt="" />
-              <img src={evidos} alt="" />
-              <img src={amp} alt="" />
-              <img src={florius} alt="" />
-              <img src={digidentity} alt="" />
-              <img src={entrust} alt="" />
+              <img src={winca} alt="" />
+              <img src={cmcca} alt="" />
+              <img src={easyca} alt="" />
+              <img src={ica} alt="" />
+              <img src={bkavca} alt="" />
             </div>
             <div className="homePage_company-logos-item">
-              <img src={asb} alt="" />
-              <img src={gov} alt="" />
-              <img src={thirdfort} alt="" />
-              <img src={idnow} alt="" />
-              <img src={thelawstore} alt="" />
+              <img src={hiloca} alt="" />
+              <img src={trustca} alt="" />
+              <img src={misa} alt="" />
+              <img src={newtel} alt="" />
+              <img src={martsign} alt="" />
             </div>
             <p className="homePage_company-readstore">
               {t("homePage.company.readStory")} <FiArrowRight />
@@ -261,11 +259,11 @@ const HomePage = (props) => {
           </div>
         </div>
         <div className="homePage_video d-flex flex-column align-items-end">
-          <div class="ratio ratio-16x9">
+          <div className="ratio ratio-16x9">
             <iframe
               src="https://www.youtube.com/embed/UesGqiCEp7Y?rel=0"
               title="YouTube video"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           <div className="homePage_video-title">
