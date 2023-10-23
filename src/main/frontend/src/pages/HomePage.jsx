@@ -135,8 +135,20 @@ const HomePage = (props) => {
             <div className="homePage_introduce-body">
               <p>{t("homePage.introduce.body")}</p>
               <div>
-                <LearnButton>{t("homePage.introduce.contact")}</LearnButton>
-                <DemoButton>{t("homePage.introduce.demoapp")}</DemoButton>
+                <LearnButton
+                  sx={{
+                    marginBottom: "20px",
+                  }}
+                >
+                  {t("homePage.introduce.contact")}
+                </LearnButton>
+                <DemoButton
+                  sx={{
+                    marginBottom: "20px",
+                  }}
+                >
+                  {t("homePage.introduce.demoapp")}
+                </DemoButton>
               </div>
             </div>
           </div>

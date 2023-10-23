@@ -32,7 +32,9 @@ import {
   Top,
   Tower,
 } from "../../icons";
+import { Link, useNavigate } from "react-router-dom";
 
+const context = "";
 const ContactButton = styled(Button)({
   backgroundColor: "var(--primary-2)",
   color: "#fff",
@@ -49,13 +51,14 @@ const ContactButton = styled(Button)({
 });
 export const Header = ({ bg }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const { width, height } = useWindowSize();
   const [open, setOpen] = React.useState(false);
 
   return (
     <div
       className={`header  d-flex  ${
-        width > 1440 ? "align-items-center" : "justify-content-between"
+        width > 1441 ? "align-items-center" : "justify-content-between"
       }`}
       style={
         bg === "white"
@@ -71,8 +74,9 @@ export const Header = ({ bg }) => {
         className="header_logo"
         src={bg === "white" ? logo_blue : logo}
         alt=""
+        onClick={() => navigate(`${context}/`)}
       />
-      {width < 1440 && (
+      {width < 1441 && (
         <IconButton
           size="large"
           edge="start"
@@ -84,7 +88,7 @@ export const Header = ({ bg }) => {
           <MenuIcon sx={{ fontSize: "45px" }} />
         </IconButton>
       )}
-      {width < 1440 && (
+      {width < 1441 && (
         <Drawer
           anchor="right"
           open={open}
@@ -141,7 +145,11 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <AIDocumentScanning />
-                    <div>
+                    <div
+                      onClick={() =>
+                        navigate(`${context}/trusted-identity-verification`)
+                      }
+                    >
                       <h4>
                         {t(
                           "header.header.menu.subIdentityVerification.built.why"
@@ -292,6 +300,18 @@ export const Header = ({ bg }) => {
                       <h4>{t("header.header.menu.subProduct.subicao.r502")}</h4>
                       <p>
                         {t("header.header.menu.subProduct.subicao.bodyR502")}
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    className="subItem1_item d-flex justify-content-start"
+                    onClick={() => setOpen(false)}
+                  >
+                    <Check />
+                    <div>
+                      <h4>{t("header.header.menu.subProduct.subicao.v10p")}</h4>
+                      <p>
+                        {t("header.header.menu.subProduct.subicao.bodyV10p")}
                       </p>
                     </div>
                   </li>
@@ -615,7 +635,7 @@ export const Header = ({ bg }) => {
           </Box>
         </Drawer>
       )}
-      {width >= 1440 && (
+      {width >= 1441 && (
         <>
           <ul className="headerList ">
             <li
@@ -631,7 +651,7 @@ export const Header = ({ bg }) => {
                 </h5>
                 <li className="subItem1_item d-flex justify-content-between">
                   <AIDocumentScanning />
-                  <div>
+                  <Link to={`${context}/trusted-identity-verification`}>
                     <h4>
                       {t(
                         "header.header.menu.subIdentityVerification.built.why"
@@ -642,7 +662,7 @@ export const Header = ({ bg }) => {
                         "header.header.menu.subIdentityVerification.built.bodyWhy"
                       )}
                     </p>
-                  </div>
+                  </Link>
                 </li>
                 <Divider
                   component="li"
@@ -700,8 +720,8 @@ export const Header = ({ bg }) => {
               <FaChevronDown />
               <ul className="subItem1">
                 <h5>{t("header.header.menu.subProduct.icao")}</h5>
-                <div className="d-flex">
-                  <div className="d-flex flex-column">
+                <div className="d-flex flex-column">
+                  <div className="d-flex justify-content-between">
                     <li className="subItem1_item d-flex justify-content-start">
                       <Check />
                       <div>
@@ -715,6 +735,19 @@ export const Header = ({ bg }) => {
                         </p>
                       </div>
                     </li>
+                    <li className="subItem1_item d-flex  justify-content-start">
+                      <Check />
+                      <div>
+                        <h4>
+                          {t("header.header.menu.subProduct.subicao.am001")}
+                        </h4>
+                        <p>
+                          {t("header.header.menu.subProduct.subicao.bodyAm001")}
+                        </p>
+                      </div>
+                    </li>
+                  </div>
+                  <div className="d-flex justify-content-between">
                     <li className="subItem1_item d-flex justify-content-start">
                       <Check />
                       <div>
@@ -730,30 +763,6 @@ export const Header = ({ bg }) => {
                       <Check />
                       <div>
                         <h4>
-                          {t("header.header.menu.subProduct.subicao.r301")}
-                        </h4>
-                        <p>
-                          {t("header.header.menu.subProduct.subicao.bodyR301")}
-                        </p>
-                      </div>
-                    </li>
-                  </div>
-                  <div>
-                    <li className="subItem1_item d-flex justify-content-start">
-                      <Check />
-                      <div>
-                        <h4>
-                          {t("header.header.menu.subProduct.subicao.am001")}
-                        </h4>
-                        <p>
-                          {t("header.header.menu.subProduct.subicao.bodyAm001")}
-                        </p>
-                      </div>
-                    </li>
-                    <li className="subItem1_item d-flex justify-content-start">
-                      <Check />
-                      <div>
-                        <h4>
                           {t("header.header.menu.subProduct.subicao.v20")}
                         </h4>
                         <p>
@@ -761,6 +770,19 @@ export const Header = ({ bg }) => {
                         </p>
                       </div>
                     </li>
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <li className="subItem1_item d-flex justify-content-start">
+                      <Check />
+                      <div>
+                        <h4>
+                          {t("header.header.menu.subProduct.subicao.r301")}
+                        </h4>
+                        <p>
+                          {t("header.header.menu.subProduct.subicao.bodyR301")}
+                        </p>
+                      </div>
+                    </li>{" "}
                     <li className="subItem1_item d-flex justify-content-start">
                       <Check />
                       <div>
@@ -769,6 +791,19 @@ export const Header = ({ bg }) => {
                         </h4>
                         <p>
                           {t("header.header.menu.subProduct.subicao.bodyR502")}
+                        </p>
+                      </div>
+                    </li>
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <li className="subItem1_item d-flex justify-content-start">
+                      <Check />
+                      <div>
+                        <h4>
+                          {t("header.header.menu.subProduct.subicao.v10p")}
+                        </h4>
+                        <p>
+                          {t("header.header.menu.subProduct.subicao.bodyV10p")}
                         </p>
                       </div>
                     </li>

@@ -52,9 +52,9 @@ const Footer = () => {
           <div className="footer_info-item">
             <img src={logo} alt="" />
             <p className="footer_info-title">{t("footer.feature.body")}</p>
-            <p className="footer_info-btn"> {t("footer.feature.subcribe")}</p>
             <p className="footer_info-btn">
-              {t("footer.feature.newsletter")} <FiArrowRight />
+              {" "}
+              {t("footer.feature.subcribe")} <FiArrowRight />
             </p>
           </div>
           <div className="footer_info-item d-flex">

@@ -1,9 +1,9 @@
 .subHeader {
   height: 44px;
   color: var(--primary-1);
-  padding: 9px 190px 9px 260px;
+  padding: 9px 0 9px 76px;
   font-size: 1.5em;
-  width: 1920px;
+  width: 1535px;
   background-color: #fff;
   transition: all 0.3s ease-in-out;
   .subHeader_p-bold {
@@ -20,10 +20,13 @@
     }
     > div {
       cursor: pointer;
+      .subHeader_icon-hover {
+        margin: 0 5px 0 0;
+        transition: all 0.3s ease-in-out;
+      }
       &:hover {
         .subHeader_icon-hover {
           margin: 0 0 0 5px;
-          transition: all 0.3s ease-in-out;
         }
       }
     }
@@ -43,6 +46,9 @@
   height: 90px;
   color: #fff;
   justify-content: center;
+  &_logo {
+    cursor: pointer;
+  }
   .headerList {
     display: flex;
     align-items: center;
@@ -87,11 +93,14 @@
           margin: 8px 0 16px;
         }
         &_item {
-          > div {
+          > div,
+          a {
+            text-decoration: none;
             h4 {
               font-size: 16px;
               font-weight: 600;
               line-height: 150%;
+              color: #fff;
             }
             p {
               color: #8492a7;
@@ -119,7 +128,8 @@
             left: 205px;
           }
           &_item {
-            > div {
+            > div,
+            a {
               max-width: 500px;
             }
           }
@@ -136,16 +146,21 @@
           }
           > div {
             > div {
-              &:first-child {
-                margin-right: 32px;
-              }
               .subItem1_item {
+                width: 48%;
                 > svg {
                   margin-right: 16px;
                 }
-                &:nth-child(2) {
-                  margin: 20px 0;
+                > div,
+                a {
+                  width: calc(100% - 36px);
                 }
+              }
+              &:nth-child(2) {
+                margin: 20px 0;
+              }
+              &:nth-child(3) {
+                margin-bottom: 20px;
               }
             }
           }
@@ -180,7 +195,8 @@
             > svg {
               margin-right: 16px;
             }
-            > div {
+            > div,
+            a {
               width: 504px;
               margin-bottom: 20px;
             }
@@ -215,7 +231,8 @@
                 > svg {
                   margin-right: 16px;
                 }
-                div {
+                div,
+                a {
                   width: 216px;
                 }
               }
@@ -294,7 +311,7 @@
 }
 // Responsive
 // 1153 to 1440
-@media (min-width: 1153px) and (max-width: 1440px) {
+@media (min-width: 1153px) and (max-width: 1441px) {
   .subHeader {
     padding: 9px 0;
     margin: 0 auto;
@@ -360,7 +377,8 @@
           > svg {
             margin-right: 16px;
           }
-          > div {
+          > div,
+          a {
             width: 90%;
             h4 {
               font-size: 16px;
@@ -477,7 +495,8 @@
           > svg {
             margin-right: 16px;
           }
-          > div {
+          > div,
+          a {
             width: 90%;
             h4 {
               font-size: 16px;
@@ -608,7 +627,8 @@
           > svg {
             margin-right: 16px;
           }
-          > div {
+          > div,
+          a {
             width: 90%;
             h4 {
               font-size: 16px;
@@ -739,7 +759,8 @@
           > svg {
             margin-right: 16px;
           }
-          > div {
+          > div,
+          a {
             width: 90%;
             h4 {
               font-size: 16px;

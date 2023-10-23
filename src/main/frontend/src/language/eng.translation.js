@@ -42,6 +42,8 @@ export default {
             bodyV20: "Biometric Tablet",
             r502: "R502-CL",
             bodyR502: "Altimeter for document/ID card",
+            v10p: "V10P",
+            bodyV10p: "Desktop Biometric ID Terminal",
           },
         },
         solution: "solutions",
@@ -106,8 +108,7 @@ export default {
   footer: {
     feature: {
       body: "Converting, scalable, easy-to-use, and secure NFC-First identity verification.",
-      subcribe: "Subscribe for our MobileID",
-      newsletter: "Newsletter",
+      subcribe: "Subscribe for our newsletter",
     },
     discover: {
       title: "Discover",
@@ -205,7 +206,36 @@ export default {
       info: {
         title: {
           header: "Leading through innovation ",
-          body: "We build upon research and innovation at Inverid. Learn more on the features of our identity verification technology through our resource centre. ",
+          body: "We build upon research and innovation at MobileId. Learn more on the features of our identity verification technology through our resource centre. ",
+          goto: "Go to our resource centre",
+        },
+        body: {
+          austrian: {
+            header:
+              "Austrian Financial Market Authority requires NFC and biometrics",
+            body: "Regulatory bodies worldwide are embracing NFC as the future for identity verification. November 2,...",
+          },
+          gartner: {
+            header:
+              "Gartner identifies document centric identity proofing as a high priority",
+            body: " July 27, Gartner published its annual update on identity and access management, the so- called Hype...",
+          },
+        },
+      },
+      talk: {
+        header: "Let’s talk about your challenge.",
+        body: "CheckID facilitates successful digital onboarding through remote identity verification. How can trusted identity verification support your business? ",
+        button: "Contact a specialist",
+        downloads: "Download our free personal app",
+      },
+    },
+  },
+  trustedIdentity: {
+    news: {
+      info: {
+        title: {
+          header: "Leading through innovation ",
+          body: "We build upon research and innovation at MobileId. Learn more on the features of our identity verification technology through our resource centre. ",
           goto: "Go to our resource centre",
         },
         body: {

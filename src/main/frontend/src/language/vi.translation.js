@@ -43,6 +43,8 @@ export default {
             bodyV20: "Máy tính bảng có tích hợp thông tin về ngón tay",
             r502: "R502-CL",
             bodyR502: "Altimeter cho tài liệu/thẻ ID",
+            v10p: "V10P",
+            bodyV10p: "Máy chấm công sinh trắc học trên máy tính để bàn",
           },
         },
         solution: "Giải pháp",
@@ -106,9 +108,8 @@ export default {
   },
   footer: {
     feature: {
-      body: "Dịch vụ xác minh danh tính NFC-First tiện lợi, có thể mở rộng, dễ sử dụng và an toàn.",
-      subcribe: "Đăng ký nhận MobileID của chúng tôi",
-      newsletter: "Bản tin",
+      body: "Dịch vụ xác minh danh tính NFC đầu tiên tiện lợi, có thể mở rộng, dễ sử dụng và an toàn.",
+      subcribe: "Đăng ký nhận bản tin của chúng tôi",
     },
     discover: {
       title: "Khám phá",
@@ -184,7 +185,7 @@ export default {
     videotitle: "Xác minh danh tính CheckID trong 2 bước",
     verify: {
       header: {
-        title: "Giải pháp xác minh danh tính MobileID",
+        title: "Giải pháp xác minh danh tính MobileId",
         body: "Tăng tốc độ xác minh danh tính bằng cách sử dụng cách xác minh danh tính dựa trên NFC đáng tin cậy và có thể mở rộng",
         question:
           "Công nghệ CheckID của chúng tôi có thể sử dụng từ xa cũng như trong cài đặt trực tiếp. Trường hợp sử dụng của bạn là gì?",
@@ -206,8 +207,8 @@ export default {
       info: {
         title: {
           header: "Dẫn đầu thông qua sáng tạo",
-          body: "Chúng tôi xây dựng trên nghiên cứu và sáng tạo tại Inverid. Tìm hiểu thêm về các tính năng của công nghệ xác minh danh tính của chúng tôi thông qua trung tâm tài nguyên của chúng tôi.",
-          goto: "Đi tới trung tâm tài nguyên của chúng tôi",
+          body: "Chúng tôi xây dựng trên nghiên cứu và sáng tạo tại MobileId. Tìm hiểu thêm về các tính năng của công nghệ xác minh danh tính của chúng tôi thông qua trung tâm tài nguyên của chúng tôi.",
+          goto: "Đến trung tâm tài nguyên của chúng tôi",
         },
         body: {
           austrian: {

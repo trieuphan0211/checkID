@@ -23,16 +23,20 @@
             font-weight: 500;
           }
           &-btn {
-            color: #ffe492;
+            display: flex;
+            align-items: center;
+            color: var(--primary-2);
             cursor: pointer;
             font-weight: 700;
             svg {
               margin-left: 15px;
+              margin-right: 5px;
               font-size: 20px;
             }
             &:hover {
               svg {
                 margin-left: 20px;
+                margin-right: 0;
                 transition: all 0.3s ease-in-out;
               }
             }
@@ -92,7 +96,7 @@
       }
     }
     > p {
-      color: #ffe492;
+      color: var(--primary-2);
       font-size: 16px;
       font-weight: 700;
       cursor: pointer;
@@ -119,8 +123,10 @@
         &:nth-child(2) {
           margin: 0 15px;
         }
-        &:last-child {
+        &:nth-child(2):hover,
+        &:last-child:hover {
           cursor: pointer;
+          color: var(--primary-2);
         }
       }
     }
