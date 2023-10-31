@@ -231,4 +231,127 @@ export default {
       },
     },
   },
+  trustedIdentity: {
+    intro: {
+      identityVerification: "Xác minh danh tính NFC-đầu tiên",
+      secureFlawless: "Xác minh danh tính di động an toàn, hoàn hảo và dễ dàng",
+      context:
+        "Bởi vì thế hệ sử dụng điện thoại thông minh không mong muốn điều gì khác. Tại sao phải làm cho việc xác minh tài liệu danh tính trở nên phức tạp hơn cần thiết? Hoặc hy sinh về bảo mật? NFC kết hợp trải nghiệm người dùng tuyệt vời với độ an toàn tối đa.",
+    },
+    info: {
+      header: "Xác minh danh tính CheckID",
+      body1:
+        "Chỉ trong hai bước đơn giản, bạn có thể xác minh bất kỳ tài liệu danh tính điện tử nào. Dễ sử dụng, với tỷ lệ chuyển đổi cao, có khả năng mở rộng, dễ triển khai. Và an toàn hơn bất kỳ công nghệ nào khác.",
+      body2:
+        "Kết hợp NFC với công nghệ nhận dạng người dùng bằng vân tay cho việc xác minh người giữ tài liệu hoặc công nghệ quang học làm phần dự phòng.",
+      contact: "Liên hệ với chuyên gia",
+    },
+    smartphone: {
+      year: "2600",
+      header:
+        "CheckID đã được chứng minh hoạt động với hơn 2600 mẫu điện thoại thông minh",
+      body1:
+        "Ngày nay, hầu như bất kỳ ai cũng biết cách sử dụng điện thoại thông minh, và hầu hết các điện thoại thông minh đều tích hợp tính năng NFC. Thanh toán tại cửa hàng bằng NFC đã trở nên phổ biến. Chúng tôi sử dụng cùng công nghệ đó để xác minh danh tính đáng tin cậy. Nó làm cho việc xác minh danh tính trở nên an toàn, đáng tin cậy, nhanh chóng, dễ dàng và tiết kiệm thời gian của nhân viên và khách hàng trong mọi giao dịch, cả trực tuyến lẫn trực tiếp.",
+      subHeader:
+        "Chúng tôi là nhà cung cấp công nghệ di động NFC đầu tiên vào năm 2014 và là nhà cung cấp đầu tiên trên iPhone vào năm 2019.",
+      body2:
+        "Chỉ cần một chiếc điện thoại thông minh và một tài liệu danh tính điện tử, công nghệ CheckID có thể xác minh danh tính của khách hàng của bạn. Ngay lập tức. Đó là giải pháp xác minh danh tính đáng tin cậy nhất trên thị trường. CheckID có thể kết hợp với công nghệ nhận dạng người dùng bằng khuôn mặt cho việc xác minh người giữ tài liệu là một lớp bảo đảm bổ sung, và xác minh quang học có thể được tổ chức thông qua đối tác như một phần dự phòng - không cần bỏ lỡ bất kỳ cơ hội nào.",
+    },
+    dowload: {
+      header: "Đơn giản hóa quy trình xác minh danh tính của bạn với NFC",
+      dowload: "Tải về báo cáo 'Tại sao NFC đầu tiên hoạt động'",
+    },
+    slide: {
+      1: {
+        header: "Tạo tỷ lệ chuyển đổi",
+        body: "Cuối cùng, xác minh danh tính từ xa nên mang lại tỷ lệ chuyển đổi, và không phải là chuyển đổi khách hàng. KYC hoặc reKYC nên dễ dàng đối với khách hàng của bạn, tăng sự tin tưởng và củng cố thương hiệu. Nhiều trong số khách hàng của chúng tôi đã thể hiện rằng CheckID cải thiện tỷ lệ chuyển đổi trong các kênh số của họ. Không cần phải lo lắng về việc phạm vi điện thoại thông minh và tài liệu danh tính. Hướng dẫn người dùng động của chúng tôi đảm bảo trải nghiệm của khách hàng trôi chảy.",
+        link: "Xem thêm về tỷ lệ chuyển đổi",
+        feedback: {
+          name: "Evelien Mooij",
+          title: "Quản lý sản phẩm Khách hàng Onboarding Rabobank",
+          body: "“Chúng tôi đã tăng kênh trực tuyến cho việc tạo tài khoản khách hàng mới từ 35% lên 60%”",
+        },
+      },
+      2: {
+        header: "Khả năng mở rộng theo yêu cầu",
+        body: "Nhu cầu về xác định danh tính có thể biến đổi theo thời gian. Các trường hợp sử dụng mới hoặc quy định có thể làm tăng mạnh nhu cầu về xác định danh tính đáng tin cậy. Ngược lại so với các công nghệ chúng tôi thay thế, như xác minh quang học và xác minh video, công nghệ CheckID hoàn toàn tự động và có khả năng mở rộng gần như không giới hạn. Chúng tôi vận hành dịch vụ của mình trong cơ sở hạ tầng đám mây công cộng an toàn, phù hợp với khu vực, mở rộng theo nhu cầu. Không cần lao động thủ công hoặc nhân viên. Các giải pháp của chúng tôi luôn được giám sát liên tục để phát triển theo nhu cầu. Nếu nhu cầu giảm, chúng tôi có thể co dãn theo đó.",
+        link: "Xem thêm về khả năng mở rộng",
+      },
+      3: {
+        header: "Dễ sử dụng",
+        body: "CheckID được xây dựng dựa trên kiến thức được thu thập từ hàng triệu giao dịch trên hơn 2600 mẫu điện thoại thông minh khác nhau. Từ kinh nghiệm phong phú và hàng triệu lần quét tài liệu trên toàn cầu, chúng tôi đã học cách làm việc với sự đa dạng khổng lồ này. CheckID nhanh chóng và xác minh trong thời gian thực; hành trình của khách hàng tổng cộng, bao gồm việc xác minh, chỉ mất ít hơn một phút.",
+        link: "Xem thêm về trải nghiệm người dùng của chúng tôi",
+      },
+      4: {
+        header: "Bảo mật là ưu tiên hàng đầu",
+        body: "Chỉ chip NFC trong tài liệu danh tính cho phép xác minh an toàn. Tài liệu danh tính điện tử có thể được xác minh trong vài giây. Tài liệu bị sửa đổi và sao chép luôn bị phát hiện, 100% trong mọi trường hợp. Chúng tôi hợp tác với các đối tác xác minh khuôn mặt tốt nhất cho việc xác minh người giữ tài liệu.",
+        link1: "Xem thêm về bảo mật",
+        link2: "Chứng chỉ của chúng tôi",
+      },
+      5: {
+        header: "Triển khai đơn giản",
+        body: "CheckID dễ dàng đánh giá và triển khai. Ứng dụng cá nhân miễn phí CheckID Me của chúng tôi có sẵn trên App Store và Google Play Store. Ứng dụng sẵn sàng sử dụng CheckID Ready của chúng tôi có thể được tùy chỉnh về giao diện của thương hiệu của bạn. Nó có thể được triển khai và hoạt động chỉ trong vài ngày. SDK của chúng tôi có thể được tích hợp vào bất kỳ ứng dụng di động nào thông qua các API có tài liệu rõ ràng.",
+        link: "Cách triển khai CheckID",
+        feedback: {
+          name: "Rianne Rolsma",
+          title: "Chủ sở hữu sản phẩm tại Aegon",
+          body: "“Chúng tôi chỉ mất 6 tuần để triển khai công nghệ xác minh lại tại Aegon từ đầu”",
+        },
+      },
+    },
+    verified: {
+      header:
+        "Hơn 737.000 danh tính đã được xác minh trong vòng không đầy 2 tuần",
+      body: "Nhờ CheckID, bây giờ bạn có thể để lại bằng lái xe thể hiện vật lý trong ngăn kéo và sử dụng ứng dụng Kørekort thay thế. Ứng dụng này là phiên bản số hóa của bằng lái xe hoạt động cả là bằng lái xe hợp pháp tại Đan Mạch và là một hình thức xác minh danh tính hợp pháp. “Điều này rõ ràng cho thấy có nhu cầu trong dân số về một sự thay thế số hóa cho bằng lái xe thể hiện vật lý,” bộ trưởng Giao thông Benny Engelbrecht bình luận.",
+      button: "Trường hợp sử dụng Kørekort-appen",
+      subVideo: "Sáng kiến của Cơ quan Số hóa Đan Mạch",
+    },
+    verify: {
+      header: {
+        title: "Giải pháp xác minh danh tính",
+        body: "Chạy nhanh hướng đến một cách làm việc đáng tin cậy và có khả năng mở rộng cao",
+        question:
+          "Giải pháp giúp bạn giải quyết thách thức xác minh danh tính, NFC-đầu tiên.",
+      },
+      body: {
+        remote: {
+          title:
+            "Xác minh danh tính trực tuyến, từ xa, bằng cách sử dụng ứng dụng của bạn hoặc sử dụng ứng dụng sẵn sàng của chúng tôi.",
+          button: "Xác minh danh tính từ xa",
+        },
+        facetoface: {
+          title:
+            "Xác minh danh tính an toàn tại văn phòng của bạn, mà không cần kiến thức về tài liệu danh tính.",
+          button: "Xác minh danh tính trực tiếp",
+        },
+      },
+    },
+    news: {
+      info: {
+        title: {
+          header: "Tìm hiểu thêm",
+          body: "Xác minh danh tính thay đổi liên tục. Các công nghệ mới nảy sinh, quan điểm khác nhau phát triển. Tại trung tâm kiến thức của chúng tôi, chúng tôi thảo luận về các phát triển mới nhất và những hiểu biết mới. ",
+          goto: "Đọc blog của chúng tôi",
+        },
+        body: {
+          austrian: {
+            header:
+              "Cơ quan Quản lý Thị trường Tài chính Áo yêu cầu NFC và nhận dạng người bằng vân tay",
+            body: "Các cơ quan quản lý trên toàn thế giới đang đón nhận NFC như tương lai của việc xác minh danh tính. Ngày 2 tháng 11,...",
+          },
+          gartner: {
+            header:
+              "Gartner xác định xác minh danh tính dựa trên tài liệu là ưu tiên hàng đầu",
+            body: "Ngày 27 tháng 7, Gartner đã công bố bản cập nhật hàng năm về quản lý danh tính và quản lý truy cập, còn được gọi là...",
+          },
+        },
+      },
+      talk: {
+        header: "Hãy thảo luận về thách thức của bạn.",
+        body: "Trong thế giới số, khoảng cách không tồn tại. Nhưng làm thế nào để bạn thực hiện đủ sự xác minh danh tính đáng tin cậy để làm việc từ xa?",
+        button: "Liên hệ với một chuyên gia",
+        downloads: "Tải về ứng dụng cá nhân miễn phí của chúng tôi",
+      },
+    },
+  },
 };

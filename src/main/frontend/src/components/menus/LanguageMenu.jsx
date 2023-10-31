@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import {
   Button,
@@ -40,20 +40,32 @@ const MenuStyle = styled(Menu)(({ theme }) => ({
 }));
 const LanguageMenu = () => {
   const [language, setLanguage] = React.useState("English");
+  const lang = localStorage.getItem("lang");
   //   handle language
   const handleLanguage = (lang, popupState) => {
-    popupState.close();
+    if (popupState) {
+      popupState.close();
+    }
     switch (lang) {
       case "Vietnamese":
         setLanguage("Vietnamese");
         i18n.changeLanguage("1");
+        localStorage.setItem("lang", "Vietnamese");
         break;
-      case "America":
+      case "English":
         setLanguage("English");
         i18n.changeLanguage("0");
+        localStorage.setItem("lang", "English");
         break;
     }
   };
+  useEffect(() => {
+    if (lang) {
+      handleLanguage(lang);
+    } else {
+      handleLanguage("English");
+    }
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <PopupState variant="popover" popupId="demo-popup-menu" sx={{ py: "0" }}>
@@ -74,7 +86,7 @@ const LanguageMenu = () => {
             <MenuStyle {...bindMenu(popupState)}>
               <MenuItem
                 onClick={() => {
-                  handleLanguage("America", popupState);
+                  handleLanguage("English", popupState);
                 }}
                 style={{ fontSize: "12px" }}
               >

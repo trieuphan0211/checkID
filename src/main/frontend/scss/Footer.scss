@@ -147,6 +147,7 @@
 
         &:last-child {
           margin: 0;
+          align-items: center;
           width: 100%;
         }
       }
@@ -159,9 +160,13 @@
           padding: 0;
         }
       }
+      > p {
+        text-align: center;
+      }
     }
     &_contact {
       flex-wrap: wrap;
+      padding: 20px 10px;
     }
   }
 }

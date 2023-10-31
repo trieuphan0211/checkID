@@ -6,7 +6,7 @@ import { IoIosSearch } from "react-icons/io";
 import { useTranslation } from "react-i18next";
 
 export const SubHeader = ({ bg }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <div className="d-flex justify-content-center w-100">
       <div
@@ -16,6 +16,7 @@ export const SubHeader = ({ bg }) => {
             ? { backgroundColor: "var(--primary-1)", color: "#fff" }
             : {}
         }
+        data-language={i18n.language}
       >
         <div className="subHeader_read d-flex align-items-center">
           <p className="subHeader_p-bold" style={{ padding: "0 6px 0 10px" }}>

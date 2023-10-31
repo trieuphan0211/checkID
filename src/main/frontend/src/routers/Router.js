@@ -3,6 +3,7 @@ import { useRoutes } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import HomePage from "../pages/HomePage";
 import TrustedIdentityVerification from "../pages/TrustedIdentityVerification";
+import RemoteIdentityVerification from "../pages/RemoteIdentityVerification";
 const context = "";
 const Routers = () => {
   const routing = useRoutes([
@@ -20,7 +21,7 @@ const Routers = () => {
         },
         {
           path: `${context}/remote-identity-verification`,
-          // element: ,
+          element: <RemoteIdentityVerification />,
         },
         {
           path: `${context}/face-to-face-identity-verification`,

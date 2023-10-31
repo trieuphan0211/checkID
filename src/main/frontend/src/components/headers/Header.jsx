@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../assets/css/Header.css";
 import logo from "../../assets/img/logo.png";
 import logo_blue from "../../assets/img/logo_blue.png";
@@ -54,7 +54,6 @@ export const Header = ({ bg }) => {
   const navigate = useNavigate();
   const { width, height } = useWindowSize();
   const [open, setOpen] = React.useState(false);
-
   return (
     <div
       className={`header  d-flex  ${
@@ -64,7 +63,7 @@ export const Header = ({ bg }) => {
         bg === "white"
           ? {
               color: "var(--primary-1)",
-              backgroundColor: "#fff",
+              backgroundColor: "var( --primary-3)",
               paddingLeft: "30px",
             }
           : { paddingLeft: "30px" }
@@ -76,7 +75,7 @@ export const Header = ({ bg }) => {
         alt=""
         onClick={() => navigate(`${context}/`)}
       />
-      {width < 1441 && (
+      {width <= 1441 && (
         <IconButton
           size="large"
           edge="start"
@@ -88,7 +87,7 @@ export const Header = ({ bg }) => {
           <MenuIcon sx={{ fontSize: "45px" }} />
         </IconButton>
       )}
-      {width < 1441 && (
+      {width <= 1441 && (
         <Drawer
           anchor="right"
           open={open}
@@ -97,7 +96,7 @@ export const Header = ({ bg }) => {
             "& .MuiDrawer-paper": {
               backgroundColor: "#043873",
               color: "#fff",
-              p: width < 768 ? "40px 0 20px" : "20px 0",
+              p: width < 769 ? "40px 0 20px" : "20px 0",
               " &::-webkit-scrollbar": {
                 display: "none",
               },
@@ -110,7 +109,7 @@ export const Header = ({ bg }) => {
             }}
             role="presentation"
           >
-            {width < 768 && (
+            {width < 769 && (
               <CloseIcon
                 sx={{
                   position: "absolute",
@@ -121,7 +120,7 @@ export const Header = ({ bg }) => {
                 onClick={() => setOpen(false)}
               />
             )}
-            <ul className="headerList ">
+            <ul className="headerList " bg={bg}>
               <li
                 className={`headerList_item ${
                   bg === "white" ? "headerList_item-white" : ""
@@ -145,11 +144,7 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <AIDocumentScanning />
-                    <div
-                      onClick={() =>
-                        navigate(`${context}/trusted-identity-verification`)
-                      }
-                    >
+                    <Link to={`${context}/trusted-identity-verification`}>
                       <h4>
                         {t(
                           "header.header.menu.subIdentityVerification.built.why"
@@ -160,7 +155,7 @@ export const Header = ({ bg }) => {
                           "header.header.menu.subIdentityVerification.built.bodyWhy"
                         )}
                       </p>
-                    </div>
+                    </Link>
                   </li>
                   <Divider
                     component="li"
@@ -625,7 +620,7 @@ export const Header = ({ bg }) => {
                     </div>
                   </li>
 
-                  <Top className="positionTop" />
+                  <Top className="positionTop" bg={bg} />
                 </ul>
               </li>
             </ul>
@@ -635,7 +630,7 @@ export const Header = ({ bg }) => {
           </Box>
         </Drawer>
       )}
-      {width >= 1441 && (
+      {width > 1441 && (
         <>
           <ul className="headerList ">
             <li
@@ -679,7 +674,7 @@ export const Header = ({ bg }) => {
                 </h5>
                 <li className="subItem1_item d-flex justify-content-between">
                   <DocumentVerification />
-                  <div>
+                  <Link to={`${context}/remote-identity-verification`}>
                     <h4>
                       {" "}
                       {t(
@@ -691,7 +686,7 @@ export const Header = ({ bg }) => {
                         "header.header.menu.subIdentityVerification.solution.bodyRemote"
                       )}
                     </p>
-                  </div>
+                  </Link>
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <DataManagement />
@@ -708,7 +703,7 @@ export const Header = ({ bg }) => {
                     </p>
                   </div>
                 </li>
-                <Top className="positionTop" />
+                <Top className="positionTop" bg={bg} />
               </ul>
             </li>
             <li
@@ -809,7 +804,7 @@ export const Header = ({ bg }) => {
                     </li>
                   </div>
                 </div>
-                <Top className="positionTop" />
+                <Top className="positionTop" bg={bg} />
               </ul>
             </li>
             <li
@@ -830,7 +825,7 @@ export const Header = ({ bg }) => {
                     {/* <p>ID card reader/scanner</p> */}
                   </div>
                 </li>
-                <Top className="positionTop" />
+                <Top className="positionTop" bg={bg} />
               </ul>
             </li>
             <li
@@ -905,7 +900,7 @@ export const Header = ({ bg }) => {
                     </h4>
                   </div>
                 </li>
-                <Top className="positionTop" />
+                <Top className="positionTop" bg={bg} />
               </ul>
             </li>
             <li
@@ -1001,7 +996,7 @@ export const Header = ({ bg }) => {
                     </li>
                   </div>
                 </div>
-                <Top className="positionTop" />
+                <Top className="positionTop" bg={bg} />
               </ul>
             </li>
             <li
@@ -1053,7 +1048,7 @@ export const Header = ({ bg }) => {
                     </li>
                   </div>
                 </div>
-                <Top className="positionTop" />
+                <Top className="positionTop" bg={bg} />
               </ul>
             </li>
           </ul>

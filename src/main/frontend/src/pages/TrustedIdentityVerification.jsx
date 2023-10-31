@@ -7,7 +7,6 @@ import "react-slideshow-image/dist/styles.css";
 import { Header, SubHeader } from "../components/headers";
 import Footer from "../components/Footer";
 import "../assets/css/TrustedIdentityVerification.css";
-import inverid from "../assets/img/trusted_identity_verification/inverid.png";
 import readid from "../assets/img/trusted_identity_verification/readid-app-passport.png";
 import create_conversion from "../assets/img/trusted_identity_verification/create_conversion.png";
 import page1_avata from "../assets/img/trusted_identity_verification/avatar.png";
@@ -21,7 +20,7 @@ import remote from "../assets/img/home_page/remote-icon.png";
 import facetoface from "../assets/img/home_page/face-to-face.png";
 import feature from "../assets/img/home_page/Featured-image-website-blog.png";
 import banner from "../assets/img/home_page/banner_readid_phone-app.png";
-import talkChallenge from "../assets/img/home_page/talkChallenge.png";
+import talkChallenge from "../assets/img/trusted_identity_verification/talkChallenge.png";
 
 import { AppBar, Box, Button, Slide, useScrollTrigger } from "@mui/material";
 import PropTypes from "prop-types";
@@ -30,6 +29,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { FiArrowRight } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
+import { useWindowSize } from "usehooks-ts";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -86,7 +86,12 @@ const LearnButton = styled(Button)({
 });
 
 const TrustedIdentityVerification = (props) => {
+  // set Title
+  document.title = "CheckID | Trusted Identity Verification";
+  //
   const { t } = useTranslation();
+  const { width, height } = useWindowSize();
+  const [slideIndex, setSlideIndex] = React.useState(0);
   const properties = {
     prevArrow: (
       <Button
@@ -98,14 +103,22 @@ const TrustedIdentityVerification = (props) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginLeft: "145px",
+          backgroundColor:
+            slideIndex === 0 ? "transparent" : "var(--primary-1)",
+
+          marginLeft: width < 1153 ? "40px" : "145px",
+          "&:hover": {
+            backgroundColor:
+              slideIndex === 0 ? "transparent" : "var(--primary-1)",
+          },
         }}
+        disabled={slideIndex === 0 ? true : false}
       >
         <ArrowBackIosIcon
           sx={{
             fontSize: "40px",
             marginLeft: "18px",
-            color: "var(--primary-1)",
+            color: slideIndex === 0 ? "var(--primary-1)" : "#fff",
           }}
         />
       </Button>
@@ -120,21 +133,31 @@ const TrustedIdentityVerification = (props) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          marginRight: "145px",
+          marginRight: width < 1153 ? "40px" : "145px",
+          backgroundColor:
+            slideIndex === 4 ? "transparent" : "var(--primary-1)",
+          "&:hover": {
+            backgroundColor:
+              slideIndex === 4 ? "transparent" : "var(--primary-1)",
+          },
         }}
+        disabled={slideIndex === 4 ? true : false}
       >
         <ArrowForwardIosIcon
           sx={{
             fontSize: "40px",
-            color: "var(--primary-1)",
+            color: slideIndex === 4 ? "var(--primary-1)" : "#fff",
             // marginRight: "18px",
           }}
         />
       </Button>
     ),
     autoplay: false,
-    canSwipe: false,
-    // transitionDuration: 500,
+    canSwipe: width > 768 ? false : true,
+    arrows: width > 768 ? true : false,
+    transitionDuration: 500,
+    infinite: false,
+    onChange: (oldIndex, newIndex) => setSlideIndex(newIndex),
   };
   return (
     <React.Fragment>
@@ -152,32 +175,26 @@ const TrustedIdentityVerification = (props) => {
       <Box className="trustedIdentity">
         <div className="trustedIdentity_intro d-flex flex-column align-items-center">
           <h4 className="trustedIdentity_intro-title">
-            nfc-first Identity Verification
+            {t("trustedIdentity.intro.identityVerification")}
           </h4>
           <h1 className="trustedIdentity_intro-header">
-            Secure, Flawless and Easy Mobile Identity Verification
+            {t("trustedIdentity.intro.secureFlawless")}
           </h1>
           <p className="trustedIdentity_intro-context">
-            Because the smartphone-minded generation expects nothing less. Why
-            make identity document verification more complicated than needed? Or
-            compromise on security? NFC combines a great user experience with
-            maximum security.
+            {t("trustedIdentity.intro.context")}
           </p>
         </div>
         <div className="trustedIdentity_info d-flex justify-content-center">
           <div className="trustedIdentity_info-layout d-flex align-items-end">
             <div className="trustedIdentity_info-content">
               <h3 className="trustedIdentity_info-content-header">
-                CheckID identity verification
+                {t("trustedIdentity.info.header")}
               </h3>
               <p className="trustedIdentity_info-content-p">
-                In two simple steps, you can verify any electronic identity
-                document. Easy to use, with high conversion, scalable, simple to
-                implement. And more secure than any other technology. 
+                {t("trustedIdentity.info.body1")}
               </p>
               <p className="trustedIdentity_info-content-p">
-                Compliment NFC with biometrics for holder verification or
-                optical technologies as a fallback. 
+                {t("trustedIdentity.info.body2")}
               </p>
               <Button
                 sx={{
@@ -187,15 +204,25 @@ const TrustedIdentityVerification = (props) => {
                   color: "#fff",
                   fontSize: "16px",
                   fontWeight: "700",
-                  textTransform: "capitalize",
+                  textTransform: "none",
                   lineHeight: "16px",
+                  "&:hover": {
+                    backgroundColor: "#0074ff",
+                    border: "2px solid #0074ff",
+                  },
                 }}
               >
-                Contact a specialist
+                {t("trustedIdentity.info.contact")}
               </Button>
             </div>
-            <div className="trustedIdentity_info-img">
+            {/* <div className="trustedIdentity_info-img">
               <img src={inverid} alt="" />
+              <div></div>
+            </div> */}
+            <div className="trustedIdentity_info-video">
+              <video controls>
+                <source src={readid_guide} />
+              </video>
               <div></div>
             </div>
           </div>
@@ -204,36 +231,21 @@ const TrustedIdentityVerification = (props) => {
           <div className="trustedIdentity_smartphone-layout d-flex">
             <div className="trustedIdentity_smartphone-header">
               <div className="trustedIdentity_smartphone-header-year d-flex align-items-center justify-content-center">
-                2600
+                {t("trustedIdentity.smartphone.year")}
               </div>
               <div className="trustedIdentity_smartphone-header-context">
-                CheckID has been proven to work with over 2600 models of
-                smartphones
+                {t("trustedIdentity.smartphone.header")}
               </div>
             </div>
             <div className="trustedIdentity_smartphone-body">
               <p className="trustedIdentity_smartphone-body-context">
-                Today, almost anyone knows how to operate a smartphone, and most
-                smartphones have built-in NFC functionality. In-store payments
-                with NFC have become a common sight. We use that same technology
-                for reliable ID verification. It makes identity verification
-                safe, secure, quick, easy, and saves staff and customers oceans
-                of time spent per exchange, both online as well as in
-                face-to-face situations. 
+                {t("trustedIdentity.smartphone.body1")}
               </p>
               <h6 className="trustedIdentity_smartphone-body-h6">
-                We were the first mobile NFC-based technology provider in 2014,
-                and were the first on iPhone in 2019.
+                {t("trustedIdentity.smartphone.subHeader")}
               </h6>
               <p className="trustedIdentity_smartphone-body-context">
-                Using just a smartphone and an electronic identity document,
-                CheckID technology can verify your customers' identity.
-                Instantly. It is the most trustworthy identity verification
-                solution on the market. CheckID can be combined with facial
-                biometric technology for holder verification as an extra layer
-                of assurance, and optical verification can be orchestrated
-                through partners as a fallback- no need to miss any
-                opportunity. 
+                {t("trustedIdentity.smartphone.body2")}
               </p>
             </div>
           </div>
@@ -242,7 +254,7 @@ const TrustedIdentityVerification = (props) => {
           <div className="trustedIdentity_dowload-layout d-flex justify-content-center align-items-center">
             <img className="trustedIdentity_dowload-img" src={readid} alt="" />
             <div className="trustedIdentity_dowload-body">
-              <h3>Simplify your identity verification process with NFC</h3>
+              <h3> {t("trustedIdentity.dowload.header")}</h3>
               <Button
                 sx={{
                   padding: "21px 37.425px 21px 37.625px",
@@ -252,13 +264,13 @@ const TrustedIdentityVerification = (props) => {
                   fontSize: "16px",
                   lineHeight: "16px",
                   color: "#fff",
-                  textTransform: "capitalize",
+                  textTransform: "none",
                   "&:hover": {
-                    backgroundColor: "var(--primary-2)",
+                    backgroundColor: "#0074ff",
                   },
                 }}
               >
-                Download report 'Why NFC First works'
+                {t("trustedIdentity.dowload.dowload")}
               </Button>
             </div>
           </div>
@@ -268,18 +280,11 @@ const TrustedIdentityVerification = (props) => {
             <div className="each-slide-effect">
               <div className="trustedIdentity_slide-page1 d-flex">
                 <div className="trustedIdentity_slide-page1-body">
-                  <h4>Create conversion</h4>
-                  <p>
-                    Ultimately, remote identity verification should bring
-                    conversion, and not churn. KYC or reKYC should be easy for
-                    your customers, increasing trust and strengthening the
-                    brand. Many of our clients show that CheckID improves
-                    conversion in their digital channels. No need to worry
-                    about smartphone and eID coverage. Our dynamic user guidance
-                    ensures a smooth customer experience. 
-                  </p>
+                  <h4> {t("trustedIdentity.slide.1.header")}</h4>
+                  <p>{t("trustedIdentity.slide.1.body")}</p>
                   <Link>
-                    More on conversion <FiArrowRight />
+                    {t("trustedIdentity.slide.1.link")}
+                    <FiArrowRight />
                   </Link>
                   <div className="page1_body">
                     <img
@@ -288,12 +293,9 @@ const TrustedIdentityVerification = (props) => {
                       alt=""
                     />
                     <div className="page1_body-body">
-                      <h6>Evelien Mooij</h6>
-                      <p>Product Manager Customer Onboarding Rabobank</p>
-                      <p>
-                        “We have grown the online channel for onboarding new
-                        customers from 35% to 60%”
-                      </p>
+                      <h6>{t("trustedIdentity.slide.1.feedback.name")}</h6>
+                      <p>{t("trustedIdentity.slide.1.feedback.title")}</p>
+                      <p>{t("trustedIdentity.slide.1.feedback.body")}</p>
                     </div>
                   </div>
                 </div>
@@ -307,21 +309,11 @@ const TrustedIdentityVerification = (props) => {
             <div className="each-slide-effect">
               <div className="trustedIdentity_slide-page2 d-flex justify-content-end">
                 <div className="trustedIdentity_slide-page2-body d-flex flex-column justify-content-center">
-                  <h4>Scalability on demand</h4>
-                  <p>
-                    The need for identification can vary over time. New use
-                    cases or regulation can cause a steep growth in demand for
-                    trusted identification. Contrary to the technologies we
-                    replace, such as optical verification and video
-                    identification, CheckID technology is fully automated and
-                    has almost unlimited scalability. We run our service in
-                    secure public cloud infrastructures, fitting to the region,
-                    scaling with demand. No manual labour or employees needed.
-                    Our solutions are continuously monitored to grow with the
-                    demand. If demand goes down, we can scale down with it.
-                  </p>
+                  <h4> {t("trustedIdentity.slide.2.header")}</h4>
+                  <p>{t("trustedIdentity.slide.2.body")}</p>
                   <Link>
-                    More on scalability <FiArrowRight />
+                    {t("trustedIdentity.slide.2.link")}
+                    <FiArrowRight />
                   </Link>
                 </div>
                 <img
@@ -334,22 +326,11 @@ const TrustedIdentityVerification = (props) => {
             <div className="each-slide-effect">
               <div className="trustedIdentity_slide-page3 d-flex">
                 <div className="trustedIdentity_slide-page3-body d-flex flex-column justify-content-center">
-                  <h4>Easy to use</h4>
-                  <p>
-                    CheckID is built upon knowledge derived from millions of
-                    transactions on over 2600 different models of smartphones.
-                    From our extensive experience and millions of scans of
-                    documents worldwide, we have learned how to deal with this
-                    tremendous diversity. CheckID is fast and verifies in
-                    real-time; the total customer journey, including the
-                    verification, takes less than one minute. 
-                  </p>
-                  <p>
-                    In face-to-face situations your staff will need very little
-                    training with CheckID to become identity document experts. 
-                  </p>
+                  <h4> {t("trustedIdentity.slide.3.header")}</h4>
+                  <p>{t("trustedIdentity.slide.3.body")}</p>
                   <Link>
-                    More on our user experience <FiArrowRight />
+                    {t("trustedIdentity.slide.3.link")}
+                    <FiArrowRight />
                   </Link>
                 </div>
                 <img
@@ -362,19 +343,15 @@ const TrustedIdentityVerification = (props) => {
             <div className="each-slide-effect">
               <div className="trustedIdentity_slide-page4 d-flex justify-content-end">
                 <div className="trustedIdentity_slide-page4-body d-flex flex-column justify-content-center">
-                  <h4>Security as a top priority</h4>
-                  <p>
-                    Only the NFC chip in identity documents allows secure
-                    verification. Electronic identity documents can be verified
-                    in seconds. Manipulated and copied documents are always
-                    detected, 100% of the time.  We collaborate with the best
-                    face verification partners for holder verification.
-                  </p>
+                  <h4> {t("trustedIdentity.slide.4.header")}</h4>
+                  <p>{t("trustedIdentity.slide.4.body")}</p>
                   <Link>
-                    More on security <FiArrowRight />
-                  </Link>{" "}
+                    {t("trustedIdentity.slide.4.link1")}
+                    <FiArrowRight />
+                  </Link>
                   <Link>
-                    Our certifications <FiArrowRight />
+                    {t("trustedIdentity.slide.4.link2")}
+                    <FiArrowRight />
                   </Link>
                 </div>
                 <img
@@ -385,19 +362,13 @@ const TrustedIdentityVerification = (props) => {
               </div>
             </div>
             <div className="each-slide-effect">
-              <div className="trustedIdentity_slide-page5 d-flex align-items-center">
+              <div className="trustedIdentity_slide-page5 d-flex">
                 <div className="trustedIdentity_slide-page5-body">
-                  <h4>Simple implementation</h4>
-                  <p>
-                    CheckID is straightforward to evaluate and implement. Our
-                    free personal app CheckID Me is readily available on the App
-                    Store and the Google Play store. Our ready-to-use CheckID
-                    Ready app can be tailored to your brand’s look and feel. It
-                    can be up and running within days. Our SDK can be integrated
-                    in any mobile application through well-documented APIs.
-                  </p>
+                  <h4> {t("trustedIdentity.slide.5.header")}</h4>
+                  <p>{t("trustedIdentity.slide.5.body")}</p>
                   <Link>
-                    How to implement CheckID <FiArrowRight />
+                    {t("trustedIdentity.slide.5.link")}
+                    <FiArrowRight />
                   </Link>
                   <div className="page5_body">
                     <img
@@ -406,12 +377,9 @@ const TrustedIdentityVerification = (props) => {
                       alt=""
                     />
                     <div className="page5_body-body">
-                      <h6>Rianne Rolsma</h6>
-                      <p>Product owner at Aegon</p>
-                      <p>
-                        “It took us only 6 weeks to implement the
-                        re-verification technology at Aegon from scratch”
-                      </p>
+                      <h6> {t("trustedIdentity.slide.5.feedback.name")}</h6>
+                      <p>{t("trustedIdentity.slide.5.feedback.title")}</p>
+                      <p>{t("trustedIdentity.slide.5.feedback.body")}</p>
                     </div>
                   </div>
                 </div>
@@ -427,19 +395,8 @@ const TrustedIdentityVerification = (props) => {
         <div className="trustedIdentity_verified d-flex justify-content-center">
           <div className="trustedIdentity_verified-layout">
             <div className="trustedIdentity_verified-body">
-              <h3>
-                More than 737.000 verified identities in less than 2 weeks
-              </h3>
-              <p>
-                Thanks to CheckID, it is now possible to leave the physical
-                driving license at home in the drawer and use the Kørekort-appen
-                instead. The app is a digital version of the driving license
-                that works both as a valid driving license in Denmark and as a
-                valid form of ID. “It clearly shows that there is a demand in
-                the population for a digital alternative to the physical driving
-                license,” says Minister of Transport Benny Engelbrecht in a
-                comment.
-              </p>
+              <h3>{t("trustedIdentity.verified.header")}</h3>
+              <p>{t("trustedIdentity.verified.body")}</p>
               <Button
                 sx={{
                   padding: "21px 37.425px 21px 37.625px",
@@ -451,11 +408,11 @@ const TrustedIdentityVerification = (props) => {
                   color: "#fff",
                   textTransform: "capitalize",
                   "&:hover": {
-                    backgroundColor: "var(--primary-2)",
+                    backgroundColor: "#2b8bff",
                   },
                 }}
               >
-                Use case Kørekort-appen
+                {t("trustedIdentity.verified.button")}
               </Button>
             </div>
             <div className="trustedIdentity_verified-video">
@@ -463,45 +420,36 @@ const TrustedIdentityVerification = (props) => {
                 <source src={readid_guide} />
               </video>
               <div></div>
+              <p className="trustedIdentity_verified-video-title">
+                {t("trustedIdentity.verified.subVideo")}
+              </p>
             </div>
           </div>
         </div>
         <div className="trustedIdentity_verify d-flex flex-column">
           <div className="trustedIdentity_verify-header d-flex flex-column align-items-center">
-            <h2>MobileID identity verification solutions</h2>
-            <h1>
-              Accelerate towards a trusted and scalable way of NFC-first
-              identity verification
-            </h1>
-            <p>
-              Our CheckID technology can be used remotely as well as in
-              face-to-face settings. What is your use case?
-            </p>
+            <h2>{t("trustedIdentity.verify.header.title")}</h2>
+            <h1>{t("trustedIdentity.verify.header.body")}</h1>
+            <p>{t("trustedIdentity.verify.header.question")}</p>
           </div>
           <div className="trustedIdentity_verify-body d-flex justify-content-center">
             <div className="trustedIdentity_verify-body-item d-flex flex-column justify-content-between">
               <div className="d-flex">
-                <p>
-                  Instant and secure online self-service identity verification
-                  from the comfort of people’s homes.
-                </p>
+                <p>{t("trustedIdentity.verify.body.remote.title")}</p>
                 <img src={remote} alt="" />
               </div>
               <VerifyButton>
-                Remote identity verification
+                {t("trustedIdentity.verify.body.remote.button")}
                 <FiArrowRight />
               </VerifyButton>
             </div>
             <div className="trustedIdentity_verify-body-item d-flex flex-column justify-content-between">
               <div className="d-flex ">
-                <p>
-                  Face-to-face, with trusted devices, you can verify identity
-                  documents without any knowledge of security features.
-                </p>
+                <p>{t("trustedIdentity.verify.body.facetoface.title")}</p>
                 <img src={facetoface} alt="" />
               </div>
               <VerifyButton>
-                Face-to-face identity verification
+                {t("trustedIdentity.verify.body.facetoface.button")}
                 <FiArrowRight />
               </VerifyButton>
             </div>
@@ -530,7 +478,7 @@ const TrustedIdentityVerification = (props) => {
               </div>
             </div>
           </div>
-          <div className="trustedIdentity_news-talk d-flex">
+          <div className="trustedIdentity_news-talk d-flex justify-content-center">
             <img src={talkChallenge} alt="" />
             <div>
               <h3>{t("trustedIdentity.news.talk.header")}</h3>

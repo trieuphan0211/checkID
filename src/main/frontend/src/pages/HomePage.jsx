@@ -108,6 +108,9 @@ const VerifyButton = styled(Button)({
   },
 });
 const HomePage = (props) => {
+  // set Title
+  document.title = "CheckID | Home";
+  //
   const { t } = useTranslation();
   return (
     <React.Fragment>

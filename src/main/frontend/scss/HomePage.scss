@@ -99,7 +99,7 @@
     &-readstore {
       width: 222px;
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
       align-items: center;
       color: var(--primary-2);
       font-size: 1.6em;
@@ -124,6 +124,7 @@
     &-header {
       margin: 70px 0;
       h2 {
+        letter-spacing: 2.81px;
         color: #ffe492;
         text-transform: uppercase;
         font-size: 1.5em;
@@ -176,7 +177,7 @@
           &-icon {
             width: 30px;
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
             align-items: center;
             svg {
               color: var(--primary-1);
@@ -217,6 +218,7 @@
     &-header {
       margin-bottom: 60px;
       h2 {
+        letter-spacing: 2.81px;
         color: #ffe492;
         text-transform: uppercase;
         font-size: 1.5em;
@@ -609,6 +611,7 @@
       }
     }
     &_verify {
+      padding: 100px 10px;
       &-body {
         flex-wrap: wrap;
         &-item {

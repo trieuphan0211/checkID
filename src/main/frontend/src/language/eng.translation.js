@@ -231,12 +231,106 @@ export default {
     },
   },
   trustedIdentity: {
+    intro: {
+      identityVerification: "nfc-first Identity Verification",
+      secureFlawless: " Secure, Flawless and Easy Mobile Identity Verification",
+      context:
+        "Because the smartphone-minded generation expects nothing less. Why make identity document verification more complicated than needed? Or compromise on security? NFC combines a great user experience with maximum security.",
+    },
+    info: {
+      header: "CheckID identity verification",
+      body1:
+        "In two simple steps, you can verify any electronic identity document. Easy to use, with high conversion, scalable, simple to implement. And more secure than any other technology.",
+      body2:
+        "Compliment NFC with biometrics for holder verification or optical technologies as a fallback.",
+      contact: "Contact a specialist",
+    },
+    smartphone: {
+      year: "2600",
+      header:
+        "CheckID has been proven to work with over 2600 models of smartphones",
+      body1:
+        " Today, almost anyone knows how to operate a smartphone, and most smartphones have built-in NFC functionality. In-store payments with NFC have become a common sight. We use that same technology for reliable ID verification. It makes identity verification safe, secure, quick, easy, and saves staff and customers oceans of time spent per exchange, both online as well as in face-to-face situations.",
+      subHeader:
+        "We were the first mobile NFC-based technology provider in 2014, and were the first on iPhone in 2019.",
+      body2:
+        " Using just a smartphone and an electronic identity document, CheckID technology can verify your customers' identity. Instantly. It is the most trustworthy identity verification solution on the market. CheckID can be combined with facial biometric technology for holder verification as an extra layer of assurance, and optical verification can be orchestrated through partners as a fallback- no need to miss any opportunity.",
+    },
+    dowload: {
+      header: "Simplify your identity verification process with NFC",
+      dowload: "Download report 'Why NFC First works'",
+    },
+    slide: {
+      1: {
+        header: "Create conversion",
+        body: " Ultimately, remote identity verification should bring conversion, and not churn. KYC or reKYC should be easy for your customers, increasing trust and strengthening the brand. Many of our clients show that CheckID improves conversion in their digital channels. No need to worry about smartphone and eID coverage. Our dynamic user guidance ensures a smooth customer experience. ",
+        link: "More on conversion",
+        feedback: {
+          name: "Evelien Mooij",
+          title: "Product Manager Customer Onboarding Rabobank",
+          body: "“We have grown the online channel for onboarding new customers from 35% to 60%”",
+        },
+      },
+      2: {
+        header: "Scalability on demand",
+        body: "The need for identification can vary over time. New use cases or regulation can cause a steep growth in demand for trusted identification. Contrary to the technologies we replace, such as optical verification and video identification, CheckID technology is fully automated and has almost unlimited scalability. We run our service in secure public cloud infrastructures, fitting to the region, scaling with demand. No manual labour or employees needed. Our solutions are continuously monitored to grow with the demand. If demand goes down, we can scale down with it.",
+        link: "More on scalability",
+      },
+      3: {
+        header: "Easy to use",
+        body: "  CheckID is built upon knowledge derived from millions of transactions on over 2600 different models of smartphones. From our extensive experience and millions of scans of documents worldwide, we have learned how to deal with this tremendous diversity. CheckID is fast and verifies in real-time; the total customer journey, including the verification, takes less than one minute. ",
+        link: "More on our user experience",
+      },
+      4: {
+        header: "Security as a top priority",
+        body: "Only the NFC chip in identity documents allows secure verification. Electronic identity documents can be verified in seconds. Manipulated and copied documents are always detected, 100% of the time.  We collaborate with the best face verification partners for holder verification.",
+        link1: " More on security",
+        link2: "Our certifications",
+      },
+      5: {
+        header: "Simple implementation",
+        body: " CheckID is straightforward to evaluate and implement. Our free personal app CheckID Me is readily available on the App Store and the Google Play store. Our ready-to-use CheckID Ready app can be tailored to your brand’s look and feel. It can be up and running within days. Our SDK can be integrated in any mobile application through well-documented APIs.",
+        link: " How to implement CheckID",
+        feedback: {
+          name: "Rianne Rolsma",
+          title: "Product owner at Aegon",
+          body: " “It took us only 6 weeks to implement the re-verification technology at Aegon from scratch”",
+        },
+      },
+    },
+    verified: {
+      header: "More than 737.000 verified identities in less than 2 weeks",
+      body: "Thanks to CheckID, it is now possible to leave the physical driving license at home in the drawer and use the Kørekort-appen instead. The app is a digital version of the driving license that works both as a valid driving license in Denmark and as a valid form of ID. “It clearly shows that there is a demand in the population for a digital alternative to the physical driving license,” says Minister of Transport Benny Engelbrecht in a comment.",
+      button: "Use case Kørekort-appen",
+      subVideo: "Danish Agency for Digitisation initiative",
+    },
+
+    verify: {
+      header: {
+        title: "Identity verification solutions",
+        body: "Accelarate towards a highly trusted and scalable way of working",
+        question:
+          "Solutions to help you handle your identity verification challenge, NFC-First.",
+      },
+      body: {
+        remote: {
+          title:
+            "Identity verification on-line, remotely, using your own app or using our ready-to-use app.",
+          button: " Remote identity verification",
+        },
+        facetoface: {
+          title:
+            "Secure identity verification in your office, without any knowledge of identity documents.",
+          button: " Face-to-face identity verification",
+        },
+      },
+    },
     news: {
       info: {
         title: {
-          header: "Leading through innovation ",
-          body: "We build upon research and innovation at MobileId. Learn more on the features of our identity verification technology through our resource centre. ",
-          goto: "Go to our resource centre",
+          header: "Learn more",
+          body: "Identity verification evolves constantly. New technologies arise, different perceptions grow. In our knowledge center we discuss our latest developments and new insights.  ",
+          goto: "Read our blog ",
         },
         body: {
           austrian: {
@@ -253,7 +347,7 @@ export default {
       },
       talk: {
         header: "Let’s talk about your challenge.",
-        body: "CheckID facilitates successful digital onboarding through remote identity verification. How can trusted identity verification support your business? ",
+        body: "In a digital world distance does not exist. But how do you realise enough trusted identity verification to do business at a distance? ",
         button: "Contact a specialist",
         downloads: "Download our free personal app",
       },

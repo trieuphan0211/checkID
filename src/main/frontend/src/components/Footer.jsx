@@ -8,7 +8,6 @@ import iso from "../assets/img/iso27001.png";
 import tuv from "../assets/img/tuv.png";
 
 import { Button, Divider, TextField } from "@mui/material";
-import { AccountCircle } from "@mui/icons-material";
 import styled from "@emotion/styled";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LanguageMenu from "./menus/LanguageMenu";
@@ -32,6 +31,9 @@ const StyleTextField = styled(TextField)({
   borderRadius: "3px",
   fontSize: "1.8em",
   fontWeight: "500",
+  "& .MuiInputBase-root.Mui-focused": {
+    backgroundColor: "var(--primary-1)",
+  },
   "& .MuiFormLabel-root ": {
     color: "#ADB7C2",
   },
