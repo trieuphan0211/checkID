@@ -6,7 +6,7 @@ import "react-slideshow-image/dist/styles.css";
 
 import { Header, SubHeader } from "../components/headers";
 import Footer from "../components/Footer";
-import "../assets/css/TrustedIdentityVerification.css";
+import "../assets/scss/TrustedIdentityVerification.scss";
 import readid from "../assets/img/trusted_identity_verification/readid-app-passport.png";
 import create_conversion from "../assets/img/trusted_identity_verification/create_conversion.png";
 import page1_avata from "../assets/img/trusted_identity_verification/avatar.png";

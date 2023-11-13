@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { Header, SubHeader } from "../components/headers";
 import vendor from "../assets/img/home_page/vendor.png";
-import "../assets/css/HomePage.css";
+import "../assets/scss/HomePage.scss";
 import benifit from "../assets/img/home_page/benifit.png";
 import remote from "../assets/img/home_page/remote-icon.png";
 import facetoface from "../assets/img/home_page/face-to-face.png";

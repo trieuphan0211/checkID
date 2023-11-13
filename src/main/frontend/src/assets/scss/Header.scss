@@ -11,6 +11,9 @@
   }
   .subHeader_p-bold {
     font-weight: 700;
+    svg {
+      margin-right: 10px;
+    }
   }
   &_app {
     font-size: 15px;
@@ -75,8 +78,13 @@
         margin-left: 9px;
         transition: all 0.3s ease-in-out;
       }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
       // smenu1
       .subItem1 {
+        box-shadow: 0px 24px 56px 0px rgba(167, 174, 186, 0.16);
         display: none;
         position: absolute;
         color: #fff;
@@ -280,6 +288,9 @@
       }
       &:hover {
         color: var(--primary-2);
+        a {
+          color: var(--primary-2);
+        }
         > svg {
           transform: rotateX(180deg);
         }
@@ -290,6 +301,10 @@
         }
       }
       &-white {
+        a {
+          color: var(--primary-1);
+          text-decoration: none;
+        }
         // smenu1
         .subItem1 {
           background-color: var(--white);
@@ -307,7 +322,16 @@
               &:hover > * {
               }
             }
-            &:nth-child(5) {
+          }
+        }
+        &:nth-child(6) {
+          .subItem1 {
+            > div {
+              > div {
+                > h5 {
+                  color: #1d2b3a;
+                }
+              }
             }
           }
         }

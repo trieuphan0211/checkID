@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../../assets/css/Header.css";
+import "../../assets/scss/Header.scss";
 import logo from "../../assets/img/logo.png";
 import logo_blue from "../../assets/img/logo_blue.png";
 
@@ -175,7 +175,7 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <DocumentVerification />
-                    <div>
+                    <Link to={`${context}/remote-identity-verification`}>
                       <h4>
                         {" "}
                         {t(
@@ -187,14 +187,14 @@ export const Header = ({ bg }) => {
                           "header.header.menu.subIdentityVerification.solution.bodyRemote"
                         )}
                       </p>
-                    </div>
+                    </Link>
                   </li>
                   <li
                     className="subItem1_item d-flex justify-content-between"
                     onClick={() => setOpen(false)}
                   >
                     <DataManagement />
-                    <div>
+                    <Link to={`${context}/face-to-face-identity-verification`}>
                       <h4>
                         {t(
                           "header.header.menu.subIdentityVerification.solution.facetoface"
@@ -205,7 +205,7 @@ export const Header = ({ bg }) => {
                           "header.header.menu.subIdentityVerification.solution.bodyFacetoFace"
                         )}
                       </p>
-                    </div>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -240,12 +240,12 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <div>
+                    <Link to={`${context}/products/v11`}>
                       <h4>{t("header.header.menu.subProduct.subicao.v11")}</h4>
                       <p>
                         {t("header.header.menu.subProduct.subicao.bodyV11")}
                       </p>
-                    </div>
+                    </Link>
                   </li>
                   <li
                     className="subItem1_item d-flex justify-content-start"
@@ -690,7 +690,7 @@ export const Header = ({ bg }) => {
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <DataManagement />
-                  <div>
+                  <Link to={`${context}/face-to-face-identity-verification`}>
                     <h4>
                       {t(
                         "header.header.menu.subIdentityVerification.solution.facetoface"
@@ -701,7 +701,7 @@ export const Header = ({ bg }) => {
                         "header.header.menu.subIdentityVerification.solution.bodyFacetoFace"
                       )}
                     </p>
-                  </div>
+                  </Link>
                 </li>
                 <Top className="positionTop" bg={bg} />
               </ul>
@@ -711,7 +711,9 @@ export const Header = ({ bg }) => {
                 bg === "white" ? "headerList_item-white" : ""
               }`}
             >
-              {t("header.header.menu.products")}
+              <Link to={`${context}/products`}>
+                {t("header.header.menu.products")}
+              </Link>
               <FaChevronDown />
               <ul className="subItem1">
                 <h5>{t("header.header.menu.subProduct.icao")}</h5>
@@ -719,7 +721,7 @@ export const Header = ({ bg }) => {
                   <div className="d-flex justify-content-between">
                     <li className="subItem1_item d-flex justify-content-start">
                       <Check />
-                      <div>
+                      <Link>
                         <h4>
                           {t("header.header.menu.subProduct.subicao.checkid")}
                         </h4>
@@ -728,79 +730,79 @@ export const Header = ({ bg }) => {
                             "header.header.menu.subProduct.subicao.bodyCheckid"
                           )}
                         </p>
-                      </div>
+                      </Link>
                     </li>
                     <li className="subItem1_item d-flex  justify-content-start">
                       <Check />
-                      <div>
+                      <Link>
                         <h4>
                           {t("header.header.menu.subProduct.subicao.am001")}
                         </h4>
                         <p>
                           {t("header.header.menu.subProduct.subicao.bodyAm001")}
                         </p>
-                      </div>
+                      </Link>
                     </li>
                   </div>
                   <div className="d-flex justify-content-between">
                     <li className="subItem1_item d-flex justify-content-start">
                       <Check />
-                      <div>
+                      <Link to={`${context}/products/v11`}>
                         <h4>
                           {t("header.header.menu.subProduct.subicao.v11")}
                         </h4>
                         <p>
                           {t("header.header.menu.subProduct.subicao.bodyV11")}
                         </p>
-                      </div>
+                      </Link>
                     </li>
                     <li className="subItem1_item d-flex justify-content-start">
                       <Check />
-                      <div>
+                      <Link>
                         <h4>
                           {t("header.header.menu.subProduct.subicao.v20")}
                         </h4>
                         <p>
                           {t("header.header.menu.subProduct.subicao.bodyV20")}
                         </p>
-                      </div>
+                      </Link>
                     </li>
                   </div>
                   <div className="d-flex justify-content-between">
                     <li className="subItem1_item d-flex justify-content-start">
                       <Check />
-                      <div>
+                      <Link>
                         <h4>
                           {t("header.header.menu.subProduct.subicao.r301")}
                         </h4>
                         <p>
                           {t("header.header.menu.subProduct.subicao.bodyR301")}
                         </p>
-                      </div>
+                      </Link>
                     </li>{" "}
                     <li className="subItem1_item d-flex justify-content-start">
                       <Check />
-                      <div>
+                      <Link>
                         <h4>
                           {t("header.header.menu.subProduct.subicao.r502")}
                         </h4>
                         <p>
                           {t("header.header.menu.subProduct.subicao.bodyR502")}
                         </p>
-                      </div>
+                      </Link>
                     </li>
                   </div>
                   <div className="d-flex justify-content-between">
                     <li className="subItem1_item d-flex justify-content-start">
                       <Check />
-                      <div>
+                      <Link>
                         <h4>
                           {t("header.header.menu.subProduct.subicao.v10p")}
                         </h4>
                         <p>
                           {t("header.header.menu.subProduct.subicao.bodyV10p")}
                         </p>
-                      </div>
+                      </Link>
                     </li>
                   </div>
                 </div>

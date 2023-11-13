@@ -353,4 +353,224 @@ export default {
       },
     },
   },
+  remoteIdentity: {
+    conversionRate: {
+      title: "Remote identity verification",
+      header: " Ramp Up Your Conversion Rates",
+      body: "One of CheckID's distinguishing traits is its high conversion without compromising security. People can remotely open a new bank account, register for a paid service, or re-KYC themselves using just their smartphone and a chipped identity document.",
+      button: " Try our free CheckID Me app",
+    },
+    matter: {
+      title: " Remote identity verification",
+      header: "No matter when or where",
+      body: "Onboarding customers, creating AML compliance or issuing travel credentials, it can all be done securely over the internet using remote identity verification. From the safety of their home, using their smartphone and ID, your customers can share their identity.",
+      button: " Explore 5 key arguments",
+    },
+    building: {
+      header: " Building on Near Field Communication",
+      body: "Smartphone NFC payments have become a normal phenomenon. Have your customers use that same technology for identity verification using secure and fool- proof identity document chip reading. The result is unrivalled identity certainty, lower costs for you, high convenience for your customers with 24x7 availability, and a surge in onboarding success.",
+    },
+    slide: {
+      1: {
+        header: "Proven solution",
+        body: "CheckID is used extensively in banking, government, digital signing and many other industries. It has proven its value in millions of verifications. In combination with facial verification it creates the highest level of certainty possible. Complement it with optical verification to leave no customer behind. ",
+        body2:
+          " Join customers such as Rabobank, ASB Bank, UK Home Office and SK ID solutions in their successful application of CheckID.",
+        link: "Customer stories",
+        feedback: {
+          name: "Rianne Rolsma",
+          title: "Product Owner",
+          body: " “We needed reliable, proven technology. Using the NFC solution is much more reliable than OCR.”",
+        },
+      },
+      2: {
+        header: "Integrate in your app or use ours",
+        body: " CheckID is straightforward to evaluate and implement. Our ready-to-use app CheckID Ready can be tailored to your brand's look and feel. It can be up and running within days. Our CheckID SaaS SDK can be integrated in any mobile application through well-documented APIs. You can have full control of user interaction or leverage the knowledge in our high-level API.",
+        body2:
+          " Capturing the visual inspection zone and reading the MRZ is always included. Try it with our free personal application CheckID Me, available in the App Store or Google Play Store.",
+        link: "Download our free personal app",
+      },
+      3: {
+        header: "Certified safety",
+        body: "The technology is secure, as is our company. We are the most certified in the identity verification industry: ISO27001, ISO27701 and eIDAS-compliant certified under ETSI EN 319 401 and ETSI EN 319 411-1/2 standards. We comply with SOC2 Type 2 as well as with EBA outsourcing guidelines. MobileID is based in the EU and follows GDPR compliance. We are regularly pen-tested by external expert.",
+        body2:
+          "We use a SaaS architecture, as client-based solutions are not secure enough in general. We collaborate with the best facial verification partners for holder verification.",
+        link: "Learn more about our certifications",
+      },
+    },
+    dowload: {
+      header: "Simplify your identity verification process with NFC",
+      read: "Read all about it",
+      button: "Go to research paper",
+    },
+    help: {
+      header: "How CheckID helps",
+      scalability: {
+        header: "Maximal scalability",
+        body: "CheckID can scale from a few to hundreds-of- thousands of scans per day. No manual steps involved.",
+      },
+      use: {
+        header: "Easy to use",
+        body: " A great user experience leads to satisfied customers. CheckID is very easy to use, creating great conversion.",
+      },
+      secure: {
+        header: "Extremely secure",
+        body: "We read and verify the contents of chip in the identity document. Tamper proof, guaranteed, including clone detection.",
+      },
+      hosted: {
+        header: "Hosted in Europe",
+        body: " We host our software in Europe and are GDPR compliant. If needed we can run CheckID in the region of your preference.",
+      },
+      implement: {
+        header: "Simple to implement",
+        body: "  Integrate our SDK in your app or use our ready-to-use app CheckID Ready. Get up and running within weeks.",
+      },
+      data: {
+        header: "Correct personal data",
+        body: "All personal information obtained from the chip is correct. No OCR mistakes, no characters missed, no fields overlooked.",
+      },
+    },
+
+    verify: {
+      header: {
+        title: "Start today",
+        body: "Solutions to solve any identity verification challenge",
+        question:
+          "CheckID is available for integration through our SDK but you can also use our ready-to-use app.",
+      },
+      body: {
+        ready: {
+          header: "CheckID Ready",
+          title:
+            " CheckID Ready is our ready-to-use app that can be tailored to the clients’ look and feel and can be up and running within days.",
+          button: "CheckID Ready",
+        },
+        saas: {
+          header: "CheckID SaaS",
+          title:
+            "Our SDK can be integrated in any mobile application through well-documented APIs. You can have full control of user interaction or leverage the knowledge in our high-level API.",
+          button: "CheckID SaaS",
+        },
+      },
+    },
+    challenge: {
+      header: " Let’s talk about your challenge.",
+      context:
+        "In a digital world distance does not exist. But how do you realise enough trust to do business at a distance?",
+      what: "What can we help you with?",
+      firstName: "First Name",
+      lastName: "Last name",
+      companyName: "Company name",
+      email: "Email",
+      check:
+        "Stay informed about identity verification, subscribe for our newsletter.",
+      context2:
+        " We’re committed to protecting and respecting your privacy. For more information read our ",
+      privacyPolicy: "Privacy Policy.",
+      contact: "Contact a specialist",
+      context3: "We’ll reply within 1 day.",
+    },
+  },
+  faceToFaceIdentity: {
+    conversionRate: {
+      title: "Face-to-face identity verification",
+      header: "Anybody can be an identity document expert",
+      body: "How can an officer in the street or a border control employee verify that the person handing them a passport is its rightful holder? Are your people struggling with all the different documents in the office?",
+      body2:
+        "With CheckID, they use their smartphone to read the embedded chip and access government issued information.",
+      button: "Try our CheckID Me app",
+    },
+    matter: {
+      title: "#TrustedIdentityVerification",
+      header: "Together we simplify identity verification",
+      body: "Handle any identity verification challenge involving sensitive, personal information with maximum security and ease.",
+      button: "Explore 5 key arguments",
+    },
+    building: {
+      header: "Powered by Near Field Communication",
+      body: " Smartphone NFC payments are increasingly common, especially during the Corona pandemic. Have your employees use that same technology for identity verification using secure and fool-proof identity document chip reading. The result is unrivalled identity certainty, lower training costs and a great experience.",
+    },
+    slide: {
+      1: {
+        header: "Anyone can do the job",
+        body: "Can you distinguish fake from valid? What do you look for to establish whether an identity card is genuine or counterfeit? And what if it is a document from countries you don't see very often? You would need extensive training.",
+        body2:
+          " MobileID lets you check the integrity of any chipped identity document. Using the ICAO 9303 and ISO 18013 standards for identity documents we know what is real and what is not. Instantly. Guaranteed.",
+        link: " Read more on MobileID and security",
+        feedback: {
+          name: "Tjitse van de Bos",
+          title: "Corporate Security Manager at CBR",
+          body: " “When in doubt, CheckID offers dependability.”",
+        },
+      },
+      2: {
+        header: "Market leader in secure digital identity verification",
+        body: " When it comes to trusted identity verification, MobileID is top of class. By reading passport chips through NFC and checking for a government’s signature, we guarantee the most accurate verification of identity details.",
+        body2:
+          " We make sure you receive the latest verified information. We also help you flag and report fraudulent practices, since our software will immediately recognise if someone has been tinkering with a chip.",
+        list: {
+          header: "Key features summarised",
+          1: " Easy to use",
+          2: " NFC-based security + convenience",
+          3: "Works client-only",
+        },
+      },
+      3: {
+        header: "It is fast, very fast",
+        body: " With CheckID you can read and verify identity documents in less than a minute. This takes just two steps: scanning the machines readable zone and reading and verifying the chip. The first step typically takes less than 7 seconds, in total. NFC read time average 5 seconds, 90% within 10 seconds.",
+        body2:
+          " Optical solutions often have problems with lighting and glare, which frustrates fast identification. Moreover, they have a hard time detecting manipulated documents, whereas NFC is tamper-proof. ",
+        link: "How Dutch police uses CheckID",
+      },
+    },
+    dowload: {
+      header: "Simplify your identity verification process with NFC",
+      read: " Read about all there is to know",
+      button: "Go to research paper",
+    },
+    help: {
+      header: "How MobileID helps",
+
+      use: {
+        header: "Easy to use",
+        body: " A great user experience leads to satisfied customers. CheckID is very easy to use, minimal training required.",
+      },
+      secure: {
+        header: "Extremely secure",
+        body: " We read and verify the contents of chip in the identity document. Tamper proof, guaranteed, including clone detection.",
+      },
+      data: {
+        header: "Correct personal data",
+        body: "All personal information obtained from the chip is correct. No OCR mistakes, no characters missed, no fields overlooked.",
+      },
+    },
+    client: {
+      header: {
+        header: "CheckID Client-only at your service",
+        body: "On trusted devices, under your control, you can use CheckID client-only. For face-to-face identity verification, our client-only solution is the best match.",
+      },
+      body: {
+        header: "CheckID Client-only",
+        body: "Learn more about our solution that works  independently of connectivity, anytime, anywhere. ",
+        button: "CheckID Client-only",
+      },
+    },
+    challenge: {
+      header: " Let’s talk about your challenge.",
+      context:
+        "In a digital world distance does not exist. But how do you realise enough trust to do business at a distance?",
+      what: "What can we help you with?",
+      firstName: "First Name",
+      lastName: "Last name",
+      companyName: "Company name",
+      email: "Email",
+      check:
+        "Stay informed about identity verification, subscribe for our newsletter.",
+      context2:
+        " We’re committed to protecting and respecting your privacy. For more information read our ",
+      privacyPolicy: "Privacy Policy.",
+      contact: "Contact a specialist",
+      context3: "We’ll reply within 1 day.",
+    },
+  },
 };

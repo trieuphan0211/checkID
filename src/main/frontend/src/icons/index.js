@@ -23,3 +23,4 @@ export * from "./LockShield";
 export * from "./EarthNetwork";
 export * from "./Setting";
 export * from "./ChartPerson";
+export * from "./Like";

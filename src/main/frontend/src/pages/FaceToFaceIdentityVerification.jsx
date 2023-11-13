@@ -1,19 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useWindowSize } from "usehooks-ts";
 
 import { Slide as SlideReact } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
 
 import { Header, SubHeader } from "../components/headers";
-import Footer from "../components/Footer";
-import "../assets/scss/RemoteIdentityVerification.scss";
-import noMatter from "../assets/img/remote_identity_verification/no_matter.png";
-import page1_avata from "../assets/img/trusted_identity_verification/avatar.png";
-import page1_provenSolution from "../assets/img/remote_identity_verification/Slider/proven_solution.png";
-import page2_intergrate from "../assets/img/remote_identity_verification/Slider/intergrate.png";
-import page3_certifield from "../assets/img/remote_identity_verification/Slider/certifield.png";
+import { ChartPerson, Like, LockShield } from "../icons";
+import { mailContact } from "../services/RemoteIdentityService";
+import "../assets/scss/FaceToFaceIdentityVerification.scss";
+import scanning from "../assets/img/face_to_face_identity_verification/scanning.png";
+import simplify_identity from "../assets/img/face_to_face_identity_verification/simplify_identity.png";
+import page1_background from "../assets/img/face_to_face_identity_verification/slider/slide1.png";
+import page1_avata from "../assets/img/face_to_face_identity_verification/slider/page1_avata.png";
+import page2 from "../assets/img/face_to_face_identity_verification/slider/page2.png";
+import page3 from "../assets/img/face_to_face_identity_verification/slider/page3.png";
 import readid from "../assets/img/trusted_identity_verification/readid-app-passport.png";
-import challenge from "../assets/img/remote_identity_verification/challenge.png";
+import challenge from "../assets/img/face_to_face_identity_verification/challenge.png";
 
 import {
   Alert,
@@ -32,23 +34,14 @@ import {
   useScrollTrigger,
 } from "@mui/material";
 import PropTypes from "prop-types";
-import styled from "@emotion/styled";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import { useTranslation } from "react-i18next";
-import { useWindowSize } from "usehooks-ts";
+import Footer from "../components/Footer";
+import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
-import {
-  ChartPerson,
-  DoubleTap,
-  EarthNetwork,
-  GraphBar,
-  LockShield,
-  Setting,
-} from "../icons";
-import StopIcon from "@mui/icons-material/Stop";
-import { mailContact } from "../services/RemoteIdentityService";
-
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import RefreshIcon from "@mui/icons-material/Refresh";
 import ReCAPTCHA from "react-google-recaptcha";
 
 function HideOnScroll(props) {
@@ -75,7 +68,7 @@ HideOnScroll.propTypes = {
    */
   window: PropTypes.func,
 };
-
+// Begin: custom MUI components
 const BlueButton = styled(Button)({
   backgroundColor: "var(--primary-2)",
   color: "#fff",
@@ -85,15 +78,8 @@ const BlueButton = styled(Button)({
   fontWeight: "700",
   borderRadius: "30px",
   height: "58px",
-  svg: {
-    marginLeft: "10px",
-  },
   "&:hover": {
-    backgroundColor: "#0074FF",
-    svg: {
-      transition: "all 0.3s ease",
-      transform: "translateX(10px)",
-    },
+    backgroundColor: "#0074ff",
   },
 });
 const TransparentButton = styled(Button)({
@@ -129,17 +115,18 @@ const TextFieldCustom = styled(TextField)({
     },
   },
 });
+// End: custom MUI components
 
-const RemoteIdentityVerification = (props) => {
+const FaceToFaceIdentityVerification = (props) => {
   // set Title
   document.title = "CheckID | Remote Identity Verification";
   //
   const [open, setOpen] = React.useState(false);
-  const [state, setState] = React.useState("warning");
+  const [state, setState] = React.useState("success");
   const [stateOpen, setStateOpen] = React.useState(false);
   const { t, i18n } = useTranslation();
   const { width, height } = useWindowSize();
-  console.log(height);
+  // Begin: Slider
   const [slideIndex, setSlideIndex] = React.useState(0);
   const properties = {
     prevArrow: (
@@ -208,6 +195,7 @@ const RemoteIdentityVerification = (props) => {
     infinite: false,
     onChange: (oldIndex, newIndex) => setSlideIndex(newIndex),
   };
+  // End: Slider
   // Begin: capcha
   const [recaptcha, setRecaptcha] = React.useState(null);
   const onChange = (value) => {
@@ -290,64 +278,77 @@ const RemoteIdentityVerification = (props) => {
           <Header bg="white" />
         </AppBar>
       </HideOnScroll>
-      <Box className="remoteIdentity">
-        <div className="remoteIdentity_conversionRate">
-          <div className="remoteIdentity_conversionRate-layout">
-            <h5 className="remoteIdentity_conversionRate-title">
-              {t("remoteIdentity.conversionRate.title")}
+      <Box className="faceToFaceIdentity">
+        <div className="faceToFaceIdentity_conversionRate d-flex">
+          <div className="faceToFaceIdentity_conversionRate-layout">
+            <h5 className="faceToFaceIdentity_conversionRate-title">
+              {t("faceToFaceIdentity.conversionRate.title")}
             </h5>
-            <h1 className="remoteIdentity_conversionRate-header">
-              {t("remoteIdentity.conversionRate.header")}
+            <h1 className="faceToFaceIdentity_conversionRate-header">
+              {t("faceToFaceIdentity.conversionRate.header")}
             </h1>
-            <p className="remoteIdentity_conversionRate-body">
-              {t("remoteIdentity.conversionRate.body")}
+            <p className="faceToFaceIdentity_conversionRate-body">
+              {t("faceToFaceIdentity.conversionRate.body")}
+            </p>
+            <p className="faceToFaceIdentity_conversionRate-body">
+              {t("faceToFaceIdentity.conversionRate.body2")}
             </p>
             <BlueButton
               sx={{
                 marginTop: "36px",
               }}
             >
-              {t("remoteIdentity.conversionRate.button")}
+              {t("faceToFaceIdentity.conversionRate.button")}
             </BlueButton>
           </div>
+          <img
+            className="faceToFaceIdentity_conversionRate-img"
+            src={scanning}
+            alt=""
+          />
         </div>
-        <div className="remoteIdentity_matter">
-          <div className="remoteIdentity_matter-layout">
-            <img className="remoteIdentity_matter-img" src={noMatter} alt="" />
-            <div className="remoteIdentity_matter-content">
-              <h6 className="remoteIdentity_matter-content-title">
-                {t("remoteIdentity.matter.title")}
+        <div className="faceToFaceIdentity_building d-flex flex-column align-items-center">
+          <h5 className="faceToFaceIdentity_building-header">
+            {t("faceToFaceIdentity.building.header")}
+          </h5>
+          <p className="faceToFaceIdentity_building-body ">
+            {t("faceToFaceIdentity.building.body")}
+          </p>
+        </div>
+        <div className="faceToFaceIdentity_matter">
+          <div className="faceToFaceIdentity_matter-layout">
+            <img
+              className="faceToFaceIdentity_matter-img"
+              src={simplify_identity}
+              alt=""
+            />
+            <div className="faceToFaceIdentity_matter-content">
+              <h6 className="faceToFaceIdentity_matter-content-title">
+                {t("faceToFaceIdentity.matter.title")}
               </h6>
-              <h3 className="remoteIdentity_matter-content-header">
-                {t("remoteIdentity.matter.header")}
+              <h3 className="faceToFaceIdentity_matter-content-header">
+                {t("faceToFaceIdentity.matter.header")}
               </h3>
-              <p className="remoteIdentity_matter-content-body">
-                {t("remoteIdentity.matter.body")}
+              <p className="faceToFaceIdentity_matter-content-body">
+                {t("faceToFaceIdentity.matter.body")}
               </p>
               <TransparentButton sx={{ marginTop: "30px" }}>
-                {t("remoteIdentity.matter.button")}
+                {t("faceToFaceIdentity.matter.button")}
               </TransparentButton>
             </div>
           </div>
         </div>
-        <div className="remoteIdentity_building d-flex flex-column align-items-center">
-          <h5 className="remoteIdentity_building-header">
-            {t("remoteIdentity.building.header")}
-          </h5>
-          <p className="remoteIdentity_building-body ">
-            {t("remoteIdentity.building.body")}
-          </p>
-        </div>
-        <div className="remoteIdentity_slide">
+        <div className="faceToFaceIdentity_slide">
           <SlideReact {...properties}>
             <div className="each-slide-effect">
-              <div className="remoteIdentity_slide-page1 d-flex">
-                <div className="remoteIdentity_slide-page1-body">
-                  <h4> {t("remoteIdentity.slide.1.header")}</h4>
-                  <p>{t("remoteIdentity.slide.1.body")}</p>
-                  <p>{t("remoteIdentity.slide.1.body2")}</p>
+              <div className="faceToFaceIdentity_slide-page1 d-flex">
+                <div className="faceToFaceIdentity_slide-page1-body">
+                  <h4>{t("faceToFaceIdentity.slide.1.header")}</h4>
+                  <p>{t("faceToFaceIdentity.slide.1.body")}</p>
+                  <p>{t("faceToFaceIdentity.slide.1.body2")}</p>
                   <Link>
-                    {t("remoteIdentity.slide.1.link")}
+                    {t("faceToFaceIdentity.slide.1.link")}
+
                     <FiArrowRight />
                   </Link>
                   <div className="page1_body">
@@ -357,63 +358,96 @@ const RemoteIdentityVerification = (props) => {
                       alt=""
                     />
                     <div className="page1_body-body">
-                      <h6>{t("remoteIdentity.slide.1.feedback.name")}</h6>
-                      <p>{t("remoteIdentity.slide.1.feedback.title")}</p>
-                      <p>{t("remoteIdentity.slide.1.feedback.body")}</p>
+                      <h6> {t("faceToFaceIdentity.slide.1.feedback.name")}</h6>
+                      <p>{t("faceToFaceIdentity.slide.1.feedback.title")}</p>
+                      <p>{t("faceToFaceIdentity.slide.1.feedback.body")}</p>
                     </div>
                   </div>
                 </div>
                 <img
-                  className="remoteIdentity_slide-page1-img"
-                  src={page1_provenSolution}
+                  className="faceToFaceIdentity_slide-page1-img"
+                  src={page1_background}
                   alt=""
                 />
               </div>
             </div>
             <div className="each-slide-effect">
-              <div className="remoteIdentity_slide-page2 d-flex justify-content-end">
-                <div className="remoteIdentity_slide-page2-body d-flex flex-column justify-content-center">
-                  <h4>{t("remoteIdentity.slide.2.header")}</h4>
-                  <p>{t("remoteIdentity.slide.2.body")}</p>
-                  <p>{t("remoteIdentity.slide.2.body2")}</p>
-                  <Link>
-                    {t("remoteIdentity.slide.2.link")}
-                    <FiArrowRight />
-                  </Link>
+              <div className="faceToFaceIdentity_slide-page2 d-flex">
+                <div className="faceToFaceIdentity_slide-page2-body d-flex flex-column justify-content-center">
+                  <h4>{t("faceToFaceIdentity.slide.2.header")}</h4>
+                  <p>{t("faceToFaceIdentity.slide.2.body")}</p>
+                  <p>{t("faceToFaceIdentity.slide.2.body2")}</p>
+                  <h6> {t("faceToFaceIdentity.slide.2.list.header")}</h6>
+                  <ul className="page2_list">
+                    <li>
+                      <FiberManualRecordIcon
+                        sx={{
+                          fontSize: "12px",
+                          marginRight: "12px",
+                          color: "var(--primary-2)",
+                        }}
+                      />
+                      {t("faceToFaceIdentity.slide.2.list.1")}
+                    </li>
+                    <li>
+                      <FiberManualRecordIcon
+                        sx={{
+                          fontSize: "12px",
+                          marginRight: "12px",
+                          color: "var(--primary-2)",
+                        }}
+                      />
+                      {t("faceToFaceIdentity.slide.2.list.2")}
+                    </li>
+                    <li>
+                      <FiberManualRecordIcon
+                        sx={{
+                          fontSize: "12px",
+                          marginRight: "12px",
+                          color: "var(--primary-2)",
+                        }}
+                      />
+                      {t("faceToFaceIdentity.slide.2.list.3")}
+                    </li>
+                  </ul>
                 </div>
                 <img
-                  className="remoteIdentity_slide-page2-img"
-                  src={page2_intergrate}
+                  className="faceToFaceIdentity_slide-page2-img"
+                  src={page2}
                   alt=""
                 />
               </div>
             </div>
             <div className="each-slide-effect">
-              <div className="remoteIdentity_slide-page3 d-flex">
-                <div className="remoteIdentity_slide-page3-body d-flex flex-column justify-content-center">
-                  <h4>{t("remoteIdentity.slide.3.header")}</h4>
-                  <p>{t("remoteIdentity.slide.3.body")}</p>
-                  <p>{t("remoteIdentity.slide.3.body2")}</p>
+              <div className="faceToFaceIdentity_slide-page3 d-flex">
+                <div className="faceToFaceIdentity_slide-page3-body d-flex flex-column justify-content-center">
+                  <h4>{t("faceToFaceIdentity.slide.3.header")}</h4>
+                  <p>{t("faceToFaceIdentity.slide.3.body")}</p>
+                  <p>{t("faceToFaceIdentity.slide.3.body2")}</p>
                   <Link>
-                    {t("remoteIdentity.slide.3.link")}
+                    {t("faceToFaceIdentity.slide.3.link")}
                     <FiArrowRight />
                   </Link>
                 </div>
                 <img
-                  className="remoteIdentity_slide-page3-img"
-                  src={page3_certifield}
+                  className="faceToFaceIdentity_slide-page3-img"
+                  src={page3}
                   alt=""
                 />
               </div>
             </div>
           </SlideReact>
         </div>
-        <div className="remoteIdentity_dowload d-flex justify-content-center">
-          <div className="remoteIdentity_dowload-layout d-flex justify-content-center align-items-center">
-            <img className="remoteIdentity_dowload-img" src={readid} alt="" />
-            <div className="remoteIdentity_dowload-body">
-              <h3> {t("remoteIdentity.dowload.header")}</h3>
-              <p> {t("remoteIdentity.dowload.read")}</p>
+        <div className="faceToFaceIdentity_dowload d-flex justify-content-center">
+          <div className="faceToFaceIdentity_dowload-layout d-flex justify-content-center align-items-center">
+            <img
+              className="faceToFaceIdentity_dowload-img"
+              src={readid}
+              alt=""
+            />
+            <div className="faceToFaceIdentity_dowload-body">
+              <h3> {t("faceToFaceIdentity.dowload.header")}</h3>
+              <p>{t("faceToFaceIdentity.dowload.read")}</p>
               <Button
                 sx={{
                   padding: "21px 37.425px 21px 37.625px",
@@ -426,114 +460,80 @@ const RemoteIdentityVerification = (props) => {
                   textTransform: "none",
                   marginTop: "30px",
                   "&:hover": {
-                    backgroundColor: "#0074FF",
+                    backgroundColor: "var(--primary-1)",
                     color: "#fff",
                   },
                 }}
               >
-                {t("remoteIdentity.dowload.button")}
+                {t("faceToFaceIdentity.dowload.button")}
               </Button>
             </div>
           </div>
         </div>
-        <div className="remoteIdentity_help d-flex flex-column align-items-center justify-content-center">
-          <div className="remoteIdentity_help-layout d-flex flex-column align-items-center justify-content-center">
-            <h1 className="remoteIdentity_help-header">
-              {t("remoteIdentity.help.header")}
+        <div className="faceToFaceIdentity_help d-flex flex-column align-items-center justify-content-center">
+          <div className="faceToFaceIdentity_help-layout d-flex flex-column align-items-center justify-content-center">
+            <h1 className="faceToFaceIdentity_help-header">
+              {t("faceToFaceIdentity.help.header")}
             </h1>
             <Grid
-              className="remoteIdentity_help-grid"
+              className="faceToFaceIdentity_help-grid"
               container
               spacing={{ xs: 1 }}
               columns={{ xs: 4, sm: 8, md: 12 }}
             >
-              <Grid xs={4} className="remoteIdentity_help-grid-item">
+              <Grid xs={4} className="faceToFaceIdentity_help-grid-item">
                 <Box>
-                  <GraphBar />
+                  <Like />
                 </Box>
-                <h5>{t("remoteIdentity.help.scalability.header")}</h5>
-                <p>{t("remoteIdentity.help.scalability.body")}</p>
+                <h5>{t("faceToFaceIdentity.help.use.header")}</h5>
+                <p>{t("faceToFaceIdentity.help.use.body")}</p>
               </Grid>
-              <Grid xs={4} className="remoteIdentity_help-grid-item">
-                <Box>
-                  <DoubleTap />
-                </Box>
-                <h5>{t("remoteIdentity.help.use.header")}</h5>
-                <p>{t("remoteIdentity.help.use.body")}</p>
-              </Grid>
-              <Grid xs={4} className="remoteIdentity_help-grid-item">
+              <Grid xs={4} className="faceToFaceIdentity_help-grid-item">
                 <Box>
                   <LockShield />
                 </Box>
-                <h5>{t("remoteIdentity.help.secure.header")}</h5>
-                <p>{t("remoteIdentity.help.secure.body")}</p>
+                <h5>{t("faceToFaceIdentity.help.secure.header")}</h5>
+                <p>{t("faceToFaceIdentity.help.secure.body")}</p>
               </Grid>
-              <Grid xs={4} className="remoteIdentity_help-grid-item">
-                <Box>
-                  <EarthNetwork />
-                </Box>
-                <h5>{t("remoteIdentity.help.hosted.header")}</h5>
-                <p>{t("remoteIdentity.help.hosted.body")}</p>
-              </Grid>
-              <Grid xs={4} className="remoteIdentity_help-grid-item">
-                <Box>
-                  <Setting />
-                </Box>
-                <h5>{t("remoteIdentity.help.implement.header")}</h5>
-                <p>{t("remoteIdentity.help.implement.body")}</p>
-              </Grid>
-              <Grid xs={4} className="remoteIdentity_help-grid-item">
+              <Grid xs={4} className="faceToFaceIdentity_help-grid-item">
                 <Box>
                   <ChartPerson />
                 </Box>
-                <h5>{t("remoteIdentity.help.data.header")}</h5>
-                <p>{t("remoteIdentity.help.data.body")}</p>
+                <h5>{t("faceToFaceIdentity.help.data.header")}</h5>
+                <p>{t("faceToFaceIdentity.help.data.body")}</p>
               </Grid>
             </Grid>
           </div>
         </div>
-        <div className="remoteIdentity_verify d-flex flex-column">
-          <div className="remoteIdentity_verify-header d-flex flex-column align-items-center">
-            <h2>{t("remoteIdentity.verify.header.title")}</h2>
-            <h1>{t("remoteIdentity.verify.header.body")}</h1>
-            <p>{t("remoteIdentity.verify.header.question")}</p>
-          </div>
-          <div className="remoteIdentity_verify-body d-flex justify-content-center">
-            <div className="remoteIdentity_verify-body-item d-flex flex-column justify-content-between">
-              <div>
-                <h5>{t("remoteIdentity.verify.body.ready.header")}</h5>
-                <p>{t("remoteIdentity.verify.body.ready.title")}</p>
-              </div>
-              <BlueButton>
-                {t("remoteIdentity.verify.body.ready.button")}
-                <FiArrowRight />
-              </BlueButton>
+        <div className="faceToFaceIdentity_client">
+          <div className="faceToFaceIdentity_client-layout d-flex justify-content-center align-items-center">
+            <div className="faceToFaceIdentity_client-header">
+              <h5>{t("faceToFaceIdentity.client.header.header")}</h5>
+              <p>{t("faceToFaceIdentity.client.header.body")}</p>
             </div>
-            <div className="remoteIdentity_verify-body-item d-flex flex-column justify-content-between">
-              <div>
-                <h5>{t("remoteIdentity.verify.body.saas.header")}</h5>
-                <p>{t("remoteIdentity.verify.body.saas.title")}</p>
-              </div>
-              <BlueButton>
-                {t("remoteIdentity.verify.body.saas.button")}
+            <div className="faceToFaceIdentity_client-body">
+              <h5>{t("faceToFaceIdentity.client.body.header")}</h5>
+              <p>{t("faceToFaceIdentity.client.body.body")}</p>
+              <TransparentButton sx={{ marginTop: "30px" }}>
+                {t("faceToFaceIdentity.client.body.button")}
                 <FiArrowRight />
-              </BlueButton>
+              </TransparentButton>
             </div>
           </div>
         </div>
-        <div className="remoteIdentity_challenge d-flex justify-content-center">
-          <div className="remoteIdentity_challenge-layout">
+        <div className="faceToFaceIdentity_challenge d-flex justify-content-center">
+          <div className="faceToFaceIdentity_challenge-layout d-flex">
             <img
-              className="remoteIdentity_challenge-img"
+              className="faceToFaceIdentity_challenge-img"
               src={challenge}
               alt=""
             />
-            <div className="remoteIdentity_challenge-form">
-              <h3 className="remoteIdentity_challenge-form-header">
-                {t("remoteIdentity.challenge.header")}
+            <div className="faceToFaceIdentity_challenge-form">
+              <h3 className="faceToFaceIdentity_challenge-form-header">
+                {t("faceToFaceIdentity.challenge.header")}
               </h3>
-              <p className="remoteIdentity_challenge-form-context">
-                {t("remoteIdentity.challenge.context")}
+              <p className="faceToFaceIdentity_challenge-form-context">
+                {t("faceToFaceIdentity.challenge.context")}
               </p>
               {state !== "success" ? (
                 <>
@@ -692,8 +692,8 @@ const RemoteIdentityVerification = (props) => {
                   Thanks for submitting the form.
                 </p>
               )}
-              <p className="remoteIdentity_challenge-form-context3">
-                {t("remoteIdentity.challenge.context3")}
+              <p className="faceToFaceIdentity_challenge-form-context3">
+                {t("faceToFaceIdentity.challenge.context3")}
               </p>
             </div>
           </div>
@@ -717,4 +717,4 @@ const RemoteIdentityVerification = (props) => {
   );
 };
 
-export default RemoteIdentityVerification;
+export default FaceToFaceIdentityVerification;

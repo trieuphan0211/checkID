@@ -29,9 +29,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
  */
     private static final String[] PUBLIC_MATCHERS = {
-            "/", "/css/**",
+            "/", "/css/**","/trusted-identity-verification"
     };
-
+   
     @Override
 
     //cấu hình các quy tắc bảo mật
@@ -48,7 +48,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpStrictTransportSecurity().maxAgeInSeconds(31536000).includeSubDomains(true).requestMatcher(AnyRequestMatcher.INSTANCE)
                 .and()
                 .addHeaderWriter(createReferrerPolicyHeaderWriter())
-                .addHeaderWriter(createCspHeaderWriter())
+//                .addHeaderWriter(createCspHeaderWriter())
                 .addHeaderWriter(createPermissionsPolicyHeaderWriter())
                 .and().csrf() //(cross-sute request forgery)==> kĩ thuật tấn công mạng
                 .disable()
@@ -63,11 +63,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .logout() // cho phép người dùng logout
 //                .permitAll();
     }
-@Bean
-    public HeaderWriter createCspHeaderWriter() {
-        String cspValue = "\"default-src * 'self' data:; script-src * 'self' 'unsafe-inline' data:; img-src 'self' 'unsafe-inline' * data:; connect-src * 'self' data:; style-src * 'self' 'unsafe-inline'";
-        return new StaticHeadersWriter("Content-Security-Policy", cspValue);
-    }
+//@Bean
+//    public HeaderWriter createCspHeaderWriter() {
+//        String cspValue = "\"default-src * 'self' data:; script-src * 'self' 'unsafe-inline' data:; img-src 'self' 'unsafe-inline' * data:; connect-src * 'self' data:; style-src * 'self' 'unsafe-inline'";
+//        return new StaticHeadersWriter("Content-Security-Policy", cspValue);
+//    }
 
     @Bean
     public HeaderWriter createReferrerPolicyHeaderWriter() {

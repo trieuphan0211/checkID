@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assets/css/Header.css";
+import "../../assets/scss/Header.scss";
 import { FaArrowRight, FaInfoCircle } from "react-icons/fa";
 import { BsChevronRight } from "react-icons/bs";
 import { IoIosSearch } from "react-icons/io";

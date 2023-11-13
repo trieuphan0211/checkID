@@ -4,6 +4,10 @@ import MainLayout from "../layouts/MainLayout";
 import HomePage from "../pages/HomePage";
 import TrustedIdentityVerification from "../pages/TrustedIdentityVerification";
 import RemoteIdentityVerification from "../pages/RemoteIdentityVerification";
+import FaceToFaceIdentityVerification from "../pages/FaceToFaceIdentityVerification";
+import ProductLayout from "../layouts/ProductLayout";
+import { AllProducts, V11Product } from "../pages/Products";
+import NotFound from "../pages/NotFound";
 const context = "";
 const Routers = () => {
   const routing = useRoutes([
@@ -25,7 +29,21 @@ const Routers = () => {
         },
         {
           path: `${context}/face-to-face-identity-verification`,
-          // element: ,
+          element: <FaceToFaceIdentityVerification />,
+        },
+        {
+          path: `${context}/products`,
+          element: <ProductLayout />,
+          children: [
+            {
+              path: `${context}/products`,
+              element: <AllProducts />,
+            },
+            {
+              path: `${context}/products/v11`,
+              element: <V11Product />,
+            },
+          ],
         },
         {
           path: `${context}/use-cases`,
@@ -137,6 +155,7 @@ const Routers = () => {
         },
       ],
     },
+    { path: "*", element: <NotFound /> },
   ]);
   return routing;
 };

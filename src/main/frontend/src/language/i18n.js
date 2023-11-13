@@ -15,12 +15,19 @@ const resources = {
   },
 };
 
+let language = localStorage.getItem("lang");
+if (language) {
+} else {
+  localStorage.setItem("lang", "English");
+  language = "English";
+}
+
 i18n
   .use(Backend)
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "0",
+    fallbackLng: language == "English" ? "0" : "1",
     debug: true,
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
