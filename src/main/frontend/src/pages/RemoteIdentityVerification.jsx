@@ -28,7 +28,6 @@ import {
   Slide,
   Snackbar,
   TextField,
-  Typography,
   useScrollTrigger,
 } from "@mui/material";
 import PropTypes from "prop-types";
@@ -46,7 +45,6 @@ import {
   LockShield,
   Setting,
 } from "../icons";
-import StopIcon from "@mui/icons-material/Stop";
 import { mailContact } from "../services/RemoteIdentityService";
 
 import ReCAPTCHA from "react-google-recaptcha";
@@ -132,7 +130,7 @@ const TextFieldCustom = styled(TextField)({
 
 const RemoteIdentityVerification = (props) => {
   // set Title
-  document.title = "CheckID | Remote Identity Verification";
+  document.title = "Remote Identity Verification | CheckID";
   //
   const [open, setOpen] = React.useState(false);
   const [state, setState] = React.useState("warning");

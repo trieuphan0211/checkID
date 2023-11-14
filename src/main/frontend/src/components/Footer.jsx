@@ -176,7 +176,7 @@ const Footer = () => {
           <div className="footer_contact d-flex justify-content-between align-items-center">
             <LanguageMenu />
             <div className="d-flex">
-              <p>© CheckID 2023 </p>
+              <p>Copyright © 2023 - {new Date().getFullYear()} Mobile-ID</p>
               <p>{t("footer.privacy")} </p>
               <p>{t("footer.contact")}</p>
             </div>

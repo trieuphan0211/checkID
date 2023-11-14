@@ -65,6 +65,8 @@ const allProducts = [
 ];
 
 export const AllProducts = () => {
+  // set Title
+  document.title = "All Products | CheckID";
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
     setPage(value);

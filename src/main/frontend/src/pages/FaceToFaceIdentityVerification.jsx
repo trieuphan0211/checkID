@@ -119,7 +119,7 @@ const TextFieldCustom = styled(TextField)({
 
 const FaceToFaceIdentityVerification = (props) => {
   // set Title
-  document.title = "CheckID | Remote Identity Verification";
+  document.title = "Remote Identity Verification | CheckID";
   //
   const [open, setOpen] = React.useState(false);
   const [state, setState] = React.useState("success");

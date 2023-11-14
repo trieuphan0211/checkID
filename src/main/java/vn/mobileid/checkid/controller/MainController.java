@@ -59,7 +59,7 @@ public class MainController {
         String host = "smtp.zoho.com";
         final String user = "ca.support@mobile-id.vn";
         final String password = "T@mic@8x";
-        String to = "trieupn@mobile-id.vn";
+        String to = "info@mobile-id.vn";
         String result;
         JSONObject json = new JSONObject(email);
         System.out.println("email: "+json.getString("email"));
@@ -107,7 +107,7 @@ public class MainController {
         String host = "smtp.zoho.com";
         final String user = "ca.support@mobile-id.vn";
         final String password = "T@mic@8x"; 
-        String to = "trieupn@mobile-id.vn";
+        String to = "info@mobile-id.vn";
         String result;
         // String msg = content.getName().replace("%40", "@");
         System.out.println("host name: " + host_name);
@@ -122,7 +122,7 @@ public class MainController {
         props.put("mail.smtp.port", 587);
 
         String msg = "Name: " + content.getName() + "\n" + "Email: " + content.getEmail().replace("%40", "@") +
-                "\n" +"Description: "+ content.getDescription()+"\n"+"Stay informed about identity verification, subscribe for our newsletter: "+content.getSignup()+ "\n" +"company: "+ content.getCompany();
+                "\n" +"Description: "+ content.getDescription()+"\n"+"Stay informed about identity verification, subscribe for our newsletter: "+content.getSignup()+ "\n" +"Company: "+ content.getCompany();
         System.out.println("msg: " + msg);
         String subject =content.getName()+  " - @Check ID";
 

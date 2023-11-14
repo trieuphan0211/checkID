@@ -5,13 +5,13 @@ public class MailContact {
     String name;
     String company;
     String description;
-    Boolean signup;
+    String signup;
 
-    public Boolean getSignup() {
+    public String getSignup() {
         return signup;
     }
 
-    public void setSignup(Boolean signup) {
+    public void setSignup(String signup) {
         this.signup = signup;
     }
 
@@ -47,7 +47,7 @@ public class MailContact {
         this.description = description;
     }
 
-    public MailContact(String email, String name, String company, String description, Boolean signup) {
+    public MailContact(String email, String name, String company, String description, String signup) {
         this.email = email;
         this.name = name;
         this.company = company;

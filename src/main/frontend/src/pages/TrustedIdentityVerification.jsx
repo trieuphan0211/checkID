@@ -87,7 +87,7 @@ const LearnButton = styled(Button)({
 
 const TrustedIdentityVerification = (props) => {
   // set Title
-  document.title = "CheckID | Trusted Identity Verification";
+  document.title = "Trusted Identity Verification | CheckID";
   //
   const { t } = useTranslation();
   const { width, height } = useWindowSize();

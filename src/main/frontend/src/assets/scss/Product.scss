@@ -3,6 +3,7 @@
   .allProducts,
   .v11 {
     &_info {
+      flex-direction: column;
       color: #fff;
       background-image: url("../img/background.png");
       background-size: cover;
@@ -70,11 +71,184 @@
         }
       }
     }
+    &_detail {
+      align-items: center;
+      padding: 60px;
+      &-img {
+        width: 800px;
+        &-show {
+          display: block;
+          margin: 0 auto;
+        }
+        &-list {
+          display: flex;
+          > img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin: 5px 10px;
+            padding: 5px;
+            &:hover {
+              box-shadow: 0px 10px 24px 0px #4f9cf9;
+              cursor: pointer;
+            }
+            &.active {
+              box-shadow: 0px 10px 24px 0px #4f9cf9;
+            }
+          }
+        }
+      }
+      &-info {
+        margin-left: 90px;
+        &-header {
+          font-size: 4em;
+          font-weight: 700;
+        }
+        &-model,
+        &-functionHeader {
+          margin-top: 50px;
+          font-size: 2em;
+          font-weight: 700;
+        }
+        &-description {
+          margin-top: 10px;
+          color: #666;
+          font-size: 1.6em;
+          font-weight: 400;
+          line-height: 30px;
+          max-width: 700px;
+        }
+        &-function {
+          display: flex;
+          padding: 8px;
+          margin: 12px 0 35px;
+          &-item {
+            width: 70px;
+            margin-right: 16px;
+            > img {
+              width: 100%;
+              height: 70px;
+              border-radius: 4px;
+              padding: 5px;
+              border: 1px solid #dee3eb;
+            }
+            > p {
+              color: #7991bd;
+              padding-top: 10px;
+              text-align: center;
+              text-wrap: nowrap;
+              font-size: 1.2em;
+              font-weight: 400;
+              line-height: 14px;
+            }
+          }
+        }
+      }
+    }
+    &_open {
+      img {
+        max-width: 1175px;
+      }
+    }
+    &_features {
+      &-comp {
+        margin: 0 auto 80px;
+        max-width: 1175px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        &-info {
+          max-width: 555px;
+          > h4 {
+            font-size: 4em;
+            font-weight: 800;
+            line-height: 40px;
+          }
+          p,
+          ol {
+            font-size: 1.6em;
+            font-weight: 400;
+            line-height: 19.5px;
+            color: #666;
+            margin-top: 20px;
+            &:first-child {
+              margin-top: 30px;
+            }
+          }
+          ol {
+            margin-bottom: 0;
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+    &_specification,
+    &_ortherProduct {
+      padding: 0 140px;
+      &-header {
+        font-size: 4em;
+        font-weight: 800;
+        line-height: 36px;
+        padding: 70px 0 50px;
+      }
+      &-item {
+        width: 380px;
+        padding: 60px 10px 10px 10px;
+        background-color: #eef1f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          height: 250px;
+          margin-bottom: 45px;
+        }
+        > div {
+          background-color: #fff;
+          width: 100%;
+          padding: 30px 5px;
+          h6 {
+            font-size: 2.6em;
+            font-weight: 400;
+            text-align: center;
+            line-height: 32px;
+          }
+          p {
+            font-size: 1.6em;
+            color: #666;
+            font-weight: 400;
+            line-height: 28px;
+            text-align: center;
+          }
+        }
+      }
+      .react-slideshow-container {
+        .nav:first-of-type {
+          left: -90px;
+        }
+        .nav:last-of-type {
+          right: -90px;
+        }
+      }
+    }
   }
   .v11 {
     &_info {
+      padding-bottom: 0;
+      height: auto;
+      flex-direction: row;
+      justify-content: center;
       &-header {
         max-width: 600px;
+        text-align: start;
+        margin: 0;
+      }
+      &-title {
+        margin-top: 30px;
+        text-align: start;
+      }
+      &-img {
+        margin-top: 45px;
       }
     }
   }

@@ -109,7 +109,7 @@ const VerifyButton = styled(Button)({
 });
 const HomePage = (props) => {
   // set Title
-  document.title = "CheckID | Home";
+  document.title = "Home | CheckID";
   //
   const { t } = useTranslation();
   return (
