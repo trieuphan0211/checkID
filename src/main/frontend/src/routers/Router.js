@@ -6,7 +6,16 @@ import TrustedIdentityVerification from "../pages/TrustedIdentityVerification";
 import RemoteIdentityVerification from "../pages/RemoteIdentityVerification";
 import FaceToFaceIdentityVerification from "../pages/FaceToFaceIdentityVerification";
 import ProductLayout from "../layouts/ProductLayout";
-import { AllProducts, V11Product } from "../pages/Products";
+import {
+  AM_001Product,
+  AllProducts,
+  CheckID_SRProduct,
+  R301_C11Product,
+  R502_CLProduct,
+  V10PProduct,
+  V11Product,
+  V20Product,
+} from "../pages/Products";
 import NotFound from "../pages/NotFound";
 const context = "";
 const Routers = () => {
@@ -42,6 +51,30 @@ const Routers = () => {
             {
               path: `${context}/products/v11`,
               element: <V11Product />,
+            },
+            {
+              path: `${context}/products/v20`,
+              element: <V20Product />,
+            },
+            {
+              path: `${context}/products/r502-cl`,
+              element: <R502_CLProduct />,
+            },
+            {
+              path: `${context}/products/r301-c11`,
+              element: <R301_C11Product />,
+            },
+            {
+              path: `${context}/products/am-001`,
+              element: <AM_001Product />,
+            },
+            {
+              path: `${context}/products/checkid-sr`,
+              element: <CheckID_SRProduct />,
+            },
+            {
+              path: `${context}/products/v10p`,
+              element: <V10PProduct />,
             },
           ],
         },

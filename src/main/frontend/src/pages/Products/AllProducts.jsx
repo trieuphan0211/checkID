@@ -32,6 +32,8 @@ const allProducts = [
     id: 3,
     name: "CheckID-SR",
     img: checkid_sr,
+    link: "/products/checkid-sr",
+
     description: "ID card reader/scanner",
   },
   {

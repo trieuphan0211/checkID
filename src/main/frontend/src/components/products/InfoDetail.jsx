@@ -13,13 +13,12 @@ export const InfoDetail = ({ showImg, classHeader, infoDetail }) => {
         />
         <Box className={`${classHeader}_detail-img-list`}>
           {showImg?.map((img, index) => (
-            <img
-              src={img}
-              alt=""
+            <Box
               className={img === faceImg ? "active" : ""}
-              key={index}
               onClick={() => setFaceImg(img)}
-            />
+            >
+              <img src={img} alt="" key={index} />
+            </Box>
           ))}
         </Box>
       </Box>
@@ -31,7 +30,12 @@ export const InfoDetail = ({ showImg, classHeader, infoDetail }) => {
           Model: {infoDetail.model}
         </h5>
         <p className={`${classHeader}_detail-info-description`}>
-          {infoDetail.description}
+          {infoDetail.description.split("/n").map((item) => (
+            <>
+              {item}
+              <br />
+            </>
+          ))}
         </p>
         <h5 className={`${classHeader}_detail-info-functionHeader`}>
           Function:

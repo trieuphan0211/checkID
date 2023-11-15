@@ -40,7 +40,11 @@ const MenuStyle = styled(Menu)(({ theme }) => ({
 }));
 const LanguageMenu = () => {
   const [language, setLanguage] = React.useState("English");
-  const lang = localStorage.getItem("lang");
+  const lang =
+    typeof window.localStorage === "object" &&
+    typeof window.localStorage?.getItem !== "undefined"
+      ? localStorage.getItem("lang")
+      : null;
   //   handle language
   const handleLanguage = (lang, popupState) => {
     if (popupState) {
@@ -49,13 +53,24 @@ const LanguageMenu = () => {
     switch (lang) {
       case "Vietnamese":
         setLanguage("Vietnamese");
-        i18n.changeLanguage("1");
-        localStorage.setItem("lang", "Vietnamese");
+        i18n.changeLanguage("vi");
+
+        if (
+          typeof window.localStorage === "object" &&
+          typeof window.localStorage?.getItem !== "undefined"
+        ) {
+          localStorage.setItem("lang", "Vietnamese");
+        }
         break;
       case "English":
         setLanguage("English");
-        i18n.changeLanguage("0");
-        localStorage.setItem("lang", "English");
+        i18n.changeLanguage("en");
+        if (
+          typeof window.localStorage === "object" &&
+          typeof window.localStorage?.getItem !== "undefined"
+        ) {
+          localStorage.setItem("lang", "English");
+        }
         break;
     }
   };

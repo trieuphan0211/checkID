@@ -4,6 +4,9 @@
  */
 package vn.mobileid.checkid.controller;
 
+import java.io.IOException;
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.Properties;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -19,7 +22,12 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.ServletContext;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 
 /**
  *
@@ -151,5 +159,38 @@ public class MainController {
         }
         return result;
 
+    }
+    
+    @Autowired
+    private ServletContext servletContext;
+
+    public String DIRECTORY = "/home/dtis/plugin";
+
+    public static MediaType getMediaTypeForFileName(ServletContext servletContext, String fileName) {
+        String mineType = servletContext.getMimeType(fileName);
+        try {
+            MediaType mediaType = MediaType.parseMediaType(mineType);
+            return mediaType;
+        } catch (Exception e) {
+            return MediaType.APPLICATION_OCTET_STREAM;
+        }
+    }
+
+    @RequestMapping("/plugin/{folder}/{fileName}")
+    public ResponseEntity<InputStreamResource> downloadFile123(@PathVariable String fileName,
+            @PathVariable String folder) throws IOException {
+
+        String path = "/home/dtis/plugin" + File.separator + folder + File.separator + fileName;
+        MediaType mediaType = getMediaTypeForFileName(this.servletContext, fileName);
+        File file = new File(path);
+        InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
+        return ResponseEntity.ok()
+                // Content-Disposition
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=" + file.getName())
+                // Content-Type
+                .contentType(mediaType)
+                // Contet-Length
+                .contentLength(file.length()) //
+                .body(resource);
     }
 }

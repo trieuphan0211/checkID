@@ -32,6 +32,7 @@ const StyledTableCell = styled(TableCell)(() => ({
 const StyledTableRow = styled(TableCell)(() => ({
   [`&.${tableCellClasses.body}`]: {
     color: "#000",
+    width: "495px",
     fontSize: "16px",
     padding: "25px 10px",
     border: "1px solid #DADCE4",
@@ -59,11 +60,21 @@ export const TechnicalSpecifications = ({ classHeader, specification }) => {
               <TableRow>
                 <StyledTableCell>{row.item}</StyledTableCell>
                 <StyledTableRow align="left">
-                  {row.specification}
+                  {row.specification.split("/n").map((item) => (
+                    <>
+                      {item}
+                      <br />
+                    </>
+                  ))}
                 </StyledTableRow>
                 <StyledTableCell align="left">{row.item1}</StyledTableCell>
                 <StyledTableRow align="left">
-                  {row.specification1}
+                  {row.specification1.split("/n").map((item) => (
+                    <>
+                      {item}
+                      <br />
+                    </>
+                  ))}
                 </StyledTableRow>
               </TableRow>
             ))}

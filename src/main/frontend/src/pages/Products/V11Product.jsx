@@ -18,11 +18,11 @@ import g4 from "../../assets/img/product/4G.png";
 import bigBattery from "../../assets/img/product/BigBattery.png";
 import telpo from "../../assets/img/product/V11/Telpo-TPS360.png";
 import v11_2 from "../../assets/img/product/V11/v11_2.png";
-import howtouse from "../../assets/img/product/V11/howtouse.png";
+import howtouse from "../../assets/img/product/howtouse.png";
 import fingerPrint from "../../assets/img/product/V11/fingerprint.png";
-import memoryCard from "../../assets/img/product/V11/memoryCard.png";
+import memoryCard from "../../assets/img/product/memoryCard.png";
 import contactCard from "../../assets/img/product/V11/contact_card.png";
-import background_4g from "../../assets/img/product/V11/4g.png";
+import background_4g from "../../assets/img/product/bg_4g.png";
 
 export const V11Product = () => {
   // set Title
