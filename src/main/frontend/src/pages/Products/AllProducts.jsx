@@ -10,65 +10,67 @@ import v10p from "../../assets/img/product/v10p.png";
 
 import { Box, Pagination } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const context = "";
-const allProducts = [
-  {
-    id: 1,
-    name: "V11",
-    img: v11,
-    link: "/products/v11",
-    description: "Handheld Biometric ID Terminal",
-  },
-  {
-    id: 2,
-    name: "V20",
-    img: v20,
-    link: "/products/v20",
-    description: "Biometric Tablet",
-  },
-
-  {
-    id: 3,
-    name: "CheckID-SR",
-    img: checkid_sr,
-    link: "/products/checkid-sr",
-
-    description: "ID card reader/scanner",
-  },
-  {
-    id: 4,
-    name: "R301 C11",
-    img: r301_c11,
-    link: "/products/r301-c11",
-    description: "CCID Smartcard Reader",
-  },
-  {
-    id: 5,
-    name: "R502-CL",
-    img: r502_cl,
-    link: "/products/r502-cl",
-    description: "CCID Smartcard Reader",
-  },
-  {
-    id: 6,
-    name: "AM-001",
-    img: am_001,
-    link: "/products/am-001",
-    description: "Altimeter for document/ID card",
-  },
-  {
-    id: 7,
-    name: "V10P",
-    img: v10p,
-    link: "/products/v10p",
-    description: "Desktop Biometric ID Terminal",
-  },
-];
 
 export const AllProducts = () => {
   // set Title
   document.title = "All Products | CheckID";
+
+  const { t } = useTranslation();
+  const allProducts = [
+    {
+      id: 1,
+      name: "V11",
+      img: v11,
+      link: "/products/v11",
+      description: "products.allProducts.items.v11",
+    },
+    {
+      id: 2,
+      name: "V20",
+      img: v20,
+      link: "/products/v20",
+      description: "products.allProducts.items.v20",
+    },
+
+    {
+      id: 3,
+      name: "CheckID-SR",
+      img: checkid_sr,
+      link: "/products/checkid-sr",
+      description: "products.allProducts.items.checkidsr",
+    },
+    {
+      id: 4,
+      name: "R301 C11",
+      img: r301_c11,
+      link: "/products/r301-c11",
+      description: "products.allProducts.items.r301c11",
+    },
+    {
+      id: 5,
+      name: "R502-CL",
+      img: r502_cl,
+      link: "/products/r502-cl",
+      description: "products.allProducts.items.r502cl",
+    },
+    {
+      id: 6,
+      name: "AM-001",
+      img: am_001,
+      link: "/products/am-001",
+      description: "products.allProducts.items.am001",
+    },
+    {
+      id: 7,
+      name: "V10P",
+      img: v10p,
+      link: "/products/v10p",
+      description: "products.allProducts.items.v10p",
+    },
+  ];
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
     setPage(value);
@@ -82,10 +84,14 @@ export const AllProducts = () => {
   return (
     <Box className="allProducts">
       <Box className="allProducts_info d-flex flex-column align-items-center">
-        <h4 className="allProducts_info-subheader">ALL Products</h4>
-        <h1 className="allProducts_info-header">Identification Terminal</h1>
+        <h4 className="allProducts_info-subheader">
+          {t("products.allProducts.header")}
+        </h4>
+        <h1 className="allProducts_info-header">
+          {t("products.allProducts.subheader")}
+        </h1>
         <p className="allProducts_info-title">
-          Fingerprint Scanner / NFC / 4G / Bluetooth / Wifi
+          {t("products.allProducts.title")}
         </p>
       </Box>
       <Box className="allProducts_item">
@@ -98,7 +104,7 @@ export const AllProducts = () => {
             <img src={item.img} alt="" />
             <Box className="allProducts_item-body">
               <h4>{item.name}</h4>
-              <p>{item.description}</p>
+              <p>{t(item.description)}</p>
             </Box>
           </Link>
         ))}

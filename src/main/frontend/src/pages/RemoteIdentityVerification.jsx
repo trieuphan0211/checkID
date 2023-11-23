@@ -37,6 +37,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { useTranslation } from "react-i18next";
 import { useWindowSize } from "usehooks-ts";
 import { FiArrowRight } from "react-icons/fi";
+import SquareRoundedIcon from "@mui/icons-material/SquareRounded";
 import {
   ChartPerson,
   DoubleTap,
@@ -628,6 +629,7 @@ const RemoteIdentityVerification = (props) => {
                         sx={{
                           color: "#fff",
                         }}
+                        icon={<SquareRoundedIcon />}
                         onChange={(event) => setCheck(event.target.checked)}
                       />
                     }

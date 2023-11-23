@@ -19,16 +19,18 @@ import r502cl_4 from "../../assets/img/product/platform.png";
 import r502cl_5 from "../../assets/img/product/R502_CL/r502cl_5.png";
 import r502cl_6 from "../../assets/img/product/R502_CL/r502cl_6.png";
 import r502cl_7 from "../../assets/img/product/R502_CL/r502cl_7.png";
+import { useTranslation } from "react-i18next";
 
-export const R502_CLProduct = () => {
+export const R502CLProduct = () => {
   // set Title
   document.title = "R502-CL | CheckID";
+
+  const { t } = useTranslation();
   const r502clImg = [front_face, behind_face];
   const infoDetail = {
-    header: "CCID Smartcard Reader",
-    model: "R502-CL",
-    description:
-      "R502-CL is a terminal interface device for smart card applications and system integrations. It can be widely used in industries or applications requiring electronic payment and authentication, especially suitable for the high security fields. It is an optimal solution for authentication, e-commerce, financial organizations, access control etc.",
+    header: "products.r502cl.infoDetail.header",
+    model: "products.r502cl.infoDetail.model",
+    description: "products.r502cl.infoDetail.description",
     function: [
       { name: "Temperature", image: temperature },
       { name: "SmartCard", image: SmartCard },
@@ -106,12 +108,8 @@ export const R502_CLProduct = () => {
     <Box className="r502cl">
       <Box className="r502cl_info d-flex align-items-center">
         <Box>
-          <h1 className="r502cl_info-header">
-            CCID Smartcard Reader (R502-CL)
-          </h1>
-          <p className="r502cl_info-title">
-            A combination of contactless and contact smart card reader
-          </p>
+          <h1 className="r502cl_info-header">{t("products.r502cl.header")}</h1>
+          <p className="r502cl_info-title">{t("products.r502cl.title")}</p>
         </Box>
         <img src={r502cl_fullFace} alt="" className="r502cl_info-img" />
       </Box>
@@ -123,12 +121,16 @@ export const R502_CLProduct = () => {
       <Box className="r502cl_features">
         <Box className="r502cl_features-comp">
           <Box className="r502cl_features-comp-info">
-            <h4>High security level hardware design</h4>
+            <h4>{t("products.r502cl.features.0.header")}</h4>
             <p>
-              High security level chipset
-              <br /> Built-in short-circuited / over-voltage protection
-              <br /> Firmware encryption mechanism
-              <br /> Encrypted firmware upgrade
+              {t("products.r502cl.features.0.body")
+                .split("/n")
+                .map((item) => (
+                  <>
+                    {item}
+                    <br />
+                  </>
+                ))}
             </p>
           </Box>
           <img src={r502cl_2} alt="" />
@@ -136,51 +138,36 @@ export const R502_CLProduct = () => {
         <Box className="r502cl_features-comp">
           <img src={r502cl_3} alt="" />
           <Box className="r502cl_features-comp-info">
-            <h4>Multifunctional composite product</h4>
-            <p>
-              Combined with contact and contactless function, in addition with 2
-              extra SAM slots, Contactless Smart Card Reader could be used for
-              both authentication and payment.
-            </p>
+            <h4>{t("products.r502cl.features.1.header")}</h4>
+            <p>{t("products.r502cl.features.1.body")}</p>
           </Box>
         </Box>
         <Box className="r502cl_features-comp">
           <Box className="r502cl_features-comp-info">
-            <h4>Major platform compatible</h4>
-            <p>
-              Smart Card Readers are compatible with mainstream operating system
-              platforms: Windows, Linux, macOS, Unix, with full CCID support,
-              Android with OTG. A true sense of driverless product.
-            </p>
+            <h4>{t("products.r502cl.features.2.header")}</h4>
+            <p>{t("products.r502cl.features.2.body")}</p>
           </Box>
           <img src={r502cl_4} alt="" />
         </Box>
         <Box className="r502cl_features-comp">
           <img src={r502cl_5} alt="" />
           <Box className="r502cl_features-comp-info">
-            <h4>Flexible customizations</h4>
-            <p>
-              We offer complete customization options for casing, packaging and
-              related service to enable the ability of creating your very own
-              Smart Card Reader.
-            </p>
+            <h4>{t("products.r502cl.features.3.header")}</h4>
+            <p>{t("products.r502cl.features.3.body")}</p>
           </Box>
         </Box>
         <Box className="r502cl_features-comp">
           <Box className="r502cl_features-comp-info">
-            <h4>Support all 13.56 MHz NFC Cards</h4>
+            <h4>{t("products.r502cl.features.4.header")}</h4>
             <p>
-              ISO/IEC 7816-1, 2, 3, 4;ISO/IEC 14443 Type A and B
-              <br />
-              Mifare © 13.56 MHz ISO 14443A
-              <br />
-              Felica © protocol support
-              <br />
-              Compatible with ISO 15693 protocol
-              <br />
-              Compatible with ISO/IEC 18092 protocol
-              <br />
-              VHBR protocol support *(Optional).
+              {t("products.r502cl.features.4.body")
+                .split("/n")
+                .map((item) => (
+                  <>
+                    {item}
+                    <br />
+                  </>
+                ))}
             </p>
           </Box>
           <img src={r502cl_6} alt="" />
@@ -188,11 +175,8 @@ export const R502_CLProduct = () => {
         <Box className="r502cl_features-comp">
           <img src={r502cl_7} alt="" />
           <Box className="r502cl_features-comp-info">
-            <h4>Certifications</h4>
-            <p>
-              With these certifications, Smart Card Reader tops by both
-              functionality and performance.
-            </p>
+            <h4>{t("products.r502cl.features.5.header")}</h4>
+            <p>{t("products.r502cl.features.5.body")}</p>
           </Box>
         </Box>
       </Box>

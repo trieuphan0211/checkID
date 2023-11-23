@@ -63,7 +63,8 @@
         }
         &:hover {
           svg {
-            margin-left: 5px;
+            transform: translateX(10px);
+            transition: all 0.3s ease-in-out;
           }
         }
       }
@@ -111,7 +112,8 @@
       }
       &:hover {
         svg {
-          margin-left: 15px;
+          transform: translateX(10px);
+          transition: all 0.3s ease-in-out;
         }
       }
     }
@@ -157,7 +159,8 @@
             transition: all 0.3s ease-in-out;
             .benifit_item-icon {
               svg {
-                margin-right: 0;
+                transform: translateX(10px);
+                transition: all 0.3s ease-in-out;
               }
             }
           }
@@ -291,12 +294,11 @@
             font-weight: 700;
             cursor: pointer;
             svg {
-              margin-right: 5px;
+              margin-left: 5px;
             }
             &:hover {
               svg {
-                margin-left: 5px;
-                margin-right: 0;
+                transform: translateX(10px);
                 transition: all 0.3s ease-in-out;
               }
             }
@@ -362,11 +364,11 @@
           cursor: pointer;
           svg {
             font-size: 20px;
-            margin-left: 5px;
+            margin-left: 10px;
           }
           &:hover {
             svg {
-              margin-left: 10px;
+              transform: translateX(10px);
               transition: all 0.3s ease-in-out;
             }
           }
@@ -594,7 +596,7 @@
         font-weight: 700;
         &:hover {
           svg {
-            margin-left: 5px;
+            transform: translateX(10px);
             transition: all 0.3s ease-in-out;
           }
         }
@@ -743,7 +745,7 @@
         font-weight: 700;
         &:hover {
           svg {
-            margin-left: 5px;
+            transform: translateX(10px);
             transition: all 0.3s ease-in-out;
           }
         }

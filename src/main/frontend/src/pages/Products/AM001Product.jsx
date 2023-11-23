@@ -16,16 +16,18 @@ import {
   OrtherProduct,
   TechnicalSpecifications,
 } from "../../components/products";
+import { useTranslation } from "react-i18next";
 
-export const AM_001Product = () => {
+export const AM001Product = () => {
   // set Title
   document.title = "AM-001 | CheckID";
+
+  const { t } = useTranslation();
   const am001Img = [front_face, behind_face, other_face];
   const infoDetail = {
-    header: "Altimeter for document ID card",
-    model: "AM-001",
-    description:
-      " AM-001 Profit from accurate data entry and verification, OEM design for ABC gates and self-service kiosks, Intuitive design helps infrequent passengers. /nAutomated passenger screening, 24/7 operation /nReads & verifies every IDs including electronic travel documents",
+    header: "products.am001.infoDetail.header",
+    model: "products.am001.infoDetail.model",
+    description: "products.am001.infoDetail.description",
     function: [
       { name: "SmartCard", image: SmartCard },
       { name: "Rich Ports", image: RichPorts },
@@ -106,12 +108,8 @@ export const AM_001Product = () => {
     <Box className="am001">
       <Box className="am001_info d-flex align-items-center">
         <Box>
-          <h1 className="am001_info-header">
-            Altimeter for document ID card(AM-001)
-          </h1>
-          <p className="am001_info-title">
-            ICAO ePassport Reader ID Card Document Camera Scanner
-          </p>
+          <h1 className="am001_info-header">{t("products.am001.header")}</h1>
+          <p className="am001_info-title">{t("products.am001.title")}</p>
         </Box>
         <img src={am001_fullFace} alt="" className="am001_info-img" />
       </Box>

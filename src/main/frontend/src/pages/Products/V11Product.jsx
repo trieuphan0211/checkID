@@ -23,16 +23,18 @@ import fingerPrint from "../../assets/img/product/V11/fingerprint.png";
 import memoryCard from "../../assets/img/product/memoryCard.png";
 import contactCard from "../../assets/img/product/V11/contact_card.png";
 import background_4g from "../../assets/img/product/bg_4g.png";
+import { useTranslation } from "react-i18next";
 
 export const V11Product = () => {
   // set Title
   document.title = "V11 | CheckID";
+
+  const { t } = useTranslation();
   const v11Img = [front_face, behind_face];
   const infoDetail = {
-    header: "Handheld Biometric ID Terminal",
-    model: "V11",
-    description:
-      "V11 is a smart Android mobile terminal, featuring a biometric fingerprint scanner that offers accurate identification. Being the most stable biometric characteristics, fingerprint authentication can be used to prevent unauthorized physical access to the school, office, laboratory, warehouse, etc.",
+    header: "products.v11.infoDetail.header",
+    model: "products.v11.infoDetail.model",
+    description: "products.v11.infoDetail.description",
     function: [
       { name: "Android", image: android },
       { name: "Fingerprint", image: fingerprint },
@@ -80,7 +82,7 @@ export const V11Product = () => {
         "ISO 7816-3 ID-1 (Full-size),ISO / IEC7816, T=0 and T=1 Protocol",
       item1: "Battery",
       specification1:
-        "5,000mAh by default (up to 7500mAh)Support PD ChargingCertification: 38.3 report, CB, CE, FCC",
+        "5,000mAh by default (up to 7500mAh)Support PD/n ChargingCertification: 38.3 report, CB, CE, FCC",
     },
     {
       item: "Fingerprint Module",
@@ -113,12 +115,8 @@ export const V11Product = () => {
     <Box className="v11">
       <Box className="v11_info d-flex align-items-center">
         <Box>
-          <h1 className="v11_info-header">
-            Handheld Biometric ID Terminal (V11)
-          </h1>
-          <p className="v11_info-title">
-            Pogo PIN supported Extensible Biometric Handheld Terminal
-          </p>
+          <h1 className="v11_info-header">{t("products.v11.header")}</h1>
+          <p className="v11_info-title">{t("products.v11.title")}</p>
         </Box>
         <img src={v11_fullFace} alt="" className="v11_info-img" />
       </Box>
@@ -127,46 +125,32 @@ export const V11Product = () => {
         <img src={telpo} alt="" />
       </Box>
       <Box className="v11_features">
-        <Box className="v11_features-comp">
+        <Box className="v11_features-comp v11_features-comp-left">
           <Box className="v11_features-comp-info">
-            <h4>More Scalabilities, More Possibilities</h4>
-            <p>
-              More possibilities and functions are available with pogo PIN, such
-              as Printer module, UHF module, etc.
-            </p>
+            <h4>{t("products.v11.features.0.header")}</h4>
+            <p>{t("products.v11.features.0.body")}</p>
           </Box>
           <img src={v11_2} alt="" />
         </Box>
         <Box className="v11_features-comp">
           <img src={howtouse} alt="" />
           <Box className="v11_features-comp-info">
-            <h4>How to Use</h4>
-            <p>
-              Supporting fingerprint verification, NFC card reading, contact
-              card reading, iris recognition, MRZ Passport reading, OCR, and
-              barcode scanning
-            </p>
+            <h4>{t("products.v11.features.1.header")}</h4>
+            <p>{t("products.v11.features.1.body")}</p>
           </Box>
         </Box>
-        <Box className="v11_features-comp">
+        <Box className="v11_features-comp v11_features-comp-left">
           <Box className="v11_features-comp-info">
-            <h4>Strong Fingerprint Authentication</h4>
-            <p>
-              Live finger detection technology, high perform fingerprint sensor
-              guarantees accurate and effective ID verification.
-            </p>
-            <p>
-              Multi-vendor fingerprint sensors are supported: Built-in FBI PIV &
-              FBI Mobile ID FAP30 / FAP20 / FAP10 certified single flat finger
-              scanner including:
-            </p>
+            <h4>{t("products.v11.features.2.header")}</h4>
+            <p>{t("products.v11.features.2.body")}</p>
+            <p>{t("products.v11.features.2.body1")}</p>
             <ol>
-              <li>IB LES Danno (TFT camera)</li>
-              <li>Suprema: BM-Slim2, BM-Slim2S, BM-Slim3S</li>
-              <li>Morpho CBM-E3</li>
-              <li>Futronic: FS81H, FS89H</li>
-              <li>Aratek: A600-M</li>
-              <li>SecuGen U10</li>
+              <li>{t("products.v11.features.2.ul.li1")}</li>
+              <li>{t("products.v11.features.2.ul.li2")}</li>
+              <li>{t("products.v11.features.2.ul.li3")}</li>
+              <li>{t("products.v11.features.2.ul.li4")}</li>
+              <li>{t("products.v11.features.2.ul.li5")}</li>
+              <li>{t("products.v11.features.2.ul.li6")}</li>
             </ol>
           </Box>
           <img src={fingerPrint} alt="" />
@@ -174,32 +158,23 @@ export const V11Product = () => {
         <Box className="v11_features-comp">
           <img src={memoryCard} alt="" />
           <Box className="v11_features-comp-info">
-            <h4>Large Memory</h4>
-            <p>3GB RAM+32GB ROM, up to 128GB Micro SD card supported</p>
+            <h4>{t("products.v11.features.3.header")}</h4>
+            <p>{t("products.v11.features.3.body")}</p>
           </Box>
         </Box>
-        <Box className="v11_features-comp">
+        <Box className="v11_features-comp v11_features-comp-left">
           <Box className="v11_features-comp-info">
-            <h4>For Both Contact and Contactless Cards</h4>
-            <p>
-              Contact: Support ID-1 size smart card, such as: ID card, chip
-              embedded NFC card.
-            </p>
-            <p>
-              Contactless (NFC): ISO/IEC 14443 A/B, ISO/IEC 7816, etc. support
-              original Android NFC API.
-            </p>
+            <h4>{t("products.v11.features.4.header")}</h4>
+            <p>{t("products.v11.features.4.body")}</p>
+            <p>{t("products.v11.features.4.body1")}</p>
           </Box>
           <img src={contactCard} alt="" />
         </Box>
         <Box className="v11_features-comp">
           <img src={background_4g} alt="" />
           <Box className="v11_features-comp-info">
-            <h4>Always Connected</h4>
-            <p>
-              4G/3G, Wi-Fi, Bluetooth and USB Type-C supported guarantee the
-              device can be connected anywhere with smooth data transmission
-            </p>
+            <h4>{t("products.v11.features.5.header")}</h4>
+            <p>{t("products.v11.features.5.body")}</p>
           </Box>
         </Box>
       </Box>

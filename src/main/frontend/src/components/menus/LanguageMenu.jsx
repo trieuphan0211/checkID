@@ -72,6 +72,16 @@ const LanguageMenu = () => {
           localStorage.setItem("lang", "English");
         }
         break;
+      default:
+        setLanguage("English");
+        i18n.changeLanguage("en");
+        if (
+          typeof window.localStorage === "object" &&
+          typeof window.localStorage?.getItem !== "undefined"
+        ) {
+          localStorage.setItem("lang", "English");
+        }
+        break;
     }
   };
   useEffect(() => {

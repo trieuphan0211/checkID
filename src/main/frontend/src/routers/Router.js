@@ -7,16 +7,25 @@ import RemoteIdentityVerification from "../pages/RemoteIdentityVerification";
 import FaceToFaceIdentityVerification from "../pages/FaceToFaceIdentityVerification";
 import ProductLayout from "../layouts/ProductLayout";
 import {
-  AM_001Product,
+  AM001Product,
   AllProducts,
-  CheckID_SRProduct,
-  R301_C11Product,
-  R502_CLProduct,
+  CheckIDSRProduct,
+  R301C11Product,
+  R502CLProduct,
   V10PProduct,
   V11Product,
   V20Product,
 } from "../pages/Products";
 import NotFound from "../pages/NotFound";
+import UseCaseLayout from "../layouts/UseCaseLayout";
+import {
+  AbnMoneyou,
+  AsbBank,
+  ThirdFort,
+  UkHomeOfficeEuss,
+  UseCase,
+} from "../pages/useCase";
+import { Partnerships } from "../pages/Partnerships";
 const context = "";
 const Routers = () => {
   const routing = useRoutes([
@@ -58,19 +67,19 @@ const Routers = () => {
             },
             {
               path: `${context}/products/r502-cl`,
-              element: <R502_CLProduct />,
+              element: <R502CLProduct />,
             },
             {
               path: `${context}/products/r301-c11`,
-              element: <R301_C11Product />,
+              element: <R301C11Product />,
             },
             {
               path: `${context}/products/am-001`,
-              element: <AM_001Product />,
+              element: <AM001Product />,
             },
             {
               path: `${context}/products/checkid-sr`,
-              element: <CheckID_SRProduct />,
+              element: <CheckIDSRProduct />,
             },
             {
               path: `${context}/products/v10p`,
@@ -80,27 +89,33 @@ const Routers = () => {
         },
         {
           path: `${context}/use-cases`,
-          // element: ,
+          element: <UseCaseLayout />,
+          children: [
+            {
+              path: `${context}/use-cases`,
+              element: <UseCase />,
+            },
+            {
+              path: `${context}/use-cases/abn-moneyou`,
+              element: <AbnMoneyou />,
+            },
+            {
+              path: `${context}/use-cases/uk-home-office-euss`,
+              element: <UkHomeOfficeEuss />,
+            },
+            {
+              path: `${context}/use-cases/thirdfort`,
+              element: <ThirdFort />,
+            },
+            {
+              path: `${context}/use-cases/asb-bank`,
+              element: <AsbBank />,
+            },
+          ],
         },
         {
           path: `${context}/partnerships`,
-          // element: ,
-        },
-        {
-          path: `${context}/use-cases/abn-moneyou`,
-          // element: ,
-        },
-        {
-          path: `${context}/use-cases/uk-home-office-euss`,
-          // element: ,
-        },
-        {
-          path: `${context}/use-cases/thirdfort`,
-          // element: ,
-        },
-        {
-          path: `${context}/use-cases/asb-bank`,
-          // element: ,
+          element: <Partnerships />,
         },
         {
           path: `${context}/financial-services`,

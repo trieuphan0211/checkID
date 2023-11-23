@@ -1,8 +1,10 @@
 import { Box, Button } from "@mui/material";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const InfoDetail = ({ showImg, classHeader, infoDetail }) => {
   const [faceImg, setFaceImg] = React.useState(showImg[0]);
+  const { t } = useTranslation();
   return (
     <Box className={`${classHeader}_detail d-flex`}>
       <Box className={`${classHeader}_detail-img`}>
@@ -24,21 +26,23 @@ export const InfoDetail = ({ showImg, classHeader, infoDetail }) => {
       </Box>
       <Box className={`${classHeader}_detail-info`}>
         <h4 className={`${classHeader}_detail-info-header`}>
-          {infoDetail.header}
+          {t(infoDetail.header)}
         </h4>
         <h5 className={`${classHeader}_detail-info-model`}>
-          Model: {infoDetail.model}
+          {t("products.model")}: {t(infoDetail.model)}
         </h5>
         <p className={`${classHeader}_detail-info-description`}>
-          {infoDetail.description.split("/n").map((item) => (
-            <>
-              {item}
-              <br />
-            </>
-          ))}
+          {t(infoDetail.description)
+            .split("/n")
+            .map((item) => (
+              <>
+                {item}
+                <br />
+              </>
+            ))}
         </p>
         <h5 className={`${classHeader}_detail-info-functionHeader`}>
-          Function:
+          {t("products.function")}:
         </h5>
         <Box className={`${classHeader}_detail-info-function`}>
           {infoDetail.function.map((item, index) => (
@@ -60,12 +64,13 @@ export const InfoDetail = ({ showImg, classHeader, infoDetail }) => {
             fontWeight: "bold",
             lineHeight: "16px",
             color: "#fff",
+            textTransform: "capitalize",
             "&:hover": {
               backgroundColor: "#0074ff",
             },
           }}
         >
-          Download
+          {t("products.download")}
         </Button>
       </Box>
     </Box>

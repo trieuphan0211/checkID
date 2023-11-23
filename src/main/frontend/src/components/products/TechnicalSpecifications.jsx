@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const StyledTableCell = styled(TableCell)(() => ({
   [`&.${tableCellClasses.head}`]: {
@@ -40,19 +41,26 @@ const StyledTableRow = styled(TableCell)(() => ({
 }));
 
 export const TechnicalSpecifications = ({ classHeader, specification }) => {
+  const { t } = useTranslation();
   return (
     <Box className={`${classHeader}_specification`}>
       <h1 className={`${classHeader}_specification-header`}>
-        Technical Specifications
+        {t("products.technical")}
       </h1>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <StyledTableCell>Item</StyledTableCell>
-              <StyledTableCell align="left">Specification</StyledTableCell>
-              <StyledTableCell align="left">Item</StyledTableCell>
-              <StyledTableCell align="left">Specification</StyledTableCell>
+              <StyledTableCell>{t("products.item")}</StyledTableCell>
+              <StyledTableCell align="left">
+                {t("products.specification")}
+              </StyledTableCell>
+              <StyledTableCell align="left">
+                {t("products.item")}
+              </StyledTableCell>
+              <StyledTableCell align="left">
+                {t("products.specification")}
+              </StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>

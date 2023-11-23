@@ -21,16 +21,18 @@ import howtouse from "../../assets/img/product/howtouse.png";
 import passport from "../../assets/img/product/v20/passport.png";
 import memoryCard from "../../assets/img/product/memoryCard.png";
 import background_4g from "../../assets/img/product/bg_4g.png";
+import { useTranslation } from "react-i18next";
 
 export const V20Product = () => {
   // set Title
   document.title = "V20 | CheckID";
+
+  const { t } = useTranslation();
   const v20Img = [front_face, behind_face];
   const infoDetail = {
-    header: "Biometric Tablet",
-    model: "V20",
-    description:
-      "V20 is designed specially for ID verification secnarios such as eVoting, law enforcement, border control, etc. Via the MRZ module, various types of IDs can be read including eID card as well as ePassport.",
+    header: "products.v20.infoDetail.header",
+    model: "products.v20.infoDetail.model",
+    description: "products.v20.infoDetail.description",
     function: [
       { name: "Android", image: android },
       { name: "Fingerprint", image: fingerprint },
@@ -113,10 +115,8 @@ export const V20Product = () => {
     <Box className="v20">
       <Box className="v20_info d-flex align-items-center">
         <Box>
-          <h1 className="v20_info-header">Biometric Tablet (V20)</h1>
-          <p className="v20_info-title">
-            Shockproof, Drop resistance, Anti-Dust Desktop biometric tablet
-          </p>
+          <h1 className="v20_info-header">{t("products.v20.header")}</h1>
+          <p className="v20_info-title">{t("products.v20.title")}</p>
         </Box>
         <img src={fullFace} alt="" className="v20_info-img" />
       </Box>
@@ -124,50 +124,37 @@ export const V20Product = () => {
       <Box className="v20_features">
         <Box className="v20_features-comp">
           <Box className="v20_features-comp-info">
-            <h4>Multi-size Fingerprint Sensors Supported</h4>
-            <p>Supported fingerprint sensor: FAP10 / FAP20 / FAP30 / FAP45</p>
+            <h4>{t("products.v20.features.0.header")}</h4>
+            <p>{t("products.v20.features.0.body")}</p>
           </Box>
           <img src={v20_2} alt="" />
         </Box>
         <Box className="v20_features-comp">
           <img src={howtouse} alt="" />
           <Box className="v20_features-comp-info">
-            <h4>How to Use</h4>
-            <p>
-              Supporting fingerprint verification, NFC card reading, contact
-              card reading, iris recognition, MRZ Passport reading, OCR, and
-              barcode scanning
-            </p>
+            <h4>{t("products.v20.features.1.header")}</h4>
+            <p>{t("products.v20.features.1.body")}</p>
           </Box>
         </Box>
         <Box className="v20_features-comp">
           <Box className="v20_features-comp-info">
-            <h4>Passport and eID Card Reading</h4>
-            <p>
-              V20 is designed specially for ID verification secnarios such as
-              eVoting, law enforcement, border control, etc.
-            </p>
-            <p>
-              Via the MRZ module, various types of IDs can be read including eID
-              card as well as ePassport.
-            </p>
+            <h4>{t("products.v20.features.2.header")}</h4>
+            <p>{t("products.v20.features.2.body")}</p>
+            <p>{t("products.v20.features.2.body1")}</p>
           </Box>
           <img src={passport} alt="" />
         </Box>
         <Box className="v20_features-comp">
           <img src={memoryCard} alt="" />
           <Box className="v20_features-comp-info">
-            <h4>Large Memory</h4>
-            <p>4GB RAM+64GB ROM Micro SD card supported</p>
+            <h4>{t("products.v20.features.3.header")}</h4>
+            <p>{t("products.v20.features.3.body")}</p>
           </Box>
         </Box>
         <Box className="v20_features-comp">
           <Box className="v20_features-comp-info">
-            <h4>Always Connected</h4>
-            <p>
-              4G/3G, Wi-Fi, Bluetooth and USB Type-C supported guarantee the
-              device can be connected anywhere with smooth data transmission
-            </p>
+            <h4>{t("products.v20.features.4.header")}</h4>
+            <p>{t("products.v20.features.4.body")}</p>
           </Box>
           <img src={background_4g} alt="" />
         </Box>

@@ -13,11 +13,13 @@ import r502_cl from "../../assets/img/product/r502-cl.png";
 import checkid_sr from "../../assets/img/product/checkid-sr_1.png";
 import am_001 from "../../assets/img/product/am-001.png";
 import v10p from "../../assets/img/product/v10p.png";
+import { useTranslation } from "react-i18next";
 
 export const OrtherProduct = ({ classHeader }) => {
+  const { t } = useTranslation();
   const { width, height } = useWindowSize();
   console.log(height);
-  const [slideIndex, setSlideIndex] = React.useState(0);
+  const [showNumber, setShowNumber] = React.useState(4);
   const [currentProduct, setCurrentProduct] = React.useState(0);
   const path = useLocation();
   const context = "";
@@ -40,20 +42,31 @@ export const OrtherProduct = ({ classHeader }) => {
       setCurrentProduct(6);
     }
   }, [path?.pathname]);
+  useEffect(() => {
+    if (width >= 1600) {
+      setShowNumber(4);
+    } else if (width >= 1200 && width < 1600) {
+      setShowNumber(3);
+    } else if (width >= 800 && width < 1200) {
+      setShowNumber(2);
+    } else {
+      setShowNumber(1);
+    }
+  }, [width]);
   const product = [
     {
       id: 1,
       name: "V11",
       img: v11,
       link: "/products/v11",
-      description: "Handheld Biometric ID Terminal",
+      description: "products.allProducts.items.v11",
     },
     {
       id: 2,
       name: "V20",
       img: v20,
       link: "/products/v20",
-      description: "Biometric Tablet",
+      description: "products.allProducts.items.v20",
     },
 
     {
@@ -61,36 +74,35 @@ export const OrtherProduct = ({ classHeader }) => {
       name: "CheckID-SR",
       img: checkid_sr,
       link: "/products/checkid-sr",
-
-      description: "ID card reader/scanner",
+      description: "products.allProducts.items.checkidsr",
     },
     {
       id: 4,
       name: "R301 C11",
       img: r301_c11,
       link: "/products/r301-c11",
-      description: "CCID Smartcard Reader",
+      description: "products.allProducts.items.r301c11",
     },
     {
       id: 5,
       name: "R502-CL",
       img: r502_cl,
       link: "/products/r502-cl",
-      description: "CCID Smartcard Reader",
+      description: "products.allProducts.items.r502cl",
     },
     {
       id: 6,
       name: "AM-001",
       img: am_001,
       link: "/products/am-001",
-      description: "Altimeter for document/ID card",
+      description: "products.allProducts.items.am001",
     },
     {
       id: 7,
       name: "V10P",
       img: v10p,
       link: "/products/v10p",
-      description: "Desktop Biometric ID Terminal",
+      description: "products.allProducts.items.v10p",
     },
   ];
   const properties = {
@@ -149,13 +161,12 @@ export const OrtherProduct = ({ classHeader }) => {
     arrows: width > 768 ? true : false,
     transitionDuration: 500,
     slidesToScroll: 1,
-    slidesToShow: 4,
-    onChange: (oldIndex, newIndex) => setSlideIndex(newIndex),
+    slidesToShow: showNumber,
   };
   return (
     <Box className={`${classHeader}_ortherProduct`}>
       <h1 className={`${classHeader}_ortherProduct-header`}>
-        Related Products
+        {t("products.relatedProducts")}
       </h1>
       <Slide {...properties}>
         {product.map(
@@ -169,7 +180,7 @@ export const OrtherProduct = ({ classHeader }) => {
                   <img src={item.img} alt="" />
                   <Box>
                     <h6>{item.name}</h6>
-                    <p>{item.description}</p>
+                    <p>{t(item.description)}</p>
                   </Box>
                 </Link>
               </div>

@@ -141,19 +141,27 @@
 // 321 to 768
 @media (min-width: 321px) and (max-width: 768px) {
   .footer {
+    padding: 0 20px;
     &_info {
+      justify-content: flex-start !important;
       &-item {
         flex-wrap: wrap;
-
+        .link {
+          &-discover,
+          &-service {
+            padding: 10px;
+          }
+        }
         &:last-child {
           margin: 0;
-          align-items: center;
+          align-items: flex-start;
           width: 100%;
         }
       }
     }
     &_cer {
       &-item {
+        justify-content: flex-start !important;
         > div {
           flex-wrap: wrap;
 
@@ -161,12 +169,15 @@
         }
       }
       > p {
-        text-align: center;
+        text-align: start;
       }
     }
     &_contact {
       flex-wrap: wrap;
       padding: 20px 10px;
+      > div {
+        padding: 10px 0;
+      }
     }
   }
 }

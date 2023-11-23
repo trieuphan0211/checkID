@@ -7,7 +7,6 @@ import SmartCard from "../../assets/img/product/SmartCard.png";
 import RichPorts from "../../assets/img/product/RichPorts.png";
 import nfc from "../../assets/img/product/NFC.png";
 import mrz from "../../assets/img/product/mrz.png";
-import fingerprint from "../../assets/img/product/Fingerprint.png";
 import camera from "../../assets/img/product/camera.png";
 import { Box } from "@mui/material";
 import {
@@ -15,16 +14,19 @@ import {
   OrtherProduct,
   TechnicalSpecifications,
 } from "../../components/products";
+import { useTranslation } from "react-i18next";
 
-export const CheckID_SRProduct = () => {
+export const CheckIDSRProduct = () => {
   // set Title
   document.title = "CheckID-SR | CheckID";
+
+  const { t } = useTranslation();
+
   const checkIdSrImg = [front_face, behind_face];
   const infoDetail = {
-    header: "ID card reader/scanner",
-    model: "CheckID-SR",
-    description:
-      "Profit from accurate data entry and verification /n OEM design for ABC gates and self-service kiosks /n Intuitive design helps infrequent passengers /n Automated passenger screening, 24/7 operation /n Reads & verifies every IDs including electronic travel documents",
+    header: "products.checkidSr.infoDetail.header",
+    model: "products.checkidSr.infoDetail.model",
+    description: "products.checkidSr.infoDetail.description",
     function: [
       { name: "SmartCard", image: SmartCard },
       { name: "Rich Ports", image: RichPorts },
@@ -103,10 +105,10 @@ export const CheckID_SRProduct = () => {
       <Box className="checkIdSr_info d-flex align-items-center">
         <Box>
           <h1 className="checkIdSr_info-header">
-            Altimeter for document ID card(AM-001)
+            {t("products.checkidSr.header")}
           </h1>
           <p className="checkIdSr_info-title">
-            ICAO ePassport Reader ID Card Document Camera Scanner
+            {t("products.checkidSr.title")}
           </p>
         </Box>
         <img src={checkIdSr_fullFace} alt="" className="checkIdSr_info-img" />

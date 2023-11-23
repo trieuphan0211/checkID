@@ -16,7 +16,7 @@
       text-transform: uppercase;
     }
     &-header {
-      text-transform: capitalize;
+      // text-transform: capitalize;
       color: var(--primary-2);
       font-size: 6.4em;
       font-weight: 700;
@@ -36,7 +36,7 @@
     padding: 40px 70px;
     background-color: #dff1ff;
     &-header {
-      text-transform: capitalize;
+      // text-transform: capitalize;
       font-size: 4em;
       font-weight: 700;
       line-height: 50px;
@@ -198,7 +198,7 @@
     }
   }
   &_dowload {
-    padding: 67px 70px;
+    padding: 67px 70px 5px 70px;
     &-layout {
       width: 1240px;
       background-color: var(--primary-2);

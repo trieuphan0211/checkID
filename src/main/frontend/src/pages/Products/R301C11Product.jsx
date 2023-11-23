@@ -18,16 +18,18 @@ import r301c11_4 from "../../assets/img/product/platform.png";
 import r301c11_5 from "../../assets/img/product/R301_C11/r301c11_5.png";
 import r301c11_6 from "../../assets/img/product/R301_C11/r301c11_6.png";
 import r301c11_7 from "../../assets/img/product/R301_C11/r301c11_7.png";
+import { useTranslation } from "react-i18next";
 
-export const R301_C11Product = () => {
+export const R301C11Product = () => {
   // set Title
   document.title = "R301-C11 | CheckID";
+
+  const { t } = useTranslation();
   const r301c11Img = [front_face, behind_face];
   const infoDetail = {
-    header: "CCID Smartcard Reader",
-    model: "R301-C11",
-    description:
-      "R301-C11 suits customers where security concerns are the most salient and satisfies the demand for a flexible solution for ID authentication, e-commerce, e-payment, information security and access control./n R301-C11 and the rest line of smart card readers offer each customer a complete solution for all manner of utilizations.",
+    header: "products.r301c11.infoDetail.header",
+    model: "products.r301c11.infoDetail.model",
+    description: "products.r301c11.infoDetail.description",
     function: [
       { name: "SmartCard", image: SmartCard },
       { name: "Rich Ports", image: RichPorts },
@@ -105,12 +107,9 @@ export const R301_C11Product = () => {
       <Box className="r301c11_info d-flex align-items-center">
         <Box>
           <h1 className="r301c11_info-header">
-            CCID Smartcard Reader (R301-C11)
+            {t("products.r301c11.header")}
           </h1>
-          <p className="r301c11_info-title">
-            Compact, ease of use, cost-effective Smart Card Reader for PC,
-            supports ISO 7816 Class A, B and C cards.
-          </p>
+          <p className="r301c11_info-title">{t("products.r301c11.title")}</p>
         </Box>
         <img src={r301c11_fullFace} alt="" className="r301c11_info-img" />
       </Box>
@@ -122,12 +121,16 @@ export const R301_C11Product = () => {
       <Box className="r301c11_features">
         <Box className="r301c11_features-comp">
           <Box className="r301c11_features-comp-info">
-            <h4>High security level hardware design</h4>
+            <h4>{t("products.r301c11.features.0.header")}</h4>
             <p>
-              High security level chipset
-              <br /> Built-in short-circuited / over-voltage protection
-              <br /> Firmware encryption mechanism
-              <br /> Encrypted firmware upgrade
+              {t("products.r301c11.features.0.body")
+                .split("/n")
+                .map((item) => (
+                  <>
+                    {item}
+                    <br />
+                  </>
+                ))}
             </p>
           </Box>
           <img src={r301c11_2} alt="" />
@@ -135,47 +138,45 @@ export const R301_C11Product = () => {
         <Box className="r301c11_features-comp">
           <img src={r301c11_3} alt="" />
           <Box className="r301c11_features-comp-info">
-            <h4>USB Type-C</h4>
+            <h4>{t("products.r301c11.features.1.header")}</h4>
             <p>
-              The most convenient USB port, users no longer have to connect the
-              cable with the correct side up
-              <br />
-              Flexible customization, USB Type-C available for all PC Smart Card
-              Readers.
+              {t("products.r301c11.features.1.body")
+                .split("/n")
+                .map((item) => (
+                  <>
+                    {item}
+                    <br />
+                  </>
+                ))}
             </p>
           </Box>
         </Box>
         <Box className="r301c11_features-comp">
           <Box className="r301c11_features-comp-info">
-            <h4>Major platform compatible</h4>
-            <p>
-              Smart Card Readers are compatible with mainstream operating system
-              platforms: Windows, Linux, macOS, Unix, with full CCID support,
-              Android with OTG. A true sense of driverless product.
-            </p>
+            <h4>{t("products.r301c11.features.2.header")}</h4>
+            <p>{t("products.r301c11.features.2.body")}</p>
           </Box>
           <img src={r301c11_4} alt="" />
         </Box>
         <Box className="r301c11_features-comp">
           <img src={r301c11_5} alt="" />
           <Box className="r301c11_features-comp-info">
-            <h4>Flexible customizations</h4>
-            <p>
-              We offer complete customization options for casing, packaging and
-              related service to enable the ability of creating your very own
-              Smart Card Reader.
-            </p>
+            <h4>{t("products.r301c11.features.3.header")}</h4>
+            <p>{t("products.r301c11.features.3.body")}</p>
           </Box>
         </Box>
         <Box className="r301c11_features-comp">
           <Box className="r301c11_features-comp-info">
-            <h4>Metal stand improves your desktop usage</h4>
+            <h4>{t("products.r301c11.features.4.header")}</h4>
             <p>
-              Heavy and stable
-              <br />
-              Fashion design
-              <br />
-              Long USB cord.
+              {t("products.r301c11.features.4.body")
+                .split("/n")
+                .map((item) => (
+                  <>
+                    {item}
+                    <br />
+                  </>
+                ))}
             </p>
           </Box>
           <img src={r301c11_6} alt="" />
@@ -183,11 +184,8 @@ export const R301_C11Product = () => {
         <Box className="r301c11_features-comp">
           <img src={r301c11_7} alt="" />
           <Box className="r301c11_features-comp-info">
-            <h4>Certifications</h4>
-            <p>
-              With these certifications, Smart Card Reader tops by both
-              functionality and performance.
-            </p>
+            <h4>{t("products.r301c11.features.5.header")}</h4>
+            <p>{t("products.r301c11.features.5.body")}</p>
           </Box>
         </Box>
       </Box>

@@ -114,7 +114,7 @@ export default {
       title: "Discover",
       why: "Why NFC?",
       using: "Using the CheckID App?",
-      work: "Work at MobileID",
+      work: "Work at Mobile-ID",
       partnerships: "Partnerships",
     },
     service: {
@@ -141,9 +141,9 @@ export default {
     },
     vendor: {
       title:
-        "MobileID Representative Vendor in Gartner 2023 Market Guide for IDV",
+        "Mobile-ID Representative Vendor in Gartner 2023 Market Guide for IDV",
       content:
-        " Gartner has published their 2023 Market Guide for Identity Verification, and MobileID is named as a representative vendor for NFC identity verification. Gartner’s stance on NFC as a means of remote identity verification is clear: NFC-based identity verification will become unavoidable in the future and is currently a necessity if organizations need to trust the outcome of a check.",
+        " Gartner has published their 2023 Market Guide for Identity Verification, and Mobile-ID is named as a representative vendor for NFC identity verification. Gartner’s stance on NFC as a means of remote identity verification is clear: NFC-based identity verification will become unavoidable in the future and is currently a necessity if organizations need to trust the outcome of a check.",
       readMore: "Read more",
     },
     company: {
@@ -184,7 +184,7 @@ export default {
     videotitle: "CheckID Identity Verification in 2 steps",
     verify: {
       header: {
-        title: "MobileID identity verification solutions",
+        title: "Mobile-ID identity verification solutions",
         body: "Accelerate towards a trusted and scalable way of NFC-first identity verification",
         question:
           "Our CheckID technology can be used remotely as well as in face-to-face settings. What is your use case?",
@@ -206,7 +206,7 @@ export default {
       info: {
         title: {
           header: "Leading through innovation ",
-          body: "We build upon research and innovation at MobileId. Learn more on the features of our identity verification technology through our resource centre. ",
+          body: "We build upon research and innovation at Mobile-Id. Learn more on the features of our identity verification technology through our resource centre. ",
           goto: "Go to our resource centre",
         },
         body: {
@@ -392,7 +392,7 @@ export default {
       },
       3: {
         header: "Certified safety",
-        body: "The technology is secure, as is our company. We are the most certified in the identity verification industry: ISO27001, ISO27701 and eIDAS-compliant certified under ETSI EN 319 401 and ETSI EN 319 411-1/2 standards. We comply with SOC2 Type 2 as well as with EBA outsourcing guidelines. MobileID is based in the EU and follows GDPR compliance. We are regularly pen-tested by external expert.",
+        body: "The technology is secure, as is our company. We are the most certified in the identity verification industry: ISO27001, ISO27701 and eIDAS-compliant certified under ETSI EN 319 401 and ETSI EN 319 411-1/2 standards. We comply with SOC2 Type 2 as well as with EBA outsourcing guidelines. Mobile-ID is based in the EU and follows GDPR compliance. We are regularly pen-tested by external expert.",
         body2:
           "We use a SaaS architecture, as client-based solutions are not secure enough in general. We collaborate with the best facial verification partners for holder verification.",
         link: "Learn more about our certifications",
@@ -495,8 +495,8 @@ export default {
         header: "Anyone can do the job",
         body: "Can you distinguish fake from valid? What do you look for to establish whether an identity card is genuine or counterfeit? And what if it is a document from countries you don't see very often? You would need extensive training.",
         body2:
-          " MobileID lets you check the integrity of any chipped identity document. Using the ICAO 9303 and ISO 18013 standards for identity documents we know what is real and what is not. Instantly. Guaranteed.",
-        link: " Read more on MobileID and security",
+          " Mobile-ID lets you check the integrity of any chipped identity document. Using the ICAO 9303 and ISO 18013 standards for identity documents we know what is real and what is not. Instantly. Guaranteed.",
+        link: " Read more on Mobile-ID and security",
         feedback: {
           name: "Tjitse van de Bos",
           title: "Corporate Security Manager at CBR",
@@ -505,7 +505,7 @@ export default {
       },
       2: {
         header: "Market leader in secure digital identity verification",
-        body: " When it comes to trusted identity verification, MobileID is top of class. By reading passport chips through NFC and checking for a government’s signature, we guarantee the most accurate verification of identity details.",
+        body: " When it comes to trusted identity verification, Mobile-ID is top of class. By reading passport chips through NFC and checking for a government’s signature, we guarantee the most accurate verification of identity details.",
         body2:
           " We make sure you receive the latest verified information. We also help you flag and report fraudulent practices, since our software will immediately recognise if someone has been tinkering with a chip.",
         list: {
@@ -529,7 +529,7 @@ export default {
       button: "Go to research paper",
     },
     help: {
-      header: "How MobileID helps",
+      header: "How Mobile-ID helps",
 
       use: {
         header: "Easy to use",
@@ -571,6 +571,246 @@ export default {
       privacyPolicy: "Privacy Policy.",
       contact: "Contact a specialist",
       context3: "We’ll reply within 1 day.",
+    },
+  },
+  products: {
+    download: "Download",
+    model: "Model",
+    function: "Function",
+    technical: "Technical Specifications",
+    item: "Item",
+    specification: "Specification",
+    relatedProducts: "Related Products",
+    allProducts: {
+      header: "All products",
+      subheader: "Identification Terminal",
+      title: "Fingerprint Scanner / NFC / 4G / Bluetooth / Wifi",
+      items: {
+        v11: "Handheld Biometric ID Terminal",
+        v20: "Biometric Tablet",
+        checkidsr: "ID card reader/scanner",
+        r301c11: "CCID Smartcard Reader",
+        am001: "Altimeter for document/ID card",
+        r502cl: "CCID Smartcard Reader",
+        v10p: "Desktop Biometric ID Terminal",
+      },
+    },
+    checkidSr: {
+      header: "ID card reader (CheckID-SR)",
+      title: "ID card reader/scanner for self-service kiosk",
+      infoDetail: {
+        header: "ID card reader/scanner",
+        model: "CheckID-SR",
+        description:
+          "Profit from accurate data entry and verification /n OEM design for ABC gates and self-service kiosks /n Intuitive design helps infrequent passengers /n Automated passenger screening, 24/7 operation /n Reads & verifies every IDs including electronic travel documents",
+      },
+    },
+    am001: {
+      header: "Altimeter for document ID card(AM-001)",
+      title: "ICAO ePassport Reader ID Card Document Camera Scanner",
+      infoDetail: {
+        header: "Altimeter for document ID card",
+        model: "AM-001",
+        description:
+          " AM-001 Profit from accurate data entry and verification, OEM design for ABC gates and self-service kiosks, Intuitive design helps infrequent passengers. /nAutomated passenger screening, 24/7 operation /nReads & verifies every IDs including electronic travel documents",
+      },
+    },
+    v11: {
+      header: " Handheld Biometric ID Terminal (V11)",
+      title: "Pogo PIN supported Extensible Biometric Handheld Terminal",
+      infoDetail: {
+        header: "Handheld Biometric ID Terminal",
+        model: "V11",
+        description:
+          "V11 is a smart Android mobile terminal, featuring a biometric fingerprint scanner that offers accurate identification. Being the most stable biometric characteristics, fingerprint authentication can be used to prevent unauthorized physical access to the school, office, laboratory, warehouse, etc.",
+      },
+      features: {
+        0: {
+          header: "More Scalabilities, More Possibilities",
+          body: "More possibilities and functions are available with pogo PIN, such as Printer module, UHF module, etc.",
+        },
+        1: {
+          header: "How to Use",
+          body: "Supporting fingerprint verification, NFC card reading, contact card reading, iris recognition, MRZ Passport reading, OCR, and barcode scanning",
+        },
+        2: {
+          header: "Strong Fingerprint Authentication",
+          body: "Live finger detection technology, high perform fingerprint sensor guarantees accurate and effective ID verification.",
+          body1:
+            "Multi-vendor fingerprint sensors are supported: Built-in FBI PIV & FBI Mobile ID FAP30 / FAP20 / FAP10 certified single flat finger scanner including:",
+          ul: {
+            li1: "IB LES Danno (TFT camera)",
+            li2: "Suprema: BM-Slim2, BM-Slim2S, BM-Slim3S",
+            li3: "Morpho CBM-E3",
+            li4: "Futronic: FS81H, FS89H",
+            li5: "Aratek: A600-M",
+            li6: "SecuGen U10",
+          },
+        },
+        3: {
+          header: "Large Memory",
+          body: "3GB RAM+32GB ROM, up to 128GB Micro SD card supported",
+        },
+        4: {
+          header: "For Both Contact and Contactless Cards",
+          body: "Contact: Support ID-1 size smart card, such as: ID card, chip embedded NFC card.",
+          body1:
+            "Contactless (NFC): ISO/IEC 14443 A/B, ISO/IEC 7816, etc. support original Android NFC API.",
+        },
+        5: {
+          header: "Always Connected",
+          body: "4G/3G, Wi-Fi, Bluetooth and USB Type-C supported guarantee the device can be connected anywhere with smooth data transmission",
+        },
+      },
+    },
+    v20: {
+      header: "Biometric Tablet (V20)",
+      title: " Shockproof, Drop resistance, Anti-Dust Desktop biometric tablet",
+      infoDetail: {
+        header: "Biometric Tablet",
+        model: "V20",
+        description:
+          "V20 is designed specially for ID verification secnarios such as eVoting, law enforcement, border control, etc. Via the MRZ module, various types of IDs can be read including eID card as well as ePassport.",
+      },
+      features: {
+        0: {
+          header: "Multi-size Fingerprint Sensors Supported",
+          body: "Supported fingerprint sensor: FAP10 / FAP20 / FAP30 / FAP45",
+        },
+        1: {
+          header: "How to Use",
+          body: "Supporting fingerprint verification, NFC card reading, contact card reading, iris recognition, MRZ Passport reading, OCR, and barcode scanning",
+        },
+        2: {
+          header: "Passport and eID Card Reading",
+          body: "V20 is designed specially for ID verification secnarios such as eVoting, law enforcement, border control, etc.",
+          body1:
+            "Via the MRZ module, various types of IDs can be read including eID card as well as ePassport.",
+        },
+        3: {
+          header: "Large Memory",
+          body: "4GB RAM+64GB ROM Micro SD card supported",
+        },
+        4: {
+          header: "Always Connected",
+          body: "4G/3G, Wi-Fi, Bluetooth and USB Type-C supported guarantee the device can be connected anywhere with smooth data transmission",
+        },
+      },
+    },
+    r301c11: {
+      header: "CCID Smartcard Reader (R301-C11)",
+      title:
+        "Compact, ease of use, cost-effective Smart Card Reader for PC, supports ISO 7816 Class A, B and C cards.",
+      infoDetail: {
+        header: "CCID Smartcard Reader",
+        model: "R301-C11",
+        description:
+          "R301-C11 suits customers where security concerns are the most salient and satisfies the demand for a flexible solution for ID authentication, e-commerce, e-payment, information security and access control./n R301-C11 and the rest line of smart card readers offer each customer a complete solution for all manner of utilizations.",
+      },
+      features: {
+        0: {
+          header: "High security level hardware design",
+          body: "High security level chipset /n Built-in short-circuited / over-voltage protection /n Firmware encryption mechanism /n Encrypted firmware upgrade",
+        },
+        1: {
+          header: "USB Type-C",
+          body: "The most convenient USB port, users no longer have to connect the cable with the correct side up /n Flexible customization, USB Type-C available for all PC Smart Card Readers.",
+        },
+        2: {
+          header: "Major platform compatible",
+          body: "Smart Card Readers are compatible with mainstream operating system platforms: Windows, Linux, macOS, Unix, with full CCID support, Android with OTG. A true sense of driverless product.",
+        },
+        3: {
+          header: "Flexible customizations",
+          body: "We offer complete customization options for casing, packaging and related service to enable the ability of creating your very own Smart Card Reader.",
+        },
+        4: {
+          header: "Metal stand improves your desktop usage",
+          body: "Heavy and stable /n Fashion design /n Long USB cord.",
+        },
+        5: {
+          header: "Certifications",
+          body: "With these certifications, Smart Card Reader tops by both functionality and performance.",
+        },
+      },
+    },
+    r502cl: {
+      header: "CCID Smartcard Reader (R502-CL)",
+      title: "A combination of contactless and contact smart card reader",
+      infoDetail: {
+        header: "CCID Smartcard Reader",
+        model: "R502-CL",
+        description:
+          "R502-CL is a terminal interface device for smart card applications and system integrations. It can be widely used in industries or applications requiring electronic payment and authentication, especially suitable for the high security fields. It is an optimal solution for authentication, e-commerce, financial organizations, access control etc.",
+      },
+      features: {
+        0: {
+          header: "High security level hardware design",
+          body: "High security level chipset /n Built-in short-circuited / over-voltage protection /n Firmware encryption mechanism /n Encrypted firmware upgrade",
+        },
+        1: {
+          header: "Multifunctional composite product",
+          body: "Combined with contact and contactless function, in addition with 2 extra SAM slots, Contactless Smart Card Reader could be used for both authentication and payment.",
+        },
+        2: {
+          header: "Major platform compatible",
+          body: "Smart Card Readers are compatible with mainstream operating system platforms: Windows, Linux, macOS, Unix, with full CCID support, Android with OTG. A true sense of driverless product.",
+        },
+        3: {
+          header: "Flexible customizations",
+          body: "We offer complete customization options for casing, packaging and related service to enable the ability of creating your very own Smart Card Reader.",
+        },
+        4: {
+          header: "Support all 13.56 MHz NFC Cards",
+          body: "ISO/IEC 7816-1, 2, 3, 4;ISO/IEC 14443 Type A and B /n Mifare © 13.56 MHz ISO 14443A /n Felica © protocol support /n Compatible with ISO 15693 protocol /n Compatible with ISO/IEC 18092 protocol /n VHBR protocol support *(Optional).",
+        },
+        5: {
+          header: "Certifications",
+          body: "With these certifications, Smart Card Reader tops by both functionality and performance.",
+        },
+      },
+    },
+    v10p: {
+      header: "Desktop Biometric ID Terminal (V10P)",
+      title: " All-in-one desktop Biometric Terminal",
+      infoDetail: {
+        header: "Desktop Biometric ID Terminal",
+        model: "V10P",
+        description:
+          "V10 is a smart desktop biometric terminal, featuring a biometric fingerprint scanner that offers accurate identification. Being the most stable biometric characteristics, fingerprint authentication can be used to prevent unauthorized physical access to the school, office, laboratory, warehouse, etc.",
+      },
+      features: {
+        0: {
+          header: "How to Use",
+          body: "Supporting fingerprint verification, NFC card reading, contact card reading, iris recognition, MRZ Passport reading, OCR, and barcode scanning",
+        },
+        1: {
+          header: "Strong Fingerprint Authentication",
+          body: "Live finger detection technology, high perform fingerprint sensor guarantees accurate and effective ID verification.",
+          body1:
+            "Built-in FBI PIV & FBI Mobile ID FAP30 / FAP20 / FAP10 certified single flat finger scanner supported, including: Futronic: FS81H, FS89H",
+        },
+        2: {
+          header: "Contactless NFC Card Reading",
+          body: "Built-in NFC card reader supports ISO/IEC 14443 A/B standard NFC cards, such as national ID card, driver's license card, medical insurance card and bank card, etc",
+        },
+        3: {
+          header: "Large Memory",
+          body: "3GB RAM+32GB ROM, up to 64GB TF-card supported",
+        },
+        4: {
+          header: "Always Connected",
+          body: "4G/3G, Wi-Fi, Bluetooth and USB Type-C supported guarantee the device can be connected anywhere with smooth data transmission",
+        },
+      },
+    },
+  },
+  usecaseStories: {
+    company: {
+      title: "You’ll be in good company",
+      content:
+        " CheckID is used by leading banks, governmental organizations, digital signature services, and many others worldwide.",
+      readStory: "Read their stories",
     },
   },
 };

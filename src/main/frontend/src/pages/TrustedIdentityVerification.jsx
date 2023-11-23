@@ -90,7 +90,7 @@ const TrustedIdentityVerification = (props) => {
   document.title = "Trusted Identity Verification | CheckID";
   //
   const { t } = useTranslation();
-  const { width, height } = useWindowSize();
+  const { width } = useWindowSize();
   const [slideIndex, setSlideIndex] = React.useState(0);
   const properties = {
     prevArrow: (

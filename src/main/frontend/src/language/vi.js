@@ -115,14 +115,14 @@ export default {
       title: "Khám phá",
       why: "Tại sao NFC?",
       using: "Sử dụng ứng dụng CheckID?",
-      work: "Làm việc tại MobileID",
+      work: "Làm việc tại Mobile-ID",
       partnerships: "Hợp tác",
     },
     service: {
       title: "Dịch vụ",
       contact: "Liên hệ với chuyên gia",
       try: "Thử ứng dụng CheckID Me của chúng tôi",
-      request: "Yêu cầu phiên trình diễn doanh nghiệp",
+      request: " Doanh nghiệp gửi yêu cầu trải nghiệm",
       downloads: "Tải về",
     },
     stayINformed: "Cập nhật thông tin về xác minh danh tính",
@@ -142,9 +142,9 @@ export default {
     },
     vendor: {
       title:
-        "Nhà cung cấp đại diện của MobileID trong Hướng dẫn thị trường 2023 của Gartner cho IDV",
+        "Nhà cung cấp đại diện của Mobile-ID trong Hướng dẫn thị trường 2023 của Gartner cho IDV",
       content:
-        "Gartner đã công bố Hướng dẫn thị trường 2023 của họ về Xác minh danh tính, và MobileID được đề cập là nhà cung cấp đại diện cho xác minh danh tính NFC. Quan điểm của Gartner về NFC là một phương tiện của việc xác minh danh tính từ xa rất rõ ràng: Xác minh danh tính dựa trên NFC sẽ trở nên không thể tránh khỏi trong tương lai và hiện nay là một điều cần thiết nếu tổ chức cần tin tưởng vào kết quả của việc kiểm tra.",
+        "Gartner đã công bố Hướng dẫn thị trường 2023 của họ về Xác minh danh tính, và Mobile-ID được đề cập là nhà cung cấp đại diện cho xác minh danh tính NFC. Quan điểm của Gartner về NFC là một phương tiện của việc xác minh danh tính từ xa rất rõ ràng: Xác minh danh tính dựa trên NFC sẽ trở nên không thể tránh khỏi trong tương lai và hiện nay là một điều cần thiết nếu tổ chức cần tin tưởng vào kết quả của việc kiểm tra.",
       readMore: "Đọc thêm",
     },
     company: {
@@ -185,7 +185,7 @@ export default {
     videotitle: "Xác minh danh tính CheckID trong 2 bước",
     verify: {
       header: {
-        title: "Giải pháp xác minh danh tính MobileId",
+        title: "Giải pháp xác minh danh tính Mobile-Id",
         body: "Tăng tốc độ xác minh danh tính bằng cách sử dụng cách xác minh danh tính dựa trên NFC đáng tin cậy và có thể mở rộng",
         question:
           "Công nghệ CheckID của chúng tôi có thể sử dụng từ xa cũng như trong cài đặt trực tiếp. Trường hợp sử dụng của bạn là gì?",
@@ -207,7 +207,7 @@ export default {
       info: {
         title: {
           header: "Dẫn đầu thông qua sáng tạo",
-          body: "Chúng tôi xây dựng trên nghiên cứu và sáng tạo tại MobileId. Tìm hiểu thêm về các tính năng của công nghệ xác minh danh tính của chúng tôi thông qua trung tâm tài nguyên của chúng tôi.",
+          body: "Chúng tôi xây dựng trên nghiên cứu và sáng tạo tại Mobile-Id. Tìm hiểu thêm về các tính năng của công nghệ xác minh danh tính của chúng tôi thông qua trung tâm tài nguyên của chúng tôi.",
           goto: "Đến trung tâm tài nguyên của chúng tôi",
         },
         body: {
@@ -394,7 +394,7 @@ export default {
       },
       3: {
         header: "An toàn được chứng nhận",
-        body: "Công nghệ an toàn, cũng như công ty của chúng tôi. Chúng tôi là công ty có nhiều chứng chỉ nhất trong ngành xác minh danh tính: được chứng nhận theo ISO27001, ISO27701 và tuân thủ tiêu chuẩn ETSI EN 319 401 và ETSI EN 319 411-1/2. Chúng tôi tuân theo SOC2 Loại 2 cũng như hướng dẫn về việc outsourcing của EBA. MobileID có trụ sở tại EU và tuân theo quy định GDPR. Chúng tôi thường xuyên được thử nghiệm bởi các chuyên gia ngoại vi.",
+        body: "Công nghệ an toàn, cũng như công ty của chúng tôi. Chúng tôi là công ty có nhiều chứng chỉ nhất trong ngành xác minh danh tính: được chứng nhận theo ISO27001, ISO27701 và tuân thủ tiêu chuẩn ETSI EN 319 401 và ETSI EN 319 411-1/2. Chúng tôi tuân theo SOC2 Loại 2 cũng như hướng dẫn về việc outsourcing của EBA. Mobile-ID có trụ sở tại EU và tuân theo quy định GDPR. Chúng tôi thường xuyên được thử nghiệm bởi các chuyên gia ngoại vi.",
         body2:
           "Chúng tôi sử dụng kiến trúc SaaS, vì các giải pháp dựa trên máy khách thường không đủ an toàn. Chúng tôi hợp tác với các đối tác xác minh khuôn mặt tốt nhất để xác minh người sở hữu.",
         link: "Tìm hiểu thêm về các chứng chỉ",
@@ -475,22 +475,20 @@ export default {
   faceToFaceIdentity: {
     conversionRate: {
       title: "Xác minh danh tính trực tiếp",
-      header:
-        "Bất kỳ ai cũng có thể trở thành chuyên gia về tài liệu danh tính",
+      header: "Bất kỳ ai cũng có thể là chuyên gia về tài liệu định danh",
       body: "Làm thế nào một cảnh sát trên đường hoặc một nhân viên kiểm soát biên giới có thể xác minh rằng người đang đưa họ chiếc hộ chiếu là người sở hữu chính xác của nó? Liệu nhân viên của bạn có đối mặt với khó khăn khi phải làm việc với nhiều loại tài liệu khác nhau trong văn phòng?",
       body2:
         "Với CheckID, họ sử dụng điện thoại thông minh của họ để đọc chip nhúng và truy cập thông tin do chính phủ cấp.",
       button: "Hãy thử ứng dụng CheckID Me của chúng tôi",
     },
     matter: {
-      title: "#XácMinhDanhTínhUyTín",
+      title: "#XacMinhDanhTinhUyTin",
       header: "Cùng nhau chúng ta đơn giản hóa quá trình xác minh danh tính",
       body: "Xử lý mọi thách thức về xác minh danh tính liên quan đến thông tin cá nhân nhạy cảm với độ an toàn và tiện lợi tối đa.",
       button: "Khám phá 5 lý do quan trọng",
     },
-
     building: {
-      header: "Sử dụng Công Nghệ Gần Trường NFC",
+      header: "Sử dụng Công Nghệ Gần NFC",
       body: "Thanh toán bằng NFC trên điện thoại di động ngày càng phổ biến, đặc biệt trong bạn dịch Covid-19. Để nhân viên của bạn sử dụng công nghệ này cho việc xác minh danh tính bằng cách đọc chip tài liệu danh tính an toàn và không thể sai sót. Kết quả là độ chắc chắn về danh tính không giành được bằng cách nào khác, giảm chi phí đào tạo và trải nghiệm tuyệt vời.",
     },
     slide: {
@@ -498,8 +496,8 @@ export default {
         header: "Bất kỳ ai cũng có thể làm công việc này",
         body: "Bạn có thể phân biệt giả mạo và hợp lệ không? Bạn tìm kiếm điều gì để xác định liệu một thẻ danh tính có phải là thật hay giả mạo không? Và nếu đó là một tài liệu từ các quốc gia mà bạn không thấy thường xuyên? Bạn sẽ cần đào tạo rộng rãi.",
         body2:
-          "MobileID cho phép bạn kiểm tra tính toàn vẹn của bất kỳ tài liệu danh tính có chip nào. Sử dụng các tiêu chuẩn ICAO 9303 và ISO 18013 cho tài liệu danh tính, chúng tôi biết điều gì là thật và điều gì không phải. Ngay lập tức. Đảm bảo.",
-        link: "Đọc thêm về MobileID và bảo mật",
+          "Mobile-ID cho phép bạn kiểm tra tính toàn vẹn của bất kỳ tài liệu danh tính có chip nào. Sử dụng các tiêu chuẩn ICAO 9303 và ISO 18013 cho tài liệu danh tính, chúng tôi biết điều gì là thật và điều gì không phải. Ngay lập tức. Đảm bảo.",
+        link: "Đọc thêm về Mobile-ID và bảo mật",
         feedback: {
           name: "Tjitse van de Bos",
           title: "Quản lý An Ninh Doanh Nghiệp tại CBR",
@@ -509,7 +507,7 @@ export default {
       2: {
         header:
           "Là nhà lãnh đạo thị trường trong việc xác minh danh tính kỹ thuật số an toàn",
-        body: "Khi đến việc xác minh danh tính đáng tin cậy, MobileID đứng đầu trong lớp của mình. Bằng cách đọc chip hộ chiếu thông qua NFC và kiểm tra chữ ký của chính phủ, chúng tôi đảm bảo sự xác minh chính xác nhất về thông tin danh tính.",
+        body: "Khi đến việc xác minh danh tính đáng tin cậy, Mobile-ID đứng đầu trong lớp của mình. Bằng cách đọc chip hộ chiếu thông qua NFC và kiểm tra chữ ký của chính phủ, chúng tôi đảm bảo sự xác minh chính xác nhất về thông tin danh tính.",
         body2:
           "Chúng tôi đảm bảo bạn nhận được thông tin đã được xác minh mới nhất. Chúng tôi cũng giúp bạn đánh dấu và báo cáo các thực hành gian lận, vì phần mềm của chúng tôi sẽ ngay lập tức nhận ra nếu có người nào đó đã làm mất dữ liệu từ chip.",
         list: {
@@ -528,13 +526,14 @@ export default {
       },
     },
 
-    download: {
-      header: "Đơn giản hóa quy trình xác minh danh tính của bạn với NFC",
-      read: " Đọc về tất cả những điều bạn cần biết",
+    dowload: {
+      header: "Đơn giản hóa quá trình xác minh danh tính của bạn với NFC",
+      read: "Đọc về tất cả những điều cần biết",
       button: "Đến bài nghiên cứu",
     },
+
     help: {
-      header: "Làm thế nào MobileID giúp đỡ",
+      header: "Mobile-ID giúp đơn giản hóa việc xác thực danh tính",
 
       use: {
         header: "Dễ sử dụng",
@@ -577,6 +576,249 @@ export default {
       privacyPolicy: "Chính sách quyền riêng tư.",
       contact: "Liên hệ với chuyên gia",
       context3: "Chúng tôi sẽ trả lời trong vòng 1 ngày.",
+    },
+  },
+  products: {
+    download: "Tải về",
+    model: "Mô hình",
+    function: "Chức năng",
+    technical: "Thông số kỹ thuật",
+    item: "Mục",
+    specification: "Thông số kỹ thuật",
+    relatedProducts: "Sản phẩm liên quan",
+    allProducts: {
+      header: "Tất cả sản phẩm",
+      subheader: "Terminal nhận diện",
+      title: "Máy quét vân tay / NFC / 4G / Bluetooth / Wifi",
+      items: {
+        v11: "Terminal Nhận Diện Di Động Vân Tay",
+        v20: "Bảng Nhận Diện Vân Tay",
+        checkidsr: "Đọc/Quét thẻ ID",
+        r301c11: "Đầu Đọc Thẻ Thông Minh CCID",
+        am001: "Altimeter cho tài liệu/thẻ ID",
+        r502cl: "Đầu Đọc Thẻ Thông Minh CCID",
+        v10p: "Terminal Nhận Diện Vân Tay Desktop",
+      },
+    },
+    checkidSr: {
+      header: "Đầu đọc thẻ ID (CheckID-SR)",
+      title: "Đầu đọc/quét thẻ ID cho kiosk tự phục vụ",
+      infoDetail: {
+        header: "Đầu đọc/Quét thẻ ID",
+        model: "CheckID-SR",
+        description:
+          "Hưởng lợi từ việc nhập dữ liệu và xác minh chính xác /n Thiết kế OEM cho cổng ABC và các kiosk tự phục vụ /n Thiết kế trực quan giúp hành khách ít sử dụng /n Kiểm tra tự động hành khách, vận hành 24/7 /n Đọc & xác minh mọi loại thẻ bao gồm cả tài liệu điện tử du lịch",
+      },
+    },
+    am001: {
+      header: "Bộ đo độ cao cho thẻ ID tài liệu (AM-001)",
+      title: "Máy đọc Hộ chiếu ICAO Máy quét Thẻ ID Camera Tài liệu",
+      infoDetail: {
+        header: "Bộ đo độ cao cho thẻ ID tài liệu",
+        model: "AM-001",
+        description:
+          "AM-001 Hưởng lợi từ việc nhập dữ liệu và xác minh chính xác, thiết kế OEM cho cổng ABC và các kiosk tự phục vụ, thiết kế trực quan giúp hành khách ít sử dụng. /nKiểm tra tự động hành khách, vận hành 24/7 /nĐọc & xác minh mọi loại thẻ bao gồm cả tài liệu điện tử du lịch",
+      },
+    },
+    v11: {
+      header: "Bộ chấm công thông minh có đèn nền (V11)",
+      title: "Terminal Di động Mở rộng hỗ trợ Pogo PIN",
+      infoDetail: {
+        header: "Bộ chấm công thông minh có đèn nền",
+        model: "V11",
+        description:
+          "V11 là một thiết bị di động thông minh chạy trên nền tảng Android, tích hợp máy quét vân tay để cung cấp xác nhận chính xác. Với đặc điểm sinh trắc học ổn định nhất, việc xác thực vân tay có thể được sử dụng để ngăn chặn việc truy cập vật lý không được ủy quyền vào trường học, văn phòng, phòng thí nghiệm, nhà kho, v.v.",
+      },
+      features: {
+        0: {
+          header: "Nhiều Tính Năng, Nhiều Khả Năng Mở Rộng",
+          body: "Có thể mở rộng nhiều khả năng và chức năng với pogo PIN, như mô-đun máy in, mô-đun UHF, v.v.",
+        },
+        1: {
+          header: "Cách Sử Dụng",
+          body: "Hỗ trợ xác thực vân tay, đọc thẻ NFC, đọc thẻ tiếp xúc, nhận diện mống mắt, đọc Hộ chiếu MRZ, OCR, và quét mã vạch",
+        },
+        2: {
+          header: "Xác Thực Vân Tay Mạnh Mẽ",
+          body: "Công nghệ phát hiện ngón tay sống, cảm biến vân tay hiệu suất cao đảm bảo xác minh ID chính xác và hiệu quả.",
+          body1:
+            "Hỗ trợ nhiều loại cảm biến vân tay từ các nhà sản xuất khác nhau: Có sẵn cảm biến đơn phẳng chứng nhận FBI PIV & FBI Mobile ID FAP30 / FAP20 / FAP10 bao gồm:",
+          ul: {
+            li1: "IB LES Danno (camera TFT)",
+            li2: "Suprema: BM-Slim2, BM-Slim2S, BM-Slim3S",
+            li3: "Morpho CBM-E3",
+            li4: "Futronic: FS81H, FS89H",
+            li5: "Aratek: A600-M",
+            li6: "SecuGen U10",
+          },
+        },
+        3: {
+          header: "Bộ Nhớ Lớn",
+          body: "3GB RAM+32GB ROM, hỗ trợ thẻ Micro SD lên đến 128GB",
+        },
+        4: {
+          header: "Hỗ Trợ Cả Thẻ Tiếp Xúc và Thẻ Không Tiếp Xúc",
+          body: "Tiếp xúc: Hỗ trợ thẻ thông minh kích thước ID-1, như: Thẻ ID, thẻ NFC tích hợp chip.",
+          body1:
+            "Không tiếp xúc (NFC): Hỗ trợ ISO/IEC 14443 A/B, ISO/IEC 7816, v.v. tuân theo API NFC Android gốc.",
+        },
+        5: {
+          header: "Luôn Kết Nối",
+          body: "Hỗ trợ 4G/3G, Wi-Fi, Bluetooth và cổng USB Type-C đảm bảo thiết bị có thể kết nối ở bất kỳ đâu với truyền dữ liệu mượt mà",
+        },
+      },
+    },
+    v20: {
+      header: "Bảng sinh trắc học (V20)",
+      title:
+        "Bảng sinh trắc học chống sốc, chống rơi, chống bụi cho máy tính đồng bộ",
+      infoDetail: {
+        header: "Bảng sinh trắc học",
+        model: "V20",
+        description:
+          "V20 được thiết kế đặc biệt cho các kịch bản xác minh ID như eVoting, thực thi pháp luật, kiểm soát biên giới, v.v. Thông qua mô-đun MRZ, có thể đọc nhiều loại thẻ ID bao gồm cả thẻ eID cũng như Hộ chiếu điện tử.",
+      },
+      features: {
+        0: {
+          header: "Hỗ trợ Nhiều Kích Thước Cảm Biến Vân Tay",
+          body: "Cảm biến vân tay được hỗ trợ: FAP10 / FAP20 / FAP30 / FAP45",
+        },
+        1: {
+          header: "Cách Sử Dụng",
+          body: "Hỗ trợ xác thực vân tay, đọc thẻ NFC, đọc thẻ tiếp xúc, nhận diện mống mắt, đọc Hộ chiếu MRZ, OCR, và quét mã vạch",
+        },
+        2: {
+          header: "Đọc Hộ Chiếu và Thẻ eID",
+          body: "V20 được thiết kế đặc biệt cho các kịch bản xác minh ID như eVoting, thực thi pháp luật, kiểm soát biên giới, v.v.",
+          body1:
+            "Thông qua mô-đun MRZ, có thể đọc nhiều loại thẻ ID bao gồm cả thẻ eID cũng như Hộ chiếu điện tử.",
+        },
+        3: {
+          header: "Bộ Nhớ Lớn",
+          body: "4GB RAM+64GB ROM, hỗ trợ thẻ Micro SD lên đến 128GB",
+        },
+        4: {
+          header: "Luôn Kết Nối",
+          body: "Hỗ trợ 4G/3G, Wi-Fi, Bluetooth và cổng USB Type-C đảm bảo thiết bị có thể kết nối ở bất kỳ đâu với truyền dữ liệu mượt mà",
+        },
+      },
+    },
+    r301c11: {
+      header: "Đầu đọc thẻ thông minh CCID (R301-C11)",
+      title:
+        "Đầu đọc thẻ thông minh nhỏ gọn, dễ sử dụng, hiệu quả chi phí cho PC, hỗ trợ thẻ ISO 7816 Class A, B và C.",
+      infoDetail: {
+        header: "Đầu đọc thẻ thông minh CCID",
+        model: "R301-C11",
+        description:
+          "R301-C11 phù hợp với khách hàng có quan tâm chủ yếu đến vấn đề an ninh và đáp ứng nhu cầu về một giải pháp linh hoạt cho xác thực ID, thương mại điện tử, thanh toán điện tử, bảo mật thông tin và kiểm soát truy cập. /n R301-C11 và dòng đầu đọc thẻ thông minh còn lại cung cấp cho mỗi khách hàng một giải pháp hoàn chỉnh cho mọi cách sử dụng.",
+      },
+      features: {
+        0: {
+          header: "Thiết kế phần cứng cấp độ an ninh cao",
+          body: "Vi xử lý cấp độ an ninh cao /n Bảo vệ chống ngắn mạch / quá áp tích hợp /n Cơ chế mã hóa firmware /n Nâng cấp firmware được mã hóa",
+        },
+        1: {
+          header: "Cổng USB Type-C",
+          body: "Cổng USB tiện lợi nhất, người dùng không còn phải kết nối cáp với mặt đúng lên /n Tùy chọn linh hoạt, USB Type-C sẵn có cho tất cả Đầu đọc thẻ thông minh PC.",
+        },
+        2: {
+          header: "Tương thích với nhiều nền tảng chính",
+          body: "Đầu đọc thẻ thông minh tương thích với các hệ điều hành phổ biến: Windows, Linux, macOS, Unix, hỗ trợ đầy đủ CCID, Android với OTG. Một sản phẩm thực sự không cần driver.",
+        },
+        3: {
+          header: "Tùy chọn linh hoạt",
+          body: "Chúng tôi cung cấp các tùy chọn tùy chỉnh đầy đủ cho vỏ, bao bì và dịch vụ liên quan để tạo khả năng tạo ra Đầu đọc thẻ thông minh của riêng bạn.",
+        },
+        4: {
+          header:
+            "Chân đế kim loại cải thiện sử dụng trên bàn làm việc của bạn",
+          body: "Nặng và ổn định /n Thiết kế thời trang /n Dây cáp USB dài.",
+        },
+        5: {
+          header: "Chứng nhận",
+          body: "Với những chứng nhận này, Đầu đọc thẻ thông minh không chỉ vượt trội về chức năng mà còn về hiệu suất.",
+        },
+      },
+    },
+    r502cl: {
+      header: "Đầu đọc thẻ thông minh CCID (R502-CL)",
+      title:
+        "Sự kết hợp giữa đầu đọc thẻ thông minh không tiếp xúc và tiếp xúc",
+      infoDetail: {
+        header: "Đầu đọc thẻ thông minh CCID",
+        model: "R502-CL",
+        description:
+          "R502-CL là một thiết bị giao diện terminal cho các ứng dụng thẻ thông minh và tích hợp hệ thống. Nó có thể được sử dụng rộng rãi trong các ngành hoặc ứng dụng đòi hỏi thanh toán và xác thực điện tử, đặc biệt phù hợp cho các lĩnh vực an ninh cao. Đây là một giải pháp tối ưu cho xác thực, thương mại điện tử, tổ chức tài chính, kiểm soát truy cập, v.v.",
+      },
+      features: {
+        0: {
+          header: "Thiết kế phần cứng cấp độ an ninh cao",
+          body: "Vi xử lý cấp độ an ninh cao /n Bảo vệ chống ngắn mạch / quá áp tích hợp /n Cơ chế mã hóa firmware /n Nâng cấp firmware được mã hóa",
+        },
+        1: {
+          header: "Sản phẩm tổ hợp đa chức năng",
+          body: "Kết hợp giữa chức năng tiếp xúc và không tiếp xúc, cùng với 2 khe cắm SAM bổ sung, Đầu đọc thẻ thông minh không tiếp xúc có thể được sử dụng cho cả xác thực và thanh toán.",
+        },
+        2: {
+          header: "Tương thích với nhiều nền tảng chính",
+          body: "Đầu đọc thẻ thông minh tương thích với các hệ điều hành phổ biến: Windows, Linux, macOS, Unix, hỗ trợ đầy đủ CCID, Android với OTG. Một sản phẩm thực sự không cần driver.",
+        },
+        3: {
+          header: "Tùy chọn linh hoạt",
+          body: "Chúng tôi cung cấp các tùy chọn tùy chỉnh đầy đủ cho vỏ, bao bì và dịch vụ liên quan để tạo khả năng tạo ra Đầu đọc thẻ thông minh của riêng bạn.",
+        },
+        4: {
+          header: "Hỗ trợ tất cả các thẻ NFC 13.56 MHz",
+          body: "ISO/IEC 7816-1, 2, 3, 4; ISO/IEC 14443 Loại A và B /n Mifare © 13.56 MHz ISO 14443A /n Hỗ trợ giao thức Felica © /n Tương thích với giao thức ISO 15693 /n Tương thích với giao thức ISO/IEC 18092 /n Hỗ trợ giao thức VHBR *(Tùy chọn).",
+        },
+        5: {
+          header: "Chứng nhận",
+          body: "Với những chứng nhận này, Đầu đọc thẻ thông minh không chỉ vượt trội về chức năng mà còn về hiệu suất.",
+        },
+      },
+    },
+    v10p: {
+      header: "Bộ chấm công thông minh đặt trên bàn (V10P)",
+      title: "Tất cả trong một bộ chấm công thông minh đặt trên bàn",
+      infoDetail: {
+        header: "Bộ chấm công thông minh đặt trên bàn",
+        model: "V10P",
+        description:
+          "V10P là một bộ chấm công thông minh đặt trên bàn, tích hợp máy quét vân tay để cung cấp xác nhận chính xác. Với đặc điểm sinh trắc học ổn định nhất, việc xác thực vân tay có thể được sử dụng để ngăn chặn việc truy cập vật lý không được ủy quyền vào trường học, văn phòng, phòng thí nghiệm, nhà kho, v.v.",
+      },
+      features: {
+        0: {
+          header: "Cách Sử Dụng",
+          body: "Hỗ trợ xác thực vân tay, đọc thẻ NFC, đọc thẻ tiếp xúc, nhận diện mống mắt, đọc Hộ chiếu MRZ, OCR, và quét mã vạch",
+        },
+        1: {
+          header: "Xác Thực Vân Tay Mạnh Mẽ",
+          body: "Công nghệ phát hiện ngón tay sống, cảm biến vân tay hiệu suất cao đảm bảo xác minh ID chính xác và hiệu quả.",
+          body1:
+            "Được hỗ trợ cảm biến đơn phẳng chứng nhận FBI PIV & FBI Mobile ID FAP30 / FAP20 / FAP10, bao gồm: Futronic: FS81H, FS89H",
+        },
+        2: {
+          header: "Đọc Thẻ NFC Không Tiếp Xúc",
+          body: "Đầu đọc thẻ NFC tích hợp hỗ trợ thẻ NFC tiêu chuẩn ISO/IEC 14443 A/B, như thẻ ID quốc gia, thẻ lái xe, thẻ bảo hiểm y tế và thẻ ngân hàng, v.v.",
+        },
+        3: {
+          header: "Bộ Nhớ Lớn",
+          body: "3GB RAM+32GB ROM, hỗ trợ thẻ TF lên đến 64GB",
+        },
+        4: {
+          header: "Luôn Kết Nối",
+          body: "Hỗ trợ 4G/3G, Wi-Fi, Bluetooth và cổng USB Type-C đảm bảo thiết bị có thể kết nối ở bất kỳ đâu với truyền dữ liệu mượt mà",
+        },
+      },
+    },
+  },
+  usecaseStories: {
+    company: {
+      title: "Bạn sẽ ở trong một tập đoàn tốt",
+      content:
+        "CheckID được sử dụng bởi các ngân hàng hàng đầu, các tổ chức chính phủ, dịch vụ chữ ký điện tử và nhiều tổ chức khác trên toàn thế giới.",
+      readStory: "Đọc câu chuyện của họ",
     },
   },
 };

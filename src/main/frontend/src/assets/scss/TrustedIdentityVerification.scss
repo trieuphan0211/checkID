@@ -423,8 +423,7 @@
             }
             &:hover {
               svg {
-                margin-left: 5px;
-                margin-right: 0;
+                transform: translateX(10px);
                 transition: all 0.3s ease-in-out;
               }
             }
@@ -494,7 +493,7 @@
           }
           &:hover {
             svg {
-              margin-left: 10px;
+              transform: translateX(10px);
               transition: all 0.3s ease-in-out;
             }
           }

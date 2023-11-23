@@ -30,7 +30,6 @@ import {
   Slide,
   Snackbar,
   TextField,
-  Typography,
   useScrollTrigger,
 } from "@mui/material";
 import PropTypes from "prop-types";
@@ -41,7 +40,7 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
-import RefreshIcon from "@mui/icons-material/Refresh";
+import SquareRoundedIcon from "@mui/icons-material/SquareRounded";
 import ReCAPTCHA from "react-google-recaptcha";
 
 function HideOnScroll(props) {
@@ -85,6 +84,7 @@ const BlueButton = styled(Button)({
 const TransparentButton = styled(Button)({
   backgroundColor: "transparent",
   color: "#fff",
+  width: "100%",
   border: "2px solid #fff",
   textTransform: "none",
   padding: "20px 40px",
@@ -119,13 +119,13 @@ const TextFieldCustom = styled(TextField)({
 
 const FaceToFaceIdentityVerification = (props) => {
   // set Title
-  document.title = "Remote Identity Verification | CheckID";
+  document.title = "Face To Face Identity Verification | CheckID";
   //
   const [open, setOpen] = React.useState(false);
-  const [state, setState] = React.useState("success");
+  const [state, setState] = React.useState("warning");
   const [stateOpen, setStateOpen] = React.useState(false);
   const { t, i18n } = useTranslation();
-  const { width, height } = useWindowSize();
+  const { width } = useWindowSize();
   // Begin: Slider
   const [slideIndex, setSlideIndex] = React.useState(0);
   const properties = {
@@ -630,6 +630,7 @@ const FaceToFaceIdentityVerification = (props) => {
                         sx={{
                           color: "#fff",
                         }}
+                        icon={<SquareRoundedIcon />}
                         onChange={(event) => setCheck(event.target.checked)}
                       />
                     }
@@ -641,6 +642,7 @@ const FaceToFaceIdentityVerification = (props) => {
                         fontSize: "13px",
                         fontWeight: "500",
                         lineHeight: "20px",
+                        textWrap: width <= 800 ? "wrap" : "nowrap",
                       },
                     }}
                   />

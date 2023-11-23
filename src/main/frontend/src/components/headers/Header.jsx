@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../../assets/scss/Header.scss";
 import logo from "../../assets/img/logo.png";
 import logo_blue from "../../assets/img/logo_blue.png";
@@ -52,7 +52,7 @@ const ContactButton = styled(Button)({
 export const Header = ({ bg }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { width, height } = useWindowSize();
+  const { width } = useWindowSize();
   const [open, setOpen] = React.useState(false);
   return (
     <div
@@ -356,21 +356,21 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Group />
-                    <div>
+                    <Link to={`${context}/use-cases`}>
                       <h4>
                         {t("header.header.menu.subCustomers.how.customers")}
                       </h4>
                       <p>
                         {t("header.header.menu.subCustomers.how.bodyCustomers")}
                       </p>
-                    </div>
+                    </Link>
                   </li>
                   <li
                     className="subItem1_item d-flex justify-content-between"
                     onClick={() => setOpen(false)}
                   >
                     <Group1 />
-                    <div>
+                    <Link to={`${context}/partnerships`}>
                       <h4>
                         {t("header.header.menu.subCustomers.how.partner")}
                       </h4>
@@ -379,7 +379,7 @@ export const Header = ({ bg }) => {
                           "header.header.menu.subCustomers.how.bodyPartnerships"
                         )}
                       </p>
-                    </div>
+                    </Link>
                   </li>
                   <Divider
                     component="li"
@@ -390,7 +390,6 @@ export const Header = ({ bg }) => {
                     }}
                   />
                   <h5>
-                    {" "}
                     {t("header.header.menu.subCustomers.highlight.title")}
                   </h5>
                   <li
@@ -398,47 +397,46 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <div>
+                    <Link to={`${context}/use-cases/abn-moneyou`}>
                       <h4>
-                        {" "}
                         {t("header.header.menu.subCustomers.highlight.digital")}
                       </h4>
-                    </div>
+                    </Link>
                   </li>
                   <li
                     className="subItem1_item d-flex justify-content-between"
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <div>
+                    <Link to={`${context}/use-cases/uk-home-office-euss`}>
                       <h4>
                         {t("header.header.menu.subCustomers.highlight.ukHome")}
                       </h4>
-                    </div>
+                    </Link>
                   </li>
                   <li
                     className="subItem1_item d-flex justify-content-between"
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <div>
+                    <Link to={`${context}/use-cases/thirdfort`}>
                       <h4>
                         {t(
                           "header.header.menu.subCustomers.highlight.automated"
                         )}
                       </h4>
-                    </div>
+                    </Link>
                   </li>
                   <li
                     className="subItem1_item d-flex justify-content-between"
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <div>
+                    <Link to={`${context}/use-cases/asb-bank`}>
                       <h4>
                         {t("header.header.menu.subCustomers.highlight.quality")}
                       </h4>
-                    </div>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -841,25 +839,25 @@ export const Header = ({ bg }) => {
                 <h5>{t("header.header.menu.subCustomers.how.title")}</h5>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Group />
-                  <div>
+                  <Link to={`${context}/use-cases`}>
                     <h4>
                       {t("header.header.menu.subCustomers.how.customers")}
                     </h4>
                     <p>
                       {t("header.header.menu.subCustomers.how.bodyCustomers")}
                     </p>
-                  </div>
+                  </Link>
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Group1 />
-                  <div>
+                  <Link to={`${context}/partnerships`}>
                     <h4>{t("header.header.menu.subCustomers.how.partner")}</h4>
                     <p>
                       {t(
                         "header.header.menu.subCustomers.how.bodyPartnerships"
                       )}
                     </p>
-                  </div>
+                  </Link>
                 </li>
                 <Divider
                   component="li"
@@ -872,35 +870,35 @@ export const Header = ({ bg }) => {
                 <h5> {t("header.header.menu.subCustomers.highlight.title")}</h5>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <div>
+                  <Link to={`${context}/use-cases/abn-moneyou`}>
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.digital")}
                     </h4>
-                  </div>
+                  </Link>
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <div>
+                  <Link to={`${context}/use-cases/uk-home-office-euss`}>
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.ukHome")}
                     </h4>
-                  </div>
+                  </Link>
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <div>
+                  <Link to={`${context}/use-cases/thirdfort`}>
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.automated")}
                     </h4>
-                  </div>
+                  </Link>
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <div>
+                  <Link to={`${context}/use-cases/asb-bank`}>
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.quality")}
                     </h4>
-                  </div>
+                  </Link>
                 </li>
                 <Top className="positionTop" bg={bg} />
               </ul>

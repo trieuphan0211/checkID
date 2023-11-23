@@ -1,12 +1,16 @@
 .product {
   margin-top: 134px;
+  .allProducts_item {
+    justify-content: center;
+  }
   .allProducts,
   .v11,
   .v20,
   .r502cl,
   .r301c11,
   .am001,
-  .checkIdSr {
+  .checkIdSr,
+  .v10p {
     &_info {
       flex-direction: column;
       color: #fff;
@@ -132,6 +136,7 @@
         }
         &-function {
           display: flex;
+          flex-wrap: wrap;
           padding: 8px;
           margin: 12px 0 35px;
           &-item {
@@ -206,7 +211,7 @@
         padding: 70px 0 50px;
       }
       &-item {
-        width: 380px;
+        width: 96%;
         text-decoration: none;
         padding: 60px 10px 10px 10px;
         background-color: #eef1f4;
@@ -253,7 +258,8 @@
   .r502cl,
   .r301c11,
   .am001,
-  .checkIdSr {
+  .checkIdSr,
+  .v10p {
     &_info {
       padding-bottom: 0;
       height: auto;
@@ -274,11 +280,19 @@
       }
     }
   }
+  .v10p {
+    &_info {
+      &-img {
+        margin-bottom: -15px;
+      }
+    }
+  }
   .v20,
   .r502cl,
   .r301c11,
   .am001,
-  .checkIdSr {
+  .checkIdSr,
+  .v10p {
     &_info {
       > .MuiBox-root {
         display: flex;
@@ -287,6 +301,310 @@
         .v20_info-header {
           text-align: center;
         }
+      }
+    }
+  }
+}
+
+// Responsive
+// 1920 to infinity
+@media (min-width: 1921px) {
+}
+
+// 1153 to 1440
+@media (min-width: 1153px) and (max-width: 1440px) {
+  .product {
+    margin-top: 134px;
+    .allProducts,
+    .v11,
+    .v20,
+    .r502cl,
+    .r301c11,
+    .am001,
+    .checkIdSr,
+    .v10p {
+      &_info {
+        position: relative;
+        height: 500px;
+        > img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform: translate(-50%, -10%);
+          margin: 0;
+        }
+
+        &-subheader {
+          max-width: 100%;
+        }
+        &-header {
+          max-width: 100%;
+          text-align: center;
+        }
+        &-title {
+          text-align: center;
+          max-width: 100%;
+        }
+        .MuiBox-root {
+          z-index: 10;
+          max-width: 70%;
+        }
+      }
+      &_detail {
+        flex-direction: column;
+
+        &-info {
+          margin: 10px 0 0 0;
+        }
+      }
+      &_open {
+        img {
+          max-width: 100%;
+        }
+      }
+      &_specification {
+        padding: 0 30px;
+      }
+    }
+  }
+}
+
+// 769 to 1152
+@media (min-width: 769px) and (max-width: 1152px) {
+  .product {
+    margin-top: 134px;
+    .allProducts,
+    .v11,
+    .v20,
+    .r502cl,
+    .r301c11,
+    .am001,
+    .checkIdSr,
+    .v10p {
+      &_info {
+        position: relative;
+        height: 500px;
+        > img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform: translate(-15%, -10%);
+          margin: 0;
+        }
+
+        &-subheader {
+          max-width: 100%;
+        }
+        &-header {
+          max-width: 100%;
+          text-align: center;
+        }
+        &-title {
+          text-align: center;
+          max-width: 100%;
+        }
+        .MuiBox-root {
+          z-index: 10;
+          max-width: 70%;
+        }
+      }
+      &_detail {
+        flex-direction: column;
+
+        &-info {
+          margin: 10px 0 0 0;
+        }
+      }
+      &_open {
+        img {
+          max-width: 100%;
+        }
+      }
+      &_features {
+        &-comp {
+          flex-direction: column;
+          justify-content: center;
+          &-left {
+            flex-direction: column-reverse;
+          }
+        }
+      }
+      &_specification {
+        padding: 0 30px;
+      }
+    }
+  }
+}
+
+// 321 to 768
+@media (min-width: 321px) and (max-width: 768px) {
+  .product {
+    .allProducts_item {
+      margin: 100px 20px;
+    }
+    margin-top: 210px;
+    .allProducts,
+    .v11,
+    .v20,
+    .r502cl,
+    .r301c11,
+    .am001,
+    .checkIdSr,
+    .v10p {
+      &_info {
+        position: relative;
+        height: 500px;
+        padding: 10px;
+        > img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform: translate(0, -10%);
+          margin: 0;
+        }
+
+        &-subheader {
+          max-width: 100%;
+        }
+        &-header {
+          max-width: 100%;
+          font-size: 4em;
+          line-height: 45px;
+          text-align: center;
+        }
+        &-title {
+          text-align: center;
+          max-width: 100%;
+        }
+        .MuiBox-root {
+          z-index: 10;
+          max-width: 100%;
+        }
+      }
+      &_detail {
+        flex-direction: column;
+        padding: 60px 20px;
+        &-img {
+          width: 100%;
+          &-show {
+            width: 100%;
+          }
+        }
+        &-info {
+          margin: 10px 0 0 0;
+        }
+      }
+      &_open {
+        img {
+          max-width: 100%;
+        }
+      }
+      &_features {
+        padding: 0 10px;
+        &-comp {
+          flex-direction: column;
+          justify-content: center;
+
+          > img {
+            width: 100%;
+          }
+          &-left {
+            flex-direction: column-reverse;
+          }
+        }
+      }
+      &_specification {
+        padding: 0 20px;
+      }
+      &_ortherProduct {
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+// 0 to 320
+@media (max-width: 320px) {
+  .product {
+    margin-top: 210px;
+    .allProducts_item {
+      margin: 100px 20px;
+    }
+    .allProducts,
+    .v11,
+    .v20,
+    .r502cl,
+    .r301c11,
+    .am001,
+    .checkIdSr,
+    .v10p {
+      &_info {
+        position: relative;
+        height: 500px;
+        padding: 10px;
+        > img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform: translate(0, -10%);
+          margin: 0;
+        }
+
+        &-subheader {
+          max-width: 100%;
+        }
+        &-header {
+          max-width: 100%;
+          font-size: 4em;
+          line-height: 45px;
+          text-align: center;
+        }
+        &-title {
+          text-align: center;
+          max-width: 100%;
+        }
+        .MuiBox-root {
+          z-index: 10;
+          max-width: 100%;
+        }
+      }
+      &_detail {
+        flex-direction: column;
+        padding: 60px 20px;
+        &-img {
+          width: 100%;
+          &-show {
+            width: 100%;
+          }
+        }
+        &-info {
+          margin: 10px 0 0 0;
+        }
+      }
+      &_open {
+        img {
+          max-width: 100%;
+        }
+      }
+      &_features {
+        padding: 0 10px;
+        &-comp {
+          flex-direction: column;
+          justify-content: center;
+
+          > img {
+            width: 100%;
+          }
+          &-left {
+            flex-direction: column-reverse;
+          }
+        }
+      }
+      &_specification {
+        padding: 0 20px;
+      }
+      &_ortherProduct {
+        padding: 0 20px;
       }
     }
   }
