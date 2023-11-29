@@ -35,6 +35,7 @@ const StyledTableRow = styled(TableCell)(() => ({
     color: "#000",
     width: "495px",
     fontSize: "16px",
+    lineHeight: "24px",
     padding: "25px 10px",
     border: "1px solid #DADCE4",
   },
@@ -47,7 +48,7 @@ export const TechnicalSpecifications = ({ classHeader, specification }) => {
       <h1 className={`${classHeader}_specification-header`}>
         {t("products.technical")}
       </h1>
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} sx={{ boxShadow: "none" }}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>

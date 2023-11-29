@@ -7,3 +7,4 @@ export * from "./R301C11Product";
 export * from "./AM001Product";
 export * from "./CheckIDSRProduct";
 export * from "./V10PProduct";
+export * from "./CheckIDET100";

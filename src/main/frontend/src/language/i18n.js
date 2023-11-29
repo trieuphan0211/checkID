@@ -20,6 +20,7 @@ let language =
   typeof window.localStorage?.getItem !== "undefined"
     ? localStorage.getItem("lang")
     : null;
+console.log(language);
 if (language) {
 } else {
   if (
@@ -36,7 +37,7 @@ i18n
   .init({
     resources,
     fallbackLng: ["en", "vi"],
-    lng: "en",
+    lng: language == "Vietnamese" ? "vi" : "en",
     debug: true,
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default

@@ -9,6 +9,7 @@ import ProductLayout from "../layouts/ProductLayout";
 import {
   AM001Product,
   AllProducts,
+  CheckIDET100,
   CheckIDSRProduct,
   R301C11Product,
   R502CLProduct,
@@ -57,10 +58,10 @@ const Routers = () => {
               path: `${context}/products`,
               element: <AllProducts />,
             },
-            {
-              path: `${context}/products/v11`,
-              element: <V11Product />,
-            },
+            // {
+            //   path: `${context}/products/v11`,
+            //   element: <V11Product />,
+            // },
             {
               path: `${context}/products/v20`,
               element: <V20Product />,
@@ -74,7 +75,7 @@ const Routers = () => {
               element: <R301C11Product />,
             },
             {
-              path: `${context}/products/am-001`,
+              path: `${context}/products/BioR502-MRZ`,
               element: <AM001Product />,
             },
             {
@@ -84,6 +85,10 @@ const Routers = () => {
             {
               path: `${context}/products/v10p`,
               element: <V10PProduct />,
+            },
+            {
+              path: `${context}/products/checkid-et100`,
+              element: <CheckIDET100 />,
             },
           ],
         },
@@ -95,110 +100,90 @@ const Routers = () => {
               path: `${context}/use-cases`,
               element: <UseCase />,
             },
-            {
-              path: `${context}/use-cases/abn-moneyou`,
-              element: <AbnMoneyou />,
-            },
-            {
-              path: `${context}/use-cases/uk-home-office-euss`,
-              element: <UkHomeOfficeEuss />,
-            },
-            {
-              path: `${context}/use-cases/thirdfort`,
-              element: <ThirdFort />,
-            },
-            {
-              path: `${context}/use-cases/asb-bank`,
-              element: <AsbBank />,
-            },
+            // {
+            //   path: `${context}/use-cases/abn-moneyou`,
+            //   element: <AbnMoneyou />,
+            // },
+            // {
+            //   path: `${context}/use-cases/uk-home-office-euss`,
+            //   element: <UkHomeOfficeEuss />,
+            // },
+            // {
+            //   path: `${context}/use-cases/thirdfort`,
+            //   element: <ThirdFort />,
+            // },
+            // {
+            //   path: `${context}/use-cases/asb-bank`,
+            //   element: <AsbBank />,
+            // },
           ],
         },
+        // {
+        //   path: `${context}/partnerships`,
+        //   element: <Partnerships />,
+        // },
         {
-          path: `${context}/partnerships`,
-          element: <Partnerships />,
-        },
-        {
-          path: `${context}/financial-services`,
+          // path: `${context}/financial-services`,
           // element: ,
         },
         {
-          path: `${context}/trust-service-providers`,
+          // path: `${context}/trust-service-providers`,
           // element: ,
         },
         {
-          path: `${context}/egovernment`,
+          // path: `${context}/egovernment`,
           // element: ,
         },
         {
-          path: `${context}/law-enforcement`,
+          // path: `${context}/law-enforcement`,
           // element: ,
         },
         {
-          path: `${context}/travel`,
+          // path: `${context}/travel`,
           // element: ,
         },
         {
-          path: `${context}/hiring`,
+          // path: `${context}/hiring`,
           // element: ,
         },
         {
-          path: `${context}/gambling`,
+          // path: `${context}/gambling`,
           // element: ,
         },
         {
-          path: `${context}/real-estate`,
+          // path: `${context}/real-estate`,
           // element: ,
         },
         {
-          path: `${context}/blog`,
+          // path: `${context}/blog`,
           // element: ,
         },
         {
-          path: `${context}/papers-reports`,
+          // path: `${context}/papers-reports`,
           // element: ,
         },
         {
-          path: `${context}/webinars`,
+          // path: `${context}/webinars`,
           // element: ,
         },
         {
-          path: `${context}/company`,
+          // path: `${context}/company`,
           // element: ,
         },
         {
-          path: `${context}/certifications`,
+          // path: `${context}/certifications`,
           // element: ,
         },
         {
-          path: `${context}/awards`,
+          // path: `${context}/awards`,
           // element: ,
         },
         {
-          path: `${context}/careers`,
+          // path: `${context}/careers`,
           // element: ,
         },
         {
-          path: `${context}/history`,
-          // element: ,
-        },
-        {
-          path: `${context}/partnerships`,
-          // element: ,
-        },
-        {
-          path: `${context}`,
-          // element: ,
-        },
-        {
-          path: `${context}`,
-          // element: ,
-        },
-        {
-          path: `${context}`,
-          // element: ,
-        },
-        {
-          path: `${context}`,
+          // path: `${context}/history`,
           // element: ,
         },
       ],

@@ -7,12 +7,12 @@ import { useWindowSize } from "usehooks-ts";
 import { Link, useLocation } from "react-router-dom";
 
 import v20 from "../../assets/img/product/v20.png";
-import v11 from "../../assets/img/product/v11.png";
 import r301_c11 from "../../assets/img/product/r301-c11.png";
 import r502_cl from "../../assets/img/product/r502-cl.png";
-import checkid_sr from "../../assets/img/product/checkid-sr_1.png";
+import checkid_sr from "../../assets/img/product/checkid-sr.png";
 import am_001 from "../../assets/img/product/am-001.png";
 import v10p from "../../assets/img/product/v10p.png";
+import checkid_et100 from "../../assets/img/product/et100.png";
 import { useTranslation } from "react-i18next";
 
 export const OrtherProduct = ({ classHeader }) => {
@@ -26,17 +26,17 @@ export const OrtherProduct = ({ classHeader }) => {
   useEffect(() => {
     const index = path.pathname.split("/")[2];
 
-    if (index === "v11") {
+    if (index === "checkid-et100") {
       setCurrentProduct(0);
     } else if (index === "v20") {
       setCurrentProduct(1);
-    } else if (index === "r301-c11") {
-      setCurrentProduct(2);
-    } else if (index === "r502-cl") {
-      setCurrentProduct(3);
     } else if (index === "checkid-sr") {
+      setCurrentProduct(2);
+    } else if (index === "r301-c11") {
+      setCurrentProduct(3);
+    } else if (index === "r502-cl") {
       setCurrentProduct(4);
-    } else if (index === "am-001") {
+    } else if (index === "BioR502-MRZ") {
       setCurrentProduct(5);
     } else if (index === "v10p") {
       setCurrentProduct(6);
@@ -56,10 +56,10 @@ export const OrtherProduct = ({ classHeader }) => {
   const product = [
     {
       id: 1,
-      name: "V11",
-      img: v11,
-      link: "/products/v11",
-      description: "products.allProducts.items.v11",
+      name: "CheckID-ET100",
+      img: checkid_et100,
+      link: "/products/checkid-et100",
+      description: "products.allProducts.items.et100",
     },
     {
       id: 2,
@@ -92,9 +92,9 @@ export const OrtherProduct = ({ classHeader }) => {
     },
     {
       id: 6,
-      name: "AM-001",
+      name: "BioR502-MRZ",
       img: am_001,
-      link: "/products/am-001",
+      link: "/products/BioR502-MRZ",
       description: "products.allProducts.items.am001",
     },
     {
@@ -150,7 +150,7 @@ export const OrtherProduct = ({ classHeader }) => {
         <ArrowForwardIosIcon
           sx={{
             fontSize: "30px",
-            marginLeft: "12px",
+            marginLeft: "5px",
             color: "#CCC",
           }}
         />

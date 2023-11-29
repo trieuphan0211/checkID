@@ -530,7 +530,14 @@ const FaceToFaceIdentityVerification = (props) => {
             />
             <div className="faceToFaceIdentity_challenge-form">
               <h3 className="faceToFaceIdentity_challenge-form-header">
-                {t("faceToFaceIdentity.challenge.header")}
+                {t("faceToFaceIdentity.challenge.header")
+                  .split("/n")
+                  .map((item) => (
+                    <>
+                      {item}
+                      <br />
+                    </>
+                  ))}
               </h3>
               <p className="faceToFaceIdentity_challenge-form-context">
                 {t("faceToFaceIdentity.challenge.context")}

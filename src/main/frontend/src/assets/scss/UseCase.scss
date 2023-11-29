@@ -178,6 +178,157 @@
     }
     &_receive {
       padding: 70px 110px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+
+      &-form {
+        max-width: 1240px;
+        background-color: var(--primary-1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 65px 16px;
+        &-title {
+          padding: 0px 24px 18px 100px;
+          font-size: 4em;
+          font-weight: 700;
+          line-height: 50px;
+        }
+        &-input {
+          min-width: 600px;
+          > h4 {
+            font-size: 2.4em;
+            font-weight: 700;
+            line-height: 30px;
+          }
+          > p {
+            font-size: 1.6em;
+            font-weight: 500;
+            line-height: 26px;
+          }
+          > div {
+            max-width: 430px;
+          }
+          &-context {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+// 1920 to infinity
+@media (min-width: 1921px) {
+}
+
+// 1153 to 1440
+@media (min-width: 1153px) and (max-width: 1440px) {
+}
+
+// 769 to 1152
+@media (min-width: 769px) and (max-width: 1152px) {
+  .usecase {
+    margin-top: 134px;
+    .usecaseStories {
+      &_intro {
+        &-description {
+          gap: 0;
+          flex-wrap: wrap;
+        }
+      }
+
+      &_quotes {
+        &-item {
+          gap: 0;
+          flex-wrap: wrap;
+        }
+      }
+      &_receive {
+        &-form {
+          flex-direction: column;
+          &-title {
+            padding: 0 0 10px 0;
+            text-align: center;
+          }
+          &-input {
+            > h4 {
+              text-align: center;
+            }
+            > p {
+              text-align: center;
+            }
+            > div {
+              max-width: none;
+              button {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 321 to 768
+@media (max-width: 768px) {
+  .usecase {
+    margin-top: 134px;
+    .usecaseStories {
+      &_intro {
+        &-description {
+          gap: 0;
+          flex-wrap: wrap;
+        }
+      }
+
+      &_quotes {
+        &-item {
+          gap: 0;
+          flex-wrap: wrap;
+          width: 100%;
+
+          &-img {
+            width: 100%;
+          }
+        }
+      }
+      &_receive {
+        padding: 70px 0;
+        width: 100%;
+        &-form {
+          flex-direction: column;
+
+          &-title {
+            padding: 0 0 10px 0;
+            text-align: center;
+          }
+          &-input {
+            min-width: auto;
+            width: 100%;
+            > h4 {
+              text-align: center;
+            }
+            > p {
+              text-align: center;
+            }
+            > div {
+              max-width: none;
+              width: 100%;
+              button {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

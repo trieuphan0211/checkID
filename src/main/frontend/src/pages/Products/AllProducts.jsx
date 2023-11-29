@@ -7,6 +7,7 @@ import r301_c11 from "../../assets/img/product/r301-c11.png";
 import r502_cl from "../../assets/img/product/r502-cl.png";
 import am_001 from "../../assets/img/product/am-001.png";
 import v10p from "../../assets/img/product/v10p.png";
+import checkid_et100 from "../../assets/img/product/et100.png";
 
 import { Box, Pagination } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -22,10 +23,10 @@ export const AllProducts = () => {
   const allProducts = [
     {
       id: 1,
-      name: "V11",
-      img: v11,
-      link: "/products/v11",
-      description: "products.allProducts.items.v11",
+      name: "CheckID-ET100",
+      img: checkid_et100,
+      link: "/products/checkid-et100",
+      description: "products.allProducts.items.et100",
     },
     {
       id: 2,
@@ -58,9 +59,9 @@ export const AllProducts = () => {
     },
     {
       id: 6,
-      name: "AM-001",
+      name: "BioR502-MRZ",
       img: am_001,
-      link: "/products/am-001",
+      link: "/products/BioR502-MRZ",
       description: "products.allProducts.items.am001",
     },
     {

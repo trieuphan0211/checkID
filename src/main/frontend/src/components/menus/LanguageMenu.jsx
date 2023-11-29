@@ -105,7 +105,7 @@ const LanguageMenu = () => {
                 alt=""
                 style={{ width: "24px", marginRight: "5px" }}
               />
-              <p> {language}</p>
+              <p> {language === "English" ? "English" : "Tiếng Việt"}</p>
               <KeyboardArrowDownIcon />
             </StyleButton>
             <MenuStyle {...bindMenu(popupState)}>
@@ -133,7 +133,7 @@ const LanguageMenu = () => {
                   alt=""
                   style={{ width: "30px", marginRight: "10px" }}
                 />
-                Vietnamese
+                Tiếng Việt
               </MenuItem>
             </MenuStyle>
           </React.Fragment>

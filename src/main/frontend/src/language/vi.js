@@ -37,14 +37,16 @@ export default {
               "Thiết bị xác thực danh tính hình thức cầm tay với thông tin về ngón tay",
             r301: "R301 C11",
             bodyR301: "Đầu đọc thẻ thông minh CCID",
-            am001: "AM-001",
-            bodyAm001: "Altimeter cho tài liệu/thẻ ID",
+            am001: "BioR502-MRZ",
+            bodyAm001: "Trình đọc tài liệu với nhận dạng khuôn mặt",
             v20: "V20",
             bodyV20: "Máy tính bảng có tích hợp thông tin về ngón tay",
             r502: "R502-CL",
-            bodyR502: "Altimeter cho tài liệu/thẻ ID",
+            bodyR502: "Đầu đọc thẻ thông minh không tiếp xúc",
             v10p: "V10P",
             bodyV10p: "Máy chấm công sinh trắc học trên máy tính để bàn",
+            checkidet100: "CheckID-ET100",
+            bodyCheckidet100: "Đầu đọc/thu mẫu thẻ ID",
           },
         },
         solution: "Giải pháp",
@@ -60,7 +62,7 @@ export default {
             title: "Cách chúng tôi làm việc cùng nhau",
             customers: "Câu chuyện của khách hàng",
             bodyCustomers:
-              "Cách người khác sử dụng ReadID để tạo ra sự xác thực danh tính đáng tin cậy",
+              "Cách người khác sử dụng CheckID để tạo ra sự xác thực danh tính đáng tin cậy",
             partner: "Đối tác",
             bodyPartnerships:
               "Chúng tôi hợp tác với đối tác trong các ngành công nghiệp khác nhau và các công nghệ khác nhau để tạo ra sự phù hợp hoàn hảo cho bạn",
@@ -110,6 +112,7 @@ export default {
     feature: {
       body: "Dịch vụ xác minh danh tính NFC đầu tiên tiện lợi, có thể mở rộng, dễ sử dụng và an toàn.",
       subcribe: "Đăng ký nhận bản tin",
+      company: "Công ty Cổ phần Công nghệ và Dịch vụ Mobile-ID",
     },
     discover: {
       title: "Khám phá",
@@ -131,6 +134,12 @@ export default {
     allCer: "Tất cả các chứng chỉ",
     privacy: "Quyền riêng tư",
     contact: "Liên hệ",
+  },
+  notfound: {
+    header:
+      "Rất tiếc. Dù sao thì trang này đã biến mất hoặc bị thiếu. Xin lỗi vì chúng tôi đã đưa bạn đến đây!",
+    title: "May mắn thay, chúng tôi có vô số thứ thú vị khác.",
+    button: "Truy cập trang chủ",
   },
   homePage: {
     introduce: {
@@ -561,7 +570,7 @@ export default {
     },
 
     challenge: {
-      header: "Hãy nói về thách thức của bạn.",
+      header: "Hãy nói về thách thức /n của bạn.",
       context:
         "Trong một thế giới kỹ thuật số, khoảng cách không tồn tại. Nhưng làm thế nào để bạn có đủ niềm tin để kinh doanh từ xa?",
       what: "Chúng tôi có thể giúp gì cho bạn?",
@@ -595,9 +604,10 @@ export default {
         v20: "Bảng Nhận Diện Vân Tay",
         checkidsr: "Đọc/Quét thẻ ID",
         r301c11: "Đầu Đọc Thẻ Thông Minh CCID",
-        am001: "Altimeter cho tài liệu/thẻ ID",
+        am001: "Trình đọc tài liệu với nhận dạng khuôn mặt",
         r502cl: "Đầu Đọc Thẻ Thông Minh CCID",
         v10p: "Terminal Nhận Diện Vân Tay Desktop",
+        et100: "Đầu Đọc Thẻ Thông Minh CCID",
       },
     },
     checkidSr: {
@@ -607,32 +617,43 @@ export default {
         header: "Đầu đọc/Quét thẻ ID",
         model: "CheckID-SR",
         description:
-          "Hưởng lợi từ việc nhập dữ liệu và xác minh chính xác /n Thiết kế OEM cho cổng ABC và các kiosk tự phục vụ /n Thiết kế trực quan giúp hành khách ít sử dụng /n Kiểm tra tự động hành khách, vận hành 24/7 /n Đọc & xác minh mọi loại thẻ bao gồm cả tài liệu điện tử du lịch",
+          "Hưởng lợi từ việc nhập dữ liệu và xác minh chính xác /n Thiết kế OEM cho cổng ABC và các kiosk tự phục vụ /n Thiết kế trực quan giúp hành khách ít sử dụng /n Kiểm tra tự động hành khách, vận hành 24/7 /n Đọc và xác minh mọi loại thẻ bao gồm cả tài liệu điện tử du lịch",
       },
     },
     am001: {
-      header: "Bộ đo độ cao cho thẻ ID tài liệu (AM-001)",
+      header: "Trình đọc tài liệu (BioR502-MRZ)",
       title: "Máy đọc Hộ chiếu ICAO Máy quét Thẻ ID Camera Tài liệu",
       infoDetail: {
-        header: "Bộ đo độ cao cho thẻ ID tài liệu",
-        model: "AM-001",
+        header: "BioR502-MRZ",
+        model: "BioR502-MRZ",
         description:
-          "AM-001 Hưởng lợi từ việc nhập dữ liệu và xác minh chính xác, thiết kế OEM cho cổng ABC và các kiosk tự phục vụ, thiết kế trực quan giúp hành khách ít sử dụng. /nKiểm tra tự động hành khách, vận hành 24/7 /nĐọc & xác minh mọi loại thẻ bao gồm cả tài liệu điện tử du lịch",
+          "BioR502-MRZ được thiết kế để đáp ứng các nhu cầu bảo mật khó khăn mà không ảnh hưởng đến sự thuận tiện. Thiết bị có cổng USB loại A cho phép kết nối với PC. Các cảm biến sinh trắc học khác nhau như SecuGen, SupreMa, ZKTeco và Morpho được hỗ trợ bởi đầu đọc thẻ. Cảm biến sinh trắc học nên được lựa chọn dựa trên yêu cầu của khách hàng.",
       },
     },
+    et100: {
+      header: "Terminal eID (CheckID-ET100)",
+      title: "Đọc Máy Quét Thẻ Hộ Chiếu Điện Tử ICAO ID Card",
+      infoDetail: {
+        header: "CheckID-ET100",
+        model: "CheckID-ET100",
+        description:
+          "CheckID-ET100 được thiết kế để đáp ứng nhu cầu bảo mật cao mà không làm giảm sự tiện lợi. Thiết bị này có cổng USB loại A female, cho phép kết nối với máy tính. Nó hỗ trợ nhiều loại cảm biến sinh trắc học như SecuGen, SupreMa, ZKTeco và Morpho. Việc chọn cảm biến sinh trắc học nên dựa trên yêu cầu của khách hàng.",
+      },
+    },
+
     v11: {
-      header: "Bộ chấm công thông minh có đèn nền (V11)",
-      title: "Terminal Di động Mở rộng hỗ trợ Pogo PIN",
+      header: "Bộ chấm công thông minh có đèn nền (V10P)",
+      title: "Terminal Di động Mở Rộng Hỗ Trợ Pogo PIN",
       infoDetail: {
         header: "Bộ chấm công thông minh có đèn nền",
-        model: "V11",
+        model: "V10P",
         description:
-          "V11 là một thiết bị di động thông minh chạy trên nền tảng Android, tích hợp máy quét vân tay để cung cấp xác nhận chính xác. Với đặc điểm sinh trắc học ổn định nhất, việc xác thực vân tay có thể được sử dụng để ngăn chặn việc truy cập vật lý không được ủy quyền vào trường học, văn phòng, phòng thí nghiệm, nhà kho, v.v.",
+          "V10P là một thiết bị di động thông minh chạy trên nền tảng Android, tích hợp máy quét vân tay để cung cấp xác nhận chính xác. Với đặc điểm sinh trắc học ổn định nhất, việc xác thực vân tay có thể được sử dụng để ngăn chặn việc truy cập vật lý không được ủy quyền vào trường học, văn phòng, phòng thí nghiệm, nhà kho, ...",
       },
       features: {
         0: {
           header: "Nhiều Tính Năng, Nhiều Khả Năng Mở Rộng",
-          body: "Có thể mở rộng nhiều khả năng và chức năng với pogo PIN, như mô-đun máy in, mô-đun UHF, v.v.",
+          body: "Có thể mở rộng nhiều khả năng và chức năng với pogo PIN, như mô-đun máy in, mô-đun UHF, ...",
         },
         1: {
           header: "Cách Sử Dụng",
@@ -660,7 +681,7 @@ export default {
           header: "Hỗ Trợ Cả Thẻ Tiếp Xúc và Thẻ Không Tiếp Xúc",
           body: "Tiếp xúc: Hỗ trợ thẻ thông minh kích thước ID-1, như: Thẻ ID, thẻ NFC tích hợp chip.",
           body1:
-            "Không tiếp xúc (NFC): Hỗ trợ ISO/IEC 14443 A/B, ISO/IEC 7816, v.v. tuân theo API NFC Android gốc.",
+            "Không tiếp xúc (NFC): Hỗ trợ ISO/IEC 14443 A/B, ISO/IEC 7816, ... tuân theo API NFC Android gốc.",
         },
         5: {
           header: "Luôn Kết Nối",
@@ -671,12 +692,12 @@ export default {
     v20: {
       header: "Bảng sinh trắc học (V20)",
       title:
-        "Bảng sinh trắc học chống sốc, chống rơi, chống bụi cho máy tính đồng bộ",
+        "Bảng sinh trắc học chống sốc, chống rơi, chống bụi cho /n máy tính đồng bộ",
       infoDetail: {
         header: "Bảng sinh trắc học",
         model: "V20",
         description:
-          "V20 được thiết kế đặc biệt cho các kịch bản xác minh ID như eVoting, thực thi pháp luật, kiểm soát biên giới, v.v. Thông qua mô-đun MRZ, có thể đọc nhiều loại thẻ ID bao gồm cả thẻ eID cũng như Hộ chiếu điện tử.",
+          "V20 được thiết kế đặc biệt cho các kịch bản xác minh ID như eVoting, thực thi pháp luật, kiểm soát biên giới, ... Thông qua mô-đun MRZ, có thể đọc nhiều loại thẻ ID bao gồm cả thẻ eID cũng như Hộ chiếu điện tử.",
       },
       features: {
         0: {
@@ -689,7 +710,7 @@ export default {
         },
         2: {
           header: "Đọc Hộ Chiếu và Thẻ eID",
-          body: "V20 được thiết kế đặc biệt cho các kịch bản xác minh ID như eVoting, thực thi pháp luật, kiểm soát biên giới, v.v.",
+          body: "V20 được thiết kế đặc biệt cho các kịch bản xác minh ID như eVoting, thực thi pháp luật, kiểm soát biên giới, ...",
           body1:
             "Thông qua mô-đun MRZ, có thể đọc nhiều loại thẻ ID bao gồm cả thẻ eID cũng như Hộ chiếu điện tử.",
         },
@@ -706,7 +727,7 @@ export default {
     r301c11: {
       header: "Đầu đọc thẻ thông minh CCID (R301-C11)",
       title:
-        "Đầu đọc thẻ thông minh nhỏ gọn, dễ sử dụng, hiệu quả chi phí cho PC, hỗ trợ thẻ ISO 7816 Class A, B và C.",
+        "Đầu Đọc Thẻ Thông Minh Nhỏ Gọn, Dễ Sử Dụng, Hiệu Quả Chi Phí Cho PC, Hỗ Trợ Thẻ ISO 7816 Class A, B và C.",
       infoDetail: {
         header: "Đầu đọc thẻ thông minh CCID",
         model: "R301-C11",
@@ -749,7 +770,7 @@ export default {
         header: "Đầu đọc thẻ thông minh CCID",
         model: "R502-CL",
         description:
-          "R502-CL là một thiết bị giao diện terminal cho các ứng dụng thẻ thông minh và tích hợp hệ thống. Nó có thể được sử dụng rộng rãi trong các ngành hoặc ứng dụng đòi hỏi thanh toán và xác thực điện tử, đặc biệt phù hợp cho các lĩnh vực an ninh cao. Đây là một giải pháp tối ưu cho xác thực, thương mại điện tử, tổ chức tài chính, kiểm soát truy cập, v.v.",
+          "R502-CL là một thiết bị giao diện terminal cho các ứng dụng thẻ thông minh và tích hợp hệ thống. Nó có thể được sử dụng rộng rãi trong các ngành hoặc ứng dụng đòi hỏi thanh toán và xác thực điện tử, đặc biệt phù hợp cho các lĩnh vực an ninh cao. Đây là một giải pháp tối ưu cho xác thực, thương mại điện tử, tổ chức tài chính, kiểm soát truy cập, ...",
       },
       features: {
         0: {
@@ -785,7 +806,7 @@ export default {
         header: "Bộ chấm công thông minh đặt trên bàn",
         model: "V10P",
         description:
-          "V10P là một bộ chấm công thông minh đặt trên bàn, tích hợp máy quét vân tay để cung cấp xác nhận chính xác. Với đặc điểm sinh trắc học ổn định nhất, việc xác thực vân tay có thể được sử dụng để ngăn chặn việc truy cập vật lý không được ủy quyền vào trường học, văn phòng, phòng thí nghiệm, nhà kho, v.v.",
+          "V10P là một bộ chấm công thông minh đặt trên bàn, tích hợp máy quét vân tay để cung cấp xác nhận chính xác. Với đặc điểm sinh trắc học ổn định nhất, việc xác thực vân tay có thể được sử dụng để ngăn chặn việc truy cập vật lý không được ủy quyền vào trường học, văn phòng, phòng thí nghiệm, nhà kho, ...",
       },
       features: {
         0: {
@@ -800,7 +821,7 @@ export default {
         },
         2: {
           header: "Đọc Thẻ NFC Không Tiếp Xúc",
-          body: "Đầu đọc thẻ NFC tích hợp hỗ trợ thẻ NFC tiêu chuẩn ISO/IEC 14443 A/B, như thẻ ID quốc gia, thẻ lái xe, thẻ bảo hiểm y tế và thẻ ngân hàng, v.v.",
+          body: "Đầu đọc thẻ NFC tích hợp hỗ trợ thẻ NFC tiêu chuẩn ISO/IEC 14443 A/B, như thẻ ID quốc gia, thẻ lái xe, thẻ bảo hiểm y tế và thẻ ngân hàng, ...",
         },
         3: {
           header: "Bộ Nhớ Lớn",

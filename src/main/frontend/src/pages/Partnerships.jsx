@@ -1,5 +1,6 @@
 import React from "react";
+import Box from "@mui/material/Box";
 
 export const Partnerships = () => {
-  return <div>Partnerships</div>;
+  return <Box>Partnerships</Box>;
 };

@@ -1,0 +1,28 @@
+.notfound {
+  margin-top: 134px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    max-width: 960px;
+    padding: 112px 20px;
+    h4 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--primary-1);
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #433c3c;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #433c3c;
+    }
+  }
+}

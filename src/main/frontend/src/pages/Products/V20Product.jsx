@@ -27,7 +27,7 @@ export const V20Product = () => {
   // set Title
   document.title = "V20 | CheckID";
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const v20Img = [front_face, behind_face];
   const infoDetail = {
     header: "products.v20.infoDetail.header",
@@ -115,8 +115,19 @@ export const V20Product = () => {
     <Box className="v20">
       <Box className="v20_info d-flex align-items-center">
         <Box>
-          <h1 className="v20_info-header">{t("products.v20.header")}</h1>
-          <p className="v20_info-title">{t("products.v20.title")}</p>
+          <h1 className="v20_info-header" lang={i18n.language}>
+            {t("products.v20.header")}
+          </h1>
+          <p className="v20_info-title">
+            {t("products.v20.title")
+              .split("/n")
+              .map((item) => (
+                <>
+                  {item}
+                  <br />
+                </>
+              ))}
+          </p>
         </Box>
         <img src={fullFace} alt="" className="v20_info-img" />
       </Box>

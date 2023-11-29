@@ -235,7 +235,7 @@ export const Header = ({ bg }) => {
                       </p>
                     </Link>
                   </li>
-                  <li
+                  {/* <li
                     className="subItem1_item d-flex justify-content-start"
                     onClick={() => setOpen(false)}
                   >
@@ -244,6 +244,18 @@ export const Header = ({ bg }) => {
                       <h4>{t("header.header.menu.subProduct.subicao.v11")}</h4>
                       <p>
                         {t("header.header.menu.subProduct.subicao.bodyV11")}
+                      </p>
+                    </Link>
+                  </li> */}
+                  <li
+                    className="subItem1_item d-flex justify-content-start"
+                    onClick={() => setOpen(false)}
+                  >
+                    <Check />
+                    <Link to={`${context}/products/v10p`}>
+                      <h4>{t("header.header.menu.subProduct.subicao.v10p")}</h4>
+                      <p>
+                        {t("header.header.menu.subProduct.subicao.bodyV10p")}
                       </p>
                     </Link>
                   </li>
@@ -265,7 +277,7 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <Link to={`${context}/products/am-001`}>
+                    <Link to={`${context}/products/BioR502-MRZ`}>
                       <h4>
                         {t("header.header.menu.subProduct.subicao.am001")}
                       </h4>
@@ -295,18 +307,6 @@ export const Header = ({ bg }) => {
                       <h4>{t("header.header.menu.subProduct.subicao.r502")}</h4>
                       <p>
                         {t("header.header.menu.subProduct.subicao.bodyR502")}
-                      </p>
-                    </Link>
-                  </li>
-                  <li
-                    className="subItem1_item d-flex justify-content-start"
-                    onClick={() => setOpen(false)}
-                  >
-                    <Check />
-                    <Link to={`${context}/products/v10p`}>
-                      <h4>{t("header.header.menu.subProduct.subicao.v10p")}</h4>
-                      <p>
-                        {t("header.header.menu.subProduct.subicao.bodyV10p")}
                       </p>
                     </Link>
                   </li>
@@ -732,60 +732,16 @@ export const Header = ({ bg }) => {
                     </li>
                     <li className="subItem1_item d-flex  justify-content-start">
                       <Check />
-                      <Link to={`${context}/products/am-001`}>
+                      <Link to={`${context}/products/checkid-et100`}>
                         <h4>
-                          {t("header.header.menu.subProduct.subicao.am001")}
+                          {t(
+                            "header.header.menu.subProduct.subicao.checkidet100"
+                          )}
                         </h4>
                         <p>
-                          {t("header.header.menu.subProduct.subicao.bodyAm001")}
-                        </p>
-                      </Link>
-                    </li>
-                  </div>
-                  <div className="d-flex justify-content-between">
-                    <li className="subItem1_item d-flex justify-content-start">
-                      <Check />
-                      <Link to={`${context}/products/v11`}>
-                        <h4>
-                          {t("header.header.menu.subProduct.subicao.v11")}
-                        </h4>
-                        <p>
-                          {t("header.header.menu.subProduct.subicao.bodyV11")}
-                        </p>
-                      </Link>
-                    </li>
-                    <li className="subItem1_item d-flex justify-content-start">
-                      <Check />
-                      <Link to={`${context}/products/v20`}>
-                        <h4>
-                          {t("header.header.menu.subProduct.subicao.v20")}
-                        </h4>
-                        <p>
-                          {t("header.header.menu.subProduct.subicao.bodyV20")}
-                        </p>
-                      </Link>
-                    </li>
-                  </div>
-                  <div className="d-flex justify-content-between">
-                    <li className="subItem1_item d-flex justify-content-start">
-                      <Check />
-                      <Link to={`${context}/products/r301-c11`}>
-                        <h4>
-                          {t("header.header.menu.subProduct.subicao.r301")}
-                        </h4>
-                        <p>
-                          {t("header.header.menu.subProduct.subicao.bodyR301")}
-                        </p>
-                      </Link>
-                    </li>{" "}
-                    <li className="subItem1_item d-flex justify-content-start">
-                      <Check />
-                      <Link to={`${context}/products/r502-cl`}>
-                        <h4>
-                          {t("header.header.menu.subProduct.subicao.r502")}
-                        </h4>
-                        <p>
-                          {t("header.header.menu.subProduct.subicao.bodyR502")}
+                          {t(
+                            "header.header.menu.subProduct.subicao.bodyCheckidet100"
+                          )}
                         </p>
                       </Link>
                     </li>
@@ -799,6 +755,55 @@ export const Header = ({ bg }) => {
                         </h4>
                         <p>
                           {t("header.header.menu.subProduct.subicao.bodyV10p")}
+                        </p>
+                      </Link>
+                    </li>
+                    <li className="subItem1_item d-flex justify-content-start">
+                      <Check />
+                      <Link to={`${context}/products/r301-c11`}>
+                        <h4>
+                          {t("header.header.menu.subProduct.subicao.r301")}
+                        </h4>
+                        <p>
+                          {t("header.header.menu.subProduct.subicao.bodyR301")}
+                        </p>
+                      </Link>
+                    </li>{" "}
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <li className="subItem1_item d-flex justify-content-start">
+                      <Check />
+                      <Link to={`${context}/products/v20`}>
+                        <h4>
+                          {t("header.header.menu.subProduct.subicao.v20")}
+                        </h4>
+                        <p>
+                          {t("header.header.menu.subProduct.subicao.bodyV20")}
+                        </p>
+                      </Link>
+                    </li>
+
+                    <li className="subItem1_item d-flex justify-content-start">
+                      <Check />
+                      <Link to={`${context}/products/r502-cl`}>
+                        <h4>
+                          {t("header.header.menu.subProduct.subicao.r502")}
+                        </h4>
+                        <p>
+                          {t("header.header.menu.subProduct.subicao.bodyR502")}
+                        </p>
+                      </Link>
+                    </li>
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <li className="subItem1_item d-flex  justify-content-start">
+                      <Check />
+                      <Link to={`${context}/products/BioR502-MRZ`}>
+                        <h4>
+                          {t("header.header.menu.subProduct.subicao.am001")}
+                        </h4>
+                        <p>
+                          {t("header.header.menu.subProduct.subicao.bodyAm001")}
                         </p>
                       </Link>
                     </li>

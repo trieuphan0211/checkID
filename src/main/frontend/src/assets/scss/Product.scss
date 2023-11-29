@@ -1,5 +1,6 @@
 .product {
   margin-top: 134px;
+
   .allProducts_item {
     justify-content: center;
   }
@@ -10,7 +11,8 @@
   .r301c11,
   .am001,
   .checkIdSr,
-  .v10p {
+  .v10p,
+  .et100 {
     &_info {
       flex-direction: column;
       color: #fff;
@@ -43,7 +45,7 @@
       }
     }
     &_item {
-      margin: 100px 14%;
+      margin: 50px 14% 100px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -57,6 +59,15 @@
         align-items: center;
         margin: 40px 30px;
         text-decoration: none;
+        > img {
+          height: 250px;
+        }
+        &:hover {
+          box-shadow: 0px 10px 24px 0px #ccc;
+          transition: all 0.3s ease-in-out;
+          background-color: #fff;
+          scale: 1.1;
+        }
       }
       &-body {
         width: 100%;
@@ -91,9 +102,10 @@
         }
         &-list {
           display: flex;
+          justify-content: center;
           > .MuiBox-root {
-            width: 70px;
-            height: 70px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             margin: 5px 10px;
             padding: 5px;
@@ -180,15 +192,15 @@
           > h4 {
             font-size: 4em;
             font-weight: 800;
-            line-height: 40px;
+            line-height: 50px;
           }
           p,
           ol {
             font-size: 1.6em;
             font-weight: 400;
-            line-height: 19.5px;
+            line-height: 30px;
             color: #666;
-            margin-top: 20px;
+            margin-top: 30px;
             &:first-child {
               margin-top: 30px;
             }
@@ -203,15 +215,15 @@
     &_specification,
     &_ortherProduct {
       padding: 0 140px;
-      margin-bottom: 100px;
+      margin-bottom: 90px;
       &-header {
         font-size: 4em;
         font-weight: 800;
         line-height: 36px;
-        padding: 70px 0 50px;
+        padding: 0 0 90px;
       }
       &-item {
-        width: 96%;
+        width: 94%;
         text-decoration: none;
         padding: 60px 10px 10px 10px;
         background-color: #eef1f4;
@@ -219,6 +231,10 @@
         flex-direction: column;
         align-items: center;
         cursor: pointer;
+        &:hover {
+          box-shadow: 0px 10px 24px 0px #ccc;
+          transition: all 0.3s ease-in-out;
+        }
         img {
           height: 250px;
           margin-bottom: 45px;
@@ -227,6 +243,7 @@
           background-color: #fff;
           width: 100%;
           padding: 30px 5px;
+          height: 120px;
           h6 {
             font-size: 2.6em;
             font-weight: 400;
@@ -240,6 +257,7 @@
             font-weight: 400;
             line-height: 28px;
             text-align: center;
+            text-transform: capitalize;
           }
         }
       }
@@ -259,7 +277,8 @@
   .r301c11,
   .am001,
   .checkIdSr,
-  .v10p {
+  .v10p,
+  .et100 {
     &_info {
       padding-bottom: 0;
       height: auto;
@@ -269,6 +288,10 @@
         max-width: 600px;
         text-align: start;
         margin: 0;
+        &[lang="vi"] {
+          max-width: 632px;
+          margin-left: -5px;
+        }
       }
       &-title {
         margin-top: 30px;
@@ -287,12 +310,20 @@
       }
     }
   }
+  .am001 {
+    &_info {
+      &-header {
+        max-width: 615px;
+      }
+    }
+  }
   .v20,
   .r502cl,
   .r301c11,
   .am001,
   .checkIdSr,
-  .v10p {
+  .v10p,
+  .et100 {
     &_info {
       > .MuiBox-root {
         display: flex;
@@ -304,11 +335,38 @@
       }
     }
   }
+  .v20 {
+    &_info {
+      > div {
+        margin-top: 50px;
+      }
+      &-header {
+        margin-left: -25px;
+      }
+    }
+  }
 }
 
 // Responsive
 // 1920 to infinity
 @media (min-width: 1921px) {
+  .product {
+    margin-top: 134px;
+
+    .allProducts,
+    .v11,
+    .v20,
+    .r502cl,
+    .r301c11,
+    .am001,
+    .checkIdSr,
+    .v10p,
+    .et100 {
+      min-height: 95vh;
+      width: 1920px;
+      margin: 0 auto;
+    }
+  }
 }
 
 // 1153 to 1440
@@ -322,7 +380,8 @@
     .r301c11,
     .am001,
     .checkIdSr,
-    .v10p {
+    .v10p,
+    .et100 {
       &_info {
         position: relative;
         height: 500px;
@@ -380,7 +439,8 @@
     .r301c11,
     .am001,
     .checkIdSr,
-    .v10p {
+    .v10p,
+    .et100 {
       &_info {
         position: relative;
         height: 500px;
@@ -437,6 +497,8 @@
 }
 
 // 321 to 768
+
+// 321 to 768
 @media (min-width: 321px) and (max-width: 768px) {
   .product {
     .allProducts_item {
@@ -450,7 +512,8 @@
     .r301c11,
     .am001,
     .checkIdSr,
-    .v10p {
+    .v10p,
+    .et100 {
       &_info {
         position: relative;
         height: 500px;
@@ -522,7 +585,11 @@
     }
   }
 }
-
+@media (min-width: 620px) and (max-width: 768px) {
+  .product {
+    margin-top: 134px;
+  }
+}
 // 0 to 320
 @media (max-width: 320px) {
   .product {
@@ -537,7 +604,8 @@
     .r301c11,
     .am001,
     .checkIdSr,
-    .v10p {
+    .v10p,
+    .et100 {
       &_info {
         position: relative;
         height: 500px;

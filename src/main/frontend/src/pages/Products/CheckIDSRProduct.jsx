@@ -96,10 +96,13 @@ export const CheckIDSRProduct = () => {
     {
       item: "Biometric template Standards",
       specification: "Suprema, ISO19794-2, ANSI 378",
-      item1: "Case material:",
+      item1: "Case material",
       specification1: "Sturdy ABS-PC plastic LED",
     },
   ];
+
+  // Begin: Scroll to top when route changes
+
   return (
     <Box className="checkIdSr">
       <Box className="checkIdSr_info d-flex align-items-center">

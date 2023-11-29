@@ -1,7 +1,6 @@
 import React from "react";
 
 import "../assets/scss/Footer.scss";
-import { FiArrowRight } from "react-icons/fi";
 import { BiSolidPaperPlane } from "react-icons/bi";
 import logo from "../assets/img/logo_blue.png";
 import iso from "../assets/img/iso27001.png";
@@ -15,6 +14,7 @@ import {
   Divider,
   Snackbar,
   TextField,
+  Grid,
 } from "@mui/material";
 import styled from "@emotion/styled";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
@@ -91,6 +91,7 @@ const Footer = () => {
           <div className="footer_info d-flex justify-content-center flex-wrap">
             <div className="footer_info-item">
               <img src={logo} alt="" />
+              <h6>{t("footer.feature.company")}</h6>
               <p className="footer_info-title">{t("footer.feature.body")}</p>
               <p>
                 <svg
@@ -109,7 +110,9 @@ const Footer = () => {
                     fill="white"
                   />
                 </svg>
-                <span style={{ marginLeft: "14px" }}>1900 6884</span>
+                <span style={{ marginLeft: "14px", lineHeight: "34px" }}>
+                  1900 6884
+                </span>
               </p>
               <p>
                 <svg
@@ -124,7 +127,9 @@ const Footer = () => {
                     fill="white"
                   />
                 </svg>
-                <span style={{ marginLeft: "10px" }}>+84 28 3636 6015</span>
+                <span style={{ marginLeft: "10px", lineHeight: "34px" }}>
+                  +84 28 3636 6015
+                </span>
               </p>
               <p>
                 <svg
@@ -139,7 +144,9 @@ const Footer = () => {
                     fill="white"
                   />
                 </svg>
-                <span style={{ marginLeft: "11px" }}>info@mobile-id.vn</span>
+                <span style={{ marginLeft: "11px", lineHeight: "34px" }}>
+                  info@mobile-id.vn
+                </span>
               </p>
             </div>
             <div className="footer_info-item d-flex">
@@ -185,48 +192,70 @@ const Footer = () => {
                 {t("footer.signup")}
                 <BiSolidPaperPlane />
               </SignButton>
+              <Grid
+                className="footer_info-item-cer"
+                container
+                rowSpacing={1}
+                columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+                sx={{ maxWidth: "307px", width: "100%" }}
+              >
+                <Grid
+                  item
+                  xs={6}
+                  sx={{
+                    width: "117px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    "& p": {
+                      fontSize: "15px",
+                      fontWeight: "500",
+                      lineHeight: "26px",
+                      textAlign: "center",
+                    },
+                    "& img": {
+                      width: "90px",
+                    },
+                  }}
+                >
+                  <img src={iso} alt="" />
+                  <p>ISO/IEC 27001 certified</p>
+                </Grid>
+                <Grid
+                  item
+                  xs={6}
+                  sx={{
+                    width: "117px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    paddingLeft: "50px !important",
+                    "& p": {
+                      fontSize: "15px",
+                      width: "120px",
+                      fontWeight: "500",
+                      lineHeight: "26px",
+                      textAlign: "center",
+                    },
+                    "& img": {
+                      width: "90px",
+                    },
+                  }}
+                >
+                  <img src={tuv} alt="" />
+                  <p>eIDAS module certification for QTSPs</p>
+                </Grid>
+              </Grid>
             </div>
-          </div>
-          <div className="footer_cer">
-            <div className="footer_cer-item d-flex justify-content-center flex-wrap">
-              <div className="d-flex align-items-center ">
-                <img src={iso} alt="" />
-                <div>
-                  <p>ISO/IEC 27001 </p>
-                  <p>certified</p>
-                </div>
-              </div>
-              <div className="d-flex align-items-center">
-                <img src={iso} alt="" />
-                <div>
-                  <p>ISO/IEC 27001 </p>
-                  <p>certified</p>
-                </div>
-              </div>
-              <div className="d-flex align-items-center">
-                <img src={tuv} alt="" />
-                <div>
-                  <p>eIDAS module </p>
-                  <p>certification for QTSPs</p>
-                </div>
-              </div>
-              <div className="d-flex align-items-center">
-                <img src={tuv} alt="" />
-                <div>
-                  <p>eIDAS eID module </p>
-                  <p>certification High</p>
-                </div>
-              </div>
-            </div>
-            <p>
-              {t("footer.allCer")} <FiArrowRight />
-            </p>
           </div>
 
           <div className="footer_contact d-flex justify-content-between align-items-center">
             <LanguageMenu />
+            <p>
+              Copyright © {new Date().getFullYear() != "2023" ? "2023 - " : ""}
+              {new Date().getFullYear()} Mobile-ID
+            </p>
             <div className="d-flex">
-              <p>Copyright © 2023 - {new Date().getFullYear()} Mobile-ID</p>
               <p>{t("footer.privacy")} </p>
               <p>{t("footer.contact")}</p>
             </div>

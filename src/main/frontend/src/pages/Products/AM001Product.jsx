@@ -20,8 +20,8 @@ import { useTranslation } from "react-i18next";
 
 export const AM001Product = () => {
   // set Title
-  document.title = "AM-001 | CheckID";
-
+  document.title = "BioR502-MRZ | CheckID";
+  console.log(process.env.public_url);
   const { t } = useTranslation();
   const am001Img = [front_face, behind_face, other_face];
   const infoDetail = {

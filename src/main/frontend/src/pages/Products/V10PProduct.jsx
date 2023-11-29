@@ -1,26 +1,28 @@
-import React from "react";
-import fullFace from "../../assets/img/product/V10P/fullFace.png";
-import front_face from "../../assets/img/product/V10P/front_face.png";
-import behind_face from "../../assets/img/product/V10P/behind_face.png";
-import android from "../../assets/img/product/Android.png";
-import fingerprint from "../../assets/img/product/Fingerprint.png";
-import size from "../../assets/img/product/size.png";
-import nfc from "../../assets/img/product/NFC.png";
-import g4 from "../../assets/img/product/4G.png";
-import camera from "../../assets/img/product/camera.png";
-import bigBattery from "../../assets/img/product/BigBattery.png";
-import howtouse from "../../assets/img/product/howtouse.png";
-import v10p_1 from "../../assets/img/product/V10P/v10p_1.png";
-import v10p_2 from "../../assets/img/product/V10P/v10p_2.png";
-import memoryCard from "../../assets/img/product/memoryCard.png";
-import background_4g from "../../assets/img/product/bg_4g.png";
-
 import { Box } from "@mui/material";
+import React from "react";
 import {
   InfoDetail,
   OrtherProduct,
   TechnicalSpecifications,
 } from "../../components/products";
+
+import v11_fullFace from "../../assets/img/product/V11/fullFace.png";
+import front_face from "../../assets/img/product/V11/front_face.png";
+import behind_face from "../../assets/img/product/V11/behind_face.png";
+import android from "../../assets/img/product/Android.png";
+import fingerprint from "../../assets/img/product/Fingerprint.png";
+import size from "../../assets/img/product/size.png";
+import nfc from "../../assets/img/product/NFC.png";
+import qrCode from "../../assets/img/product/QR-code.png";
+import g4 from "../../assets/img/product/4G.png";
+import bigBattery from "../../assets/img/product/BigBattery.png";
+import telpo from "../../assets/img/product/V11/Telpo-TPS360.png";
+import v11_2 from "../../assets/img/product/V11/v11_2.png";
+import howtouse from "../../assets/img/product/howtouse.png";
+import fingerPrint from "../../assets/img/product/V11/fingerprint.png";
+import memoryCard from "../../assets/img/product/memoryCard.png";
+import contactCard from "../../assets/img/product/V11/contact_card.png";
+import background_4g from "../../assets/img/product/bg_4g.png";
 import { useTranslation } from "react-i18next";
 
 export const V10PProduct = () => {
@@ -28,17 +30,17 @@ export const V10PProduct = () => {
   document.title = "V10P | CheckID";
 
   const { t } = useTranslation();
-  const v10pImg = [front_face, behind_face];
+  const v11Img = [front_face, behind_face];
   const infoDetail = {
-    header: "products.v10p.infoDetail.header",
-    model: "products.v10p.infoDetail.model",
-    description: "products.v10p.infoDetail.description",
+    header: "products.v11.infoDetail.header",
+    model: "products.v11.infoDetail.model",
+    description: "products.v11.infoDetail.description",
     function: [
       { name: "Android", image: android },
       { name: "Fingerprint", image: fingerprint },
-      { name: "10-inch", image: size },
+      { name: "5-inch", image: size },
       { name: "NFC", image: nfc },
-      { name: "Camera", image: camera },
+      { name: "QRcode", image: qrCode },
       { name: "4G", image: g4 },
       { name: "Big Battery", image: bigBattery },
     ],
@@ -46,127 +48,141 @@ export const V10PProduct = () => {
   const specification = [
     {
       item: "OS",
-      specification: "Android 10 (GMS Available)",
-      item1: "Host Interface",
-      specification1: "1×USB Type-C, USB 2.0, OTG",
+      specification: "Android 12 (GMS Available)",
+      item1: "Communications",
+      specification1: "4G/3G/2G/WLAN/Bluetooth/GNSS",
     },
     {
       item: "Processor",
-      specification: "Qualcomm QCM2150",
-      item1: "Dimension",
-      specification1: "204.4X82.5X15.5mm (L×W×H)",
+      specification: "Quad-Core ARM Cortex A53",
+      item1: "Earphone",
+      specification1: "Type-C port convert to earphone",
     },
     {
-      item: "SIM Card Slot",
-      specification:
-        "Supported Card Types:1.8V, 3V and 5V /n Smart Card Interface Speed:10753~625kbps (when supported by card) /n Smart Card Clock Frequency:4M~12MISO 7816-3ISO/IEC7816, T=0 and T=1  /n Protocol,Class A, B, C card",
-      item1: "SIM Card Slot",
-      specification1:
-        "Supported Card Types:1.8V, 3V and 5VSmart Card Interface Speed:10753~625kbps (when supported by card)Smart Card Clock Frequency:4M~12MISO 7816-3ISO/IEC7816, T=0 and T=1 Protocol,Class A, B, C cards",
+      item: "Memory",
+      specification: "RAM 3GB + ROM 32GB",
+      item1: "Speaker",
+      specification1: "Support",
     },
     {
       item: "Display",
-      specification: "LCM 5 inch, 1280×720, IPS",
+      specification: "LCM 5 inch, 1280×720, IPS, Multi-Touch Panel",
       item1: "Material",
-      specification1: "ABS+PC",
+      specification1: "Rugged and ABS+PC",
     },
     {
-      item: "DPI",
-      specification: "500 DPI",
-      item1: "4G",
-      specification1: "B3 (1800), B4 (1700/2100)",
+      item: "Host Interface",
+      specification: "USB Type-C",
+      item1: "UHF Module",
+      specification1: "Optional",
     },
     {
-      item: "Image Size",
-      specification: "320×480 Pixel",
-      item1: "NFC (optional)",
-      specification1:
-        "Smart Card Interface Speed:106kbps~424kbpsSmart Card Clock Frequency:13.56MHzISO 14443 Type A and Type B",
-    },
-    {
-      item: "ID-1 Card Slot (optional)",
-      specification: `Support Card Types:1.8V, 3V and 5VSmart Card Interface /n Speed:10753~625kbps (when supported by card)Smart Card Clock /n Frequency:4M~12MISO 7816-3 ID-1 (full-size)ISO/IEC7816, T=0 and T=1 protocol,Class A, B, C cards`,
-      item1: "ID-1 Card Slot (optional)",
-      specification1:
-        "Supported Card Types: 1.8V, 3V and 5V Smart Card Interface /n Speed: 10753~625kbps(when supported by card) Smart Card Clock /n Frequency: 4MISO 7816-3 ID-1 (full-size)",
-    },
-    {
-      item: "Live Finger Detection (LFD) Feature",
-      specification: "YES",
-      item1: "Internal Memory",
-      specification1: "RAM 2GB + ROM 16GB eMMC",
-    },
-
-    {
-      item: "Power Adaptor",
-      specification: "Input: 100~240V, 50/60Hz 0.35A /n Output: 5V/1500mAs",
-      item1: "Bluetooth",
-      specification1: "Bluetooth 4.2",
-    },
-    {
-      item: "Voltage",
-      specification: "DC 4.5~5.5V via USB port",
+      item: "Contactless Card Reader (Optional)",
+      specification:
+        "ISO 7816-3 ID-1 (Full-size),ISO / IEC7816, T=0 and T=1 Protocol",
       item1: "Battery",
-      specification1: "3.7V, 4000mAh",
+      specification1:
+        "5,000mAh by default (up to 7500mAh)Support PD/n ChargingCertification: 38.3 report, CB, CE, FCC",
+    },
+    {
+      item: "Fingerprint Module",
+      specification:
+        "Morpho CBM-V3 (by default)Compatible with:Futronic FS81, SecuGen U10, Suprema Slim2S, Aratek A600-M",
+      item1: "NFC",
+      specification1:
+        "Clock Frequency: 13.56Mhz Smart /n Card Interface Speed: 106~848kbps /n Protocol: ISO/IEC 14443 A/BISO 15693, Mifare, FelicaNFC SDK by Android System (optional)",
+    },
+    {
+      item: "Front Camera (Optional)",
+      specification: "5MP, auto focus",
+      item1: "Dimensions (mm)",
+      specification1: "180X80X60mm (L×W×H)",
+    },
+    {
+      item: "Rear Camera (Optional)",
+      specification: "8MP Autofocus with Flash, optional 13MP",
+      item1: "Barcode",
+      specification1: "For both barcode and QR code",
+    },
+    {
+      item: "4G",
+      specification: "FDD-LTE B1 B3 B7 B8 B28TDD-LTE B38 B39 B40 B41B",
+      item1: "Expansion Card",
+      specification1: "Support up to 128GB Micro SD Card",
     },
   ];
   return (
-    <Box className="v10p">
-      <Box className="v10p_info d-flex align-items-center">
+    <Box className="v11">
+      <Box className="v11_info d-flex align-items-center">
         <Box>
-          <h1 className="v10p_info-header">{t("products.v10p.header")}</h1>
-          <p className="v10p_info-title">{t("products.v10p.title")}</p>
+          <h1 className="v11_info-header">{t("products.v11.header")}</h1>
+          <p className="v11_info-title">{t("products.v11.title")}</p>
         </Box>
-        <img src={fullFace} alt="" className="v10p_info-img" />
+        <img src={v11_fullFace} alt="" className="v11_info-img" />
       </Box>
-      <InfoDetail
-        classHeader="v10p"
-        showImg={v10pImg}
-        infoDetail={infoDetail}
-      />
-      <Box className="v10p_features">
-        <Box className="v10p_features-comp">
+      <InfoDetail classHeader="v11" showImg={v11Img} infoDetail={infoDetail} />
+      <Box className="v11_open d-flex justify-content-center">
+        <img src={telpo} alt="" />
+      </Box>
+      <Box className="v11_features">
+        <Box className="v11_features-comp v11_features-comp-left">
+          <Box className="v11_features-comp-info">
+            <h4>{t("products.v11.features.0.header")}</h4>
+            <p>{t("products.v11.features.0.body")}</p>
+          </Box>
+          <img src={v11_2} alt="" />
+        </Box>
+        <Box className="v11_features-comp">
           <img src={howtouse} alt="" />
-          <Box className="v10p_features-comp-info">
-            <h4>{t("products.v10p.features.0.header")}</h4>
-            <p>{t("products.v10p.features.0.body")}</p>
+          <Box className="v11_features-comp-info">
+            <h4>{t("products.v11.features.1.header")}</h4>
+            <p>{t("products.v11.features.1.body")}</p>
           </Box>
         </Box>
-        <Box className="v10p_features-comp">
-          <Box className="v10p_features-comp-info">
-            <h4>{t("products.v10p.features.1.header")}</h4>
-            <p>{t("products.v10p.features.1.body")}</p>
-            <p>{t("products.v10p.features.1.body1")}</p>
+        <Box className="v11_features-comp v11_features-comp-left">
+          <Box className="v11_features-comp-info">
+            <h4>{t("products.v11.features.2.header")}</h4>
+            <p>{t("products.v11.features.2.body")}</p>
+            <p>{t("products.v11.features.2.body1")}</p>
+            <ol>
+              <li>{t("products.v11.features.2.ul.li1")}</li>
+              <li>{t("products.v11.features.2.ul.li2")}</li>
+              <li>{t("products.v11.features.2.ul.li3")}</li>
+              <li>{t("products.v11.features.2.ul.li4")}</li>
+              <li>{t("products.v11.features.2.ul.li5")}</li>
+              <li>{t("products.v11.features.2.ul.li6")}</li>
+            </ol>
           </Box>
-          <img src={v10p_1} alt="" />
+          <img src={fingerPrint} alt="" />
         </Box>
-        <Box className="v10p_features-comp">
-          <img src={v10p_2} alt="" />
-          <Box className="v10p_features-comp-info">
-            <h4>{t("products.v10p.features.2.header")}</h4>
-            <p>{t("products.v10p.features.2.body")}</p>
-          </Box>
-        </Box>
-        <Box className="v10p_features-comp">
-          <Box className="v10p_features-comp-info">
-            <h4>{t("products.v10p.features.3.header")}</h4>
-            <p>{t("products.v10p.features.3.body")}</p>
-          </Box>
+        <Box className="v11_features-comp">
           <img src={memoryCard} alt="" />
+          <Box className="v11_features-comp-info">
+            <h4>{t("products.v11.features.3.header")}</h4>
+            <p>{t("products.v11.features.3.body")}</p>
+          </Box>
         </Box>
-        <Box className="v10p_features-comp">
+        <Box className="v11_features-comp v11_features-comp-left">
+          <Box className="v11_features-comp-info">
+            <h4>{t("products.v11.features.4.header")}</h4>
+            <p>{t("products.v11.features.4.body")}</p>
+            <p>{t("products.v11.features.4.body1")}</p>
+          </Box>
+          <img src={contactCard} alt="" />
+        </Box>
+        <Box className="v11_features-comp">
           <img src={background_4g} alt="" />
-          <Box className="v10p_features-comp-info">
-            <h4>{t("products.v10p.features.4.header")}</h4>
-            <p>{t("products.v10p.features.4.body")}</p>
+          <Box className="v11_features-comp-info">
+            <h4>{t("products.v11.features.5.header")}</h4>
+            <p>{t("products.v11.features.5.body")}</p>
           </Box>
         </Box>
       </Box>
       <TechnicalSpecifications
-        classHeader="v10p"
+        classHeader="v11"
         specification={specification}
       />
-      <OrtherProduct classHeader="v10p" />
+      <OrtherProduct classHeader="v11" />
     </Box>
   );
 };

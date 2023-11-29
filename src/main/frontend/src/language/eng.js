@@ -36,14 +36,16 @@ export default {
             bodyV11: "Handheld Biometric ID Terminal",
             r301: "R301 C11",
             bodyR301: "CCID Smartcard Reader",
-            am001: "AM-001",
-            bodyAm001: "Altimeter for document/ID card",
+            am001: "BioR502-MRZ",
+            bodyAm001: "Document Reader with Facial Recognition",
             v20: "V20",
             bodyV20: "Biometric Tablet",
             r502: "R502-CL",
-            bodyR502: "Altimeter for document/ID card",
+            bodyR502: "Contactless Smart Card Reader",
             v10p: "V10P",
             bodyV10p: "Desktop Biometric ID Terminal",
+            checkidet100: "CheckID-ET100",
+            bodyCheckidet100: "ID card reader/scanner",
           },
         },
         solution: "solutions",
@@ -59,7 +61,7 @@ export default {
             title: " How we work together",
             customers: "Customer stories",
             bodyCustomers:
-              "How others are using ReadID to create trusted identity verification",
+              "How others are using CheckID to create trusted identity verification",
             partner: "Partnerships",
             bodyPartnerships:
               " We collaborate with partners in different industries and other technologies to create a perfect fit for you",
@@ -109,6 +111,7 @@ export default {
     feature: {
       body: "Converting, scalable, easy-to-use, and secure NFC-First identity verification.",
       subcribe: "Subscribe for our newsletter",
+      company: "Mobile-ID Technologies And Services Joint Stock Company",
     },
     discover: {
       title: "Discover",
@@ -130,6 +133,12 @@ export default {
     allCer: "All certifications",
     privacy: "Privacy",
     contact: "Contact",
+  },
+  notfound: {
+    header:
+      " Oops. This page has disappeared or was missing anyhow. Sorry that we brought you here!",
+    title: "Fortunately, we have loads of other interesting stuff.",
+    button: "Go to homepage",
   },
   homePage: {
     introduce: {
@@ -590,9 +599,10 @@ export default {
         v20: "Biometric Tablet",
         checkidsr: "ID card reader/scanner",
         r301c11: "CCID Smartcard Reader",
-        am001: "Altimeter for document/ID card",
+        am001: "Document Reader with Facial Recognition",
         r502cl: "CCID Smartcard Reader",
         v10p: "Desktop Biometric ID Terminal",
+        et100: "ID card reader/scanner",
       },
     },
     checkidSr: {
@@ -606,23 +616,33 @@ export default {
       },
     },
     am001: {
-      header: "Altimeter for document ID card(AM-001)",
+      header: "Document Reader (BioR502-MRZ)",
       title: "ICAO ePassport Reader ID Card Document Camera Scanner",
       infoDetail: {
-        header: "Altimeter for document ID card",
-        model: "AM-001",
+        header: "BioR502-MRZ",
+        model: "BioR502-MRZ",
         description:
-          " AM-001 Profit from accurate data entry and verification, OEM design for ABC gates and self-service kiosks, Intuitive design helps infrequent passengers. /nAutomated passenger screening, 24/7 operation /nReads & verifies every IDs including electronic travel documents",
+          "BioR502-MRZ is designed to meet tough security needs without sacrificing convenience. The device has a USB Type A female port allowing for it to be connected to a PC. Various biometric sensors such as SecuGen, SupreMa, ZKTeco and Morpho are supported by the card reader. The biometric sensor should be selected based on customer requirements.",
+      },
+    },
+    et100: {
+      header: "eID Terminal (CheckID-ET100)",
+      title: "ICAO ePassport Reader ID Card Document Camera Scanner",
+      infoDetail: {
+        header: "CheckID-ET100",
+        model: "CheckID-ET100",
+        description:
+          "CheckID-ET100 is designed to meet tough security needs without sacrificing convenience. The device has a USB Type A female port allowing for it to be connected to a PC. Various biometric sensors such as SecuGen, SupreMa, ZKTeco and Morpho are supported by the card reader. The biometric sensor should be selected based on customer requirements.",
       },
     },
     v11: {
-      header: " Handheld Biometric ID Terminal (V11)",
+      header: " Handheld Biometric ID Terminal (V10P)",
       title: "Pogo PIN supported Extensible Biometric Handheld Terminal",
       infoDetail: {
         header: "Handheld Biometric ID Terminal",
-        model: "V11",
+        model: "V10P",
         description:
-          "V11 is a smart Android mobile terminal, featuring a biometric fingerprint scanner that offers accurate identification. Being the most stable biometric characteristics, fingerprint authentication can be used to prevent unauthorized physical access to the school, office, laboratory, warehouse, etc.",
+          "V10P is a smart Android mobile terminal, featuring a biometric fingerprint scanner that offers accurate identification. Being the most stable biometric characteristics, fingerprint authentication can be used to prevent unauthorized physical access to the school, office, laboratory, warehouse, etc.",
       },
       features: {
         0: {
@@ -806,11 +826,58 @@ export default {
     },
   },
   usecaseStories: {
+    info: {
+      subHeader: "Customer stories",
+      header: "Stories from the people we’ve worked with",
+      title:
+        "Discover how MobileID ensures the most trusted mobile identity document authenticity across industries, and impacts the world of identity verification. Below are our success stories.",
+      filterByUsecase: "Filter by use cases",
+      description: {
+        p: " “It just wasn't a seamless user experience with OCR, leading to poor conversion. With NFC we created a high quality customer journey and the number of customers who no longer need to visit a branch has increased fivefold”",
+        h6: "Andrea McKain",
+        name: "ASB Bank",
+      },
+    },
     company: {
       title: "You’ll be in good company",
       content:
         " CheckID is used by leading banks, governmental organizations, digital signature services, and many others worldwide.",
       readStory: "Read their stories",
+    },
+    readStory: "Read the full story",
+    quotes: {
+      0: {
+        header:
+          '“We have grown the online channel for onboarding new customers from 35% to 60% and the feedback we receive from app users includes comments such as "Is fantastic", "Fast" and "Clear.”',
+        name: "Evelien Mooij",
+        title: "Rabobank",
+      },
+      1: {
+        header:
+          '"We wanted the best technology behind this that would offer titanium standard identity verification for Livesign. After testing CheckID technology, we concluded that there is no better solution for identity verification."',
+        name: "Ian Hendey",
+        title: "the lawstore / livesign",
+      },
+      2: {
+        header:
+          '“The full student onboarding has changed to an instant and smooth process. Great for students and employees"',
+        name: "Jeroen Ruiter",
+        title: "Leiden University",
+      },
+      3: {
+        header:
+          "“CBR employees have identified a few cases where look-a-likes tried to fool them. The CheckID app confirmed the employees' doubts.”",
+        name: "Tjitse van den Bos",
+        title: "CBR",
+      },
+      exploremore: "Explore more",
+    },
+    recives: {
+      header:
+        "Never stop learning.We like to make an effort to deliver all the insights to you.",
+      body: {
+        header: "Receive updates per email",
+      },
     },
   },
 };

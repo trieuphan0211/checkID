@@ -7,7 +7,7 @@
     margin: 0 auto;
   }
   &_info {
-    padding: 96px 0 20px 0;
+    padding: 96px 0;
     &-item {
       color: #fff;
       &--lable {
@@ -17,10 +17,19 @@
         padding-right: 24px;
         max-width: 322px;
         font-size: 1.6em;
+        > img {
+          width: 274px;
+        }
+        > h6 {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 24px;
+          margin: 30px 0 10px;
+        }
         .footer_info {
           &-title {
-            margin: 30px 0;
             font-weight: 500;
+            margin-bottom: 10px;
           }
           &-btn {
             display: flex;
@@ -51,6 +60,10 @@
           margin-bottom: 16px;
         }
       }
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-top: 25px;
+      }
       .link {
         &-discover,
         &-service {
@@ -71,50 +84,20 @@
           }
         }
       }
-    }
-  }
-  &_cer {
-    padding: 20px 0 50px 0;
-    &-item {
-      > div {
-        &:first-child {
-          padding-left: 0;
-        }
-        &:last-child {
-          padding-right: 0;
-        }
-        color: #fff;
-        padding: 0 24px 18px;
-        width: 332px;
-        > div {
-          p {
-            font-size: 1.6em;
-            text-wrap: nowrap;
-            font-weight: 500;
-          }
-        }
-      }
-    }
-    > p {
-      color: var(--primary-2);
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      svg {
-        font-size: 20px;
-        margin-left: 5px;
-      }
-      &:hover {
-        svg {
-          margin-left: 10px;
-          transition: all 0.3s ease-in-out;
-        }
+      &-cer {
+        margin-top: 40px !important;
       }
     }
   }
+
   &_contact {
     width: 100%;
     padding: 20px 0;
+    > p {
+      color: #fff;
+      font-size: 1.6em;
+      font-weight: 500;
+    }
     > div {
       p {
         color: #fff;
@@ -123,8 +106,7 @@
         &:nth-child(2) {
           margin: 0 15px;
         }
-        &:nth-child(2):hover,
-        &:last-child:hover {
+        &:hover {
           cursor: pointer;
           color: var(--primary-2);
         }
@@ -157,19 +139,6 @@
           align-items: flex-start;
           width: 100%;
         }
-      }
-    }
-    &_cer {
-      &-item {
-        justify-content: flex-start !important;
-        > div {
-          flex-wrap: wrap;
-
-          padding: 0;
-        }
-      }
-      > p {
-        text-align: start;
       }
     }
     &_contact {
