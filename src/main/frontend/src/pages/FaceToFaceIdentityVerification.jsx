@@ -8,13 +8,13 @@ import { Header, SubHeader } from "../components/headers";
 import { ChartPerson, Like, LockShield } from "../icons";
 import { mailContact } from "../services/RemoteIdentityService";
 import "../assets/scss/FaceToFaceIdentityVerification.scss";
-import scanning from "../assets/img/face_to_face_identity_verification/scanning.png";
+import scanning from "../assets/img/scanning.png";
 import simplify_identity from "../assets/img/face_to_face_identity_verification/simplify_identity.png";
 import page1_background from "../assets/img/face_to_face_identity_verification/slider/slide1.png";
 import page1_avata from "../assets/img/face_to_face_identity_verification/slider/page1_avata.png";
 import page2 from "../assets/img/face_to_face_identity_verification/slider/page2.png";
 import page3 from "../assets/img/face_to_face_identity_verification/slider/page3.png";
-import readid from "../assets/img/trusted_identity_verification/readid-app-passport.png";
+import readid from "../assets/img/readid-app-passport.png";
 import challenge from "../assets/img/face_to_face_identity_verification/challenge.png";
 
 import {

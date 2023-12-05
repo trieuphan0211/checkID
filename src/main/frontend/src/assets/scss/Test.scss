@@ -1,0 +1,50 @@
+#placeholder {
+  height: 150vh;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  border: 1px solid;
+}
+
+@keyframes example {
+  0% {
+    width: 0%;
+  }
+
+  10% {
+    width: 0%;
+  }
+
+  100% {
+    max-width: 100%;
+  }
+}
+
+.bara1 {
+  border-radius: 1px 25px 25px 1px;
+  padding: 16px;
+  background-color: #7ac1cf;
+  position: relative;
+  margin-bottom: -32px;
+  z-index: 2;
+  animation-duration: 6s;
+}
+
+.bara1.animate {
+  animation-name: example;
+}
+
+.barb1 {
+  border-radius: 1px 25px 25px 1px;
+  padding: 16px;
+  background-color: #e3e3e3;
+  position: relative;
+  margin-bottom: 8px;
+  z-index: 1;
+}
+
+.textbox {
+  position: absolute;
+  color: #ffffff;
+  margin-top: -12px;
+}

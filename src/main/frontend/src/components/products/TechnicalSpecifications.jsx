@@ -26,7 +26,7 @@ const StyledTableCell = styled(TableCell)(() => ({
     backgroundColor: "#ADB7C2",
     color: "#000",
     fontSize: "16px",
-    padding: "25px 10px",
+    padding: "15px 10px",
     border: "1px solid #DADCE4",
   },
 }));
@@ -36,7 +36,7 @@ const StyledTableRow = styled(TableCell)(() => ({
     width: "495px",
     fontSize: "16px",
     lineHeight: "24px",
-    padding: "25px 10px",
+    padding: "15px 10px",
     border: "1px solid #DADCE4",
   },
 }));
@@ -49,7 +49,7 @@ export const TechnicalSpecifications = ({ classHeader, specification }) => {
         {t("products.technical")}
       </h1>
       <TableContainer component={Paper} sx={{ boxShadow: "none" }}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table sx={{ minWidth: 650 }} aria-label="simple table" size="small">
           <TableHead>
             <TableRow>
               <StyledTableCell>{t("products.item")}</StyledTableCell>

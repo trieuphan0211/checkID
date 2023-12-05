@@ -235,43 +235,24 @@ export const Header = ({ bg }) => {
                       </p>
                     </Link>
                   </li>
-                  {/* <li
-                    className="subItem1_item d-flex justify-content-start"
-                    onClick={() => setOpen(false)}
-                  >
-                    <Check to={`${context}/products/v11`} />
-                    <Link to={`${context}/products/v11`}>
-                      <h4>{t("header.header.menu.subProduct.subicao.v11")}</h4>
-                      <p>
-                        {t("header.header.menu.subProduct.subicao.bodyV11")}
-                      </p>
-                    </Link>
-                  </li> */}
                   <li
                     className="subItem1_item d-flex justify-content-start"
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <Link to={`${context}/products/v10p`}>
-                      <h4>{t("header.header.menu.subProduct.subicao.v10p")}</h4>
+                    <Link to={`${context}/products/checkid-et100`}>
+                      <h4>
+                        {t(
+                          "header.header.menu.subProduct.subicao.checkidet100"
+                        )}
+                      </h4>
                       <p>
-                        {t("header.header.menu.subProduct.subicao.bodyV10p")}
+                        {t(
+                          "header.header.menu.subProduct.subicao.bodyCheckidet100"
+                        )}
                       </p>
                     </Link>
                   </li>
-                  <li
-                    className="subItem1_item d-flex justify-content-start"
-                    onClick={() => setOpen(false)}
-                  >
-                    <Check />
-                    <Link to={`${context}/products/r301-c11`}>
-                      <h4>{t("header.header.menu.subProduct.subicao.r301")}</h4>
-                      <p>
-                        {t("header.header.menu.subProduct.subicao.bodyR301")}
-                      </p>
-                    </Link>
-                  </li>
-
                   <li
                     className="subItem1_item d-flex justify-content-start"
                     onClick={() => setOpen(false)}
@@ -291,10 +272,10 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <Link to={`${context}/products/v20`}>
-                      <h4>{t("header.header.menu.subProduct.subicao.v20")}</h4>
+                    <Link to={`${context}/products/r301-c11`}>
+                      <h4>{t("header.header.menu.subProduct.subicao.r301")}</h4>
                       <p>
-                        {t("header.header.menu.subProduct.subicao.bodyV20")}
+                        {t("header.header.menu.subProduct.subicao.bodyR301")}
                       </p>
                     </Link>
                   </li>
@@ -307,6 +288,31 @@ export const Header = ({ bg }) => {
                       <h4>{t("header.header.menu.subProduct.subicao.r502")}</h4>
                       <p>
                         {t("header.header.menu.subProduct.subicao.bodyR502")}
+                      </p>
+                    </Link>
+                  </li>
+                  <li
+                    className="subItem1_item d-flex justify-content-start"
+                    onClick={() => setOpen(false)}
+                  >
+                    <Check />
+                    <Link to={`${context}/products/v10p`}>
+                      <h4>{t("header.header.menu.subProduct.subicao.v10p")}</h4>
+                      <p>
+                        {t("header.header.menu.subProduct.subicao.bodyV10p")}
+                      </p>
+                    </Link>
+                  </li>
+
+                  <li
+                    className="subItem1_item d-flex justify-content-start"
+                    onClick={() => setOpen(false)}
+                  >
+                    <Check />
+                    <Link to={`${context}/products/v20`}>
+                      <h4>{t("header.header.menu.subProduct.subicao.v20")}</h4>
+                      <p>
+                        {t("header.header.menu.subProduct.subicao.bodyV20")}
                       </p>
                     </Link>
                   </li>
@@ -329,13 +335,23 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <div>
+                    <Link to={`${context}/solutions/client-middleware`}>
                       <h4>
                         {" "}
                         {t("header.header.menu.subSolution.subicao.checkid")}
                       </h4>
                       {/* <p>ID card reader/scanner</p> */}
-                    </div>
+                    </Link>
+                  </li>
+                  <li
+                    className="subItem1_item d-flex justify-content-start"
+                    onClick={() => setOpen(false)}
+                  >
+                    <Check />
+                    <Link to={`${context}/solutions/mobile-sdk`}>
+                      <h4>{t("header.header.menu.subSolution.subicao.sdk")}</h4>
+                      {/* <p>ID card reader/scanner</p> */}
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -356,7 +372,9 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Group />
-                    <Link to={`${context}/use-cases`}>
+                    <Link
+                    // to={`${context}/use-cases`}
+                    >
                       <h4>
                         {t("header.header.menu.subCustomers.how.customers")}
                       </h4>
@@ -370,7 +388,9 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Group1 />
-                    <Link to={`${context}/partnerships`}>
+                    <Link
+                    // to={`${context}/partnerships`}
+                    >
                       <h4>
                         {t("header.header.menu.subCustomers.how.partner")}
                       </h4>
@@ -397,7 +417,9 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <Link to={`${context}/use-cases/abn-moneyou`}>
+                    <Link
+                    // to={`${context}/use-cases/abn-moneyou`}
+                    >
                       <h4>
                         {t("header.header.menu.subCustomers.highlight.digital")}
                       </h4>
@@ -408,7 +430,9 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <Link to={`${context}/use-cases/uk-home-office-euss`}>
+                    <Link
+                    // to={`${context}/use-cases/uk-home-office-euss`}
+                    >
                       <h4>
                         {t("header.header.menu.subCustomers.highlight.ukHome")}
                       </h4>
@@ -419,7 +443,9 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <Link to={`${context}/use-cases/thirdfort`}>
+                    <Link
+                    // to={`${context}/use-cases/thirdfort`}
+                    >
                       <h4>
                         {t(
                           "header.header.menu.subCustomers.highlight.automated"
@@ -432,7 +458,9 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <Link to={`${context}/use-cases/asb-bank`}>
+                    <Link
+                    // to={`${context}/use-cases/asb-bank`}
+                    >
                       <h4>
                         {t("header.header.menu.subCustomers.highlight.quality")}
                       </h4>
@@ -730,6 +758,7 @@ export const Header = ({ bg }) => {
                         </p>
                       </Link>
                     </li>
+
                     <li className="subItem1_item d-flex  justify-content-start">
                       <Check />
                       <Link to={`${context}/products/checkid-et100`}>
@@ -823,12 +852,19 @@ export const Header = ({ bg }) => {
                 <h5>{t("header.header.menu.subSolution.icao")}</h5>
                 <li className="subItem1_item d-flex justify-content-start">
                   <Check />
-                  <div>
+                  <Link to={`${context}/solutions/client-middleware`}>
                     <h4>
                       {t("header.header.menu.subSolution.subicao.checkid")}
                     </h4>
                     {/* <p>ID card reader/scanner</p> */}
-                  </div>
+                  </Link>
+                </li>
+                <li className="subItem1_item d-flex justify-content-start">
+                  <Check />
+                  <Link to={`${context}/solutions/mobile-sdk`}>
+                    <h4>{t("header.header.menu.subSolution.subicao.sdk")}</h4>
+                    {/* <p>ID card reader/scanner</p> */}
+                  </Link>
                 </li>
                 <Top className="positionTop" bg={bg} />
               </ul>
@@ -844,7 +880,9 @@ export const Header = ({ bg }) => {
                 <h5>{t("header.header.menu.subCustomers.how.title")}</h5>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Group />
-                  <Link to={`${context}/use-cases`}>
+                  <Link
+                  // to={`${context}/use-cases`}
+                  >
                     <h4>
                       {t("header.header.menu.subCustomers.how.customers")}
                     </h4>
@@ -855,7 +893,9 @@ export const Header = ({ bg }) => {
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Group1 />
-                  <Link to={`${context}/partnerships`}>
+                  <Link
+                  // to={`${context}/partnerships`}
+                  >
                     <h4>{t("header.header.menu.subCustomers.how.partner")}</h4>
                     <p>
                       {t(
@@ -875,7 +915,9 @@ export const Header = ({ bg }) => {
                 <h5> {t("header.header.menu.subCustomers.highlight.title")}</h5>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <Link to={`${context}/use-cases/abn-moneyou`}>
+                  <Link
+                  // to={`${context}/use-cases/abn-moneyou`}
+                  >
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.digital")}
                     </h4>
@@ -883,7 +925,9 @@ export const Header = ({ bg }) => {
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <Link to={`${context}/use-cases/uk-home-office-euss`}>
+                  <Link
+                  // to={`${context}/use-cases/uk-home-office-euss`}
+                  >
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.ukHome")}
                     </h4>
@@ -891,7 +935,9 @@ export const Header = ({ bg }) => {
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <Link to={`${context}/use-cases/thirdfort`}>
+                  <Link
+                  //  to={`${context}/use-cases/thirdfort`}
+                  >
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.automated")}
                     </h4>
@@ -899,7 +945,9 @@ export const Header = ({ bg }) => {
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <Link to={`${context}/use-cases/asb-bank`}>
+                  <Link
+                  // to={`${context}/use-cases/asb-bank`}
+                  >
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.quality")}
                     </h4>

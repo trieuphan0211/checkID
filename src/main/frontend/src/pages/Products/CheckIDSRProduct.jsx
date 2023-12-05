@@ -51,7 +51,7 @@ export const CheckIDSRProduct = () => {
     {
       item: "Universal ID documentation type",
       specification:
-        "HK/Macao entry/exit visit card for China mainland /n HK/Macao entry/exit visit card for HK/Macao mainland /n Chinese national ID card /n HK/Macao/Taiwan citizen inhabit cards /n Foreigner permanent inhabit ID card （Chinese green card）",
+        "Citizen identification card with chip, /n citizen identification card non chip, /n driver's license (VietNam)",
       item1: "Environment condition",
       specification1:
         "Operation: 0℃～50℃, 0～90 % RH ( non-condense )/n Storage: -30℃～60℃, 0～95 % RH ( non-condense )",

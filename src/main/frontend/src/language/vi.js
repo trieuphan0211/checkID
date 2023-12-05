@@ -54,6 +54,7 @@ export default {
           icao: "Giải pháp Đọc ICAO",
           subicao: {
             checkid: "CheckID Client Middleware",
+            sdk: "CheckID Mobile SDK",
           },
         },
         customers: "Khách hàng",
@@ -840,6 +841,25 @@ export default {
       content:
         "CheckID được sử dụng bởi các ngân hàng hàng đầu, các tổ chức chính phủ, dịch vụ chữ ký điện tử và nhiều tổ chức khác trên toàn thế giới.",
       readStory: "Đọc câu chuyện của họ",
+    },
+  },
+  client: {
+    challenge: {
+      header: "Hãy nói về thách thức của bạn.",
+      context:
+        "Trong một thế giới kỹ thuật số, khoảng cách không tồn tại. Nhưng làm thế nào để bạn có đủ niềm tin để kinh doanh từ xa?",
+      what: "Chúng tôi có thể giúp gì cho bạn?",
+      firstName: "Tên",
+      lastName: "Họ",
+      companyName: "Tên công ty",
+      email: "Email",
+      check:
+        "Cập nhật thông tin về xác minh danh tính, đăng ký nhận bản tin của chúng tôi.",
+      context2:
+        "Chúng tôi cam kết bảo vệ và tôn trọng quyền riêng tư của bạn. Để biết thêm thông tin, vui lòng đọc Chính sách quyền riêng tư của chúng tôi.",
+      privacyPolicy: "Chính sách quyền riêng tư.",
+      contact: "Liên hệ với chuyên gia",
+      context3: "Chúng tôi sẽ trả lời trong vòng 1 ngày.",
     },
   },
 };

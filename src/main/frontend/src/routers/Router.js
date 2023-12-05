@@ -27,6 +27,9 @@ import {
   UseCase,
 } from "../pages/useCase";
 import { Partnerships } from "../pages/Partnerships";
+import { Test } from "../pages/Test";
+import SolutionsLayout from "../layouts/SolutionsLayout";
+import { ClientMiddleware, MobileSDK } from "../pages/solutions";
 const context = "";
 const Routers = () => {
   const routing = useRoutes([
@@ -89,6 +92,20 @@ const Routers = () => {
             {
               path: `${context}/products/checkid-et100`,
               element: <CheckIDET100 />,
+            },
+          ],
+        },
+        {
+          path: `${context}`,
+          element: <SolutionsLayout />,
+          children: [
+            {
+              path: `${context}/solutions/client-middleware`,
+              element: <ClientMiddleware />,
+            },
+            {
+              path: `${context}/solutions/mobile-sdk`,
+              element: <MobileSDK />,
             },
           ],
         },
@@ -189,6 +206,7 @@ const Routers = () => {
       ],
     },
     { path: "*", element: <NotFound /> },
+    { path: "/test", element: <Test /> },
   ]);
   return routing;
 };

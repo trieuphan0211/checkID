@@ -53,6 +53,7 @@ export default {
           icao: "ICAO Reader Solution",
           subicao: {
             checkid: "CheckID Client Middleware",
+            sdk: "CheckID Mobile SDK",
           },
         },
         customers: "customers",
@@ -878,6 +879,25 @@ export default {
       body: {
         header: "Receive updates per email",
       },
+    },
+  },
+  client: {
+    challenge: {
+      header: " Let’s talk about your challenge.",
+      context:
+        "In a digital world distance does not exist. But how do you realise enough trust to do business at a distance?",
+      what: "What can we help you with?",
+      firstName: "First Name",
+      lastName: "Last name",
+      companyName: "Company name",
+      email: "Email",
+      check:
+        "Stay informed about identity verification, subscribe for our newsletter.",
+      context2:
+        " We’re committed to protecting and respecting your privacy. For more information read our ",
+      privacyPolicy: "Privacy Policy.",
+      contact: "Contact a specialist",
+      context3: "We’ll reply within 1 day.",
     },
   },
 };

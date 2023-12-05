@@ -12,7 +12,7 @@ import page1_avata from "../assets/img/trusted_identity_verification/avatar.png"
 import page1_provenSolution from "../assets/img/remote_identity_verification/Slider/proven_solution.png";
 import page2_intergrate from "../assets/img/remote_identity_verification/Slider/intergrate.png";
 import page3_certifield from "../assets/img/remote_identity_verification/Slider/certifield.png";
-import readid from "../assets/img/trusted_identity_verification/readid-app-passport.png";
+import readid from "../assets/img/readid-app-passport.png";
 import challenge from "../assets/img/remote_identity_verification/challenge.png";
 
 import {

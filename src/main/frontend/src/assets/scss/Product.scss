@@ -92,13 +92,13 @@
       }
     }
     &_detail {
-      align-items: center;
       padding: 60px;
       &-img {
         width: 800px;
         &-show {
           display: block;
           margin: 0 auto;
+          height: 577px;
         }
         &-list {
           display: flex;
@@ -220,7 +220,7 @@
         font-size: 4em;
         font-weight: 800;
         line-height: 36px;
-        padding: 0 0 90px;
+        padding: 0 0 50px;
       }
       &-item {
         width: 94%;
@@ -271,6 +271,15 @@
       }
     }
   }
+  .et100 {
+    &_detail {
+      &-img {
+        &-show {
+          scale: 0.7;
+        }
+      }
+    }
+  }
   .v11,
   .v20,
   .r502cl,
@@ -284,6 +293,9 @@
       height: auto;
       flex-direction: row;
       justify-content: center;
+      > .MuiBox-root {
+        margin-bottom: 80px;
+      }
       &-header {
         max-width: 600px;
         text-align: start;
@@ -297,9 +309,6 @@
         margin-top: 30px;
         text-align: start;
         max-width: 500px;
-      }
-      &-img {
-        margin-top: 45px;
       }
     }
   }
@@ -337,9 +346,6 @@
   }
   .v20 {
     &_info {
-      > div {
-        margin-top: 50px;
-      }
       &-header {
         margin-left: -25px;
       }
