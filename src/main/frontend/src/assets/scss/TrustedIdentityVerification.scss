@@ -952,13 +952,13 @@
   }
 }
 // 321 to 768
-@media (min-width: 321px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .trustedIdentity {
-    margin-top: 210px;
     &_intro {
       padding: 50px 10px 30px;
       &-header {
         font-size: 4em;
+        text-align: center;
       }
     }
     &_info {
@@ -971,6 +971,16 @@
       &-content {
         width: 100%;
         padding: 20px 30px 20px 30px;
+        text-align: center;
+        &-header {
+          max-width: 100%;
+        }
+        &-p {
+          max-width: 100%;
+        }
+        button {
+          width: 100%;
+        }
       }
       &-video {
         position: relative;
@@ -1011,6 +1021,8 @@
         width: 100%;
         flex-direction: column;
         padding: 70px 10px;
+        border-radius: 0;
+        gap: 10px;
       }
       &-img {
         margin: 0;
@@ -1081,7 +1093,16 @@
         padding: 0;
       }
       &-body {
-        padding: 60px;
+        padding: 60px 20px;
+        h3 {
+          text-align: center;
+        }
+        p {
+          text-align: justify;
+        }
+        button {
+          width: 100%;
+        }
       }
       &-video {
         position: relative;
@@ -1103,212 +1124,7 @@
         flex-wrap: wrap;
         &-item {
           margin: 0 5px;
-          padding: 10px;
-
-          &:first-child {
-            margin: 0 0 20px 0;
-          }
-          > button {
-            padding: 5px 10px;
-          }
-        }
-      }
-    }
-    &_news {
-      &-info {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-right: 0;
-        &-title {
-          margin-bottom: 30px;
-        }
-        &-body {
-          flex-wrap: wrap;
-          justify-content: center;
-          &-item {
-            width: auto;
-            max-width: 400px;
-            img {
-              width: 100%;
-            }
-            &:first-child {
-              margin-right: 5px;
-              margin-bottom: 10px;
-            }
-
-            h4 {
-              padding: 30px 0 30px 30px;
-              max-width: 230px;
-            }
-          }
-        }
-      }
-      &-talk {
-        > img {
-          width: 100%;
-          height: auto;
-        }
-        width: auto;
-        flex-wrap: wrap;
-        justify-content: center;
-        & > div {
-          margin: 0 24px;
-        }
-      }
-    }
-  }
-}
-// 0 to 320
-@media (max-width: 320px) {
-  .trustedIdentity {
-    margin-top: 210px;
-    &_intro {
-      padding: 50px 10px 30px;
-      &-header {
-        font-size: 4em;
-      }
-    }
-    &_info {
-      padding: 38px 10px;
-      &-layout {
-        height: auto;
-        flex-direction: column;
-        align-items: center !important;
-      }
-      &-content {
-        width: 100%;
-        padding: 20px 30px 20px 30px;
-      }
-      &-video {
-        position: relative;
-        width: 100%;
-        margin-top: 10px;
-        video {
-          width: 100%;
-        }
-        div {
-          display: none;
-          width: 64%;
-          margin: -10px auto;
-        }
-      }
-    }
-    &_smartphone {
-      padding: 75px 10px;
-      &-layout {
-        flex-direction: column;
-        align-items: center;
-      }
-      &-header {
-        margin: 0 20px;
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &-context {
-          text-align: center;
-          width: auto;
-        }
-      }
-    }
-    &_dowload {
-      padding: 50px 0;
-      &-layout {
-        width: 100%;
-        flex-direction: column;
-        padding: 70px 10px;
-      }
-      &-img {
-        margin: 0;
-        width: 100%;
-      }
-      &-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h3 {
-          max-width: none;
-          text-align: center;
-          margin-bottom: 20px;
-        }
-      }
-    }
-    &_slide {
-      &-page1,
-      &-page2,
-      &-page3,
-      &-page4,
-      &-page5 {
-        margin: 28px 25px;
-      }
-      &-page1,
-      &-page3,
-      &-page5 {
-        flex-direction: column-reverse;
-        &-img {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-        &-body {
-          display: flex;
-          flex-direction: column;
-          margin: 0;
-        }
-      }
-      &-page2,
-      &-page4 {
-        flex-direction: column-reverse;
-        &-img {
-          width: 100%;
-          position: relative;
-          margin-left: 10px;
-        }
-        &-body {
-          max-width: none;
-          width: auto;
-          margin: 0 10px;
-          min-height: auto;
-        }
-      }
-      &-page4 {
-        &-body {
-          margin: 10px;
-        }
-        &-img {
-          margin-top: 10px;
-        }
-      }
-    }
-    &_verified {
-      padding: 75px 10px;
-      &-layout {
-        width: auto;
-        padding: 0;
-      }
-      &-body {
-        padding: 60px;
-      }
-      &-video {
-        position: relative;
-        width: 100%;
-        margin-top: 10px;
-        video {
-          width: 100%;
-        }
-        div {
-          display: none;
-          width: 64%;
-          margin: -10px auto;
-        }
-      }
-    }
-    &_verify {
-      &-body {
-        flex-wrap: wrap;
-        &-item {
-          margin: 0 5px;
-          padding: 10px;
+          padding: 20px;
 
           &:first-child {
             margin: 0 0 20px 0;

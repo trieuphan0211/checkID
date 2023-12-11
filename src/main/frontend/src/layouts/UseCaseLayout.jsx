@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { Header, SubHeader } from "../components/headers";
 import Footer from "../components/Footer";
 import "../assets/scss/UseCase.scss";
+import { useLocation } from "react-router-dom";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -32,18 +33,31 @@ HideOnScroll.propTypes = {
 };
 
 const UseCaseLayout = (props) => {
+  const path = useLocation();
   return (
     <React.Fragment>
       <HideOnScroll {...props}>
-        <AppBar
-          sx={{
-            boxShadow: "none",
-            backgroundColor: "var(--primary-1)",
-          }}
-        >
-          <SubHeader bg="blue" />
-          <Header bg="white" />
-        </AppBar>
+        {path?.pathname === "/use-cases" ? (
+          <AppBar
+            sx={{
+              boxShadow: "none",
+              backgroundColor: "white",
+            }}
+          >
+            <SubHeader />
+            <Header />
+          </AppBar>
+        ) : (
+          <AppBar
+            sx={{
+              boxShadow: "none",
+              backgroundColor: "var(--primary-1)",
+            }}
+          >
+            <SubHeader bg="blue" />
+            <Header bg="white" />
+          </AppBar>
+        )}
       </HideOnScroll>
       <div className="usecase">
         <Outlet />

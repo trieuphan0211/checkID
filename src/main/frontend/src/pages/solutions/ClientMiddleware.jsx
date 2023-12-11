@@ -15,8 +15,8 @@ import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import SquareRoundedIcon from "@mui/icons-material/SquareRounded";
-import Link from "@mui/material/Link";
 import ReCAPTCHA from "react-google-recaptcha";
+import { Link } from "react-router-dom";
 
 const BlueButton = styled(Button)({
   backgroundColor: "var(--primary-2)",
@@ -133,36 +133,29 @@ export const ClientMiddleware = () => {
     <Box className="client">
       <Box className="client_header">
         <Box>
-          <h5 className="client_header-subheader">ICAO READER SOLUTION</h5>
-          <h1 className="client_header-header">
-            The independent middleware for biometrics and eIDs
-          </h1>
+          <h5 className="client_header-subheader">
+            {t("client.header.subheader")}
+          </h5>
+          <h1 className="client_header-header">{t("client.header.header")}</h1>
           <BlueButton
             sx={{
               margin: "30px 0",
             }}
           >
-            Try our CheckID Me app
+            {t("client.header.try")}
           </BlueButton>
         </Box>
         <img className="client_header-img" src={scanning} alt="scanning" />
       </Box>
       <Box className="client_definition">
-        <h5 className="client_definition-header">CheckID Client Middleware</h5>
-        <p className="client_definition-body">
-          CheckID is the standard-oriented solution for all conceivable
-          biometrics and eID applications and our approach to using biometric
-          system components and document readers in a modular way and allow
-          their easy replacement at any time. With CheckID, we make the
-          processes involved in eID enrolment, in police work and at border
-          controls smooth, sustainable and clear.
-        </p>
+        <h5 className="client_definition-header">
+          {t("client.definition.header")}
+        </h5>
+        <p className="client_definition-body">{t("client.definition.body")}</p>
       </Box>
       <div className="client_help d-flex flex-column align-items-center justify-content-center">
         <div className="client_help-layout d-flex flex-column align-items-center justify-content-center">
-          <h1 className="client_help-header">
-            The benefits of biomiddle at a glance
-          </h1>
+          <h1 className="client_help-header">{t("client.help.header")}</h1>
           <Grid
             className="client_help-grid"
             container
@@ -173,57 +166,36 @@ export const ClientMiddleware = () => {
               <Box>
                 <ModulePuzzle />
               </Box>
-              <h5>Modular</h5>
-              <p>
-                Thanks to its modular and scalable architecture, CheckID meets a
-                wide range of requirements - from local pilots to national
-                solutions.
-              </p>
+              <h5>{t("client.help.item.1.header")}</h5>
+              <p>{t("client.help.item.1.body")}</p>
             </Grid>
             <Grid xs={4} className="client_help-grid-item">
               <Box>
                 <ChartPerson />
               </Box>
-              <h5>Independent</h5>
-              <p>
-                CheckID communicates with client applications via a
-                service-oriented interface. Therefore, the software is
-                independent of system platforms and programming languages.
-              </p>
+              <h5>{t("client.help.item.2.header")}</h5>
+              <p>{t("client.help.item.2.body")}</p>
             </Grid>
             <Grid xs={4} className="client_help-grid-item">
               <Box>
                 <AutoGraph />
               </Box>
-              <h5>Quickly implemented</h5>
-              <p>
-                Thanks to its consistent standard orientation, CheckID is easily
-                and quickly integrated into existing infrastructures. In many
-                public enrolment and border control projects, CheckID is already
-                the hub and heart of large IT infrastructures.
-              </p>
+              <h5>{t("client.help.item.3.header")}</h5>
+              <p>{t("client.help.item.3.body")}</p>
             </Grid>
             <Grid xs={4} className="client_help-grid-item">
               <Box>
                 <Like />
               </Box>
-              <h5>Investment-proof</h5>
-              <p>
-                By using internationally standardized interfaces, CheckID
-                ensures the easy exchange of individual components in the highly
-                dynamic market of biometric technologies.
-              </p>
+              <h5>{t("client.help.item.4.header")}</h5>
+              <p>{t("client.help.item.4.body")}</p>
             </Grid>
             <Grid xs={4} className="client_help-grid-item">
               <Box>
                 <Phone />
               </Box>
-              <h5>Mobile</h5>
-              <p>
-                CheckID is also available for mobile biometrics and eID
-                applications. We serve all common systems, including Android and
-                iOS.
-              </p>
+              <h5>{t("client.help.item.5.header")}</h5>
+              <p>{t("client.help.item.5.body")}</p>
             </Grid>
           </Grid>
         </div>

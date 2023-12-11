@@ -22,6 +22,10 @@ export const SubHeader = ({ bg }) => {
           <p className="subHeader_p-bold" style={{ padding: "0 6px 0 10px" }}>
             <FaInfoCircle />
             {t("header.subHeader.question")}
+            <BsChevronRight
+              className="subHeader_icon-hover"
+              style={{ fontSize: "10px" }}
+            />
           </p>
           <p className="subHeader_p">
             {t("header.subHeader.readMore")}

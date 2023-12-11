@@ -14,19 +14,11 @@ import {
   R301C11Product,
   R502CLProduct,
   V10PProduct,
-  V11Product,
   V20Product,
 } from "../pages/Products";
+import { AbnMoneyou, UseCase } from "../pages/customers";
 import NotFound from "../pages/NotFound";
 import UseCaseLayout from "../layouts/UseCaseLayout";
-import {
-  AbnMoneyou,
-  AsbBank,
-  ThirdFort,
-  UkHomeOfficeEuss,
-  UseCase,
-} from "../pages/useCase";
-import { Partnerships } from "../pages/Partnerships";
 import { Test } from "../pages/Test";
 import SolutionsLayout from "../layouts/SolutionsLayout";
 import { ClientMiddleware, MobileSDK } from "../pages/solutions";

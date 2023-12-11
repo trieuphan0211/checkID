@@ -119,7 +119,11 @@
 // 1153 to 1440
 
 // 769 to 1152
-
+@media (max-width: 600px) {
+  .MuiDivider-root {
+    bottom: 140px !important;
+  }
+}
 // 321 to 768
 @media (min-width: 321px) and (max-width: 768px) {
   .footer {

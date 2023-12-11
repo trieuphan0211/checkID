@@ -574,18 +574,24 @@
   }
 }
 // 321 to 768
-@media (min-width: 321px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .faceToFaceIdentity {
-    margin-top: 185px;
     &_conversionRate {
       flex-direction: column;
       &-layout {
+        margin: 0;
       }
       &-title {
       }
       &-header {
+        font-size: 10vw;
+        line-height: normal;
       }
       &-body {
+        max-width: 100%;
+      }
+      button {
+        width: 100%;
       }
       &-img {
         width: 100%;
@@ -605,8 +611,8 @@
         position: relative;
         bottom: auto;
         left: auto;
-        margin-top: 20px;
-        max-width: 80%;
+        border-radius: 0;
+        max-width: 100%;
         &-title {
         }
         &-header {
@@ -649,16 +655,23 @@
       padding: 0;
       &-layout {
         border-radius: 0;
+        padding: 40px 20px;
+        gap: 10px;
       }
       &-img {
         margin: 0;
+        width: 100%;
       }
       &-body {
-        padding: 0 50px;
         h3 {
           max-width: 100%;
+          text-align: center;
         }
         p {
+          text-align: center;
+        }
+        button {
+          width: 100%;
         }
       }
     }
@@ -683,71 +696,43 @@
         }
       }
     }
+    &_help {
+      padding: 10vw 5vw;
+
+      &-layout {
+        padding: 0;
+      }
+      &-header {
+        font-size: 10vw;
+        line-height: normal;
+        text-align: center;
+      }
+      &-grid {
+        &-item {
+          > * {
+            margin: 0 auto;
+            text-align: center;
+          }
+        }
+      }
+    }
     &_client {
       padding: 50px 20px;
       &-layout {
         flex-direction: column;
+        gap: 20px;
+      }
+      &-header {
+        padding: 0;
+        h5 {
+          font-size: 7vw;
+          line-height: normal;
+          text-align: center;
+        }
       }
       &-body {
         margin-right: 0;
-      }
-    }
-  }
-}
-// 0 to 320
-@media (max-width: 320px) {
-  .faceToFaceIdentity {
-    &_matter {
-      &-layout {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-      }
-      &-img {
-        width: 100%;
-      }
-      &-content {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        margin-top: 20px;
-        max-width: 80%;
-        &-title {
-        }
-        &-header {
-        }
-        &-body {
-        }
-      }
-    }
-    &_challenge {
-      &-layout {
-        width: 100%;
-        display: flex;
-        margin: 50px 0;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 20px;
-      }
-      &-img {
-        width: 100%;
-      }
-      &-form {
-        margin-top: 20px;
-        max-width: 100%;
-        padding: 50px;
-        position: relative;
-        top: auto;
-        right: auto;
-        &-header {
-        }
-        &-context {
-        }
-        &-context2,
-        &-context3 {
-        }
-        &-context3 {
-        }
+        padding: 20px;
       }
     }
   }

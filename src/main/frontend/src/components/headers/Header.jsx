@@ -372,9 +372,7 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Group />
-                    <Link
-                    // to={`${context}/use-cases`}
-                    >
+                    <Link to={`${context}/use-cases`}>
                       <h4>
                         {t("header.header.menu.subCustomers.how.customers")}
                       </h4>
@@ -880,9 +878,7 @@ export const Header = ({ bg }) => {
                 <h5>{t("header.header.menu.subCustomers.how.title")}</h5>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Group />
-                  <Link
-                  // to={`${context}/use-cases`}
-                  >
+                  <Link to={`${context}/use-cases`}>
                     <h4>
                       {t("header.header.menu.subCustomers.how.customers")}
                     </h4>

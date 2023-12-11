@@ -838,50 +838,151 @@ export default {
         h6: "Andrea McKain",
         name: "ASB Bank",
       },
+
+      caseList: {
+        all: "All",
+        financialServices: "Financial Services",
+        onBoarding: "Onboarding",
+        remoteIdentityVerification: "Remote Identity Verification",
+        checkidSaas: "CheckID SaaS",
+        digitalSigning: "Digital Signing",
+        realEstate: "Real Estate",
+        checkidReady: "CheckID Ready",
+        government: "Government",
+        faceToFaceVerification: "Face-to-face verification",
+        borderControlPolice: "Border control / police",
+        checkidClient: "CheckID Client-only",
+        travel: "Travel",
+        reVerification: "Re-verification",
+        hiring: "Hiring",
+      },
     },
+
     company: {
       title: "You’ll be in good company",
       content:
         " CheckID is used by leading banks, governmental organizations, digital signature services, and many others worldwide.",
       readStory: "Read their stories",
     },
-    readStory: "Read the full story",
-    quotes: {
+    slider: {
       0: {
-        header:
-          '“We have grown the online channel for onboarding new customers from 35% to 60% and the feedback we receive from app users includes comments such as "Is fantastic", "Fast" and "Clear.”',
+        content:
+          '“We have grown the online channel for onboarding new customers from 35% to 60% and the feedback we receive from app users includes comments such as "Is fantastic", "Fast" and "Clear”.',
         name: "Evelien Mooij",
-        title: "Rabobank",
       },
       1: {
-        header:
-          '"We wanted the best technology behind this that would offer titanium standard identity verification for Livesign. After testing CheckID technology, we concluded that there is no better solution for identity verification."',
+        content:
+          "“We wanted the best technology behind this that would offer titanium standard identity verification for Livesign.After testing CheckID technology, we concluded that there is no better solution for identity verification”.",
         name: "Ian Hendey",
-        title: "the lawstore / livesign",
       },
       2: {
-        header:
-          '“The full student onboarding has changed to an instant and smooth process. Great for students and employees"',
+        content:
+          "“The full student onboarding has changed to aninstant and smooth process. Great for studentsand employees.”",
         name: "Jeroen Ruiter",
-        title: "Leiden University",
       },
       3: {
-        header:
+        content:
           "“CBR employees have identified a few cases where look-a-likes tried to fool them. The CheckID app confirmed the employees' doubts.”",
         name: "Tjitse van den Bos",
-        title: "CBR",
       },
-      exploremore: "Explore more",
+      4: {
+        content:
+          "“It just wasn't a seamless user experience with OCR, leading to poor conversion. With NFC we created a high quality customer journey and the number of customers who no longer need to visit a branch has increased fivefold”",
+        name: "Andrea McKain",
+      },
+      5: {
+        content:
+          "“If you want to be sure that the identity document is real and is in use right now then I see no real alternative to NFC and biometrics”",
+        name: "Kalev Pihl",
+      },
+      6: {
+        content:
+          "“During COVID, we were able to scale up to 120.000 digital onboarding identity verifications a day thanks to ReadID”",
+        name: "Marcel Wendt",
+      },
+      7: {
+        content:
+          "“We needed reliable, proven technology. Using the NFC solution is much more reliable than OCR.”",
+        name: "Rianne Rolsma",
+      },
+      8: {
+        content:
+          "“It clearly shows that there is a demand in the population for a digital alternative to the physical driving license.”",
+        name: "Benny Engelbrecht",
+      },
+      9: {
+        content:
+          "Thirdfort’s platform is now used to remotely ‘onboard’ over 30,000 clients each month – a ten-fold increase on pre-pandemic numbers - on behalf of more than 500 law firms and property businesses.",
+        name: "Jack Bidgood",
+      },
+      10: {
+        content:
+          "With ReadID, we achieve a higher level of confidence. 96% of all people that start the process finish it successfully in the first attempt. ",
+        name: "Justus Damman",
+      },
+      11: {
+        content:
+          "If you need a high level of confidence for a check, chip opening is the most robust, fastest, and easiest to use for end customers.",
+        name: "Tony Machin",
+      },
     },
+    readStory: "Read the full story",
+    exploremore: "Explore more",
     recives: {
       header:
         "Never stop learning.We like to make an effort to deliver all the insights to you.",
       body: {
         header: "Receive updates per email",
+        title: "1 newsletter a month",
+        yourEmail: "Your email",
+        yourName: "Your name",
+        lastName: "Last name",
+        companyName: "Company name",
+        url: "Company website url",
+        check:
+          "Yes, inform me about identity verification. I want to subscribe for the CheckID Newsletter*",
+        sub: "We’re committed to protecting and respecting your privacy. For more information read our",
+        private: "Privacy Policy.",
+        button: " Yes, keep me informed",
       },
     },
   },
   client: {
+    header: {
+      subheader: "ICAO READER SOLUTION",
+      header: "The independent middleware for biometrics and eIDs",
+      try: " Try our CheckID Me app",
+    },
+    definition: {
+      header: "CheckID Client Middleware",
+      body: "CheckID is the standard-oriented solution for all conceivable biometrics and eID applications and our approach to using biometric system components and document readers in a modular way and allow their easy replacement at any time. With CheckID, we make the processes involved in eID enrolment, in police work and at border controls smooth, sustainable and clear.",
+    },
+    help: {
+      header: "The benefits of biomiddle at a glance",
+      item: {
+        1: {
+          header: "Modular",
+          body: " Thanks to its modular and scalable architecture, CheckID meets a wide range of requirements - from local pilots to national solutions.",
+        },
+        2: {
+          header: "Independent",
+          body: " CheckID communicates with client applications via a service-oriented interface. Therefore, the software is independent of system platforms and programming languages.",
+        },
+
+        3: {
+          header: "Quickly implemented",
+          body: "Thanks to its consistent standard orientation, CheckID is easily and quickly integrated into existing infrastructures. In many public enrolment and border control projects, CheckID is already the hub and heart of large IT infrastructures.",
+        },
+        4: {
+          header: "Investment-proof",
+          body: "By using internationally standardized interfaces, CheckID ensures the easy exchange of individual components in the highly dynamic market of biometric technologies.",
+        },
+        5: {
+          header: "Mobile",
+          body: " CheckID is also available for mobile biometrics and eID applications. We serve all common systems, including Android and iOS.",
+        },
+      },
+    },
     challenge: {
       header: " Let’s talk about your challenge.",
       context:
@@ -898,6 +999,123 @@ export default {
       privacyPolicy: "Privacy Policy.",
       contact: "Contact a specialist",
       context3: "We’ll reply within 1 day.",
+    },
+  },
+  mobilesdk: {
+    header: {
+      subheader: "ICAO READER SOLUTION",
+      header: "Trust and Scalability",
+      body: "CheckID SaaS is a scalable and secure solution for larger volumes, suitable for online use cases. Can be combined with face matching, leveraging the high-resolution face image from the chip for an extra layer of assurance and security.",
+      try: " Try our CheckID Me app",
+      contact: " Contact a specialist",
+    },
+    definition: {
+      header: "CheckID Mobile SDK",
+      body: "CheckID SaaS allows the verification of identity documents in a secure and user-friendly manner using a smartphone with NFC. CheckID is provided as configurable software that you can integrate into your own apps and backend systems. We provide an SDK (Software Development Kit) and APIs (Application Programming Interfaces) to make this possible. CheckID® thus becomes part of the software that you provide to your users, who won’t even be aware that the mobile verification technology is provided by us. CheckID SaaS allows you to fully customize what personal information you want to read and which verifications you want to carry out, giving you complete control over your customer journey.",
+      body1:
+        "The verification runs on our secure server, hosted by Mobile-ID in a public cloud. You do not have to worry about updates and security. Doing the verification in our server makes CheckID SaaS suitable for online use cases in which you cannot trust the smartphone, for example for onboarding for banks.",
+    },
+    help: {
+      item: {
+        1: {
+          header: "Your app, CheckID inside",
+          body: "CheckID SaaS is integrated into your app using our CheckID SDK, enabling you to use your own look and feel with CheckID inside.",
+        },
+        2: {
+          header: "User friendly",
+          body: "CheckID is reliable and user-friendly, much more than optical scanning of identity documents or online video identification.",
+        },
+
+        3: {
+          header: "Scalable and secure",
+          body: "We host CheckID SaaS in a highly secure public cloud that can easily scale up or down with demand.",
+        },
+        4: {
+          header: "Privacy committed",
+          body: "We have a world-unique certification package. We are committedv to your security and your customers' privacy.",
+        },
+        5: {
+          header: "Instant results",
+          body: " You get personal information and verification results instantly, via a REST interface (JSON, XML, or PDF).",
+        },
+        6: {
+          header: "Face verification",
+          body: "Orchestration with facial biometrics for holder verification is possible, creating the best and most secure identity verification solution available.",
+        },
+      },
+      saas: {
+        header: "For whom?",
+        body: "CheckID SaaS is mostly used for online use cases, in which a user has to verify their own identity via an instant and online process. Opening bank accounts, VISA applications, and re- verifications are typical use cases.",
+        body1:
+          "CheckID SaaS requires some implementation effort and is therefore best suited for medium-sized and larger organizations, that already have a mobile app and have substantial volumes of verifications. Typical customers are banks, governmental organizations, and Trust Service Providers.",
+        body2:
+          " For smaller organizations or organizations without an app, CheckID Ready may be better suited.",
+        mess: {
+          name: "Kalev Pihl",
+          title: "CEO SK ID Solutions",
+          body: "“NFC reading is worth the effort; there is no real alternative. Even trained persons or good AI algorithms are not able to check identity document security features based on video. If the stakes are high, this is the way to do it”",
+        },
+      },
+    },
+    nfc: {
+      header: "Simplify your identity verification process with NFC",
+      body: "Read about all there is to know",
+      button: "Go to research paper",
+    },
+    slide: {
+      1: {
+        header: "Higher conversion, Happy customers",
+        body: " Starting in 2018, Rabobank has used CheckID in a wide range of use cases. Initial successes created demand throughout the organisation. From onboarding to board membership, from becoming of age to identity wallets.",
+        link: "How Rabobank uses CheckID",
+        feedback: {
+          name: "Emy Leemans",
+          title: "Product owner at Rabobank",
+          body: " “We have grown the online channel for onboarding new customers from 35% to 60%”",
+        },
+      },
+      2: {
+        header: "Trusted verification for SK ID Solutions",
+        body: "SK ID Solutions (SK) is an Estonian-based trusted services provider. SK provides international e-identity solutions, including a popular mobile solution for the Baltics called Smart-ID with almost 3 million users and 60 million monthly transactions.",
+        body1:
+          "SK ID Solutions added NFC-based identity document verification with CheckID, liveness detection and facial recognition for onboarding to Smart-ID. SK uses CheckID SaaS, integrating the CheckID SDKs in their Smart-ID app.",
+        link: "Read the full story",
+        feedback: {
+          name: "Kalev Pihl",
+          title: "CEO SK ID Solutions",
+          body: " “NFC reading is worth the effort; there is no real alternative.”",
+        },
+      },
+      3: {
+        header:
+          "World’s Most Successful Remote Identity Verification Immigration Programme",
+        body: "To support the United Kingdom’s exit from the European Union, the EU Settlement Scheme was established by the Home Office to allow EEA nationals living in the UK to apply for a UK immigration status.",
+        body1:
+          "Together with our partners Entrust and iProov, we were selected to allow for a smooth application process.",
+        link: "UK Home Office EU Settlement Scheme",
+        feedback: {
+          name: "5 million",
+          title: "",
+          body: " “More than 5 million applications have successfully concluded since the start of the programme,”",
+        },
+      },
+    },
+    solution: {
+      subheader: "Start today",
+      header:
+        "Our other solutions to solve any identity verification challenge",
+      body: "CheckID comes in different flavours and architectures to match your use case.",
+      item: {
+        1: {
+          header: "CheckID Client Only",
+          body: "In the client-only version, CheckID runs on the smartphone only, without a server.  Allows verification of identity documents with very limited training and reading personal information very quickly without any typing or OCR mistakes.",
+          button: "CheckID Client-only",
+        },
+        2: {
+          header: "CheckID Ready",
+          body: "CheckID Ready is a ready-to-use identity verification app suitable for online use cases. A configurable app, ready for use, SaaS based. Get up and running in few days instead of weeks. Comes in a basic version, branded or enterprise edition.",
+          button: "CheckID Ready",
+        },
+      },
     },
   },
 };

@@ -11,7 +11,11 @@
   }
   .subHeader_p-bold {
     font-weight: 700;
+
     svg {
+      &:last-child {
+        display: none;
+      }
       margin-right: 10px;
     }
   }
@@ -510,10 +514,12 @@
   .subHeader {
     padding: 9px 0;
     margin: 0 auto;
-  }
-  .subHeader_read {
-    cursor: pointer;
-    margin-right: 50px;
+    &_read {
+      cursor: pointer;
+    }
+    &_app {
+      display: none !important;
+    }
   }
   .headerList {
     display: flex;
@@ -629,12 +635,21 @@
   .subHeader {
     padding: 9px 0;
     margin: 0 auto;
-    flex-wrap: wrap;
-    height: auto;
-  }
-  .subHeader_read {
-    cursor: pointer;
-    flex-wrap: wrap;
+    &_read {
+      cursor: pointer;
+    }
+    &_p-bold {
+      svg:last-child {
+        margin-left: 10px;
+        display: inline !important;
+      }
+    }
+    &_p {
+      display: none;
+    }
+    &_app {
+      display: none !important;
+    }
   }
   .header {
     padding: 0 5px !important;
@@ -643,7 +658,6 @@
       // height: max-content;
     }
     button {
-      width: 20%;
       margin: 0;
     }
   }
@@ -762,13 +776,21 @@
   .subHeader {
     padding: 9px 0;
     margin: 0 auto;
-    flex-wrap: wrap;
-    height: auto;
-  }
-  .subHeader_read {
-    cursor: pointer;
-    margin-right: 50px;
-    flex-wrap: wrap;
+    &_read {
+      cursor: pointer;
+    }
+    &_p-bold {
+      svg:last-child {
+        margin-left: 10px;
+        display: inline !important;
+      }
+    }
+    &_p {
+      display: none;
+    }
+    &_app {
+      display: none !important;
+    }
   }
   .header {
     padding: 0 5px !important;

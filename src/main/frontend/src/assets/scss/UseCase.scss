@@ -2,9 +2,10 @@
   margin-top: 134px;
   .usecaseStories {
     &_intro {
-      background-color: var(--primary-2);
+      background-image: url("../img/background.png");
+      background-position: 50%;
       color: #fff;
-      padding: 50px 70px 110px 70px;
+      padding: 50px 70px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -35,32 +36,6 @@
         font-weight: 500;
         line-height: 26px;
       }
-
-      &-description {
-        padding: 0 30px;
-        max-width: 1300px;
-        display: flex;
-        gap: 72px;
-        padding: 0 24px;
-        &-body {
-          max-width: 640px;
-          p:first-child {
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 40px;
-          }
-          h6,
-          p:last-child {
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 20px;
-          }
-          h6 {
-            margin-top: 30px;
-            font-weight: 700;
-          }
-        }
-      }
     }
     &_company {
       padding: 40px 0;
@@ -78,34 +53,15 @@
         max-width: 650px;
       }
       &-logos {
-        &-item {
+        max-width: 910px;
+        flex-wrap: wrap;
+        justify-content: center;
+        img {
+          padding: 0 20px 50px;
+        }
+        &:first-child {
           img {
-            padding: 0 35px 50px;
-          }
-          &:first-child {
-            img {
-              padding: 0 20px 50px;
-            }
-          }
-        }
-      }
-      &-readstore {
-        width: 222px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        color: var(--primary-2);
-        font-size: 1.6em;
-        font-weight: 700;
-        cursor: pointer;
-        svg {
-          margin-left: 10px;
-          transition: all 0.3s ease-in-out;
-        }
-        &:hover {
-          svg {
-            transform: translateX(10px);
-            transition: all 0.3s ease-in-out;
+            padding: 0 20px 50px;
           }
         }
       }
@@ -117,53 +73,80 @@
       justify-content: center;
       margin: 0 auto;
       gap: 125px;
-
-      &-item {
+      &-slide {
+        width: 99vw;
+        .images-wrap.horizontal {
+        }
+      }
+      &-page {
+        padding: 185px 322px 160px;
+        min-height: 700px;
+        background-image: url("../img/customer/Vector.png");
+        background-position: 28%;
+        background-repeat: no-repeat;
         display: flex;
-        max-width: 1280px;
-        padding: 0 100px;
-        padding: 0 30px;
-        max-width: 1300px;
-        display: flex;
+        justify-content: center;
+        gap: 130px;
         align-items: center;
-
-        gap: 48px;
-        padding: 0 24px;
-        &-body {
-          max-width: 640px;
-          h6,
-          p {
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 20px;
-          }
-          p:first-child {
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 40px;
-          }
-
-          h6 {
-            margin-top: 30px;
+        > div {
+          max-width: 470px;
+          gap: 60px;
+        }
+        &-content {
+          font-size: 23.063px;
+          font-weight: 500;
+          line-height: 32px; /* 138.753% */
+          letter-spacing: -0.48px;
+        }
+        &-info {
+          &-name {
+            font-size: 20px;
             font-weight: 700;
+            line-height: 24px; /* 120% */
+            letter-spacing: -0.2px;
           }
-          a {
-            font-size: 16px;
-            text-decoration: none;
-            display: inline-block;
+          &-title {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            margin-bottom: 30px;
+          }
+          &-link {
             color: var(--primary-2);
+            text-decoration: none;
+            font-size: 16px;
             font-weight: 700;
             line-height: 24px;
-            margin-top: 25px;
-            svg {
-              margin-left: 5px;
+            > svg {
+              transition: all 0.3s ease-in-out;
+              margin-left: 10px;
             }
             &:hover {
-              svg {
+              > svg {
                 transform: translateX(10px);
-                transition: all 0.3s ease-in-out;
               }
             }
+          }
+        }
+      }
+      .indicators {
+        gap: 72px;
+        border-radius: 50px;
+        align-items: center;
+        width: max-content;
+        position: relative;
+        padding: 16px 32px;
+        background-color: #fff;
+        margin: -70px auto 0;
+        z-index: 10;
+        box-shadow: 0px 0px 30px 0px rgba(26, 31, 119, 0.05),
+          0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+        > img {
+          width: 60px;
+
+          &:hover {
+            cursor: pointer;
           }
         }
       }
@@ -182,8 +165,8 @@
       justify-content: center;
       align-items: center;
       color: #fff;
-
       &-form {
+        border-radius: 30px;
         max-width: 1240px;
         background-color: var(--primary-1);
         display: flex;
@@ -235,7 +218,6 @@
 // 769 to 1152
 @media (min-width: 769px) and (max-width: 1152px) {
   .usecase {
-    margin-top: 134px;
     .usecaseStories {
       &_intro {
         &-description {
@@ -245,12 +227,14 @@
       }
 
       &_quotes {
-        &-item {
-          gap: 0;
-          flex-wrap: wrap;
+        &-page {
+          padding: 185px 12% 160px;
+          gap: 10px;
+          flex-direction: column;
         }
       }
       &_receive {
+        padding: 70px 0;
         &-form {
           flex-direction: column;
           &-title {
@@ -280,24 +264,43 @@
 // 321 to 768
 @media (max-width: 768px) {
   .usecase {
-    margin-top: 134px;
     .usecaseStories {
       &_intro {
+        padding: 50px 20px;
+        &-header {
+          font-size: 6vw;
+          line-height: normal;
+        }
         &-description {
           gap: 0;
           flex-wrap: wrap;
         }
       }
-
+      &_company {
+        padding: 30px 20px;
+        &-title {
+          font-size: 6vw;
+          line-height: normal;
+          text-align: center;
+        }
+        &-content {
+          font-size: 1.6em;
+        }
+      }
       &_quotes {
-        &-item {
-          gap: 0;
-          flex-wrap: wrap;
-          width: 100%;
+      }
+      &_quotes {
+        &-page {
+          padding: 185px 12% 160px;
+          gap: 10px;
+          flex-direction: column;
 
-          &-img {
+          > img {
             width: 100%;
           }
+        }
+        .indicators {
+          display: none;
         }
       }
       &_receive {
@@ -305,9 +308,11 @@
         width: 100%;
         &-form {
           flex-direction: column;
-
+          border-radius: 0;
           &-title {
-            padding: 0 0 10px 0;
+            padding: 0 0 20px 0;
+            font-size: 6vw;
+            line-height: normal;
             text-align: center;
           }
           &-input {

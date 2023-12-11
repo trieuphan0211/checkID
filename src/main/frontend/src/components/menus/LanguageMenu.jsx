@@ -34,8 +34,13 @@ const StyleButton = styled(Button)(({ theme }) => ({
 }));
 const MenuStyle = styled(Menu)(({ theme }) => ({
   "& .MuiList-root": {
+    backgroundColor: "var(--primary-1)",
     paddingTop: "0",
+    color: "#fff",
     paddingBottom: "0",
+  },
+  "& .MuiPaper-root": {
+    backgroundColor: "var(--primary-1)",
   },
 }));
 const LanguageMenu = () => {
@@ -126,7 +131,9 @@ const LanguageMenu = () => {
                 onClick={() => {
                   handleLanguage("Vietnamese", popupState);
                 }}
-                style={{ fontSize: "12px" }}
+                style={{
+                  fontSize: "12px",
+                }}
               >
                 <img
                   src={Vietnam}
