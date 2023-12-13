@@ -56,23 +56,24 @@ public class MainController {
 
     @Value("${PORT}")
     private int mail_port;
-    
+
     @PostMapping("/sendmail")
-    public static String SendMail(@RequestBody String email) throws Exception{
-//        System.out.println("host name: " + host_name+ "user name: "+user_name+"password: "+mail_password+"to: "+mail_to);
-//        String host = host_name;
-//        final String user = user_name;
-//        final String password = mail_password;
-//        String to = mail_to;
+    public static String SendMail(@RequestBody String email) throws Exception {
+        // System.out.println("host name: " + host_name+ "user name:
+        // "+user_name+"password: "+mail_password+"to: "+mail_to);
+        // String host = host_name;
+        // final String user = user_name;
+        // final String password = mail_password;
+        // String to = mail_to;
         String host = "smtp.zoho.com";
         final String user = "ca.support@mobile-id.vn";
         final String password = "T@mic@8x";
         String to = "info@mobile-id.vn";
         String result;
         JSONObject json = new JSONObject(email);
-        System.out.println("email: "+json.getString("email"));
-        
-        // Get the session object  
+        System.out.println("email: " + json.getString("email"));
+
+        // Get the session object
         String msg = json.getString("email").replace("content=", "");
 
         Properties props = new Properties();
@@ -108,13 +109,13 @@ public class MainController {
 
     @PostMapping(path = "/sendContact")
     public static String SendContactCrtl(@ModelAttribute MailContact content) throws Exception {
-//        String host = host_name;
-//        final String user = user_name;
-//        final String password = mail_password;
-//        String to = mail_to;
+        // String host = host_name;
+        // final String user = user_name;
+        // final String password = mail_password;
+        // String to = mail_to;
         String host = "smtp.zoho.com";
         final String user = "ca.support@mobile-id.vn";
-        final String password = "T@mic@8x"; 
+        final String password = "T@mic@8x";
         String to = "info@mobile-id.vn";
         String result;
         // String msg = content.getName().replace("%40", "@");
@@ -122,17 +123,19 @@ public class MainController {
 
         Properties props = new Properties();
         props.put("mail.smtp.host", host);
-//        props.put("mail.smtp.auth", mail_auth);
-//        props.put("mail.smtp.starttls.enable", mail_startyls);
-//        props.put("mail.smtp.port", mail_port);
+        // props.put("mail.smtp.auth", mail_auth);
+        // props.put("mail.smtp.starttls.enable", mail_startyls);
+        // props.put("mail.smtp.port", mail_port);
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.port", 587);
 
         String msg = "Name: " + content.getName() + "\n" + "Email: " + content.getEmail().replace("%40", "@") +
-                "\n" +"Description: "+ content.getDescription()+"\n"+"Stay informed about identity verification, subscribe for our newsletter: "+content.getSignup()+ "\n" +"Company: "+ content.getCompany();
+                "\n" + "Description: " + content.getDescription() + "\n"
+                + "Stay informed about identity verification, subscribe for our newsletter: " + content.getSignup()
+                + "\n" + "Company: " + content.getCompany() + "\n" + "CompanyURL: " + content.getCompanyUrl();
         System.out.println("msg: " + msg);
-        String subject =content.getName()+  " - @Check ID";
+        String subject = content.getName() + " - @Check ID";
 
         Session session = Session.getDefaultInstance(props,
                 new javax.mail.Authenticator() {
@@ -160,7 +163,7 @@ public class MainController {
         return result;
 
     }
-    
+
     @Autowired
     private ServletContext servletContext;
 

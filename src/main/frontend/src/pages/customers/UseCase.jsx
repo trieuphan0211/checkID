@@ -16,6 +16,10 @@ import Grid from "@mui/material/Grid";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import SquareRoundedIcon from "@mui/icons-material/SquareRounded";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useWindowSize } from "usehooks-ts";
 
@@ -56,6 +60,7 @@ import newtel from "../../assets/img/company/newtel.png";
 import martsign from "../../assets/img/company/martsign.png";
 import { useTranslation } from "react-i18next";
 import { FiArrowRight } from "react-icons/fi";
+import { mailContact } from "../../services/RemoteIdentityService";
 
 const names = [
   "usecaseStories.info.caseList.financialServices",
@@ -88,6 +93,7 @@ const items = [
     name: "usecaseStories.slider.1.name",
     title: "the lawstore / livesign",
     link: "",
+    scale: "1.8",
   },
   {
     img: leiden,
@@ -95,6 +101,7 @@ const items = [
     name: "usecaseStories.slider.2.name",
     title: "Leiden University",
     link: "",
+    scale: "1.8",
   },
   {
     img: cbr,
@@ -116,6 +123,7 @@ const items = [
     name: "usecaseStories.slider.5.name",
     title: "SK ID Solutions",
     link: "",
+    scale: "1.8",
   },
   {
     img: digidentity,
@@ -123,6 +131,7 @@ const items = [
     name: "usecaseStories.slider.6.name",
     title: "Digidentity",
     link: "",
+    scale: "1.8",
   },
   {
     img: aegon,
@@ -137,6 +146,7 @@ const items = [
     name: "usecaseStories.slider.8.name",
     title: "Agency for Digitisation Denmark",
     link: "",
+    scale: "1.8",
   },
   {
     img: thirdfort,
@@ -189,14 +199,17 @@ const TextFieldCustom = styled(TextField)({
 export const UseCase = () => {
   // set Title
   document.title = "Customer overview | CheckID";
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const { width } = useWindowSize();
 
   // Begin: Select
-  const [selectValue, setSelectValue] = React.useState("");
+  const [selectValue, setSelectValue] = React.useState(
+    t("usecaseStories.info.filterByUsecase")
+  );
 
   const handleChangeSelect = (event) => {
+    console.log(event.target.value);
     setSelectValue(event.target.value);
   };
   // End: Select
@@ -353,6 +366,7 @@ export const UseCase = () => {
   }, [data]);
   let [searchParams, setSearchParams] = useSearchParams();
   const [page, setPage] = React.useState(1);
+  const dataPage = data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5);
   const pageParam = param.get("quotes_page_num");
   React.useEffect(() => {
     if (pageParam) {
@@ -467,14 +481,9 @@ export const UseCase = () => {
           minWidth: "50px",
           height: "50px",
           borderRadius: "50%",
-          pointerEvents:
-            slideIndex ===
-            data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5).length - 1
-              ? "none"
-              : "auto",
+          pointerEvents: slideIndex === dataPage.length - 1 ? "none" : "auto",
           border:
-            slideIndex ===
-            data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5).length - 1
+            slideIndex === dataPage.length - 1
               ? "#F3F5F7"
               : "1px solid var(--primary-1)",
           display: "flex",
@@ -482,31 +491,21 @@ export const UseCase = () => {
           alignItems: "center",
           marginRight: width < 1153 ? "40px" : "19%",
           backgroundColor:
-            slideIndex ===
-            data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5).length - 1
-              ? "#F3F5F7"
-              : "var(--primary-1)",
+            slideIndex === dataPage.length - 1 ? "#F3F5F7" : "var(--primary-1)",
           "&:hover": {
             backgroundColor:
-              slideIndex ===
-              data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5).length - 1
+              slideIndex === dataPage.length - 1
                 ? "transparent"
                 : "var(--primary-1)",
           },
         }}
-        disabled={
-          slideIndex ===
-          data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5).length - 1
-        }
+        disabled={slideIndex === dataPage.length - 1}
       >
         <ArrowForwardIosIcon
           sx={{
             fontSize: "24px",
             color:
-              slideIndex ===
-              data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5).length - 1
-                ? "var(--primary-1)"
-                : "#fff",
+              slideIndex === dataPage.length - 1 ? "var(--primary-1)" : "#fff",
             // marginRight: "18px",
           }}
         />
@@ -523,16 +522,84 @@ export const UseCase = () => {
     },
     cssClass: "usecaseStories_quotes-slide",
     indicators: (index) =>
-      data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5)[index]?.img ? (
+      dataPage[index]?.img ? (
         <img
-          src={data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5)[index]?.img}
-          alt=""
+          src={dataPage[index]?.img}
+          style={{ scale: dataPage[index]?.scale }}
+          alt={dataPage[index]?.scale}
         />
       ) : (
         <img src="" alt="" style={{ display: "none" }} />
       ),
   };
   // End: Slide
+  //service
+  const [open, setOpen] = React.useState(false);
+  const [state, setState] = React.useState("warning");
+  const [stateOpen, setStateOpen] = React.useState(false);
+  const [checkNul, setCheckNul] = React.useState({
+    companyUrl: false,
+    email: false,
+    firstName: false,
+    lastName: false,
+    companyName: false,
+  });
+  const [companyUrl, setCompanyUrl] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [firstName, setFirstName] = React.useState("");
+  const [lastName, setLastName] = React.useState("");
+  const [companyName, setCompanyName] = React.useState("");
+  const [check, setCheck] = React.useState(false);
+  var regEx = /\S+@\S+\.\S+/;
+  const sendMail = async () => {
+    setOpen(true);
+    if (
+      companyUrl === "" ||
+      email === "" ||
+      firstName === "" ||
+      lastName === "" ||
+      companyName === "" ||
+      !regEx.test(email)
+    ) {
+      const checkInfo = {};
+      if (companyUrl === "") {
+        checkInfo.companyUrl = true;
+      }
+      if (email === "") {
+        checkInfo.email = true;
+      }
+      if (firstName === "") {
+        checkInfo.firstName = true;
+      }
+      if (lastName === "") {
+        checkInfo.lastName = true;
+      }
+      if (companyName === "") {
+        checkInfo.companyName = true;
+      }
+      if (!regEx.test(email) || email === "") {
+        checkInfo.email = true;
+      }
+      setCheckNul({ ...checkNul, ...checkInfo });
+    } else {
+      const mesage = await mailContact({
+        name:
+          i18n.language === 0
+            ? firstName + " " + lastName
+            : lastName + " " + firstName,
+        email: email,
+        company: companyName,
+        companyUrl: companyUrl,
+        signup: check ? "Agree" : "Disagree",
+      });
+      console.log(mesage);
+      setState(mesage);
+      setStateOpen(true);
+    }
+
+    setOpen(false);
+  };
+  console.log(checkNul, firstName, lastName, companyName, email, companyUrl);
   return (
     <Box className="usecaseStories">
       <Box className="usecaseStories_intro">
@@ -562,6 +629,7 @@ export const UseCase = () => {
           <Select
             value={selectValue}
             onChange={handleChangeSelect}
+            renderValue={(value) => `${value}`}
             displayEmpty
             sx={{
               minWidth: "255px",
@@ -579,16 +647,20 @@ export const UseCase = () => {
                 lineHeight: "26px",
                 color: "#fff",
               },
+              "& .MuiSelect-iconOpen": {
+                transform: "rotate(180deg)",
+                transition: "all 0.3s ease",
+              },
+              "& .MuiSelect-icon": {
+                color: "#fff",
+              },
             }}
-            IconComponent={() => (
-              <ExpandMoreIcon
-                sx={{
-                  color: "#fff",
-                }}
-              />
-            )}
+            IconComponent={ExpandMoreIcon}
           >
-            <MenuItem value="" onClick={() => handleChangeCase(0)}>
+            <MenuItem
+              value={t("usecaseStories.info.filterByUsecase")}
+              onClick={() => handleChangeCase(0)}
+            >
               {t("usecaseStories.info.caseList.all")}
             </MenuItem>
             {names.map((name, index) => (
@@ -642,20 +714,14 @@ export const UseCase = () => {
             {data
               .slice(0 + (page - 1) * 5, 5 + (page - 1) * 5)
               .map((item, index) => {
-                if (
-                  index + 1 ===
-                    data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5).length &&
-                  data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5).length < 5
-                ) {
-                  const length =
-                    5 -
-                    data.slice(0 + (page - 1) * 5, 5 + (page - 1) * 5).length;
+                if (index + 1 === dataPage.length && dataPage.length < 5) {
+                  const length = 5 - dataPage.length;
 
                   const arr = [];
                   arr.push(
                     <div className="each-slide-effect" key={index + 1}>
                       <Box className={`usecaseStories_quotes-page`}>
-                        <img src={item.img} alt="" />
+                        <img alt="" />
                         <Box className=" d-flex flex-column">
                           <p className="usecaseStories_quotes-page-content ">
                             {t(item.content)}
@@ -764,14 +830,23 @@ export const UseCase = () => {
               <TextFieldCustom
                 label={t("usecaseStories.recives.body.yourEmail")}
                 required
+                error={checkNul.email}
+                onChange={(event) => setEmail(event.target.value)}
+                onClick={() => setCheckNul({ ...checkNul, email: false })}
               />
               <TextFieldCustom
                 label={t("usecaseStories.recives.body.yourName")}
                 required
+                error={checkNul.firstName}
+                onChange={(event) => setFirstName(event.target.value)}
+                onClick={() => setCheckNul({ ...checkNul, firstName: false })}
               />
               <TextFieldCustom
                 label={t("usecaseStories.recives.body.lastName")}
                 required
+                error={checkNul.lastName}
+                onChange={(event) => setLastName(event.target.value)}
+                onClick={() => setCheckNul({ ...checkNul, lastName: false })}
               />
               <Grid
                 container
@@ -782,12 +857,20 @@ export const UseCase = () => {
                   <TextFieldCustom
                     id="outlined-multiline-flexible"
                     label={t("usecaseStories.recives.body.companyName")}
+                    onChange={(event) => setCompanyName(event.target.value)}
+                    onClick={() =>
+                      setCheckNul({ ...checkNul, companyName: false })
+                    }
                   />
                 </Grid>
                 <Grid item xs={6}>
                   <TextFieldCustom
                     id="outlined-multiline-flexible"
                     label={t("usecaseStories.recives.body.url")}
+                    onChange={(event) => setCompanyUrl(event.target.value)}
+                    onClick={() =>
+                      setCheckNul({ ...checkNul, companyUrl: false })
+                    }
                   />
                 </Grid>
               </Grid>
@@ -799,6 +882,7 @@ export const UseCase = () => {
                       color: "#fff",
                     }}
                     icon={<SquareRoundedIcon />}
+                    onChange={(event) => setCheck(event.target.checked)}
                   />
                 }
                 label={t("usecaseStories.recives.body.check")}
@@ -824,6 +908,7 @@ export const UseCase = () => {
                 </Link>
               </p>
               <Button
+                onClick={() => sendMail()}
                 sx={{
                   padding: "21px 40px",
                   borderRadius: "29px",
@@ -841,7 +926,16 @@ export const UseCase = () => {
                     color: "#fff",
                   },
                 }}
-                disabled
+                disabled={
+                  recaptcha === null ||
+                  companyUrl === "" ||
+                  email === "" ||
+                  firstName === "" ||
+                  lastName === "" ||
+                  companyName === ""
+                    ? true
+                    : false
+                }
               >
                 {t("usecaseStories.recives.body.button")}
               </Button>
@@ -849,6 +943,19 @@ export const UseCase = () => {
           </Box>
         </Box>
       </Box>
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={open}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
+      <Snackbar open={stateOpen} onClose={() => setStateOpen(false)}>
+        <Alert severity={state}>
+          {state === "error" && "ERROR NETWORK"}
+          {state === "success" && "SENDING MAIL SUCCESSFULLY"}
+          {state === "warning" && "SENDING MAIL FAILED"}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };

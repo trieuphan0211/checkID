@@ -6,6 +6,7 @@ public class MailContact {
     String company;
     String description;
     String signup;
+    String companyUrl;
 
     public String getSignup() {
         return signup;
@@ -47,12 +48,22 @@ public class MailContact {
         this.description = description;
     }
 
-    public MailContact(String email, String name, String company, String description, String signup) {
+    public void setCompanyUrl(String companyUrl) {
+        this.companyUrl = companyUrl;
+    }
+
+    public String getCompanyUrl() {
+        return companyUrl;
+    }
+
+    public MailContact(String email, String name, String company, String description, String signup,
+            String companyUrl) {
         this.email = email;
         this.name = name;
         this.company = company;
         this.description = description;
+        this.signup = signup;
+        this.companyUrl = companyUrl;
     }
-
 
 }
