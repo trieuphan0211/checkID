@@ -1,0 +1,21 @@
+@keyframes translateX {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate {
+  opacity: 1 !important;
+  animation: translateX 0.5s ease-in-out;
+}
+@media (prefers-reduced-motion) {
+  .product {
+    .allProducts_item-box {
+      animation: none !important;
+    }
+  }
+}

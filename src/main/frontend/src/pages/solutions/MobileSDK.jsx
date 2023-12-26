@@ -59,11 +59,12 @@ const TransparentButton = styled(Button)({
   color: "#fff",
   border: "2px solid #fff",
   textTransform: "none",
-  padding: "20px 70px",
+  padding: "20px 40px",
   fontSize: "1.6em",
   fontWeight: "700",
   borderRadius: "30px",
   width: "100%",
+  textWrap: "nowrap",
   height: "58px",
   "&:hover": {
     backgroundColor: "#0074ff",
@@ -260,7 +261,14 @@ export const MobileSDK = () => {
             {t("mobilesdk.header.subheader")}
           </h5>
           <h1 className="mobilesdk_header-header">
-            {t("mobilesdk.header.header")}
+            {t("mobilesdk.header.header")
+              .split("/n")
+              .map((item, index) => (
+                <>
+                  {item}
+                  <br />
+                </>
+              ))}
           </h1>
           <p className="mobilesdk_header-body">{t("mobilesdk.header.body")}</p>
           <Box>
@@ -473,6 +481,7 @@ export const MobileSDK = () => {
             <p>{t("mobilesdk.solution.item.1.body")}</p>
             <TransparentButton>
               {t("mobilesdk.solution.item.1.button")}
+              <FiArrowRight />
             </TransparentButton>
           </Box>
           <Box className="mobilesdk_solution-body-item">

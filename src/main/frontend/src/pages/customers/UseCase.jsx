@@ -162,6 +162,7 @@ const items = [
     title: "ABN AMRO | Moneyou",
     link: "",
   },
+
   {
     img: trustid,
     content: "usecaseStories.slider.11.content",
@@ -209,7 +210,6 @@ export const UseCase = () => {
   );
 
   const handleChangeSelect = (event) => {
-    console.log(event.target.value);
     setSelectValue(event.target.value);
   };
   // End: Select
@@ -232,6 +232,7 @@ export const UseCase = () => {
 
   const caseParam = param.get("case");
   React.useEffect(() => {
+    document.querySelector(".usecase .usecaseStories_quotes")?.scrollIntoView();
     document
       .querySelector(".usecase .usecaseStories_quotes .indicators > img")
       ?.click();
@@ -592,14 +593,14 @@ export const UseCase = () => {
         companyUrl: companyUrl,
         signup: check ? "Agree" : "Disagree",
       });
-      console.log(mesage);
+
       setState(mesage);
       setStateOpen(true);
     }
 
     setOpen(false);
   };
-  console.log(checkNul, firstName, lastName, companyName, email, companyUrl);
+
   return (
     <Box className="usecaseStories">
       <Box className="usecaseStories_intro">
@@ -645,6 +646,7 @@ export const UseCase = () => {
                 fontSize: "16px",
                 fontWeight: "500",
                 lineHeight: "26px",
+
                 color: "#fff",
               },
               "& .MuiSelect-iconOpen": {
@@ -658,6 +660,13 @@ export const UseCase = () => {
             IconComponent={ExpandMoreIcon}
           >
             <MenuItem
+              sx={{
+                fontWeight: "600",
+                "&:hover": {
+                  backgroundColor: "#fff",
+                  color: "var(--primary-2)",
+                },
+              }}
               value={t("usecaseStories.info.filterByUsecase")}
               onClick={() => handleChangeCase(0)}
             >
@@ -665,6 +674,13 @@ export const UseCase = () => {
             </MenuItem>
             {names.map((name, index) => (
               <MenuItem
+                sx={{
+                  fontWeight: "600",
+                  "&:hover": {
+                    backgroundColor: "#fff",
+                    color: "var(--primary-2)",
+                  },
+                }}
                 key={index}
                 value={t(name)}
                 onClick={() => handleChangeCase(index + 1)}
@@ -721,7 +737,7 @@ export const UseCase = () => {
                   arr.push(
                     <div className="each-slide-effect" key={index + 1}>
                       <Box className={`usecaseStories_quotes-page`}>
-                        <img alt="" />
+                        <img src={item.img} alt="" />
                         <Box className=" d-flex flex-column">
                           <p className="usecaseStories_quotes-page-content ">
                             {t(item.content)}

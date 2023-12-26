@@ -1,6 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+// import "../assets/scss/Animation.scss";
+// import "../services/Animation.js";
 
 const MainLayout = () => {
   const locate = useLocation();

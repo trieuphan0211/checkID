@@ -2,9 +2,9 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import HomePage from "../pages/HomePage";
-import TrustedIdentityVerification from "../pages/TrustedIdentityVerification";
-import RemoteIdentityVerification from "../pages/RemoteIdentityVerification";
-import FaceToFaceIdentityVerification from "../pages/FaceToFaceIdentityVerification";
+import TrustedIdentityVerification from "../pages/identityVerification/TrustedIdentityVerification";
+import RemoteIdentityVerification from "../pages/identityVerification/RemoteIdentityVerification";
+import FaceToFaceIdentityVerification from "../pages/identityVerification/FaceToFaceIdentityVerification";
 import ProductLayout from "../layouts/ProductLayout";
 import {
   AM001Product,
@@ -16,7 +16,7 @@ import {
   V10PProduct,
   V20Product,
 } from "../pages/Products";
-import { AbnMoneyou, UseCase } from "../pages/customers";
+import { Partnerships, UseCase } from "../pages/customers";
 import NotFound from "../pages/NotFound";
 import UseCaseLayout from "../layouts/UseCaseLayout";
 import { Test } from "../pages/Test";
@@ -127,10 +127,10 @@ const Routers = () => {
             // },
           ],
         },
-        // {
-        //   path: `${context}/partnerships`,
-        //   element: <Partnerships />,
-        // },
+        {
+          path: `${context}/partnerships`,
+          element: <Partnerships />,
+        },
         {
           // path: `${context}/financial-services`,
           // element: ,

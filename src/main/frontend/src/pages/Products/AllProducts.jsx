@@ -82,6 +82,7 @@ export const AllProducts = () => {
   useEffect(() => {
     setData(allProducts.slice((page - 1) * 9, page * 9));
   }, [page]);
+
   return (
     <Box className="allProducts">
       <Box className="allProducts_info d-flex flex-column align-items-center">

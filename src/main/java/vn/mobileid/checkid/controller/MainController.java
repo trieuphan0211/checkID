@@ -180,7 +180,7 @@ public class MainController {
     }
 
     @RequestMapping("/plugin/{folder}/{fileName}")
-    public ResponseEntity<InputStreamResource> downloadFile123(@PathVariable String fileName,
+    public ResponseEntity<InputStreamResource> downloadFile(@PathVariable String fileName,
             @PathVariable String folder) throws IOException {
 
         String path = "/home/dtis/plugin" + File.separator + folder + File.separator + fileName;

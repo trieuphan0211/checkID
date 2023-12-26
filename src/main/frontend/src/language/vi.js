@@ -702,7 +702,7 @@ export default {
       },
       features: {
         0: {
-          header: "Hỗ trợ Nhiều Kích Thước Cảm Biến Vân Tay",
+          header: "Hỗ Trợ Nhiều Kích Thước Cảm Biến Vân Tay",
           body: "Cảm biến vân tay được hỗ trợ: FAP10 / FAP20 / FAP30 / FAP45",
         },
         1: {
@@ -835,6 +835,177 @@ export default {
       },
     },
   },
+  client: {
+    header: {
+      subheader: "GIẢI PHÁP ĐỌC ICAO",
+      header: "Middleware độc lập cho sinh trắc học và thẻ căn cước",
+      try: " Thử ứng dụng CheckID Me của chúng tôi",
+    },
+    definition: {
+      header: "Phần mềm trung gian CheckID Client",
+      body: "CheckID là giải pháp được định hướng theo tiêu chuẩn cho mọi ứng dụng sinh trắc học và thẻ căn cước có thể tưởng tượng được, và là cách tiếp cận của chúng tôi đối với việc sử dụng các thành phần hệ thống sinh trắc học và đầu đọc tài liệu một cách linh hoạt và cho phép thay thế dễ dàng vào bất kỳ thời điểm nào. Với CheckID, chúng tôi làm cho các quy trình liên quan đến việc đăng ký thẻ căn cước, công việc cảnh sát và kiểm soát biên giới trở nên mượt mà, bền vững và rõ ràng.",
+    },
+    help: {
+      header: "Các lợi ích của Biomiddle một cách tổng quan",
+      item: {
+        1: {
+          header: "Mô-đun",
+          body: "Nhờ kiến trúc mô-đun và có thể mở rộng, CheckID đáp ứng một loạt yêu cầu rộng - từ các dự án thử nghiệm cục bộ đến các giải pháp quốc gia.",
+        },
+        2: {
+          header: "Độc lập",
+          body: " CheckID giao tiếp với ứng dụng khách thông qua giao diện dịch vụ. Do đó, phần mềm này độc lập với các nền tảng hệ thống và ngôn ngữ lập trình.",
+        },
+
+        3: {
+          header: "Triển khai nhanh chóng",
+          body: "Nhờ hướng tiêu chuẩn nhất quán, CheckID dễ dàng và nhanh chóng tích hợp vào cơ sở hạ tầng hiện tại. Trong nhiều dự án đăng ký thẻ căn cước công cộng và kiểm soát biên giới, CheckID đã trở thành trung tâm và trái tim của cơ sở hạ tầng IT lớn.",
+        },
+        4: {
+          header: "Bảo toàn đầu tư",
+          body: "Bằng cách sử dụng giao diện chuẩn quốc tế, CheckID đảm bảo sự trao đổi dễ dàng của các thành phần cá nhân trong thị trường động động cao của công nghệ sinh trắc học.",
+        },
+        5: {
+          header: "Di động",
+          body: " CheckID cũng có sẵn cho các ứng dụng sinh trắc học và thẻ căn cước di động. Chúng tôi hỗ trợ tất cả các hệ thống phổ biến, bao gồm Android và iOS.",
+        },
+      },
+    },
+
+    challenge: {
+      header: "Hãy nói về thách thức của bạn.",
+      context:
+        "Trong một thế giới kỹ thuật số, khoảng cách không tồn tại. Nhưng làm thế nào để bạn có đủ niềm tin để kinh doanh từ xa?",
+      what: "Chúng tôi có thể giúp gì cho bạn?",
+      firstName: "Tên",
+      lastName: "Họ",
+      companyName: "Tên công ty",
+      email: "Email",
+      check:
+        "Cập nhật thông tin về xác minh danh tính, đăng ký nhận bản tin của chúng tôi.",
+      context2:
+        "Chúng tôi cam kết bảo vệ và tôn trọng quyền riêng tư của bạn. Để biết thêm thông tin, vui lòng đọc Chính sách quyền riêng tư của chúng tôi. ",
+      privacyPolicy: "Chính sách quyền riêng tư.",
+      contact: "Liên hệ với chuyên gia",
+      context3: "Chúng tôi sẽ trả lời trong vòng 1 ngày.",
+    },
+  },
+  mobilesdk: {
+    header: {
+      subheader: "GIẢI PHÁP ĐỌC ICAO",
+      header: "Đáng tin cậy và /n Khả năng mở rộng",
+      body: "CheckID SaaS là một giải pháp có khả năng mở rộng và bảo mật cho quy mô lớn, phù hợp cho các trường hợp sử dụng trực tuyến. Có thể kết hợp với so khớp khuôn mặt, tận dụng hình ảnh khuôn mặt có độ phân giải cao từ chip để đảm bảo thêm một tầng bảo đảm và an ninh.",
+      try: " Thử ngay ứng dụng CheckID Me của chúng tôi",
+      contact: " Liên hệ chuyên gia",
+    },
+    definition: {
+      header: "CheckID Mobile SDK",
+      body: "CheckID SaaS cho phép xác minh các tài liệu danh tính một cách an toàn và thân thiện với người dùng bằng cách sử dụng điện thoại thông minh có NFC. CheckID được cung cấp dưới dạng phần mềm có thể cấu hình mà bạn có thể tích hợp vào ứng dụng di động và hệ thống backend của mình. Chúng tôi cung cấp một SDK (Bộ công cụ phát triển phần mềm) và các API (Giao diện lập trình ứng dụng) để làm điều này. CheckID® trở thành một phần của phần mềm mà bạn cung cấp cho người dùng, mà họ có thể không hề nhận thức được rằng công nghệ xác minh di động được cung cấp bởi chúng tôi. CheckID SaaS cho phép bạn tùy chỉnh hoàn toàn thông tin cá nhân bạn muốn đọc và xác minh nào bạn muốn thực hiện, mang lại sự kiểm soát hoàn toàn đối với hành trình của khách hàng của bạn.",
+      body1:
+        "Quá trình xác minh diễn ra trên máy chủ an toàn của chúng tôi, do Mobile-ID đặt tại một đám mây công cộng. Bạn không cần lo lắng về cập nhật và bảo mật. Việc thực hiện xác minh trên máy chủ của chúng tôi làm cho CheckID SaaS phù hợp cho các trường hợp sử dụng trực tuyến mà bạn không thể tin tưởng vào điện thoại thông minh, ví dụ như quá trình nhập cảnh cho ngân hàng.",
+    },
+    help: {
+      item: {
+        1: {
+          header: "Ứng dụng của bạn, CheckID bên trong",
+          body: "CheckID SaaS được tích hợp vào ứng dụng của bạn bằng cách sử dụng SDK CheckID của chúng tôi, giúp bạn sử dụng giao diện và trải nghiệm của riêng mình với CheckID bên trong.",
+        },
+        2: {
+          header: "Thân thiện với người dùng",
+          body: "CheckID đáng tin cậy và thân thiện với người dùng, nhiều hơn so với quét quang học của tài liệu danh tính hoặc xác minh video trực tuyến.",
+        },
+        3: {
+          header: "Mở rộng và an toàn",
+          body: "Chúng tôi lưu trữ CheckID SaaS trên một đám mây công cộng cực kỳ an toàn có thể dễ dàng mở rộng hoặc thu nhỏ theo yêu cầu.",
+        },
+        4: {
+          header: "Cam kết bảo mật thông tin",
+          body: "Chúng tôi có một gói chứng nhận duy nhất trên thế giới. Chúng tôi cam kết đảm bảo an ninh của bạn và quyền riêng tư của khách hàng.",
+        },
+        5: {
+          header: "Kết quả ngay lập tức",
+          body: "Bạn nhận thông tin cá nhân và kết quả xác minh ngay lập tức, qua giao diện REST (JSON, XML hoặc PDF).",
+        },
+        6: {
+          header: "Xác minh khuôn mặt",
+          body: "Tổ chức với sinh trắc học khuôn mặt để xác minh chủ sở hữu là có thể, tạo ra giải pháp xác minh danh tính tốt nhất và an toàn nhất hiện có.",
+        },
+      },
+      saas: {
+        header: "Dành cho ai?",
+        body: "CheckID SaaS chủ yếu được sử dụng cho các trường hợp sử dụng trực tuyến, trong đó người dùng phải xác minh danh tính của họ thông qua quy trình tức thì và trực tuyến. Mở tài khoản ngân hàng, đơn xin VISA và xác minh lại là các trường hợp sử dụng điển hình.",
+        body1:
+          "CheckID SaaS đòi hỏi một chút công sức triển khai và do đó phù hợp nhất cho các tổ chức trung bình và lớn, đã có ứng dụng di động và có khối lượng xác minh đáng kể. Khách hàng điển hình là ngân hàng, tổ chức chính phủ và Nhà cung cấp Dịch vụ Tin cậy.",
+        body2:
+          "Đối với các tổ chức nhỏ hơn hoặc tổ chức không có ứng dụng, CheckID Ready có thể phù hợp hơn.",
+        mess: {
+          name: "Kalev Pihl",
+          title: "CEO SK ID Solutions",
+          body: "“Đọc NFC đáng đầu tư; không có thay thế thực sự. Ngay cả những người được đào tạo hoặc thuật toán AI tốt không thể kiểm tra các tính năng an ninh của tài liệu danh tính dựa trên video. Nếu mức cược cao, đây là cách để làm”",
+        },
+      },
+    },
+    nfc: {
+      header: "Đơn giản hóa quy trình xác minh danh tính của bạn với NFC",
+      body: "Đọc về mọi điều bạn cần biết",
+      button: "Đến tài liệu nghiên cứu",
+    },
+    slide: {
+      1: {
+        header: "Tỉ lệ chuyển đổi cao, Khách hàng hạnh phúc",
+        body: "Bắt đầu từ năm 2018, Rabobank đã sử dụng CheckID trong nhiều trường hợp sử dụng khác nhau. Những thành công ban đầu đã tạo ra nhu cầu trong toàn bộ tổ chức. Từ quá trình nhập cảnh đến việc trở thành thành viên ban quản trị, từ việc trưởng thành đến ví danh tính.",
+        link: "Cách Rabobank sử dụng CheckID",
+        feedback: {
+          name: "Emy Leemans",
+          title: "Chủ sản phẩm tại Rabobank",
+          body: "“Chúng tôi đã làm tăng kênh trực tuyến để nhập cảnh cho khách hàng mới từ 35% lên 60%”",
+        },
+      },
+      2: {
+        header: "Xác minh đáng tin cậy cho SK ID Solutions",
+        body: "SK ID Solutions (SK) là một nhà cung cấp dịch vụ đáng tin cậy có trụ sở tại Estonia. SK cung cấp các giải pháp quốc tế về danh tính điện tử, bao gồm một giải pháp di động phổ biến cho Baltic gọi là Smart-ID với gần 3 triệu người dùng và 60 triệu giao dịch hàng tháng.",
+        body1:
+          "SK ID Solutions đã thêm xác minh tài liệu danh tính dựa trên NFC với CheckID, phát hiện tính sống và nhận diện khuôn mặt để nhập cảnh vào Smart-ID. SK sử dụng CheckID SaaS, tích hợp các SDK CheckID vào ứng dụng Smart-ID của họ.",
+        link: "Đọc câu chuyện đầy đủ",
+        feedback: {
+          name: "Kalev Pihl",
+          title: "CEO SK ID Solutions",
+          body: "“Đọc NFC đáng đầu tư; không có thay thế thực sự.”",
+        },
+      },
+      3: {
+        header:
+          "Chương trình xác minh danh tính trực tuyến thành công nhất thế giới",
+        body: "Để hỗ trợ việc Anh rời Liên minh châu Âu, Chương trình quy ước dự án của Bộ Nội vụ được thiết lập để cho phép các công dân của Liên minh châu Âu sống tại Anh đăng ký tình trạng nhập cảnh tại Vương quốc Anh.",
+        body1:
+          "Cùng với đối tác của chúng tôi là Entrust và iProov, chúng tôi đã được chọn để tạo điều kiện cho quy trình đăng ký mượt mà.",
+        link: "Chương trình Quy ước EU của Bộ Nội vụ Anh",
+        feedback: {
+          name: "5 triệu",
+          title: "",
+          body: "“Hơn 5 triệu đơn đăng ký đã kết thúc thành công kể từ khi chương trình bắt đầu,”",
+        },
+      },
+    },
+    solution: {
+      subheader: "Bắt đầu từ hôm nay",
+      header:
+        "Các giải pháp khác của chúng tôi để giải quyết mọi thách thức xác minh danh tính",
+      body: "CheckID xuất hiện dưới nhiều hình thức và kiến trúc để phù hợp với trường hợp sử dụng của bạn.",
+      item: {
+        1: {
+          header: "CheckID Client Only",
+          body: "Trong phiên bản chỉ dành cho khách hàng, CheckID chỉ chạy trên điện thoại thông minh, không có máy chủ. Cho phép xác minh tài liệu danh tính với sự đào tạo rất hạn chế và đọc thông tin cá nhân một cách nhanh chóng mà không cần bất kỳ lỗi gõ hoặc OCR nào.",
+          button: "CheckID Chỉ cho khách hàng",
+        },
+        2: {
+          header: "CheckID Ready",
+          body: "CheckID Ready là một ứng dụng xác minh danh tính sẵn sàng sử dụng cho các trường hợp sử dụng trực tuyến. Một ứng dụng có thể cấu hình, sẵn sàng sử dụng, dựa trên SaaS. Bắt đầu nhanh chóng trong vài ngày thay vì vài tuần. Có phiên bản cơ bản, phiên bản có thương hiệu hoặc doanh nghiệp.",
+          button: "CheckID Ready",
+        },
+      },
+    },
+  },
   usecaseStories: {
     info: {
       subHeader: "Những câu chuyện từ khách hàng",
@@ -938,7 +1109,7 @@ export default {
     exploremore: "Khám phá thêm",
     recives: {
       header:
-        "Không bao giờ ngừng học. Chúng tôi thích nỗ lực mang đến tất cả những thông tin cho bạn.",
+        "Không bao giờ ngừng học hỏi. Chúng tôi muốn nỗ lực cung cấp tất cả những hiểu biết sâu sắc cho bạn.",
       body: {
         header: "Nhận cập nhật qua email",
         title: "1 bản tin mỗi tháng",
@@ -955,175 +1126,89 @@ export default {
       },
     },
   },
-
-  client: {
+  partnership: {
     header: {
-      subheader: "GIẢI PHÁP ĐỌC ICAO",
-      header: "Middleware độc lập cho sinh trắc học và thẻ căn cước",
-      try: " Thử ứng dụng CheckID Me của chúng tôi",
-    },
-    definition: {
-      header: "Phần mềm trung gian CheckID Client",
-      body: "CheckID là giải pháp được định hướng theo tiêu chuẩn cho mọi ứng dụng sinh trắc học và thẻ căn cước có thể tưởng tượng được, và là cách tiếp cận của chúng tôi đối với việc sử dụng các thành phần hệ thống sinh trắc học và đầu đọc tài liệu một cách linh hoạt và cho phép thay thế dễ dàng vào bất kỳ thời điểm nào. Với CheckID, chúng tôi làm cho các quy trình liên quan đến việc đăng ký thẻ căn cước, công việc cảnh sát và kiểm soát biên giới trở nên mượt mà, bền vững và rõ ràng.",
-    },
-    help: {
-      header: "Các lợi ích của Biomiddle một cách tổng quan",
-      item: {
-        1: {
-          header: "Mô-đun",
-          body: "Nhờ kiến trúc mô-đun và có thể mở rộng, CheckID đáp ứng một loạt yêu cầu rộng - từ các dự án thử nghiệm cục bộ đến các giải pháp quốc gia.",
-        },
-        2: {
-          header: "Độc lập",
-          body: " CheckID giao tiếp với ứng dụng khách thông qua giao diện dịch vụ. Do đó, phần mềm này độc lập với các nền tảng hệ thống và ngôn ngữ lập trình.",
-        },
-
-        3: {
-          header: "Triển khai nhanh chóng",
-          body: "Nhờ hướng tiêu chuẩn nhất quán, CheckID dễ dàng và nhanh chóng tích hợp vào cơ sở hạ tầng hiện tại. Trong nhiều dự án đăng ký thẻ căn cước công cộng và kiểm soát biên giới, CheckID đã trở thành trung tâm và trái tim của cơ sở hạ tầng IT lớn.",
-        },
-        4: {
-          header: "Bảo toàn đầu tư",
-          body: "Bằng cách sử dụng giao diện chuẩn quốc tế, CheckID đảm bảo sự trao đổi dễ dàng của các thành phần cá nhân trong thị trường động động cao của công nghệ sinh trắc học.",
-        },
-        5: {
-          header: "Di động",
-          body: " CheckID cũng có sẵn cho các ứng dụng sinh trắc học và thẻ căn cước di động. Chúng tôi hỗ trợ tất cả các hệ thống phổ biến, bao gồm Android và iOS.",
-        },
-      },
-    },
-
-    challenge: {
-      header: "Hãy nói về thách thức của bạn.",
+      subheader: "Đối tác",
+      header: "Di chuyển nhanh hơn, cùng nhau",
       context:
-        "Trong một thế giới kỹ thuật số, khoảng cách không tồn tại. Nhưng làm thế nào để bạn có đủ niềm tin để kinh doanh từ xa?",
-      what: "Chúng tôi có thể giúp gì cho bạn?",
-      firstName: "Tên",
-      lastName: "Họ",
-      companyName: "Tên công ty",
-      email: "Email",
-      check:
-        "Cập nhật thông tin về xác minh danh tính, đăng ký nhận bản tin của chúng tôi.",
-      context2:
-        "Chúng tôi cam kết bảo vệ và tôn trọng quyền riêng tư của bạn. Để biết thêm thông tin, vui lòng đọc Chính sách quyền riêng tư của chúng tôi.",
-      privacyPolicy: "Chính sách quyền riêng tư.",
-      contact: "Liên hệ với chuyên gia",
-      context3: "Chúng tôi sẽ trả lời trong vòng 1 ngày.",
+        "Đối tác của chúng tôi giúp chúng tôi điều chỉnh công nghệ của mình cho các ứng dụng cụ thể và các khu vực địa lý. Chúng tôi cũng hợp tác với nhà cung cấp công nghệ để thực hiện xác minh khuôn mặt và kiểm tra quang học.",
     },
-  },
-  mobilesdk: {
-    header: {
-      subheader: "GIẢI PHÁP ĐỌC ICAO",
-      header: "Đáng tin cậy và Khả năng mở rộng",
-      body: "CheckID SaaS là một giải pháp có khả năng mở rộng và bảo mật cho quy mô lớn, phù hợp cho các trường hợp sử dụng trực tuyến. Có thể kết hợp với so khớp khuôn mặt, tận dụng hình ảnh khuôn mặt có độ phân giải cao từ chip để đảm bảo thêm một tầng bảo đảm và an ninh.",
-      try: " Thử ngay ứng dụng CheckID Me của chúng tôi",
-      contact: " Liên hệ chuyên gia",
-    },
-    definition: {
-      header: "CheckID Mobile SDK",
-      body: "CheckID SaaS cho phép xác minh các tài liệu danh tính một cách an toàn và thân thiện với người dùng bằng cách sử dụng điện thoại thông minh có NFC. CheckID được cung cấp dưới dạng phần mềm có thể cấu hình mà bạn có thể tích hợp vào ứng dụng di động và hệ thống backend của mình. Chúng tôi cung cấp một SDK (Bộ công cụ phát triển phần mềm) và các API (Giao diện lập trình ứng dụng) để làm điều này. CheckID® trở thành một phần của phần mềm mà bạn cung cấp cho người dùng, mà họ có thể không hề nhận thức được rằng công nghệ xác minh di động được cung cấp bởi chúng tôi. CheckID SaaS cho phép bạn tùy chỉnh hoàn toàn thông tin cá nhân bạn muốn đọc và xác minh nào bạn muốn thực hiện, mang lại sự kiểm soát hoàn toàn đối với hành trình của khách hàng của bạn.",
-      body1:
-        "Quá trình xác minh diễn ra trên máy chủ an toàn của chúng tôi, do Mobile-ID đặt tại một đám mây công cộng. Bạn không cần lo lắng về cập nhật và bảo mật. Việc thực hiện xác minh trên máy chủ của chúng tôi làm cho CheckID SaaS phù hợp cho các trường hợp sử dụng trực tuyến mà bạn không thể tin tưởng vào điện thoại thông minh, ví dụ như quá trình nhập cảnh cho ngân hàng.",
-    },
-    help: {
-      item: {
-        1: {
-          header: "Ứng dụng của bạn, CheckID bên trong",
-          body: "CheckID SaaS được tích hợp vào ứng dụng của bạn bằng cách sử dụng SDK CheckID của chúng tôi, giúp bạn sử dụng giao diện và trải nghiệm của riêng mình với CheckID bên trong.",
-        },
-        2: {
-          header: "Thân thiện với người dùng",
-          body: "CheckID đáng tin cậy và thân thiện với người dùng, nhiều hơn so với quét quang học của tài liệu danh tính hoặc xác minh video trực tuyến.",
-        },
-        3: {
-          header: "Mở rộng và an toàn",
-          body: "Chúng tôi lưu trữ CheckID SaaS trên một đám mây công cộng cực kỳ an toàn có thể dễ dàng mở rộng hoặc thu nhỏ theo yêu cầu.",
-        },
-        4: {
-          header: "Cam kết bảo mật thông tin",
-          body: "Chúng tôi có một gói chứng nhận duy nhất trên thế giới. Chúng tôi cam kết đảm bảo an ninh của bạn và quyền riêng tư của khách hàng.",
-        },
-        5: {
-          header: "Kết quả ngay lập tức",
-          body: "Bạn nhận thông tin cá nhân và kết quả xác minh ngay lập tức, qua giao diện REST (JSON, XML hoặc PDF).",
-        },
-        6: {
-          header: "Xác minh khuôn mặt",
-          body: "Tổ chức với sinh trắc học khuôn mặt để xác minh chủ sở hữu là có thể, tạo ra giải pháp xác minh danh tính tốt nhất và an toàn nhất hiện có.",
-        },
+    expand: {
+      body: {
+        header: "Mở rộng ưu đãi sản phẩm của bạn với CheckID",
+        p1: "Làm phong phú hoặc mở rộng ưu đãi sản phẩm của bạn với công nghệ CheckID, công nghệ xác minh danh tính di động tốt nhất dựa trên NFC. Chúng tôi tìm kiếm các đối tác có kiến thức thị trường và khách hàng mạnh mẽ, có trọng tâm địa lý hoặc ngành có độ ưu thế, đặc biệt là trong lĩnh vực Tài chính, Chính phủ điện tử, Nền kinh tế Nền tảng, Cho thuê, Du lịch, Cảnh sát và Kiểm soát biên giới.",
+        p2: "Là đối tác Mobile-ID, bạn có thể:",
+        li1: "Nhúng SDK CheckID của chúng tôi vào ứng dụng hoặc SDK của bạn",
+        li2: "Sử dụng CheckID Ready, giải pháp nhãn trắng sẵn có của chúng tôi, có sẵn với các tùy chọn nhãn hiệu khác nhau.",
+        p3: "Đối tác của chúng tôi có khả năng tạo ra giá trị gia tăng đáng kể với ưu đãi sản phẩm hoàn chỉnh của họ.",
       },
-      saas: {
-        header: "Dành cho ai?",
-        body: "CheckID SaaS chủ yếu được sử dụng cho các trường hợp sử dụng trực tuyến, trong đó người dùng phải xác minh danh tính của họ thông qua quy trình tức thì và trực tuyến. Mở tài khoản ngân hàng, đơn xin VISA và xác minh lại là các trường hợp sử dụng điển hình.",
+    },
+    partners: {
+      header: "Đối tác Mobile-ID của chúng tôi",
+    },
+    contact: {
+      info: {
+        header1: "Trở thành đối tác Mobile-ID",
+        context1:
+          "Nếu bạn muốn nâng cao ưu đãi sản phẩm của mình với CheckID, vui lòng điền vào mẫu liên hệ quản lý đối tác trên trang này và chọn 'Tôi quan tâm đến đối tác Mobile-ID'.",
+        header2: "Hợp tác với một trong những đối tác của chúng tôi",
+        context2:
+          "Nếu bạn là một khách hàng cuối và bạn có yêu cầu vượt ra khỏi ưu đãi mặc định của CheckID, hợp tác với một trong những đối tác của Mobile-ID có thể là một giải pháp rất hiệu quả.",
+        context3:
+          "Hệ sinh thái ngày càng phát triển của chúng tôi bao gồm nhiều đối tác với các khả năng và bộ giải pháp khác nhau có sẵn để hỗ trợ bạn.",
+        context4:
+          "Nếu bạn quan tâm về cách họ có thể giúp bạn, vui lòng điền vào mẫu liên hệ và chọn 'Tôi muốn làm việc với một trong những đối tác của bạn'.",
+        context5:
+          "Chúng tôi sẽ xác định cách đối tác của chúng tôi có thể giúp bạn đạt được mục tiêu của mình.",
+      },
+      form: {
+        subheader: "Liên hệ quản lý đối tác",
+        header: "Hãy nói về thách thức của bạn",
+        firstName: "Tên",
+        lastName: "Họ",
+        jobTitle: "Chức vụ",
+        companyName: "Tên công ty",
+        pleseSelect: "Vui lòng chọn",
+        all: "Tất cả",
+        country: "Quốc gia/Khu vực",
+        companyUrl: "Địa chỉ trang web của công ty",
+        email: "Email",
+        partnership: "Đối tác*",
+        option1: "Tôi quan tâm đến đối tác Mobile-ID",
+        option2: "Tôi muốn hợp tác với một trong những đối tác của bạn",
+        context:
+          "Hãy nói cho chúng tôi biết một chút về trường hợp sử dụng của bạn",
+        stayINformed:
+          "Thông tin xác minh danh tính, đăng ký nhận bản tin của chúng tôi.",
+        button: "Liên hệ quản lý đối tác của chúng tôi",
+      },
+    },
+    digidentity: {
+      info: {
+        header: "Ý nghĩa của Mobile-ID đối với Digidentity",
         body1:
-          "CheckID SaaS đòi hỏi một chút công sức triển khai và do đó phù hợp nhất cho các tổ chức trung bình và lớn, đã có ứng dụng di động và có khối lượng xác minh đáng kể. Khách hàng điển hình là ngân hàng, tổ chức chính phủ và Nhà cung cấp Dịch vụ Tin cậy.",
+          "Digidentity là một công ty xác minh danh tính trực tuyến toàn cầu, kết hợp tính tiện lợi mượt mà với bảo mật cấp chính phủ. Họ tạo điều kiện cho việc giao tiếp kỹ thuật số an toàn giữa công dân và chính phủ của họ. Bảy năm trước, Digidentity được chọn để cung cấp dịch vụ của họ cho Chương trình Xác minh GOV.UK.",
         body2:
-          "Đối với các tổ chức nhỏ hơn hoặc tổ chức không có ứng dụng, CheckID Ready có thể phù hợp hơn.",
-        mess: {
-          name: "Kalev Pihl",
-          title: "CEO SK ID Solutions",
-          body: "“Đọc NFC đáng đầu tư; không có thay thế thực sự. Ngay cả những người được đào tạo hoặc thuật toán AI tốt không thể kiểm tra các tính năng an ninh của tài liệu danh tính dựa trên video. Nếu mức cược cao, đây là cách để làm”",
-        },
+          "Xem cuộc phỏng vấn của chúng tôi với Marcel Wendt, giám đốc điều hành của Digidentity",
       },
+      videoTitle: "Nói với Marcel Wendt",
     },
-    nfc: {
-      header: "Đơn giản hóa quy trình xác minh danh tính của bạn với NFC",
-      body: "Đọc về mọi điều bạn cần biết",
-      button: "Đến tài liệu nghiên cứu",
+    trust: {
+      header: "Đáng tin cậy",
+      body: "Hợp tác với một đối tác đáng tin cậy.",
+      contact: " Đọc về chứng chỉ của chúng tôi",
     },
-    slide: {
-      1: {
-        header: "Tỉ lệ chuyển đổi cao, Khách hàng hạnh phúc",
-        body: "Bắt đầu từ năm 2018, Rabobank đã sử dụng CheckID trong nhiều trường hợp sử dụng khác nhau. Những thành công ban đầu đã tạo ra nhu cầu trong toàn bộ tổ chức. Từ quá trình nhập cảnh đến việc trở thành thành viên ban quản trị, từ việc trưởng thành đến ví danh tính.",
-        link: "Cách Rabobank sử dụng CheckID",
-        feedback: {
-          name: "Emy Leemans",
-          title: "Chủ sản phẩm tại Rabobank",
-          body: "“Chúng tôi đã làm tăng kênh trực tuyến để nhập cảnh cho khách hàng mới từ 35% lên 60%”",
-        },
-      },
-      2: {
-        header: "Xác minh đáng tin cậy cho SK ID Solutions",
-        body: "SK ID Solutions (SK) là một nhà cung cấp dịch vụ đáng tin cậy có trụ sở tại Estonia. SK cung cấp các giải pháp quốc tế về danh tính điện tử, bao gồm một giải pháp di động phổ biến cho Baltic gọi là Smart-ID với gần 3 triệu người dùng và 60 triệu giao dịch hàng tháng.",
-        body1:
-          "SK ID Solutions đã thêm xác minh tài liệu danh tính dựa trên NFC với CheckID, phát hiện tính sống và nhận diện khuôn mặt để nhập cảnh vào Smart-ID. SK sử dụng CheckID SaaS, tích hợp các SDK CheckID vào ứng dụng Smart-ID của họ.",
-        link: "Đọc câu chuyện đầy đủ",
-        feedback: {
-          name: "Kalev Pihl",
-          title: "CEO SK ID Solutions",
-          body: "“Đọc NFC đáng đầu tư; không có thay thế thực sự.”",
-        },
-      },
-      3: {
+    new: {
+      header: "Mở rộng phạm vi của bạn",
+      body: "Trong thế giới số hóa, khoảng cách không tồn tại. Nhưng làm thế nào bạn xây dựng đủ niềm tin để kinh doanh từ xa? Đọc thêm tin tức về CheckID.",
+      0: {
         header:
-          "Chương trình xác minh danh tính trực tuyến thành công nhất thế giới",
-        body: "Để hỗ trợ việc Anh rời Liên minh châu Âu, Chương trình quy ước dự án của Bộ Nội vụ được thiết lập để cho phép các công dân của Liên minh châu Âu sống tại Anh đăng ký tình trạng nhập cảnh tại Vương quốc Anh.",
-        body1:
-          "Cùng với đối tác của chúng tôi là Entrust và iProov, chúng tôi đã được chọn để tạo điều kiện cho quy trình đăng ký mượt mà.",
-        link: "Chương trình Quy ước EU của Bộ Nội vụ Anh",
-        feedback: {
-          name: "5 triệu",
-          title: "",
-          body: "“Hơn 5 triệu đơn đăng ký đã kết thúc thành công kể từ khi chương trình bắt đầu,”",
-        },
+          "Main mua lại đa số cổ phần trong CheckID thông qua đầu tư đáng kể",
+        body: "CheckID đóng góp vào việc cải thiện an toàn và giảm gian lận trên toàn thế giới, sử dụng công nghệ xác minh danh tính độc đáo...",
       },
-    },
-    solution: {
-      subheader: "Bắt đầu từ hôm nay",
-      header:
-        "Các giải pháp khác của chúng tôi để giải quyết mọi thách thức xác minh danh tính",
-      body: "CheckID xuất hiện dưới nhiều hình thức và kiến trúc để phù hợp với trường hợp sử dụng của bạn.",
-      item: {
-        1: {
-          header: "CheckID Client Only",
-          body: "Trong phiên bản chỉ dành cho khách hàng, CheckID chỉ chạy trên điện thoại thông minh, không có máy chủ. Cho phép xác minh tài liệu danh tính với sự đào tạo rất hạn chế và đọc thông tin cá nhân một cách nhanh chóng mà không cần bất kỳ lỗi gõ hoặc OCR nào.",
-          button: "CheckID Chỉ dành cho khách hàng",
-        },
-        2: {
-          header: "CheckID Ready",
-          body: "CheckID Ready là một ứng dụng xác minh danh tính sẵn sàng sử dụng cho các trường hợp sử dụng trực tuyến. Một ứng dụng có thể cấu hình, sẵn sàng sử dụng, dựa trên SaaS. Bắt đầu nhanh chóng trong vài ngày thay vì vài tuần. Có phiên bản cơ bản, phiên bản có thương hiệu hoặc doanh nghiệp.",
-          button: "CheckID Ready",
-        },
+      1: {
+        header: "Cơ quan Quản lý Tài chính Áo yêu cầu NFC và sinh trắc học",
+        body: "Các cơ quan quản lý trên toàn thế giới đang chấp nhận NFC là tương lai cho xác minh danh tính. Ngày 2 tháng 11...",
       },
     },
   },

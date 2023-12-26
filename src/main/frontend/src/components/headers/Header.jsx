@@ -386,9 +386,7 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Group1 />
-                    <Link
-                    // to={`${context}/partnerships`}
-                    >
+                    <Link to={`${context}/partnerships`}>
                       <h4>
                         {t("header.header.menu.subCustomers.how.partner")}
                       </h4>
@@ -889,9 +887,7 @@ export const Header = ({ bg }) => {
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Group1 />
-                  <Link
-                  // to={`${context}/partnerships`}
-                  >
+                  <Link to={`${context}/partnerships`}>
                     <h4>{t("header.header.menu.subCustomers.how.partner")}</h4>
                     <p>
                       {t(

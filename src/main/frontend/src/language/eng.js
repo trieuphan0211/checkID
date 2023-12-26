@@ -826,127 +826,6 @@ export default {
       },
     },
   },
-  usecaseStories: {
-    info: {
-      subHeader: "Customer stories",
-      header: "Stories from the people we’ve worked with",
-      title:
-        "Discover how MobileID ensures the most trusted mobile identity document authenticity across industries, and impacts the world of identity verification. Below are our success stories.",
-      filterByUsecase: "Filter by use cases",
-      description: {
-        p: " “It just wasn't a seamless user experience with OCR, leading to poor conversion. With NFC we created a high quality customer journey and the number of customers who no longer need to visit a branch has increased fivefold”",
-        h6: "Andrea McKain",
-        name: "ASB Bank",
-      },
-
-      caseList: {
-        all: "All",
-        financialServices: "Financial Services",
-        onBoarding: "Onboarding",
-        remoteIdentityVerification: "Remote Identity Verification",
-        checkidSaas: "CheckID SaaS",
-        digitalSigning: "Digital Signing",
-        realEstate: "Real Estate",
-        checkidReady: "CheckID Ready",
-        government: "Government",
-        faceToFaceVerification: "Face-to-face verification",
-        borderControlPolice: "Border control / police",
-        checkidClient: "CheckID Client-only",
-        travel: "Travel",
-        reVerification: "Re-verification",
-        hiring: "Hiring",
-      },
-    },
-
-    company: {
-      title: "You’ll be in good company",
-      content:
-        " CheckID is used by leading banks, governmental organizations, digital signature services, and many others worldwide.",
-      readStory: "Read their stories",
-    },
-    slider: {
-      0: {
-        content:
-          '“We have grown the online channel for onboarding new customers from 35% to 60% and the feedback we receive from app users includes comments such as "Is fantastic", "Fast" and "Clear”.',
-        name: "Evelien Mooij",
-      },
-      1: {
-        content:
-          "“We wanted the best technology behind this that would offer titanium standard identity verification for Livesign.After testing CheckID technology, we concluded that there is no better solution for identity verification”.",
-        name: "Ian Hendey",
-      },
-      2: {
-        content:
-          "“The full student onboarding has changed to aninstant and smooth process. Great for studentsand employees.”",
-        name: "Jeroen Ruiter",
-      },
-      3: {
-        content:
-          "“CBR employees have identified a few cases where look-a-likes tried to fool them. The CheckID app confirmed the employees' doubts.”",
-        name: "Tjitse van den Bos",
-      },
-      4: {
-        content:
-          "“It just wasn't a seamless user experience with OCR, leading to poor conversion. With NFC we created a high quality customer journey and the number of customers who no longer need to visit a branch has increased fivefold”",
-        name: "Andrea McKain",
-      },
-      5: {
-        content:
-          "“If you want to be sure that the identity document is real and is in use right now then I see no real alternative to NFC and biometrics”",
-        name: "Kalev Pihl",
-      },
-      6: {
-        content:
-          "“During COVID, we were able to scale up to 120.000 digital onboarding identity verifications a day thanks to ReadID”",
-        name: "Marcel Wendt",
-      },
-      7: {
-        content:
-          "“We needed reliable, proven technology. Using the NFC solution is much more reliable than OCR.”",
-        name: "Rianne Rolsma",
-      },
-      8: {
-        content:
-          "“It clearly shows that there is a demand in the population for a digital alternative to the physical driving license.”",
-        name: "Benny Engelbrecht",
-      },
-      9: {
-        content:
-          "Thirdfort’s platform is now used to remotely ‘onboard’ over 30,000 clients each month – a ten-fold increase on pre-pandemic numbers - on behalf of more than 500 law firms and property businesses.",
-        name: "Jack Bidgood",
-      },
-      10: {
-        content:
-          "With ReadID, we achieve a higher level of confidence. 96% of all people that start the process finish it successfully in the first attempt. ",
-        name: "Justus Damman",
-      },
-      11: {
-        content:
-          "If you need a high level of confidence for a check, chip opening is the most robust, fastest, and easiest to use for end customers.",
-        name: "Tony Machin",
-      },
-    },
-    readStory: "Read the full story",
-    exploremore: "Explore more",
-    recives: {
-      header:
-        "Never stop learning.We like to make an effort to deliver all the insights to you.",
-      body: {
-        header: "Receive updates per email",
-        title: "1 newsletter a month",
-        yourEmail: "Your email",
-        yourName: "Your name",
-        lastName: "Last name",
-        companyName: "Company name",
-        url: "Company website url",
-        check:
-          "Yes, inform me about identity verification. I want to subscribe for the CheckID Newsletter*",
-        sub: "We’re committed to protecting and respecting your privacy. For more information read our",
-        private: "Privacy Policy.",
-        button: " Yes, keep me informed",
-      },
-    },
-  },
   client: {
     header: {
       subheader: "ICAO READER SOLUTION",
@@ -1115,6 +994,214 @@ export default {
           body: "CheckID Ready is a ready-to-use identity verification app suitable for online use cases. A configurable app, ready for use, SaaS based. Get up and running in few days instead of weeks. Comes in a basic version, branded or enterprise edition.",
           button: "CheckID Ready",
         },
+      },
+    },
+  },
+  usecaseStories: {
+    info: {
+      subHeader: "Customer stories",
+      header: "Stories from the people we’ve worked with",
+      title:
+        "Discover how MobileID ensures the most trusted mobile identity document authenticity across industries, and impacts the world of identity verification. Below are our success stories.",
+      filterByUsecase: "Filter by use cases",
+      description: {
+        p: " “It just wasn't a seamless user experience with OCR, leading to poor conversion. With NFC we created a high quality customer journey and the number of customers who no longer need to visit a branch has increased fivefold”",
+        h6: "Andrea McKain",
+        name: "ASB Bank",
+      },
+
+      caseList: {
+        all: "All",
+        financialServices: "Financial Services",
+        onBoarding: "Onboarding",
+        remoteIdentityVerification: "Remote Identity Verification",
+        checkidSaas: "CheckID SaaS",
+        digitalSigning: "Digital Signing",
+        realEstate: "Real Estate",
+        checkidReady: "CheckID Ready",
+        government: "Government",
+        faceToFaceVerification: "Face-to-face verification",
+        borderControlPolice: "Border control / police",
+        checkidClient: "CheckID Client-only",
+        travel: "Travel",
+        reVerification: "Re-verification",
+        hiring: "Hiring",
+      },
+    },
+
+    company: {
+      title: "You’ll be in good company",
+      content:
+        " CheckID is used by leading banks, governmental organizations, digital signature services, and many others worldwide.",
+      readStory: "Read their stories",
+    },
+    slider: {
+      0: {
+        content:
+          '“We have grown the online channel for onboarding new customers from 35% to 60% and the feedback we receive from app users includes comments such as "Is fantastic", "Fast" and "Clear”.',
+        name: "Evelien Mooij",
+      },
+      1: {
+        content:
+          "“We wanted the best technology behind this that would offer titanium standard identity verification for Livesign.After testing CheckID technology, we concluded that there is no better solution for identity verification”.",
+        name: "Ian Hendey",
+      },
+      2: {
+        content:
+          "“The full student onboarding has changed to aninstant and smooth process. Great for studentsand employees.”",
+        name: "Jeroen Ruiter",
+      },
+      3: {
+        content:
+          "“CBR employees have identified a few cases where look-a-likes tried to fool them. The CheckID app confirmed the employees' doubts.”",
+        name: "Tjitse van den Bos",
+      },
+      4: {
+        content:
+          "“It just wasn't a seamless user experience with OCR, leading to poor conversion. With NFC we created a high quality customer journey and the number of customers who no longer need to visit a branch has increased fivefold”",
+        name: "Andrea McKain",
+      },
+      5: {
+        content:
+          "“If you want to be sure that the identity document is real and is in use right now then I see no real alternative to NFC and biometrics”",
+        name: "Kalev Pihl",
+      },
+      6: {
+        content:
+          "“During COVID, we were able to scale up to 120.000 digital onboarding identity verifications a day thanks to ReadID”",
+        name: "Marcel Wendt",
+      },
+      7: {
+        content:
+          "“We needed reliable, proven technology. Using the NFC solution is much more reliable than OCR.”",
+        name: "Rianne Rolsma",
+      },
+      8: {
+        content:
+          "“It clearly shows that there is a demand in the population for a digital alternative to the physical driving license.”",
+        name: "Benny Engelbrecht",
+      },
+      9: {
+        content:
+          "Thirdfort’s platform is now used to remotely ‘onboard’ over 30,000 clients each month – a ten-fold increase on pre-pandemic numbers - on behalf of more than 500 law firms and property businesses.",
+        name: "Jack Bidgood",
+      },
+      10: {
+        content:
+          "With ReadID, we achieve a higher level of confidence. 96% of all people that start the process finish it successfully in the first attempt. ",
+        name: "Justus Damman",
+      },
+      11: {
+        content:
+          "If you need a high level of confidence for a check, chip opening is the most robust, fastest, and easiest to use for end customers.",
+        name: "Tony Machin",
+      },
+    },
+    readStory: "Read the full story",
+    exploremore: "Explore more",
+    recives: {
+      header:
+        "Never stop learning.We like to make an effort to deliver all the insights to you.",
+      body: {
+        header: "Receive updates per email",
+        title: "1 newsletter a month",
+        yourEmail: "Your email",
+        yourName: "Your name",
+        lastName: "Last name",
+        companyName: "Company name",
+        url: "Company website url",
+        check:
+          "Yes, inform me about identity verification. I want to subscribe for the CheckID Newsletter*",
+        sub: "We’re committed to protecting and respecting your privacy. For more information read our",
+        private: "Privacy Policy.",
+        button: " Yes, keep me informed",
+      },
+    },
+  },
+  partnership: {
+    header: {
+      subheader: "Partners",
+      header: " Move faster, together",
+      context:
+        "Our partners help us tailor our technology for specific applications and geographical regions. We also partner with technology providers, for face verification and optical checks.",
+    },
+    expand: {
+      body: {
+        header: " Expand your product offering with CheckID",
+        p1: "Enrich or expand your product offering with CheckID technology, the best NFC-based mobile identity verification. We look for partners with strong market and customer knowledge, whose geographical or industry focus has merits - especially in Finance, eGovernment, Platform Economy, Rental, Travel, Police & Border control.",
+        p2: "As an Mobile-ID partner you can:",
+        li1: "embed our CheckID SDK into your app or SDK",
+        li2: "use CheckID Ready, our turn-key white label solution, available with different branding options.",
+        p3: "Our partners are able to generate serious added value with their complete customer offering.",
+      },
+    },
+    partners: {
+      header: "Our Mobile-ID partners",
+    },
+    contact: {
+      info: {
+        header1: "Become an Mobile-ID partner",
+        context1:
+          "If you want to elevate your product offering with CheckID, please complete the contact partner manager form on this page and select 'I'm interested in an Mobile-ID partnership'.",
+
+        header2: "Work with one of our partners",
+        context2:
+          "If you are an end customer and you have requirements that go beyond the default CheckID offering, working with one of Mobile-ID's partners could be a very effective solution.",
+        context3:
+          "Our growing eco-system includes many partners with different capabilities and solution sets available to support you.",
+        context4:
+          "If you are interested how they might help you, then please complete the contact form and select 'I want to work with one of your partners'.",
+        context5:
+          "We will determine how our partners could help you achieve your objectives.",
+      },
+      form: {
+        subheader: "Contact partner manager",
+        header: "Let's talk about your challenge",
+        firstName: "First Name",
+        lastName: "Last name",
+        jobTitle: "Job title",
+        companyName: "Company name",
+        pleseSelect: "Please Select",
+        all: "All",
+        country: "Country/Region",
+        companyUrl: "Company website URL",
+        email: "Email",
+        partnership: "Partnership*",
+        option1: "I'm interested in a Mobile-ID partnership",
+        option2: "I want to work with one of your partners",
+        context: "Tell us something about your use case",
+        stayINformed:
+          "Stay informed about identity verification, subscribe for our newsletter.",
+        button: " Contact our partner manager",
+      },
+    },
+    digidentity: {
+      info: {
+        header: "What Mobile-ID means for Digidentity",
+        body1:
+          "Digidentity is a global online identity verification company, combining smooth usability with government- grade security.  They enable safe digital communication between citizens and their governments. Seven years ago Digidentity was selected to deliver their services for the GOV.UK Verify Programme.",
+        body2:
+          "Watch our interview with Marcel Wendt, managing director of Digidentity",
+      },
+      videoTitle: "As told by Marcel Wendt",
+    },
+    trust: {
+      header: "Trustworthy",
+      body: "Work with a reliable partner.",
+      contact: " Read about our certificates",
+    },
+    new: {
+      header: "Expand your reach",
+      body: "In a digital world distance does not exist. But how do you establish enough trust to do business at a distance? Read more news on CheckID.",
+      0: {
+        header:
+          "Main acquires majority stake in CheckID via substantial investment",
+        body: "CheckID contributes to improving safety and reducing fraud worldwide, using innovative identity...",
+      },
+      1: {
+        header:
+          "Austrian Financial Market Authority requires NFC and biometrics",
+        body: "Regulatory bodies worldwide are embracing NFC as the future for identity verification. November 2,...",
       },
     },
   },

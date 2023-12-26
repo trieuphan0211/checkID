@@ -10,6 +10,4 @@ class CheckidApplicationTests {
 	void contextLoads() {
 	}
 
-
-
 }
