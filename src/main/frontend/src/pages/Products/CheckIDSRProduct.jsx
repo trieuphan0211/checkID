@@ -37,6 +37,13 @@ export const CheckIDSRProduct = () => {
   };
   const specification = [
     {
+      item: "Name ",
+      specification: "Slot load smart card scanner",
+      item1: "Security module",
+      specification1:
+        "Security module Embedded ID card security module (SAM) optional",
+    },
+    {
       item: "RF technology",
       specification: "Support ISO/IEC 14443 Type A/B",
       item1: "Power input",
@@ -50,11 +57,10 @@ export const CheckIDSRProduct = () => {
     },
     {
       item: "Universal ID documentation type",
-      specification:
-        "Citizen identification card with chip, /n citizen identification card non chip, /n driver's license (VietNam)",
+      specification: "Viet Nam national ID card",
       item1: "Environment condition",
       specification1:
-        "Operation: 0℃～50℃, 0～90 % RH ( non-condense )/n Storage: -30℃～60℃, 0～95 % RH ( non-condense )",
+        "Operation: 0°C - 50°C, 0°C - 90% RH (non-condense)/n Storage: -30°C - 60°C, 0°C - 95% RH (non-condense)",
     },
     {
       item: "Working frequency",
@@ -70,8 +76,7 @@ export const CheckIDSRProduct = () => {
     },
     {
       item: "Camera spec",
-      specification:
-        "200W Pixel, revolution, 1080P, fixed length, rotate angle",
+      specification: "2.0M pixel 1080P resolution, fixed length, rotate angle",
       item1: "Product device",
       specification1: "154mm *95*40mm",
     },
@@ -83,13 +88,13 @@ export const CheckIDSRProduct = () => {
     },
     {
       item: "Platform",
-      specification: "Windows/Linux/Android",
+      specification: "Windows",
       item1: "Power adaptor",
       specification1: "DC 12V",
     },
     {
-      item: "Online update",
-      specification: "Support online firmware update",
+      item: "Update",
+      specification: "Support firmware update",
       item1: "USB data cable",
       specification1: "USB cable 1000mm",
     },

@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   header: {
     subHeader: {
@@ -641,7 +642,16 @@ export default {
           "CheckID-ET100 được thiết kế để đáp ứng nhu cầu bảo mật cao mà không làm giảm sự tiện lợi. Thiết bị này có cổng USB loại A female, cho phép kết nối với máy tính. Nó hỗ trợ nhiều loại cảm biến sinh trắc học như SecuGen, SupreMa, ZKTeco và Morpho. Việc chọn cảm biến sinh trắc học nên dựa trên yêu cầu của khách hàng.",
       },
     },
-
+    checkidR76: {
+      header: "Kiosk gắn trên tường (CheckID -R76)",
+      // title: "ICAO ePassport Reader ID Card Document Camera Scanner",
+      infoDetail: {
+        header: "CheckID -R76",
+        model: "CheckID -R76",
+        description:
+          "CheckID -R76 Thiết bị đầu cuối thanh toán không dùng tiền mặt treo tường được thiết kế đặc biệt cho các tình huống như trạm xăng, ngân hàng, bệnh viện hoặc những nơi khác có tấm chắn mưa. Màn hình LED cảm ứng thuận tiện hơn cho khách hàng sử dụng.",
+      },
+    },
     v11: {
       header: "Bộ chấm công thông minh có đèn nền (V10P)",
       title: "Terminal Di động Mở Rộng Hỗ Trợ Pogo PIN",
@@ -1211,5 +1221,346 @@ export default {
         body: "Các cơ quan quản lý trên toàn thế giới đang chấp nhận NFC là tương lai cho xác minh danh tính. Ngày 2 tháng 11...",
       },
     },
+  },
+  abnMoneyou: {
+    subheader: "Moneyou | Florius | ABN AMRO",
+    header: " Giải pháp kỹ thuật số an toàn cho quy trình đăng ký thế chấp",
+    context:
+      "Moneyou đã nâng tiêu chuẩn xác minh danh tính cho khách hàng khi đăng ký thế chấp. Với CheckID, họ đạt được mức độ tin cậy cao hơn và 96% tất cả những người bắt đầu quy trình đều hoàn tất thành công trong lần thử đầu tiên. ",
+    videoTitle:
+      " Chúng tôi đã nói chuyện với Justus Damman về các kênh kỹ thuật số của họ",
+    IdentityVerification: "Những thách thức nhận dạng của Moneyou ",
+    abnAmro:
+      "ABN AMRO có một số nhãn hiệu cho các khoản thế chấp, bao gồm Moneyou, Florius và chính ABN AMRO. Tất cả đều sử dụng cùng một nền tảng. Trong thị trường thế chấp ở Hà Lan, họ là một trong những người chơi sáng tạo nhất.",
+    normallyTheIdentity:
+      "Thông thường việc xác minh danh tính là một phần trách nhiệm của công chứng viên, ngay trước khi chuyển tiền và bất động sản, có rất ít rủi ro. Việc xác minh danh tính hiện nay cần phải được thực hiện ngay từ đầu quá trình, thậm chí trước khi đưa ra giao dịch. khách hàng đưa ra lời đề nghị.",
+    weReached:
+      " “Chúng tôi đã đạt tỷ lệ thành công rất cao là 96%, cao hơn cả những gì chúng tôi mong đợi”",
+    justusDamman: "Justus Damman, Moneyou",
+    forThisKYC:
+      "Đối với các quy trình KYC này, quy trình đăng ký thế chấp trực tuyến và giúp khách hàng của chúng tôi có thể tự thay đổi khoản thế chấp bằng kỹ thuật số, Moneyou phải biết chính xác họ đang giao dịch với ai thông qua giải pháp kỹ thuật số.",
+    theyWantToBe:
+      "Họ muốn trở thành “tốt nhất” cho hơn 15 nghìn khách hàng của mình nên “vừa đủ tốt” là chưa đủ. Moneyou cần một giải pháp an toàn và có thể áp dụng dễ dàng trong các giai đoạn đầu của quy trình. Tuân thủ và KYC rất quan trọng quan trọng trong ngành ngân hàng ngày nay.",
+    thisWasTheReason:
+      " Đây là lý do nâng cao tiêu chuẩn xác minh danh tính cho Moneyou. Trong CheckID, họ đã tìm được đối tác để tạo quy trình xác minh danh tính kỹ thuật số hoàn toàn, tuân thủ các tiêu chuẩn nhận dạng cao nhất của Châu Âu (eIDAS cao)",
+    moneyouUses:
+      "Moneyou sử dụng CheckID Ready, bao gồm cả xác minh khuôn mặt. Nghiên cứu của họ chỉ ra rằng người dùng thích sử dụng một ứng dụng riêng, chỉ để nhận dạng và có thể xóa sau đó. Do đó, họ sử dụng ứng dụng sẵn có thay vì tích hợp nó vào Ứng dụng ngân hàng Moneyou. Điều này cũng giúp triển khai nhanh chóng.",
+    instantIdentity: "Xác minh danh tính ngay lập tức, 24x7",
+    theyIntroduced:
+      "Họ đã giới thiệu tính năng xác minh danh tính dựa trên NFC với CheckID Ready, được gắn nhãn hiệu theo phong cách của họ, được kích hoạt bằng mã QR trong luồng web. Trong vài phút, quá trình xác minh đầy đủ sẽ được thực hiện mà không cần thực hiện các bước thủ công. Bằng chứng nhận dạng được lấy từ dịch vụ và được lưu giữ để lưu giữ hồ sơ, tuân thủ đầy đủ GDPR.",
+    mostOfTheWork:
+      "Hầu hết công việc triển khai xác minh danh tính bằng CheckID không phải là công nghệ. Khó khăn là thuyết phục mọi người trong ngân hàng về khái niệm mới và cách suy nghĩ mới. Việc chuyển từ xác minh trực tiếp sang xác minh kỹ thuật số là rất khó khăn nắm bắt được những người không rành về kỹ thuật tại ngân hàng vì giải pháp này là công nghệ cao. Khi mọi người nhìn thấy CheckID Me, ứng dụng cá nhân miễn phí của chúng tôi và các trường hợp thử nghiệm, mọi người bắt đầu hiểu khả năng và sức mạnh của giải pháp này cho nhu cầu của họ khách hàng và cho ngân hàng.",
+    afterwardsPeople:
+      "Sau đó, mọi người thực sự hài lòng với những gì đạt được. Lý do chọn CheckID với xác minh khuôn mặt với iProov là vì nó hoàn toàn tự động, không có bất kỳ sự tương tác nào của con người. Điều này giúp xác minh danh tính ngay lập tức, 24x7, cũng như xác minh danh tính rất an toàn .",
+    easyToTake: "Dễ lấy và chia sẻ",
+    downloadCaseStudy: "Tải xuống Case Study Moneyou",
+    theResults: "Kết quả sử dụng CheckID",
+    customersReally:
+      "Khách hàng thực sự đánh giá cao giải pháp này, họ thấy nó rất dễ sử dụng. Moneyou đạt tỷ lệ thành công thực sự cao: 96% tất cả những người bắt đầu quá trình đều hoàn thành thành công ngay lần thử đầu tiên. Tỷ lệ này cao hơn chúng tôi mong đợi và hy vọng.",
+    vớiCheckID:
+      "Với CheckID, Moneyou đạt được mức độ tin cậy cao hơn. Do đó, họ không còn cung cấp IDIN (một dịch vụ ngân hàng Hà Lan để đăng nhập), điều này mang lại mức độ tin cậy thấp hơn. Quy trình mới vượt trội hơn quy trình cũ về chất lượng và khả năng sử dụng. Nó đã trở thành quy trình ưa thích của khách hàng cũng như Pháp lý và Tuân thủ. Một lợi ích bổ sung là chất lượng dữ liệu liên quan đến dữ liệu cá nhân cũng được cải thiện.",
+    personalData:
+      "Dữ liệu cá nhân hiện được xử lý kỹ thuật số thay vì thủ công. Điều đó ngăn ngừa các lỗi cá nhân trong việc thu thập dữ liệu cá nhân. Điều này cũng mang lại lợi ích cho các quy trình khác như KYC và kiểm tra độ tin cậy vì giờ đây họ có thể điều tra dựa trên dữ liệu chính xác mà không mắc lỗi chính tả trong tên viết tắt, họ và ngày sinh. xác minh.",
+    inTheFuture:
+      "Trong tương lai, ABN AMRO cũng đang nghĩ đến việc giới thiệu nó vào kênh trung gian, áp dụng các bài học kinh nghiệm với Moneyou. Có thể các trường hợp sử dụng sẽ mở rộng sang xác minh lại và ký kỹ thuật số.",
+    moreCustomerStories: "Thêm câu chuyện của khách hàng",
+  },
+  ukHomeOfficeEuss: {
+    subHeader: "Văn phòng tại nhà ở Vương quốc Anh",
+    header:
+      "Chương trình xác minh danh tính từ xa thành công nhất thế giới dành cho người nhập cư",
+    description:
+      "Để hỗ trợ Vương quốc Anh rời khỏi Liên minh Châu Âu, Chương trình Định cư EU đã được Bộ Nội vụ thành lập để cho phép các công dân EEA sống ở Vương quốc Anh nộp đơn xin quy chế nhập cư vào Vương quốc Anh.",
+    videoTitle: "Cách đạt được tỷ lệ chuyển đổi ban đầu cao bằng công nghệ NFC",
+    digitalVerification: "Xác minh kỹ thuật số trong 3 bước",
+    applicantsNeed: "Người nộp đơn chỉ cần hoàn thành ba bước:",
+    proveIdentity: "Chứng minh danh tính của họ",
+    showLive: "Cho thấy họ sống ở Vương quốc Anh",
+    declareCriminal: "Tuyên bố bất kỳ bản án hình sự nào",
+    homeOfficeWanted:
+      "Vì Bộ Nội vụ muốn làm cho quy trình đăng ký trở nên dễ dàng nhất có thể đối với khoảng bốn triệu công dân EEA cần nộp đơn, họ đã tìm kiếm các khả năng cải tiến và hiệu quả mới để đưa vào kênh ứng dụng kỹ thuật số đầu cuối tùy chọn. Cùng với đối tác WorldReach Software (được Entrust mua lại vào năm 2021), chúng tôi đã được chọn để giúp quá trình đăng ký diễn ra suôn sẻ.",
+    worldReachSoftware:
+      "WorldReach Software (nay là Entrust) là một tổ chức tập trung vào các dịch vụ công kỹ thuật số có độ tin cậy cao dành cho các tổ chức nhập cư, hộ chiếu, quản lý biên giới, lãnh sự và dịch vụ công dân.",
+
+    worldReachSelected:
+      "Phần mềm WorldReach đã được Home Office chọn để vận hành và quản lý khả năng xác minh kỹ thuật số hỗ trợ Chương trình định cư EU (EUSS). Cùng với WorldReach và iProov, chúng tôi đã cố gắng tạo ra chương trình nhập cư kỹ thuật số lớn nhất và thành công nhất trên thế giới bằng cách sử dụng điều khiển từ xa xác minh danh tính.",
+    nfc: "“Sử dụng NFC, chúng tôi có thể xác định từ xa tính xác thực của tài liệu nhận dạng ở mức độ tin cậy cần thiết.”",
+    ePassportNfc: "Đọc chip NFC ePassport",
+    innovativeService:
+      "Dịch vụ cải tiến này được hỗ trợ bởi CheckID, dịch vụ này đọc các tính năng bảo mật của chip ePassport để xác thực tính hợp pháp của tài liệu, như một phần của nền tảng Know You Traveller của WorldReach. Ngoài ra, một phần của quá trình xác minh danh tính là so sánh ảnh selfie. Điều này đạt được bằng cách so sánh mức độ an toàn hình ảnh tham chiếu từ chip ePassport đến ảnh selfie trực tiếp được chụp bằng camera của điện thoại thông minh. Dịch vụ này không chỉ hỗ trợ Hộ chiếu điện tử mà còn cả thẻ cư trú sinh trắc học của Vương quốc Anh và thẻ ID điện tử của công dân EU, tất cả đều sử dụng tiêu chuẩn ICAO.",
+    nfcRemote:
+      " Bằng cách sử dụng NFC, chúng tôi có thể xác định từ xa tính xác thực của tài liệu nhận dạng ở mức độ tin cậy cần thiết. Ngoài ra, hình ảnh khuôn mặt có độ phân giải cao từ chip cho phép khớp khuôn mặt an toàn. Trường hợp sử dụng này chứng minh rõ ràng tại sao NFC First là giải pháp phương pháp tốt nhất trong việc xác minh danh tính từ xa.",
+    identificationTakeAway: "Nhận dạng mang đi",
+    downloadCaseStudy: " Tải xuống nghiên cứu điển hình EUSS",
+    pritiPatel:
+      '"Có hơn 6 triệu đơn đăng ký tham gia chương trình này là một thành tựu chưa từng có và tôi rất vui vì chúng tôi đã đảm bảo được quyền lợi của rất nhiều công dân EU – bạn bè, hàng xóm và thành viên gia đình của chúng tôi."',
+    pritiPatelName: "Priti Patel",
+    ukHomeSecretary: "Bộ trưởng Nội vụ Vương quốc Anh",
+    photodfid: "[Ảnh DFID]",
+    pressReleaseUk: "Thông cáo báo chí Văn phòng Nội vụ Vương quốc Anh",
+    learnMoreGoverment:
+      "Bạn muốn tìm hiểu thêm về bảo mật cấp chính phủ để xác minh danh tính?",
+    contactSpecialist: "Liên hệ với chuyên gia",
+    results: "Kết quả",
+    theEussVerySuccessfull:
+      "EUSS là một bằng chứng rất thành công, có thể mở rộng về những gì có thể và có thể đạt được nhờ các quy trình, công nghệ và nhóm cộng tác toàn diện phù hợp.",
+    moreThan6MillionApplication:
+      "Hơn 6 triệu đơn đăng ký đã kết thúc thành công (dữ liệu tháng 12 năm 2021)",
+    highPercentage:
+      "Tỷ lệ phần trăm cao hoàn thành đơn đăng ký trong thời gian dưới 10 phút với mức độ đảm bảo danh tính cao.",
+    thisWasTheFirst:
+      "Đây là ứng dụng iOS đầu tiên được sản xuất có thể đọc chip tuân thủ ICAO MRTD qua NFC ở quy mô lớn.",
+    overDifferent:
+      "Hơn 2.300 nhãn hiệu và mẫu thiết bị Android và iOS khác nhau đã được sử dụng để hoàn tất quy trình xác minh danh tính.",
+    serviceIsScalable:
+      "Dịch vụ này có thể mở rộng, với mức cao nhất là 25.000-30.000 đơn đăng ký mỗi ngày do EUSS nhận ra.",
+    systemAvailable:
+      "Tính khả dụng của hệ thống kể từ khi bắt đầu sản xuất trực tiếp là 99,97%, vượt quá cam kết SLA.",
+    feebackSurvey:
+      "Kết quả khảo sát phản hồi EUSS 2019: 79% người đăng ký cho biết rằng việc chứng minh danh tính của họ thông qua ứng dụng là “rất dễ” hoặc “khá dễ”. 7% nữa cho rằng việc này không khó cũng không dễ.",
+    moreCustomerStories: "Thêm câu chuyện của khách hàng",
+  },
+  thirdfort: {
+    subHeader: "THIRDFORT",
+    header: "Không còn rủi ro cho luật sư thông qua Thirdfort",
+    description:
+      "Gian lận là một tệ nạn xã hội và Thirdfort đang thực hiện sứ mệnh loại bỏ rủi ro này khỏi các giao dịch tài sản để nhiều người có thể yên tâm di chuyển. Làm việc với các luật sư, đại lý và các lĩnh vực được quản lý khác, Thirdfort tự động hóa ID và kiểm tra chống rửa tiền để cho phép những người tốt có được tiếp tục công việc của họ và giúp cuộc sống của khách hàng dễ dàng hơn.",
+    videoTitle:
+      "Chúng tôi đã nói chuyện với Jack Bidgood, người đồng sáng lập và giám đốc điều hành của Thirdfort.",
+    onboardClients:
+      "Các máy khách được tích hợp nhanh chóng, an toàn và hoàn toàn từ xa",
+    onboardClientsDescription:
+      "Trong một ứng dụng dễ sử dụng, Thirdfort kết hợp công nghệ Ngân hàng mở, xác minh tài liệu và công nghệ nhận dạng khuôn mặt để cung cấp các hoạt động kiểm tra tuân thủ từ xa và nhanh chóng mà khách hàng có thể hoàn thành từ mọi nơi. Chúng tôi đã nói chuyện với Jack Bidgood, đồng sáng lập và giám đốc điều hành của Pháo đài thứ ba.",
+    onboardClientsDescription2:
+      "Gian lận thông qua tài sản ở Vương quốc Anh là một vấn đề trị giá 216 triệu bảng Anh/năm và đang phát triển nhanh chóng. Các luật sư đang ở tuyến đầu và được yêu cầu thực hiện các cuộc kiểm tra chống rửa tiền và giấy tờ tùy thân chậm chạp và phức tạp liên quan đến các tài liệu thực tế và các cuộc gặp trực tiếp. Những cuộc kiểm tra này làm chậm rất nhiều giảm giao dịch tài sản hiện đang ở mức 20 tuần.",
+    onboardClientsDescription3:
+      "Thirdfort luôn tìm cách sử dụng công nghệ mới nhất để đảm bảo rằng họ đang cung cấp các biện pháp kiểm tra ID an toàn và mạnh mẽ nhất mà khách hàng dễ sử dụng.",
+    onboardClientsDescription4:
+      "Ngành pháp lý rất ngại rủi ro. Họ muốn đảm bảo rằng khi công nghệ được áp dụng, rủi ro luôn được giảm thiểu. COVID đã thay đổi tâm lý đó và điều này đã tạo ra cơ hội cho sự thay đổi.",
+    hmLandRegistry: "Tiêu chuẩn ID kỹ thuật số của Cơ quan đăng ký đất đai",
+    hmLandRegistryDescription:
+      "Thirdfort đã làm việc cùng với Cơ quan đăng ký đất đai HM để đảm bảo rằng sản phẩm nâng cấp của họ hoàn toàn phù hợp với Tiêu chuẩn ID kỹ thuật số mới của Cơ quan đăng ký đất đai. Thứ ba tiêu chuẩn kết hợp công nghệ từ CheckID và đối tác CheckID iProov. Sản phẩm cấp chính phủ có nhiệm vụ chống gian lận và, điều quan trọng nhất là những người sử dụng Tiêu chuẩn Thirdfort sẽ tuân thủ Tiêu chuẩn ID Kỹ thuật số của Cơ quan Đăng ký Đất đai HM.",
+    hmLandRegistryDescription2:
+      "Thirdfort cũng sử dụng Ngân hàng mở để có quyền truy cập vào thông tin chi tiết ngân hàng. Việc thực hiện đúng hành trình là rất quan trọng; nó phải là một giải pháp vượt trội dành cho các luật sư. Họ cần hướng dẫn người dùng về lý do tại sao họ nên sử dụng ứng dụng và Những gì nó làm.",
+    quote:
+      "“Bạn chưa bao giờ gặp ai đó nói rằng: ‘Tôi mới mua một căn nhà vào ngày hôm trước và việc đó thực sự nhanh chóng, thú vị, mọi việc diễn ra rất suôn sẻ và không có vấn đề gì trên hành trình.’ Chúng tôi muốn thay đổi điều đó.”",
+    quoteAuthor: "Jack Bidgood, Đồng sáng lập Thirdfort",
+    hmLandRegistryDescription3:
+      "Tiêu chuẩn ID kỹ thuật số đã được công bố vào tháng 3 năm 2021 để khuyến khích kiểm tra danh tính kỹ thuật số trong quá trình chuyển tải và thúc đẩy ngành hướng tới một bộ tiêu chuẩn rõ ràng về ID điện tử. Những công ty đáp ứng tiêu chuẩn này đã được cung cấp 'Bến cảng an toàn' để bảo vệ họ truy đòi - với lý do việc kiểm tra danh tính không đầy đủ - trong mọi khiếu nại phát sinh từ việc đăng ký giao dịch gian lận. để xác minh từ xa tính xác thực của giấy tờ nhận dạng, chẳng hạn như hộ chiếu.",
+    keyTakeAway: "Lấy chìa khóa để nhận dạng",
+    downloadCaseStudy: "Tải xuống Case Study Thirdfort",
+    improvedCustomerJourney: " Hành trình của khách hàng được cải thiện",
+    improvedCustomerJourneyDescription:
+      "Đối với các luật sư, việc sử dụng Thirdfort Standard có tác động lớn. Nó không chỉ loại bỏ cơ hội truy đòi nếu gian lận xảy ra mà họ còn có thể yên tâm rằng họ đang sử dụng công nghệ bảo mật mới nhất để ngăn chặn và phát hiện những kẻ lừa đảo. Nó làm giảm rủi ro trách nhiệm pháp lý của họ về cơ bản. Đây là động lực rất mạnh mẽ để các công ty chuyển nhượng và công ty luật tham gia.",
+    improvedCustomerJourneyDescription2:
+      "So với các dịch vụ ban đầu của Thirdfort, hành trình của khách hàng đã được cải thiện, điều này được phản ánh qua việc sử dụng tính năng kiểm tra ID tiêu chuẩn của Thirdfort. Thirdfort đã phát triển nhanh chóng trong năm qua nhờ đại dịch Covid-19 và sự tăng tốc sau đó của luật pháp số hóa công ty và băng tải.",
+    improvedCustomerJourneyDescription3:
+      "Nền tảng của Thirdfort hiện được sử dụng để /‘tiếp nhận/’ từ xa hơn 30.000 khách hàng mỗi tháng – tăng gấp 10 lần so với con số trước đại dịch – thay mặt cho hơn 500 công ty luật và doanh nghiệp bất động sản. Đến nay, khoảng 10% thị trường ở Vương quốc Anh lưu chuyển thông qua giải pháp Thirdfort.",
+    moreCustomerStories: "Thêm câu chuyện của khách hàng",
+  },
+  asbBank: {
+    subHeader: "ASB",
+    header: "Hành trình khách hàng chất lượng cao dành cho ASB",
+    description:
+      "ASB đang tìm kiếm một công nghệ để dựa vào khi tiếp nhận khách hàng từ xa. Trải nghiệm người dùng và nhận dạng liền mạch cho khách hàng của họ. Với Công nghệ NFC của CheckID, số lượng khách hàng không còn cần phải đến chi nhánh đã tăng gấp 5 lần.",
+    videoTitle:
+      " Chúng tôi đã nói chuyện với Andrea McKain, Trưởng nhóm giao hàng Biết khách hàng của bạn tại ASB",
+    knowYourCustomer: " Biết khách hàng của bạn tại ASB",
+    knowYourCustomerDescription:
+      "Ngân hàng ASB ban đầu được thành lập vào năm 1874 với tên gọi Ngân hàng Tiết kiệm Auckland ở New Zealand. Đây là công ty con của Commonwealth BankAustralia (CBA). ASB nổi tiếng về sự đổi mới và áp dụng các công nghệ mới, như họ đã làm với xác minh danh tính kỹ thuật số.",
+    knowYourCustomerDescription2:
+      "Chúng tôi đã thảo luận với Andrea McKain về lý do hợp tác với CheckID và kết quả. Cô ấy là trưởng nhóm phân phối chương trình Biết khách hàng của bạn tại ASB và chịu trách nhiệm triển khai CheckID tại ASB.",
+    knowYourCustomerDescription3:
+      "ASB đã có sẵn giải pháp xác minh danh tính kỹ thuật số, được ra mắt vào năm 2018. Giải pháp này dựa trên công nghệ OCR quang học, tuy nhiên ASB đã thất vọng với việc chuyển đổi. Quá trình này rất phức tạp và các quy định về rửa tiền của New Zealand có nghĩa là nó yêu cầu một giải pháp thứ yếu cũng có xác nhận điện tử phù hợp. Sau khi quét, khách hàng cũng cần kiểm tra thủ công dữ liệu đã đọc trước khi có thể tiếp tục.",
+    knowYourCustomerDescription4:
+      "Quá trình này cũng dẫn đến nhiều kết quả âm tính giả. Cuối cùng, nhiều người vẫn phải đến văn phòng chi nhánh, một điều khó khăn hoặc thậm chí là không thể thực hiện được dưới thời Covid. Đó thường không phải là trải nghiệm người dùng liền mạch. ASB cần một giải pháp đơn giản hơn để phát triển chuyển đổi và giảm áp lực lên các văn phòng chi nhánh.",
+    quote:
+      "“Đó không phải là trải nghiệm người dùng liền mạch với OCR, dẫn đến chuyển đổi kém”",
+    quoteAuthor: "Andrea McKain, ASB",
+    asbIdApp: "Ứng dụng ID ASB",
+    asbIdAppDescription:
+      "ASB nhận thức được các khả năng của công nghệ NFC và Andrea nhanh chóng biết đến CheckID. ASB sử dụng SDK CheckID SaaS để tích hợp NFC cũng như xác minh chủ sở hữu trong ứng dụng ID ASB của họ. Giai đoạn chứng minh khái niệm đã thuyết phục nhóm về các khả năng và vào tháng 4 năm 2021, ASB đã đưa ra giải pháp mới của mình.",
+    asbIdAppDescription2:
+      "Ứng dụng này có lợi thế cạnh tranh lớn: ASB vẫn là ngân hàng duy nhất ở Châu Á Thái Bình Dương sử dụng công nghệ NFC! Ứng dụng này hỗ trợ hộ chiếu từ hơn 130 quốc gia, điều này rất quan trọng vì New Zealand có lượng lớn người nhập cư. ASB cũng đang xem xét khả năng giới thiệu lại giấy phép lái xe cho hành trình của khách hàng, dựa trên việc chụp trang ảnh của CheckID.",
+    quote2:
+      "“Phản hồi của khách hàng thật tuyệt vời và trải nghiệm người dùng thật tuyệt vời”",
+    quoteAuthor2: "Jack Bidgood, Đồng sáng lập Thirdfort",
+    growConversion: "Tăng cường chuyển đổi với NFC",
+    growConversionDescription:
+      "NFC đã tạo ra một hành trình chất lượng cao cho khách hàng. Andrea nói rằng “Phản hồi của khách hàng thật tuyệt vời và trải nghiệm người dùng thật tuyệt vời.”",
+    growConversionDescription2:
+      "Chuyển đổi đối với khách hàng bắt đầu quá trình đọc hộ chiếu trong ứng dụng ASB ID đã tăng lên hơn 89% (hơn 99% trên iOS) và số lượng khách hàng không cần đến chi nhánh nữa đã tăng gấp 5 lần.",
+    growConversionDescription3:
+      "Ứng dụng ID ASB chủ yếu được dùng để xác minh danh tính khi mới tham gia nhưng cũng được dùng để xác minh danh tính của khách hàng hiện tại nếu cần.",
+    yourKeyTakeAway: "Mất chìa khóa của bạn",
+    downloadCaseStudy: "Tải xuống ASB nghiên cứu điển hình",
+    moreCustomerStories: "Thêm câu chuyện của khách hàng",
+  },
+  financialServices: {
+    identityVerificationForFinancialServices:
+      "Xác minh danh tính cho các dịch vụ tài chính",
+    combiningSecureKYCAMLAndGreatConversion:
+      "Kết hợp KYC, AML an toàn và chuyển đổi tuyệt vời",
+    financialSectorIsConstantlyBalancing:
+      "Lĩnh vực tài chính không ngừng cân bằng các quy trình KYC an toàn với khả năng xử lý trơn tru và trải nghiệm khách hàng tối ưu. Mobile-ID cung cấp giải pháp để có được tất cả: NFC- tích hợp trên thiết bị di động đầu tiên dễ sử dụng, hoàn toàn không gian lận và có hiệu quả chi phí cao .",
+    contactASpecialist: "Liên hệ với chuyên gia",
+    tryOurCheckIDMeApp: "Dùng thử ứng dụng CheckID Me của chúng tôi",
+    knowYourCustomer: "Biết khách hàng của bạn",
+    identityVerificationForOnboardingNewCustomers:
+      "Xác minh danh tính để tiếp nhận khách hàng mới và khắc phục.",
+    antiMoneyLaundering: "Chống rửa tiền",
+    mobileIDHelpsAMLCompliancyWithRemote:
+      "Mobile-ID giúp tuân thủ AML với điều khiển từ xa.",
+    reverification: "Xác minh lại",
+    yourCustomerLifeCycleDoesntStopAfterOnboarding:
+      "Vòng đời khách hàng của bạn không dừng lại sau khi tham gia. Hãy sử dụng CheckID để kích hoạt ứng dụng.",
+    poweredByNearFieldCommunication: "Được hỗ trợ bởi Giao tiếp trường gần",
+    checkIDTechnologyOffersAnUnrivalled:
+      "Công nghệ CheckID mang lại trải nghiệm không gì sánh bằng cho khách hàng và khả năng tích hợp trên thiết bị di động có độ bảo mật cao bằng cách kết hợp xác minh tài liệu nhận dạng di động với xác minh khuôn mặt. Từ sự thoải mái tại nhà riêng của mình, khách hàng có thể mở tài khoản ngân hàng trực tuyến trong vòng vài phút, chỉ sử dụng tài liệu nhận dạng và NFC của chúng tôi dựa trên công nghệ. Không cần đến văn phòng.",
+    howRabobankUsesCheckIDForOnboarding:
+      "Cách Rabobank sử dụng CheckID để giới thiệu",
+    kycForBanks: "KYC cho ngân hàng",
+    amlForBanks: "Việc tuân thủ AML trở nên dễ dàng",
+    consumersAreIncreasinglyOnlineMinded:
+      " Người tiêu dùng ngày càng quan tâm đến trực tuyến và mong đợi các dịch vụ kỹ thuật số nhanh chóng. Các văn phòng chi nhánh thực tế với quầy và giờ thăm viếng truyền thống đang nhanh chóng trở nên lỗi thời. Việc đến các văn phòng này để xác minh danh tính ngày càng được coi là lỗi thời, nếu không nói là lãng phí thời gian và năng lượng. Các ngân hàng lâu đời đang thường tìm cách giảm chi phí chung bằng cách đóng cửa các văn phòng lỗi thời và các ngân hàng thách thức hiện tại thậm chí không còn văn phòng thực tế nữa.",
+    accordingTotheEuropeanComission:
+      "Theo Ủy ban Châu Âu, việc chống rửa tiền và tài trợ khủng bố sẽ tăng cường an ninh toàn cầu, tính toàn vẹn của hệ thống tài chính và tăng trưởng bền vững. Do đó, các ngân hàng phải đối mặt với luật pháp nghiêm ngặt để chống rửa tiền và tài trợ khủng bố. Việc tuân thủ các chỉ thị AML là rất khó khăn, và các ngân hàng phải trải qua các chương trình xác minh lại rộng rãi và tốn kém. Mobile-ID có thể đơn giản hóa các bước khắc phục trong quy trình AML.",
+    mobileIDReducesCostsByMakingReverification:
+      "Mobile-ID giảm chi phí bằng cách giúp việc xác minh lại an toàn và đơn giản. Và bằng cách tránh sự tương tác của con người, các quy trình AML trở nên hiệu quả hơn. Công nghệ CheckID mang lại khả năng xác minh lại an toàn, bằng cách kết hợp xác minh tài liệu nhận dạng di động với xác minh khuôn mặt, mà không có nguy cơ khách hàng rời bỏ không cần thiết.",
+    countriesUseICAOCompliantIdentityDocuments:
+      "Các quốc gia sử dụng tài liệu nhận dạng tuân thủ ICAO được CheckID hỗ trợ",
+    viewWorldwideCoverageOfNFC: "Xem phạm vi phủ sóng toàn cầu của NFC",
+    certifiedSecurity: "Chứng nhận bảo mật",
+    theTechnologyIsSecureAsIsOurCompany:
+      " Công nghệ này rất an toàn, công ty chúng tôi cũng vậy. Chúng tôi là công ty được chứng nhận tốt nhất trong ngành xác minh danh tính: ISO27001, ISO27701 và tuân thủ eIDAS được chứng nhận theo tiêu chuẩn ETSI EN 319 401 và ETSI EN 319 411-1/2. Chúng tôi thường xuyên được kiểm tra và đã được thử nghiệm bằng bút và tuân thủ các nguyên tắc gia công của EBA. Mobile-ID dựa trên sự tuân thủ của EU và GDPR.",
+    weBuildUponElectronicIdentityDocuments:
+      "Chúng tôi xây dựng dựa trên các tài liệu nhận dạng điện tử không thể xuyên thủng: dữ liệu trong tài liệu nhận dạng điện tử không thể bị thao túng và luôn được đọc chính xác. Chúng tôi có thể phát hiện xem một con chip có bị sao chép hay không. Hình ảnh cá nhân trong chip không thể bị thao túng và có độ phân giải cao hơn khuôn mặt được in hình ảnh. Điều này ngăn chặn gian lận danh tính và cung cấp cơ sở xác minh khuôn mặt mạnh mẽ hơn nhiều so với các giải pháp quang học.",
+    reverificationAtAegon: "Xác minh lại tại Aegon",
+
+    rianneRolsma: "Rianne Rolsma",
+    productOwnerAtAegon: "Chủ sở hữu sản phẩm tại Aegon",
+    weNeededReliableProvenTechnology:
+      " “Chúng tôi cần công nghệ đáng tin cậy và đã được chứng minh. Sử dụng giải pháp NFC đáng tin cậy hơn nhiều so với OCR.”",
+    checkIDForChallengerBanks: "CheckID cho các ngân hàng thách thức",
+    noOfficesGoodbyeNineToFiveMentality:
+      "Không có văn phòng, tạm biệt tâm lý làm việc từ 9 giờ sáng đến 5 giờ chiều, chỉ có dịch vụ tài chính hàng đầu suốt ngày đêm và một UX gọn gàng và đẹp mắt, đặc biệt dành cho thế hệ trẻ. Tuy nhiên, mọi ngân hàng vẫn cần xác minh chính thức danh tính khách hàng của bạn.",
+    mobileIDCanOfferYourCustomers:
+      "Mobile-ID có thể cung cấp cho khách hàng của bạn quy trình giới thiệu nhanh chóng và an toàn cần thiết mà họ đã biết và yêu thích về bạn nếu bạn sử dụng công nghệ CheckID. Tích hợp trong ứng dụng của riêng bạn thông qua SDK trực quan của chúng tôi hoặc sử dụng ứng dụng Sẵn sàng sử dụng của chúng tôi và tùy chỉnh nó cho phù hợp với nhận diện thương hiệu của riêng bạn. Nhân viên CNTT của bạn sẽ yêu thích khả năng tích hợp dễ dàng và hiệu quả xuyên suốt của nó.",
+    wowYourNewClientsWithASmoothMobile:
+      "Làm cho khách hàng mới của bạn ngạc nhiên với trải nghiệm làm quen mượt mà trên thiết bị di động, phù hợp với trải nghiệm của giải pháp hàng đầu của bạn.",
+    howNFCTechnologyHelps: "Công nghệ NFC giúp ích như thế nào",
+    startToday: "Bắt đầu ngay hôm nay",
+    solutionsToSolveAnyIdentityVerificationChallenge:
+      "Giải pháp giải quyết mọi thách thức xác minh danh tính",
+    weProvideAFreePersonalAppCheckIDMe:
+      "Chúng tôi cung cấp ứng dụng cá nhân miễn phí, CheckID Me, để bạn tự mình trải nghiệm công nghệ CheckID. Hãy sử dụng CheckID SaaS để tích hợp vào ứng dụng của riêng bạn hoặc sử dụng ứng dụng sẵn sàng sử dụng của chúng tôi để bắt đầu hoạt động.",
+    checkIDSaaS: "CheckID SaaS",
+    ourSDKCanBeIntegratedInAnyMobile:
+      " SDK của chúng tôi có thể được tích hợp trong bất kỳ ứng dụng di động nào thông qua các API được ghi chép rõ ràng. Bạn có thể có toàn quyền kiểm soát tương tác của người dùng hoặc tận dụng kiến thức trong API cấp cao của chúng tôi.",
+    checkIDReady: "CheckID đã sẵn sàng",
+    checkIDReadyIsOurWhiteLabelApp:
+      "CheckID Ready là ứng dụng nhãn trắng của chúng tôi có thể được điều chỉnh cho phù hợp với giao diện của khách hàng và có thể thiết lập và chạy trong vòng vài ngày.",
+    weHaveGrownTheOnlineChannelForOnboarding:
+      '"Chúng tôi đã phát triển kênh trực tuyến để giới thiệu khách hàng mới từ 35% lên 60% bằng CheckID"',
+    emyLeemans: "Emy Leemans",
+    productManagerCustomerOnboardingRabobank:
+      "Giám đốc sản phẩm Giới thiệu khách hàng Rabobank",
+    readAboutDifferentApplicationsAtRabobank:
+      "Đọc về các ứng dụng khác nhau tại Rabobank",
+    itTookUsOnly6WeeksToImplementTheReVerification:
+      '"Chúng tôi chỉ mất 6 tuần để triển khai công nghệ xác minh lại tại Aegon từ đầu bằng CheckID"',
+    productManagerAegon: "Aegon quản lý sản phẩm",
+    learnMoreAboutTheSpeedOfImplementation: "Tìm hiểu thêm về tốc độ thực hiện",
+    letsTalkAboutYourChallenge: "Hãy nói về thử thách của bạn.",
+    inADigitalWorldDistanceDoesNotExistButHowDoYouRealise:
+      "Trong thế giới kỹ thuật số, khoảng cách không tồn tại. Nhưng làm thế nào để bạn có đủ niềm tin để kinh doanh từ xa?",
+  },
+  DigitalSigning: {
+    identityVerificationForQualifiedTrustServiceProviders:
+      "XÁC MINH DANH TÍNH DÀNH CHO NHÀ CUNG CẤP DỊCH VỤ TIN TƯỞNG ĐỦ ĐIỀU KIỆN",
+    identityVerificationAtTheHighestEIDASTrustLevels:
+      "Xác minh danh tính ở cấp độ tin cậy eIDAS cao nhất",
+    digitalTrustIsVitalInOurModernEconomy:
+      " Niềm tin kỹ thuật số rất quan trọng trong nền kinh tế hiện đại của chúng ta, nơi các giao dịch diễn ra bằng kỹ thuật số, mọi lúc, mọi nơi. Nhà cung cấp chữ ký số tạo ra quyền truy cập dễ dàng và an toàn vào các dịch vụ điện tử bằng cách cung cấp chứng chỉ đủ tiêu chuẩn cho người dùng. Chúng tôi mang đến mức độ tin cậy kỹ thuật số và khả năng mở rộng cao nhất cho nhận dạng khách hàng, được chứng nhận eIDAS.",
+    evidencePackageForAudits: "Gói bằng chứng cho kiểm toán",
+    weDocumentEveryVerificationInAnEvidencePackage:
+      " Chúng tôi ghi lại mọi xác minh trong gói bằng chứng mà bạn có thể lưu trữ cho mục đích kiểm tra. Tạo bằng chứng về độ tin cậy.",
+    instantAndAutomaticIdentityVerification:
+      "Xác minh danh tính tức thì và tự động",
+    youDoNotNeedAnyManualStepsOrPersonalContact:
+      "Bạn không cần bất kỳ bước thủ công hoặc liên hệ cá nhân nào. Cung cấp thông tin giới thiệu và xác minh lại 24 x 7.",
+    poweredByNFC: "Được hỗ trợ bởi NFC",
+    nfcBasedIdentityVerificationCombinesTrust:
+      "Xác minh danh tính dựa trên NFC kết hợp sự tin cậy, bảo mật và khả năng mở rộng cho TSP ở mức độ tin cậy cao nhất.",
+    competitiveCostReduction:
+      "Giảm chi phí cạnh tranh, bảo mật chưa từng có, trải nghiệm khách hàng tuyệt vời",
+    customerOnboardingAndReVerification:
+      "Giới thiệu và xác minh lại khách hàng là một bước quan trọng đối với Nhà cung cấp dịch vụ ủy thác. Theo truyền thống, điều này có nghĩa là khách hàng phải đến văn phòng hoặc nhận đại lý đến thăm tại nhà. Sau đó, một quan chức có trình độ cần phải xác minh thủ công dữ liệu hộ chiếu so với dữ liệu hiện có của ngân hàng thông tin.",
+    aCostlyTimeConsumingAndIntrusiveProcess:
+      " Một quy trình tốn kém, tốn thời gian và rắc rối. Nhà cung cấp dịch vụ tin cậy cần xác minh danh tính từ xa ngay lập tức để làm hài lòng khách hàng của họ. Đạt eIDAS cao với CheckID. ",
+    certifiedSecurity: "Chứng nhận bảo mật",
+    mobileIDHasObtainedCertification:
+      "Mobile-ID đã đạt được chứng nhận thông qua sự kết hợp độc đáo của các chứng chỉ bảo mật. Khách hàng và người dùng của CheckID tin tưởng Mobile-ID với thông tin bảo mật và quyền riêng tư có độ nhạy cảm cao. Mobile-ID có trách nhiệm không chỉ bảo mật mà còn phải chứng minh rằng chúng tôi an toàn . Điều này cung cấp chứng nhận TSP cần thiết cho chữ ký đủ điều kiện.",
+    mobileIDHasExtendedItsBaselineISO27001:
+      " Mobile-ID, đã mở rộng mức độ bảo mật ISO27001 cơ bản với ba chứng nhận bổ sung: ISO/IEC 27701 cho Quản lý quyền riêng tư, mô-đun eIDAS dành cho Nhà cung cấp dịch vụ tin cậy đủ tiêu chuẩn (chữ ký số) và nhận dạng điện tử eIDAS (eID) ở mức đảm bảo Cao.",
+    asAResultYouSaveAuditingTimeAndCosts:
+      "Do đó, bạn tiết kiệm được thời gian và chi phí kiểm tra mà không có nguy cơ kiểm toán viên phát hiện ra lỗ hổng bảo mật. Đạt được sự tuân thủ eIDAS với xác minh danh tính từ xa.",
+    ourWorldFirstCertificatePackage: "ourWorldFirstCertificatePackage",
+    clemensWanko: "Clemens Wanko",
+    tuvaustria: "TÜV Áo",
+    certificationsExpressAnIndependent:
+      '"Các chứng nhận thể hiện tuyên bố chất lượng độc lập từ một cơ quan độc lập!"',
+    contactless24x7: "Không tiếp xúc, 24x7",
+    mobileIDsNFCBasedRemoteIdentityVerification:
+      "Xác minh danh tính từ xa dựa trên NFC của Mobile-ID thay thế xác minh vật lý và giảm đáng kể chi phí triển khai và xác minh lại. Nó an toàn hơn các phương pháp vật lý hoặc quang học. CheckID tạo ra khả năng mở rộng mà bạn cần để những người dùng quan tâm đến thiết bị di động của bạn áp dụng trên quy mô lớn.",
+    asCompetitionIsStrongInTheDigitalSignature:
+      "Do sự cạnh tranh gay gắt trên thị trường chữ ký số nên việc số hóa và giảm chi phí là rất quan trọng để nâng cao khả năng cạnh tranh.",
+    keyFeaturesSummarised: " Tóm tắt các tính năng chính",
+    onlineIdentityVerificationAnytimeAnywhere:
+      "Xác minh danh tính trực tuyến, mọi lúc, mọi nơi, ngay lập tức",
+    evidencePackageForAuditTrial: "Gói bằng chứng cho thử nghiệm kiểm toán",
+    instantScalabilityToHighVolumes:
+      "Khả năng mở rộng tức thì lên khối lượng lớn",
+    documentVerificationCombinedWithFace:
+      "Xác minh tài liệu kết hợp xác minh khuôn mặt",
+    upTimeReportedByUKHomeOffice:
+      "thời gian hoạt động được Văn phòng tại Vương quốc Anh báo cáo cho Ứng dụng Chương trình định cư EU.",
+    maximalScalability: "Khả năng mở rộng tối đa",
+    theNeedForIdentificationCanVaryOverTime:
+      "Nhu cầu nhận dạng có thể thay đổi theo thời gian. Các trường hợp sử dụng hoặc quy định mới có thể khiến nhu cầu nhận dạng đáng tin cậy tăng mạnh. CheckID hoàn toàn tự động và có khả năng mở rộng gần như không giới hạn, không giống như xác minh quang học và nhận dạng video.",
+    weRunOurServiceInSecurePublicCloud:
+      "Chúng tôi vận hành dịch vụ của mình trên cơ sở hạ tầng đám mây công cộng an toàn, phù hợp với khu vực và mở rộng quy mô theo nhu cầu. Bạn không cần bất kỳ lao động thủ công hoặc đào tạo nhân viên nào. Chúng tôi tiếp tục giám sát chặt chẽ các giải pháp của chúng tôi để phát triển theo nhu cầu. Nếu nhu cầu giảm, chúng tôi có thể giảm quy mô.",
+    checkIDCanHandleHundredsOfThousands:
+      "CheckID có thể xử lý hàng trăm nghìn xác minh mỗi ngày.",
+    marcelWendt: "Marcel Wendt",
+    managingDirectorOfDigidentity: "Giám đốc điều hành của Digidentity",
+    duringCovidWeWereAbleToScaleUp:
+      '"Trong thời gian diễn ra dịch COVID, chúng tôi có thể tăng quy mô lên tới 120.000 lượt tham gia kỹ thuật số mỗi ngày nhờ CheckID"',
+    startToday: "Bắt đầu ngay hôm nay",
+    solutionsToSolveAnyIdentityVerificationChallenge:
+      " Giải pháp giải quyết mọi thách thức xác minh danh tính",
+    weProvideAFreePersonalAppCheckIDMe:
+      "Chúng tôi cung cấp ứng dụng cá nhân miễn phí, CheckID Me, để bạn tự mình trải nghiệm công nghệ CheckID. Hãy sử dụng CheckID SaaS để tích hợp vào ứng dụng của riêng bạn hoặc sử dụng ứng dụng sẵn sàng sử dụng của chúng tôi để bắt đầu hoạt động. ",
+    checkIDSaaS: "CheckID SaaS",
+    developersCanIntegrateOurSDK:
+      "Các nhà phát triển có thể tích hợp SDK của chúng tôi vào bất kỳ ứng dụng di động nào bằng cách sử dụng các API có tài liệu rõ ràng. Bạn có thể có toàn quyền kiểm soát tương tác của người dùng hoặc tận dụng kiến thức trong API cấp cao của chúng tôi. Kết hợp với xác minh khuôn mặt để có mức độ tin cậy cao nhất.",
+    checkIDReady: "CheckID đã sẵn sàng",
+    checkIDReadyIsOurReadyToUseApp:
+      "CheckID Ready là ứng dụng sẵn sàng sử dụng của chúng tôi với nhiều tùy chọn tùy chỉnh. Ứng dụng này có thể thiết lập và chạy trong vòng vài ngày, có hoặc không có xác minh khuôn mặt.",
+    ifYouWantToBeSureThatTheIdentityDocument:
+      '"Nếu bạn muốn chắc chắn rằng tài liệu nhận dạng là có thật và hiện đang được sử dụng thì tôi thấy không có giải pháp thay thế thực sự nào cho NFC và sinh trắc học."',
+    kalevPihl: "Kalev Pihl",
+    ceoOfSKIDSolutions: "CEO của SK ID Solutions",
+    readTheFullStoryOfSKIDSolutionsFromEstonia:
+      "Đọc toàn bộ câu chuyện về SK ID Solutions từ Estonia",
+    beforeUsingCheckIDTechnologyThereWas:
+      "Trước khi sử dụng công nghệ CheckID, có 60% nhập thủ công bằng cách nhập dữ liệu của giấy tờ tùy thân.",
+    digidentity: "Nhân phẩm",
+    productManagerAegon: "Aegon quản lý sản phẩm",
+    howDigidentityWasAbleToScaleUnderCOVID:
+      "Làm thế nào Digidentity có thể mở rộng quy mô trong bối cảnh đại dịch COVID",
+    letsDiscussYourChallenge: "Hãy thảo luận về thử thách của bạn.",
+    howCanWeHelpYouToLowerCosts:
+      "Làm cách nào chúng tôi có thể giúp bạn giảm chi phí và tăng khả năng cạnh tranh về chữ ký số đủ tiêu chuẩn?",
   },
 };

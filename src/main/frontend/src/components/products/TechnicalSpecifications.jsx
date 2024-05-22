@@ -41,7 +41,11 @@ const StyledTableRow = styled(TableCell)(() => ({
   },
 }));
 
-export const TechnicalSpecifications = ({ classHeader, specification }) => {
+export const TechnicalSpecifications = ({
+  classHeader,
+  specification,
+  type,
+}) => {
   const { t } = useTranslation();
   return (
     <Box className={`${classHeader}_specification`}>
@@ -52,14 +56,29 @@ export const TechnicalSpecifications = ({ classHeader, specification }) => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table" size="small">
           <TableHead>
             <TableRow>
-              <StyledTableCell>{t("products.item")}</StyledTableCell>
-              <StyledTableCell align="left">
-                {t("products.specification")}
-              </StyledTableCell>
-              <StyledTableCell align="left">
+              <StyledTableCell
+                sx={{
+                  width: {
+                    xs: "auto",
+                    md: "325px",
+                  },
+                }}
+              >
                 {t("products.item")}
               </StyledTableCell>
               <StyledTableCell align="left">
+                {t("products.specification")}
+              </StyledTableCell>
+              <StyledTableCell
+                align="left"
+                sx={type === "type1" ? { display: "none" } : null}
+              >
+                {t("products.item")}
+              </StyledTableCell>
+              <StyledTableCell
+                align="left"
+                sx={type === "type1" ? { display: "none" } : null}
+              >
                 {t("products.specification")}
               </StyledTableCell>
             </TableRow>
@@ -76,15 +95,19 @@ export const TechnicalSpecifications = ({ classHeader, specification }) => {
                     </>
                   ))}
                 </StyledTableRow>
-                <StyledTableCell align="left">{row.item1}</StyledTableCell>
-                <StyledTableRow align="left">
-                  {row.specification1.split("/n").map((item) => (
-                    <>
-                      {item}
-                      <br />
-                    </>
-                  ))}
-                </StyledTableRow>
+                {type === "type1" ? null : (
+                  <>
+                    <StyledTableCell align="left">{row.item1}</StyledTableCell>
+                    <StyledTableRow align="left">
+                      {row.specification1.split("/n").map((item) => (
+                        <>
+                          {item}
+                          <br />
+                        </>
+                      ))}
+                    </StyledTableRow>
+                  </>
+                )}
               </TableRow>
             ))}
           </TableBody>

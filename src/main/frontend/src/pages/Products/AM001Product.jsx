@@ -1,22 +1,21 @@
-import React from "react";
-
-import am001_fullFace from "../../assets/img/product/AM_001/fullFace.png";
-import front_face from "../../assets/img/product/AM_001/front_face.png";
-import behind_face from "../../assets/img/product/AM_001/behind_face.png";
-import other_face from "../../assets/img/product/AM_001/orther_face.png";
-import SmartCard from "../../assets/img/product/SmartCard.png";
-import RichPorts from "../../assets/img/product/RichPorts.png";
-import nfc from "../../assets/img/product/NFC.png";
-import mrz from "../../assets/img/product/mrz.png";
-import fingerprint from "../../assets/img/product/Fingerprint.png";
-import camera from "../../assets/img/product/camera.png";
 import { Box } from "@mui/material";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import behind_face from "../../assets/img/product/AM_001/behind_face.png";
+import front_face from "../../assets/img/product/AM_001/front_face.png";
+import am001_fullFace from "../../assets/img/product/AM_001/fullFace.png";
+import other_face from "../../assets/img/product/AM_001/orther_face.png";
+import fingerprint from "../../assets/img/product/Fingerprint.png";
+import nfc from "../../assets/img/product/NFC.png";
+import RichPorts from "../../assets/img/product/RichPorts.png";
+import SmartCard from "../../assets/img/product/SmartCard.png";
+import camera from "../../assets/img/product/camera.png";
+import mrz from "../../assets/img/product/mrz.png";
 import {
   InfoDetail,
   OrtherProduct,
   TechnicalSpecifications,
 } from "../../components/products";
-import { useTranslation } from "react-i18next";
 
 export const AM001Product = () => {
   // set Title

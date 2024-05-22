@@ -59,7 +59,7 @@ const UseCaseLayout = (props) => {
           </AppBar>
         )}
       </HideOnScroll>
-      <div className="usecase">
+      <div className="usecase industries">
         <Outlet />
       </div>
       <Footer />

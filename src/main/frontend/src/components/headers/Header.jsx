@@ -1,16 +1,15 @@
-import React from "react";
-import "../../assets/scss/Header.scss";
-import logo from "../../assets/img/logo.png";
-import logo_blue from "../../assets/img/logo_blue.png";
-
-import { useTranslation } from "react-i18next";
-import { FaChevronDown } from "react-icons/fa";
-import { useWindowSize } from "usehooks-ts";
-
-import { Box, Button, Divider, Drawer, IconButton } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import styled from "@emotion/styled";
 import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Box, Button, Divider, Drawer, IconButton } from "@mui/material";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { FaChevronDown } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import { useWindowSize } from "usehooks-ts";
+import logo from "../../assets/img/logo.png";
+import logo_blue from "../../assets/img/logo_blue.png";
+import "../../assets/scss/Header.scss";
 import {
   AIDocumentScanning,
   Blog,
@@ -32,7 +31,6 @@ import {
   Top,
   Tower,
 } from "../../icons";
-import { Link, useNavigate } from "react-router-dom";
 
 const context = "";
 const ContactButton = styled(Button)({
@@ -316,6 +314,22 @@ export const Header = ({ bg }) => {
                       </p>
                     </Link>
                   </li>
+                  <li
+                    className="subItem1_item d-flex justify-content-start"
+                    onClick={() => setOpen(false)}
+                  >
+                    <Check />
+                    <Link to={`${context}/products/checkid-r76`}>
+                      <h4>
+                        {t("header.header.menu.subProduct.subicao.checkidr76")}
+                      </h4>
+                      <p>
+                        {t(
+                          "header.header.menu.subProduct.subicao.bodyCheckidr76"
+                        )}
+                      </p>
+                    </Link>
+                  </li>
                 </ul>
               </li>
               <li
@@ -413,9 +427,7 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <Link
-                    // to={`${context}/use-cases/abn-moneyou`}
-                    >
+                    <Link to={`${context}/use-cases/abn-moneyou`}>
                       <h4>
                         {t("header.header.menu.subCustomers.highlight.digital")}
                       </h4>
@@ -426,9 +438,7 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <Link
-                    // to={`${context}/use-cases/uk-home-office-euss`}
-                    >
+                    <Link to={`${context}/use-cases/uk-home-office-euss`}>
                       <h4>
                         {t("header.header.menu.subCustomers.highlight.ukHome")}
                       </h4>
@@ -439,9 +449,7 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <Link
-                    // to={`${context}/use-cases/thirdfort`}
-                    >
+                    <Link to={`${context}/use-cases/thirdfort`}>
                       <h4>
                         {t(
                           "header.header.menu.subCustomers.highlight.automated"
@@ -454,9 +462,7 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Check />
-                    <Link
-                    // to={`${context}/use-cases/asb-bank`}
-                    >
+                    <Link to={`${context}/use-cases/asb-bank`}>
                       <h4>
                         {t("header.header.menu.subCustomers.highlight.quality")}
                       </h4>
@@ -485,24 +491,24 @@ export const Header = ({ bg }) => {
                     onClick={() => setOpen(false)}
                   >
                     <Financial />
-                    <div>
+                    <Link to={`${context}/industries/financial-services`}>
                       <h4>
                         {t(
                           "header.header.menu.subIndustries.working.financial"
                         )}
                       </h4>
-                    </div>
+                    </Link>
                   </li>
                   <li
                     className="subItem1_item d-flex justify-content-start"
                     onClick={() => setOpen(false)}
                   >
                     <Signature />
-                    <div>
+                    <Link to={`${context}/industries/trust-service-providers`}>
                       <h4>
                         {t("header.header.menu.subIndustries.working.digital")}
                       </h4>
-                    </div>
+                    </Link>
                   </li>
                   <li
                     className="subItem1_item d-flex justify-content-start"
@@ -832,6 +838,21 @@ export const Header = ({ bg }) => {
                         </p>
                       </Link>
                     </li>
+                    <li className="subItem1_item d-flex  justify-content-start">
+                      <Check />
+                      <Link to={`${context}/products/checkid-r76`}>
+                        <h4>
+                          {t(
+                            "header.header.menu.subProduct.subicao.checkidr76"
+                          )}
+                        </h4>
+                        <p>
+                          {t(
+                            "header.header.menu.subProduct.subicao.bodyCheckidr76"
+                          )}
+                        </p>
+                      </Link>
+                    </li>
                   </div>
                 </div>
                 <Top className="positionTop" bg={bg} />
@@ -907,9 +928,7 @@ export const Header = ({ bg }) => {
                 <h5> {t("header.header.menu.subCustomers.highlight.title")}</h5>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <Link
-                  // to={`${context}/use-cases/abn-moneyou`}
-                  >
+                  <Link to={`${context}/use-cases/abn-moneyou`}>
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.digital")}
                     </h4>
@@ -917,9 +936,7 @@ export const Header = ({ bg }) => {
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <Link
-                  // to={`${context}/use-cases/uk-home-office-euss`}
-                  >
+                  <Link to={`${context}/use-cases/uk-home-office-euss`}>
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.ukHome")}
                     </h4>
@@ -927,9 +944,7 @@ export const Header = ({ bg }) => {
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <Link
-                  //  to={`${context}/use-cases/thirdfort`}
-                  >
+                  <Link to={`${context}/use-cases/thirdfort`}>
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.automated")}
                     </h4>
@@ -937,9 +952,7 @@ export const Header = ({ bg }) => {
                 </li>
                 <li className="subItem1_item d-flex justify-content-between">
                   <Check />
-                  <Link
-                  // to={`${context}/use-cases/asb-bank`}
-                  >
+                  <Link to={`${context}/use-cases/asb-bank`}>
                     <h4>
                       {t("header.header.menu.subCustomers.highlight.quality")}
                     </h4>
@@ -961,25 +974,27 @@ export const Header = ({ bg }) => {
                   <div className="d-flex flex-column">
                     <li className="subItem1_item d-flex justify-content-start">
                       <Financial />
-                      <div>
+                      <Link to={`${context}/industries/financial-services`}>
                         <h4>
                           {" "}
                           {t(
                             "header.header.menu.subIndustries.working.financial"
                           )}
                         </h4>
-                      </div>
+                      </Link>
                     </li>
                     <li className="subItem1_item d-flex justify-content-start">
                       <Signature />
-                      <div>
+                      <Link
+                        to={`${context}/industries/trust-service-providers`}
+                      >
                         <h4>
                           {" "}
                           {t(
                             "header.header.menu.subIndustries.working.digital"
                           )}
                         </h4>
-                      </div>
+                      </Link>
                     </li>
                     <li className="subItem1_item d-flex justify-content-start">
                       <Govement />

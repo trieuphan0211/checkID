@@ -10,18 +10,28 @@ import {
   AM001Product,
   AllProducts,
   CheckIDET100,
+  CheckIDR76,
   CheckIDSRProduct,
   R301C11Product,
   R502CLProduct,
   V10PProduct,
   V20Product,
 } from "../pages/Products";
-import { Partnerships, UseCase } from "../pages/customers";
+import {
+  AbnMoneyou,
+  AsbBank,
+  Partnerships,
+  ThirdFort,
+  UkHomeOfficeEuss,
+  UseCase,
+} from "../pages/customers";
 import NotFound from "../pages/NotFound";
 import UseCaseLayout from "../layouts/UseCaseLayout";
 import { Test } from "../pages/Test";
 import SolutionsLayout from "../layouts/SolutionsLayout";
 import { ClientMiddleware, MobileSDK } from "../pages/solutions";
+import FinancialServices from "../pages/industries/FinancialServices";
+import DigitalSigning from "../pages/industries/DigitalSigning";
 const context = "";
 const Routers = () => {
   const routing = useRoutes([
@@ -85,6 +95,10 @@ const Routers = () => {
               path: `${context}/products/checkid-et100`,
               element: <CheckIDET100 />,
             },
+            {
+              path: `${context}/products/checkid-r76`,
+              element: <CheckIDR76 />,
+            },
           ],
         },
         {
@@ -109,22 +123,36 @@ const Routers = () => {
               path: `${context}/use-cases`,
               element: <UseCase />,
             },
-            // {
-            //   path: `${context}/use-cases/abn-moneyou`,
-            //   element: <AbnMoneyou />,
-            // },
-            // {
-            //   path: `${context}/use-cases/uk-home-office-euss`,
-            //   element: <UkHomeOfficeEuss />,
-            // },
-            // {
-            //   path: `${context}/use-cases/thirdfort`,
-            //   element: <ThirdFort />,
-            // },
-            // {
-            //   path: `${context}/use-cases/asb-bank`,
-            //   element: <AsbBank />,
-            // },
+            {
+              path: `${context}/use-cases/abn-moneyou`,
+              element: <AbnMoneyou />,
+            },
+            {
+              path: `${context}/use-cases/uk-home-office-euss`,
+              element: <UkHomeOfficeEuss />,
+            },
+            {
+              path: `${context}/use-cases/thirdfort`,
+              element: <ThirdFort />,
+            },
+            {
+              path: `${context}/use-cases/asb-bank`,
+              element: <AsbBank />,
+            },
+          ],
+        },
+        {
+          path: `${context}/industries`,
+          element: <UseCaseLayout />,
+          children: [
+            {
+              path: `${context}/industries/financial-services`,
+              element: <FinancialServices />,
+            },
+            {
+              path: `${context}/industries/trust-service-providers`,
+              element: <DigitalSigning />,
+            },
           ],
         },
         {

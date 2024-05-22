@@ -1,17 +1,15 @@
+import { Box, Pagination } from "@mui/material";
 import React, { useEffect, useState } from "react";
-
-import v11 from "../../assets/img/product/v11.png";
-import v20 from "../../assets/img/product/v20.png";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import am_001 from "../../assets/img/product/am-001.png";
 import checkid_sr from "../../assets/img/product/checkid-sr.png";
+import checkid_et100 from "../../assets/img/product/et100.png";
 import r301_c11 from "../../assets/img/product/r301-c11.png";
 import r502_cl from "../../assets/img/product/r502-cl.png";
-import am_001 from "../../assets/img/product/am-001.png";
 import v10p from "../../assets/img/product/v10p.png";
-import checkid_et100 from "../../assets/img/product/et100.png";
-
-import { Box, Pagination } from "@mui/material";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import v20 from "../../assets/img/product/v20.png";
+import checkidR76 from "../../assets/img/product/checkid-r76.png";
 
 const context = "";
 
@@ -69,6 +67,13 @@ export const AllProducts = () => {
       name: "V10P",
       img: v10p,
       link: "/products/v10p",
+      description: "products.allProducts.items.v10p",
+    },
+    {
+      id: 8,
+      name: "CheckID-R76",
+      img: checkidR76,
+      link: "/products/checkid-r76",
       description: "products.allProducts.items.v10p",
     },
   ];

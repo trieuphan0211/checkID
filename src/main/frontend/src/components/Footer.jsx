@@ -1,26 +1,24 @@
-import React from "react";
-
-import "../assets/scss/Footer.scss";
-import { BiSolidPaperPlane } from "react-icons/bi";
-import logo from "../assets/img/logo_blue.png";
-import iso from "../assets/img/iso27001.png";
-import tuv from "../assets/img/tuv.png";
-
+import styled from "@emotion/styled";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import {
   Alert,
   Backdrop,
   Button,
   CircularProgress,
   Divider,
+  Grid,
   Snackbar,
   TextField,
-  Grid,
 } from "@mui/material";
-import styled from "@emotion/styled";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import LanguageMenu from "./menus/LanguageMenu";
+import React from "react";
 import { useTranslation } from "react-i18next";
+import { BiSolidPaperPlane } from "react-icons/bi";
+import iso from "../assets/img/iso27001.png";
+import logo from "../assets/img/logo_blue.png";
+import tuv from "../assets/img/tuv.png";
+import "../assets/scss/Footer.scss";
 import { https } from "../services/AxiosConfig";
+import LanguageMenu from "./menus/LanguageMenu";
 
 //Begin: Custom style for TextField, Button component from Material UI
 const SignButton = styled(Button)({

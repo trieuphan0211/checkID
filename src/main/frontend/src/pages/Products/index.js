@@ -8,3 +8,4 @@ export * from "./AM001Product";
 export * from "./CheckIDSRProduct";
 export * from "./V10PProduct";
 export * from "./CheckIDET100";
+export * from "./CheckIDR76";

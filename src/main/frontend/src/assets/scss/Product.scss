@@ -12,7 +12,8 @@
   .am001,
   .checkIdSr,
   .v10p,
-  .et100 {
+  .et100,
+  .checkidR76 {
     &_info {
       flex-direction: column;
       color: #fff;
@@ -271,7 +272,8 @@
       }
     }
   }
-  .et100 {
+  .et100,
+  .checkidR76 {
     &_detail {
       &-img {
         &-show {
@@ -287,7 +289,8 @@
   .am001,
   .checkIdSr,
   .v10p,
-  .et100 {
+  .et100,
+  .checkidR76 {
     &_info {
       padding-bottom: 0;
       height: auto;
@@ -323,6 +326,13 @@
     &_info {
       &-header {
         max-width: 615px;
+      }
+    }
+  }
+  .checkidR76 {
+    &_info {
+      &-header {
+        max-width: 675px;
       }
     }
   }
@@ -367,7 +377,8 @@
     .am001,
     .checkIdSr,
     .v10p,
-    .et100 {
+    .et100,
+    .checkidR76 {
       min-height: 95vh;
       width: 1920px;
       margin: 0 auto;
@@ -387,7 +398,8 @@
     .am001,
     .checkIdSr,
     .v10p,
-    .et100 {
+    .et100,
+    .checkidR76 {
       &_info {
         position: relative;
         height: 500px;
@@ -441,7 +453,8 @@
     .am001,
     .checkIdSr,
     .v10p,
-    .et100 {
+    .et100,
+    .checkidR76 {
       &_info {
         flex-wrap: wrap;
         height: auto;
@@ -514,7 +527,8 @@
     .am001,
     .checkIdSr,
     .v10p,
-    .et100 {
+    .et100,
+    .checkidR76 {
       &_info {
         flex-wrap: wrap;
         height: auto;

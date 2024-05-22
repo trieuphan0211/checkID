@@ -1,24 +1,23 @@
+import { Box } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import SmartCard from "../../assets/img/product/SmartCard.png";
-import RichPorts from "../../assets/img/product/RichPorts.png";
-import nfc from "../../assets/img/product/NFC.png";
-import mrz from "../../assets/img/product/mrz.png";
-import fingerprint from "../../assets/img/product/Fingerprint.png";
-import camera from "../../assets/img/product/camera.png";
-import et100_fullFace from "../../assets/img/product/CheckID_ET100/fullFace.png";
 import img1 from "../../assets/img/product/CheckID_ET100/et100_1.png";
 import img2 from "../../assets/img/product/CheckID_ET100/et100_2.png";
 import img3 from "../../assets/img/product/CheckID_ET100/et100_3.png";
 import img4 from "../../assets/img/product/CheckID_ET100/et100_4.png";
 import img5 from "../../assets/img/product/CheckID_ET100/et100_5.png";
+import et100_fullFace from "../../assets/img/product/CheckID_ET100/fullFace.png";
+import fingerprint from "../../assets/img/product/Fingerprint.png";
+import nfc from "../../assets/img/product/NFC.png";
+import RichPorts from "../../assets/img/product/RichPorts.png";
+import SmartCard from "../../assets/img/product/SmartCard.png";
+import camera from "../../assets/img/product/camera.png";
+import mrz from "../../assets/img/product/mrz.png";
 import {
   InfoDetail,
   OrtherProduct,
   TechnicalSpecifications,
 } from "../../components/products";
-import { Box } from "@mui/material";
 
 export const CheckIDET100 = () => {
   // set Title
@@ -52,7 +51,7 @@ export const CheckIDET100 = () => {
       item: "Weight",
       specification: "2.5 kg",
       item1: "WIFI",
-      specification1: "IEEE 802.11 a/b/g/n/ac  /n 2.4G & 5 /n GAP",
+      specification1: "IEEE 802.11 a/b/g/n/ac,2.4G & 5G,AP",
     },
     {
       item: "Working Temprature",
@@ -74,15 +73,17 @@ export const CheckIDET100 = () => {
     },
     {
       item: "Operation System",
-      specification: " Android 9+, support remote upgrade",
+      specification: "Support remote upgrade",
       item1: "MRZ Reader",
-      specification1: "Yes",
+      specification1:
+        "300dpi resolution, wide angle multiple spectral lights /n High-definition scan tube, high-definition image",
     },
     {
       item: "Processor ",
       specification: "8-Core ARM Cortex-A53 2.0G",
-      item1: "Contactless Reader",
-      specification1: "ISO 14443 Type-A/B, Mifare",
+      item1: "NFC Interface",
+      specification1:
+        "Support all 13.56 MHz NFC functions /n Followed ISO/IEC 14443 Type A/B",
     },
     {
       item: "RAM",
@@ -99,30 +100,20 @@ export const CheckIDET100 = () => {
     {
       item: "Resolution ",
       specification: "1280 x 800",
-      item1: "RJ45",
-      specification1: "Yes",
+      item1: "Background Light",
+      specification1: "Adjustable",
     },
+
     {
-      item: "Background Light ",
-      specification: "Size 10.1 inch LCD",
-      item1: "RJ11 (RS232)",
-      specification1: "Yes",
+      item: "Screen Size",
+      specification: "10.1 inch LCD",
+      item1: "Touch",
+      specification1: "Supported",
     },
-    {
-      item: "Screen",
-      specification: "Adjustable",
-      item1: "RJ11 (Cashbox)",
-      specification1: "Yes",
-    },
-    {
-      item: "Touch",
-      specification: "Yes",
-      item1: "Power Port Yes",
-      specification1: "Yes",
-    },
+
     {
       item: "Camera",
-      specification: "5M Pixel /n Binocular Camera support liveness detection",
+      specification: "5.0M Pixels Monocular Camera",
       item1: "Input",
       specification1: "100V-240V AC50/60HZ 1.0A",
     },
@@ -140,13 +131,13 @@ export const CheckIDET100 = () => {
     },
     {
       item: "Speaker",
-      specification: "Yes",
+      specification: "Supported",
       item1: "Location",
       specification1: "GPS",
     },
     {
       item: "MIC",
-      specification: "Yes",
+      specification: "Supported",
       item1: "Video",
       specification1: "1080p HD video playing /n 720p HD video recording",
     },

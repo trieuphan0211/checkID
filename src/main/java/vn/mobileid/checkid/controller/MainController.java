@@ -68,7 +68,7 @@ public class MainController {
         String host = "smtp.zoho.com";
         final String user = "ca.support@mobile-id.vn";
         final String password = "T@mic@8x";
-        String to = "info@mobile-id.vn";
+        String to = "thanhtv@mobile-id.vn";
         String result;
         JSONObject json = new JSONObject(email);
         System.out.println("email: " + json.getString("email"));
@@ -116,7 +116,7 @@ public class MainController {
         String host = "smtp.zoho.com";
         final String user = "ca.support@mobile-id.vn";
         final String password = "T@mic@8x";
-        String to = "info@mobile-id.vn";
+        String to = "thanhtv@mobile-id.vn";
         String result;
         // String msg = content.getName().replace("%40", "@");
         System.out.println("host name: " + host_name);
