@@ -110,7 +110,14 @@ const LanguageMenu = () => {
                 alt=""
                 style={{ width: "24px", marginRight: "5px" }}
               />
-              <p> {language === "English" ? "English" : "Tiếng Việt"}</p>
+              <p
+                style={{
+                  fontSize: "16px",
+                }}
+              >
+                {" "}
+                {language === "English" ? "English" : "Tiếng Việt"}
+              </p>
               <KeyboardArrowDownIcon />
             </StyleButton>
             <MenuStyle {...bindMenu(popupState)}>
@@ -118,7 +125,7 @@ const LanguageMenu = () => {
                 onClick={() => {
                   handleLanguage("English", popupState);
                 }}
-                style={{ fontSize: "12px" }}
+                style={{ fontSize: "16px" }}
               >
                 <img
                   src={English}
@@ -132,7 +139,7 @@ const LanguageMenu = () => {
                   handleLanguage("Vietnamese", popupState);
                 }}
                 style={{
-                  fontSize: "12px",
+                  fontSize: "16px",
                 }}
               >
                 <img

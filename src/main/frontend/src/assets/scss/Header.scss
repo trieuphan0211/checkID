@@ -214,6 +214,14 @@
                 }
               }
             }
+            &:nth-child(6) {
+              > div,
+              a {
+                h4 {
+                  margin-bottom: 0;
+                }
+              }
+            }
           }
         }
       }

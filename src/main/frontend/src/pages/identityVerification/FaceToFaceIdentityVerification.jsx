@@ -654,7 +654,7 @@ const FaceToFaceIdentityVerification = (props) => {
                     }}
                   />
                   <ReCAPTCHA
-                    sitekey="6LcbJg0pAAAAAPxqdGBmN6e6E3UQ4hNDkVMUAxt7"
+                    sitekey="6Leq6zcqAAAAADsQ-zdK4ZZaEXF_Hu_gscJoCTsY"
                     onChange={onChange}
                   />
                   <p className="remoteIdentity_challenge-form-context2">

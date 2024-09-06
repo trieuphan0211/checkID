@@ -49,9 +49,14 @@ export const CheckIDR76 = () => {
         "Size:15.6 inches /n Communication interface type USB /n Multi points touch /n Minimum touch object diameter > 3mm  ",
     },
     {
-      item: "BINOCULAR CAMERA  ",
+      item: "BARCODE READER  ",
       specification:
         "TTL interface /n support 2D code: PDF417, QR Code, Data Matrix, Han Xin Code,GM code /n Aztec Code, Micro QR Code,etc /n Support 1D code: Code128， Code39， EAN8， EAN13， cross 25 code,etc  ",
+    },
+    {
+      item: "BINOCULAR CAMERA  ",
+      specification:
+        "USB interface, double 2 million, support face recognition, live recognition  ",
     },
     {
       item: "PANEL PRINTER ",

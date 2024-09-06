@@ -73,7 +73,15 @@ const Footer = () => {
       setCheckNull(true);
     } else {
       try {
-        const mesage = await https.post("/sendmail", { email: email });
+        const mesage = await https.post(
+          "/sendmail",
+          { email: email },
+          {
+            headers: {
+              "X-XSRF-TOKEN": sessionStorage.getItem("XSRF-TOKEN"),
+            },
+          }
+        );
         setState(mesage.data);
       } catch (error) {
         setState("error");
@@ -181,6 +189,13 @@ const Footer = () => {
                 onChange={(event) => setEmail(event.target.value)}
                 onClick={() => setCheckNull(false)}
               />
+              <input
+                type="hidden"
+                id="_csrf"
+                name="_csrf"
+                value="${_csrf.token}"
+              />
+
               <SignButton
                 variant="contained"
                 className="footer_info-btn"

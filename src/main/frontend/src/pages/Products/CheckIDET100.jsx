@@ -45,13 +45,13 @@ export const CheckIDET100 = () => {
       specification: "273 x 155 x 20 mm",
       item1: "Band",
       specification1:
-        "GSM band 3/8, /n WCDMA band 1/8, /n TD-SCDMA band 34/39, /n CDMA BC0, /n TDD-LTE band 34/39/40/41 (38)  /n FDD LTE band 1/3/5/8",
+        "WCDMA band 1/8, /n TD-SCDMA band 34/39, CDMA BC0, /n TDD-LTE band 34/39/40/41 (38) /n FDD LTE band 1/3/5/8",
     },
     {
       item: "Weight",
       specification: "2.5 kg",
       item1: "WIFI",
-      specification1: "IEEE 802.11 a/b/g/n/ac,2.4G & 5G,AP",
+      specification1: `IEEE 802.11 a/b/g//cbn/ac,2.4G & 5G,AP`,
     },
     {
       item: "Working Temprature",
@@ -123,12 +123,7 @@ export const CheckIDET100 = () => {
       item1: "Output ",
       specification1: "12/3A DC",
     },
-    {
-      item: "Light",
-      specification: "Lights for status indication",
-      item1: "Certification",
-      specification1: "CE/FCC",
-    },
+
     {
       item: "Speaker",
       specification: "Supported",

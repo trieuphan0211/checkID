@@ -57,6 +57,10 @@ export default {
             checkid: "CheckID Client Middleware",
             sdk: "CheckID Mobile SDK",
           },
+          eVerification: "GIẢI PHÁP XÁC MINH ĐIỆN TỬ",
+          subEVerification: {
+            eidBank: "EIDBank",
+          },
         },
         customers: "Khách hàng",
         subCustomers: {

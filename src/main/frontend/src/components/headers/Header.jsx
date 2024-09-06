@@ -367,6 +367,29 @@ export const Header = ({ bg }) => {
                       {/* <p>ID card reader/scanner</p> */}
                     </Link>
                   </li>
+                  <Divider
+                    component="li"
+                    sx={{
+                      width: "100%",
+                      marginTop: "12px",
+                      borderColor: "#C4C4C4",
+                    }}
+                  />
+                  <h5>{t("header.header.menu.subSolution.eVerification")}</h5>
+                  <li className="subItem1_item d-flex justify-content-start">
+                    <Check />
+                    <Link
+                      to={`https://checkid.mobile-id.vn/eidbank/demo/`}
+                      target="_blank"
+                    >
+                      <h4>
+                        {t(
+                          "header.header.menu.subSolution.subEVerification.eidBank"
+                        )}
+                      </h4>
+                      {/* <p>ID card reader/scanner</p> */}
+                    </Link>
+                  </li>
                 </ul>
               </li>
               <li
@@ -880,6 +903,29 @@ export const Header = ({ bg }) => {
                   <Check />
                   <Link to={`${context}/solutions/mobile-sdk`}>
                     <h4>{t("header.header.menu.subSolution.subicao.sdk")}</h4>
+                    {/* <p>ID card reader/scanner</p> */}
+                  </Link>
+                </li>
+                <Divider
+                  component="li"
+                  sx={{
+                    width: "100%",
+                    marginTop: "12px",
+                    borderColor: "#C4C4C4",
+                  }}
+                />
+                <h5>{t("header.header.menu.subSolution.eVerification")}</h5>
+                <li className="subItem1_item d-flex justify-content-start">
+                  <Check />
+                  <Link
+                    to={`https://checkid.mobile-id.vn/eidbank/demo/`}
+                    target="_blank"
+                  >
+                    <h4>
+                      {t(
+                        "header.header.menu.subSolution.subEVerification.eidBank"
+                      )}
+                    </h4>
                     {/* <p>ID card reader/scanner</p> */}
                   </Link>
                 </li>

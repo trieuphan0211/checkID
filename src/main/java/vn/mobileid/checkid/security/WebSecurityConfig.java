@@ -7,9 +7,12 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
+import org.springframework.security.web.csrf.CsrfFilter;
 import org.springframework.security.web.header.HeaderWriter;
 import org.springframework.security.web.header.writers.StaticHeadersWriter;
 import org.springframework.security.web.util.matcher.AnyRequestMatcher;
+import vn.mobileid.checkid.config.CustomerTokenLogger;
 
 /**
  *
@@ -36,6 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     //cấu hình các quy tắc bảo mật
     protected void configure(HttpSecurity http) throws Exception {
+        http.addFilterAfter(new CustomerTokenLogger(), CsrfFilter.class);
         http.headers()
                 .xssProtection()
                 .and()
@@ -51,9 +55,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .addHeaderWriter(createCspHeaderWriter())
                 .addHeaderWriter(createPermissionsPolicyHeaderWriter())
                 .and().csrf() //(cross-sute request forgery)==> kĩ thuật tấn công mạng
-                .disable()
-                .authorizeRequests() //yêu cầu quyền truy cập
-                .antMatchers(PUBLIC_MATCHERS).permitAll(); // Cho phép tất cả mọi người truy cập vào địa chỉ này
+                .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+//                .disable()
+//                .authorizeRequests() //yêu cầu quyền truy cập
+//                .antMatchers(PUBLIC_MATCHERS).permitAll(); // Cho phép tất cả mọi người truy cập vào địa chỉ này
 //                .anyRequest().authenticated() // Tất cả các request khác đều cần phải xác thực mới được truy cập. (xác minh là ai)
 //                .and()
 //                .formLogin() // Cho phép người dùng xác thực bằng form login

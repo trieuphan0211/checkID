@@ -101,7 +101,7 @@ export const TechnicalSpecifications = ({
                     <StyledTableRow align="left">
                       {row.specification1.split("/n").map((item) => (
                         <>
-                          {item}
+                          {item.replace("/cb", "")}
                           <br />
                         </>
                       ))}

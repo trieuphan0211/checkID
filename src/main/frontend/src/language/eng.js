@@ -58,6 +58,10 @@ export default {
             checkid: "CheckID Client Middleware",
             sdk: "CheckID Mobile SDK",
           },
+          eVerification: "E-VERIFICATION SOLUTION",
+          subEVerification: {
+            eidBank: "EIDBank",
+          },
         },
         customers: "customers",
         subCustomers: {

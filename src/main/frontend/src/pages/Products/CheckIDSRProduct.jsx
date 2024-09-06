@@ -77,32 +77,15 @@ export const CheckIDSRProduct = () => {
     {
       item: "Camera spec",
       specification: "2.0M pixel 1080P resolution, fixed length, rotate angle",
-      item1: "Product device",
-      specification1: "154mm *95*40mm",
+      item1: "Communicate interface",
+      specification1: "USB 2.0 high-speed interface",
     },
-    {
-      item: "Communicate interface",
-      specification: "USB 2.0 high-speed interface",
-      item1: "Install screws",
-      specification1: "M3-6",
-    },
+
     {
       item: "Platform",
       specification: "Windows",
-      item1: "Power adaptor",
-      specification1: "DC 12V",
-    },
-    {
-      item: "Update",
-      specification: "Support firmware update",
-      item1: "USB data cable",
-      specification1: "USB cable 1000mm",
-    },
-    {
-      item: "Biometric template Standards",
-      specification: "Suprema, ISO19794-2, ANSI 378",
-      item1: "Case material",
-      specification1: "Sturdy ABS-PC plastic LED",
+      item1: "Update",
+      specification1: "Support firmware update",
     },
   ];
 

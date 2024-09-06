@@ -5,6 +5,7 @@ export const mailContact = async (requestData) => {
     const response = await https.post("/sendContact", requestData, {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
+        "X-XSRF-TOKEN": sessionStorage.getItem("XSRF-TOKEN"),
       },
     });
     return response.data;
