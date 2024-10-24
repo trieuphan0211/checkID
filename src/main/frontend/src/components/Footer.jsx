@@ -134,7 +134,7 @@ const Footer = () => {
                   />
                 </svg>
                 <span style={{ marginLeft: "10px", lineHeight: "34px" }}>
-                  +84 28 3636 6015
+                  +84 28 3622 2982
                 </span>
               </p>
               <p>
